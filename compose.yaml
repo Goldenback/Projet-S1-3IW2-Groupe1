@@ -1,0 +1,27 @@
+version: '3'
+services:
+  site:
+    build: site
+    ports:
+     - "80:80"
+    volumes:
+      - ./www:/var/www/html/
+      - ./server/000-default.conf:/etc/apache2/sites-available/000-default.conf
+      - ./server/apache2.conf:/etc/apache2/apache2.conf
+      - ./server/php.ini:/usr/local/etc/php/php.ini
+    depends_on: 
+      - db
+  db:
+    image: mariadb
+    restart: always
+    environment:
+      POSTGRES_DB: db_name
+      POSTGRES_USER: super_user_name
+      POSTGRES_PASSWORD: smth_smth
+      ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
