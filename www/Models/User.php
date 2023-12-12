@@ -9,7 +9,7 @@ class User
     protected string $lastname;
     protected string $email;
     protected string $pwd;
-    protected int $status;
+    protected string $role;
     protected int $isDeleted;
 
     /**
@@ -96,20 +96,14 @@ class User
         $this->pwd = $pwd;
     }
 
-    /**
-     * @return int
-     */
-    public function getStatus(): int
+    public function getRole(): string
     {
-        return $this->status;
+        return $this->role;
     }
 
-    /**
-     * @param int $status
-     */
-    public function setStatus(int $status): void
+    public function setRole(string $role): void
     {
-        $this->status = $status;
+        $this->role = $role;
     }
 
     /**
