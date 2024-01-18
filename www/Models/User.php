@@ -2,6 +2,9 @@
 
 namespace App\Models;
 
+
+use App\DB\Database;
+
 class User
 {
     private ?int $id = null;
@@ -121,4 +124,33 @@ class User
     {
         $this->isDeleted = $isDeleted;
     }
+
+
+
+
+    public function authenticateUser($email, $password): bool {
+
+        $database = new Database();
+        $pdo = $database->getDatabaseConnection();
+
+        $stmt = $pdo->prepare("SELECT * FROM users WHERE email = :email");
+        $stmt->execute(['email' => $email]);
+        $user = $stmt->fetch();
+
+        if ($user) {
+            return password_verify($password, $user['pwd']);
+        }
+
+        return false;
+    }
+
+    public function createUser($firstname, $lastname, $email, $password, $role): bool
+    {
+        $database = new Database();
+        $pdo = $database->getDatabaseConnection();
+
+        $stmt = $pdo->prepare("INSERT INTO users (Firstname, Lastname, email, pwd, Role, is_validated, created_at) VALUES (?, ?, ?, ?, ?, ?, NOW())");
+        return $stmt->execute([$firstname, $lastname, $email, $password, $role, false]);
+    }
+
 }

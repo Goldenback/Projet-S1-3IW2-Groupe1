@@ -2,7 +2,9 @@ version: '3'
 
 services:
   php:
-    build: php
+    build:
+      context: ./php
+      dockerfile: Dockerfile
     volumes:
       - ./www:/var/www/html/
     depends_on:
@@ -29,6 +31,7 @@ services:
       POSTGRES_USER: super_user_name
       POSTGRES_PASSWORD: smth_smth
     volumes:
+      - ./www/DB/init-db.sql:/docker-entrypoint-initdb.d/init-db.sql
       - postgres_data:/var/lib/postgresql/data
     networks:
       - internal
