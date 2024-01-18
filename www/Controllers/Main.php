@@ -18,7 +18,6 @@ class Main
     {
         session_start();
         if($_SESSION["connected"]){
-            echo "Home";
             require(BASE_DIR . "/Views/Templates/Home.php");
         }
     }
@@ -26,5 +25,14 @@ class Main
     public function getfonts(): array
     {
         return $this->config->getAllFonts();
+    }
+
+    public function config() : void
+    {
+        session_start();
+        if($_SESSION["connected"]){
+            echo "Home";
+            require(BASE_DIR . "/Views/Templates/config_form.php");
+        }
     }
 }

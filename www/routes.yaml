@@ -4,7 +4,7 @@
 
 /config:
   controller : Main
-  action :
+  action : config
 
 /login:
   controller: Security
