@@ -40,13 +40,8 @@ class Security
         require(BASE_DIR . "/Views/Security/login_form.php");
     }
 
-
-
-
     public function logout(): void
     {
-        echo "Logout";
-
         session_start();
 
         //pour effacer les données de la session
@@ -77,7 +72,6 @@ class Security
 
             //ajoute dans la bdd
             if ($this->User->createUser($firstname, $lastname, $email, $hashedPassword, $role)) {
-                echo "Inscription réussie";
                 header("Location: /login");
                 exit();
             } else {

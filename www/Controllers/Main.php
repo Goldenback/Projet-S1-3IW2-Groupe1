@@ -20,6 +20,9 @@ class Main
         if($_SESSION["connected"]){
             require(BASE_DIR . "/Views/Templates/Home.php");
         }
+        else{
+            echo "Veuillez-vous connecter";
+        }
     }
 
     public function getfonts(): array
@@ -31,7 +34,6 @@ class Main
     {
         session_start();
         if($_SESSION["connected"]){
-            echo "Home";
             require(BASE_DIR . "/Views/Templates/config_form.php");
         }
     }
