@@ -2,12 +2,20 @@
 
 namespace App\Models;
 
+use App\DB\Database;
+
 class config
 {
     private ?int $id;
     private string $primary_color;
     private string $secondary_color;
     private string $isDeleted;
+    private Database $pdo;
+
+    public function __construct()
+    {
+        $this->pdo = new Database();
+    }
 
     /**
      * @return int|null
@@ -71,5 +79,12 @@ class config
     public function setIsDeleted(string $isDeleted): void
     {
         $this->isDeleted = $isDeleted;
+    }
+
+
+    public function getAllFonts()
+    {
+        $stmt = $this->pdo->query("SELECT * FROM fonts");
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 }

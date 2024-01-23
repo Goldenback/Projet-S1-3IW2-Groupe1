@@ -8,17 +8,13 @@ RUN apt-get update -y \
         libjpeg-dev \
         libfreetype6-dev \
         libyaml-dev \
-        libzip-dev
-#        unzip \
-#        curl \
-#        autoconf \
-#        gcc \
-#        make
+        libzip-dev \
+        libpq-dev  # PostgreSQL development libraries
 
 # Configure and install PHP extensions
 RUN docker-php-ext-configure gd --with-freetype --with-jpeg \
     && docker-php-ext-install -j$(nproc) gd \
-    && docker-php-ext-install pdo pdo_mysql zip
+    && docker-php-ext-install pdo pdo_pgsql zip  # Install pdo_pgsql for PostgreSQL
 
 # Install YAML extension
 RUN pecl install yaml \
