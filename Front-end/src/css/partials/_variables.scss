@@ -1,0 +1,35 @@
+$black: #000;
+$white: #fff;
+$blue: #0d6efd;
+$grey: #6c757d;
+$red: #dc3545;
+$darkGrey: #212529;
+$lightGrey: #f8f9fa;
+
+$md-size: 1024px;
+
+:root {
+	/* Couleurs */
+	--white: #{$white};
+	--blue: #{$blue};
+	--blue-darker: #{darken($blue, 10%)};
+	--grey: #{$grey};
+	--light-grey: #{$lightGrey};
+	--grey-darker: #{darken($grey, 10%)};
+	--red: #{$red};
+	--red-darker: #{darken($red, 10%)};
+	--text-color: #{$black};
+	--button-bg-color: #{$black};
+	--button-bg-hover-color: #{lighten($black, 10%)};
+
+	--text-color: #{$darkGrey};
+	/* Radius */
+	--main-radius: #{rem(6)};
+	/* Fonts */
+	--main-font: #{$font1};
+	/* Transitions */
+	--transition-duration: 0.3s;
+}
+
+/* Ecrans */
+$md-size: 1024px;
