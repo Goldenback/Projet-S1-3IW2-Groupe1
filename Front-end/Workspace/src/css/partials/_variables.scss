@@ -3,6 +3,7 @@ $white : #FFF;
 $bg-color : #FFF2D8;
 $primary-color : #113946;
 $secondary-color : #EAD7BB;
+$centered : auto;
 
 
 :root{
@@ -40,7 +41,15 @@ $secondary-color : #EAD7BB;
 
     --title-spacing : #{rem(5)};
    
+    /*padding & margins */
 
+    --pm-md : #{rem(16)};
+    --pm-sm : #{rem(8)};
+    --pm-lg : #{rem(16) rem(32)};
+    --pm-xlg : #{rem(32)};
+    --pm-xxlg : #{rem(64)};
     
+    /*margin*/
 
+    --centered : #{$centered};
 }

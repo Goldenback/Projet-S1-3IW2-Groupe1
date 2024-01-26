@@ -23,6 +23,14 @@
   --subtitle-size: 1.5rem;
   /*Letter spacing*/
   --title-spacing: 0.3125rem;
+  /*padding & margins */
+  --pm-md: 1rem;
+  --pm-sm: 0.5rem;
+  --pm-lg: 1rem 2rem;
+  --pm-xlg: 2rem;
+  --pm-xxlg: 4rem;
+  /*margin*/
+  --centered: auto;
 }
 
 /*Variables #2*/
@@ -66,7 +74,7 @@ img {
 }
 
 .btn {
-  padding: 1rem;
+  padding: var(--pm-md);
   text-decoration: none;
   color: var(--white);
   background-color: var(--btn-bg-color);
@@ -78,10 +86,10 @@ img {
   margin-bottom: 1.25rem;
 }
 .btn-lg {
-  padding: 1rem 2rem;
+  padding: var(--pm-lg);
 }
 .btn-sm {
-  padding: 0.5rem;
+  padding: var(--pm-sm);
 }
 .btn-primary {
   background-color: var(--primary-color);
@@ -148,6 +156,33 @@ img {
   font-size: var(--subtitle-size);
   font-family: var(--main-font);
   font-weight: lighter;
+}
+
+.CTA {
+  border: 1px solid var(--text-color);
+  padding: var(--pm-xxlg);
+  font-family: var(--main-font);
+  max-width: 35vw;
+  margin: auto;
+  background-color: var(--transparent);
+}
+.CTA .content {
+  text-align: center;
+}
+.CTA .content-title {
+  font-size: var(--title-size);
+  display: inline;
+  margin: auto;
+}
+.CTA .content-text {
+  font-size: var(--main-size);
+}
+.CTA-form {
+  text-align: center;
+  margin-top: var(--pm-xlg);
+}
+.CTA-form input {
+  padding: var(--pm-md);
 }
 
 /*# sourceMappingURL=main.css.map */
