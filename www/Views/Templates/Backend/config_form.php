@@ -31,10 +31,13 @@
     <label for="secondary_color">Couleur Secondaire:</label>
     <input type="text" id="secondary_color" name="secondary_color" required>
 
-    <!-- Ajoutez d'autres champs si nécessaire -->
-
     <button type="submit">Enregistrer la Configuration</button>
 </form>
+
+<div>
+    <br>
+    <a href="#" target="_blank">Voir ma page</a>
+</div>
 
 </body>
 </html>

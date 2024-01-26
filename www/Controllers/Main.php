@@ -18,7 +18,7 @@ class Main
     {
         session_start();
         if($_SESSION["connected"]){
-            require(BASE_DIR . "/Views/Templates/Home.php");
+            require(BASE_DIR . "/Views/Templates/home.php");
         }
         else{
             echo "Veuillez-vous connecter";
