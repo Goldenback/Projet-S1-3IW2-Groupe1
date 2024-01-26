@@ -1,0 +1,24 @@
+.navbar{
+    background-color: var(--bg-color);
+    .container{
+        @include flexbox(row, nowrap, space-around, center);
+    }
+    &-title{
+        font-size: var(--title-size);
+        font-family: var(--title-font);
+    }
+    &-links{
+        width: 30%;
+        display: flex;
+        justify-content: space-around;
+        font-family: var(--main-font);
+        list-style-type: none;
+    }
+    &-links li{font-size: var(--main-size);}
+    hr{
+        color: var(--text-color);
+        width: 100%;
+        height: rem(2);
+    }
+}
+

@@ -1,0 +1,46 @@
+$black : #000;
+$white : #FFF;
+$bg-color : #FFF2D8;
+$primary-color : #113946;
+$secondary-color : #EAD7BB;
+
+
+:root{
+    /*Color*/
+
+    --text-color:#{$black};
+    --white:#{$white};
+    --btn-bg-color:#{$black};
+    --bg-color:#{$bg-color};
+    --btn-bg-hover-color: #{lighten($black, 10%)};
+   --primary-color : #{$primary-color};
+   --secondary-color : #{$secondary-color};
+
+
+    /*Radius*/
+
+    --main-radius: #{rem(6)};
+
+    /*Fonts*/
+
+    --main-font: #{$text-font};
+    --title-font: #{$title-font};
+
+    /*trans*/
+
+    --transition-duration:0.3s;
+
+    /*Font size*/
+    --main-size : #{rem(16)};
+    --title-size : #{rem(32)};
+    --main-title-size : #{rem(80)};
+    --subtitle-size : #{rem(24)};
+
+    /*Letter spacing*/
+
+    --title-spacing : #{rem(5)};
+   
+
+    
+
+}
