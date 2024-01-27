@@ -25,11 +25,6 @@ class Main
         }
     }
 
-    public function getfonts(): array
-    {
-        return $this->config->getAllFonts();
-    }
-
     public function config() : void
     {
         session_start();
