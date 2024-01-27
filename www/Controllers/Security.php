@@ -56,8 +56,6 @@ class Security
 
     public function register(): void
     {
-        echo "Formulaire d'inscription : ";
-
         // Vérifie si le formulaire a été envoyé
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Récupère les données
@@ -65,7 +63,8 @@ class Security
             $lastname = $_POST["lastname"] ?? '';
             $email = $_POST["email"] ?? '';
             $password = $_POST["password"] ?? '';
-            $role = 'user';
+
+            $role = 'user'; //à changer
 
             // pour hacher le mot de passe
             $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
