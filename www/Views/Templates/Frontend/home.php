@@ -7,14 +7,8 @@
 <body>
 
 <div class="">
-    <br><br>
+    <p>Ma page</p>
 </div>
 
 </body>
 </html>
-
-<?php
-
-// header + image background + texte en hover
-
-echo "Home";

@@ -17,24 +17,20 @@ class Main
     public function home(): void
     {
         session_start();
-        if($_SESSION["connected"]){
-            require(BASE_DIR . "/Views/Templates/home.php");
+        if ($_SESSION["connected"]) {
+            require(BASE_DIR . "/Views/Templates/Frontend/home.php");
         }
         else{
-            echo "Veuillez-vous connecter";
+            header("Location: /login");
+            exit();
         }
-    }
-
-    public function getfonts(): array
-    {
-        return $this->config->getAllFonts();
     }
 
     public function config() : void
     {
         session_start();
         if($_SESSION["connected"]){
-            require(BASE_DIR . "/Views/Templates/config_form.php");
+            require(BASE_DIR . "/Views/Templates/Backend/config_form.php");
         }
     }
 }

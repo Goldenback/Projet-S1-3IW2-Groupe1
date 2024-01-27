@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Configuration</title>
+    <style></style>
 </head>
 <body>
 
@@ -36,7 +37,9 @@
 
 <div>
     <br>
-    <a href="#" target="_blank">Voir ma page</a>
+    <a href="/mypage" target="_blank">Voir ma page</a>
+    <br>
+    <a href="/logout"> Se déconnecter</a>
 </div>
 
 </body>

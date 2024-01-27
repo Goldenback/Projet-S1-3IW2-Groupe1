@@ -1,10 +1,6 @@
 /:
-  controller: Main
-  action: home
-
-/config:
-  controller : Main
-  action : config
+  controller: Security
+  action: login
 
 /login:
   controller: Security
@@ -17,3 +13,11 @@
 /register:
   controller: Security
   action: register
+
+/mypage:
+  controller: Main
+  action: home
+
+/config:
+  controller : Main
+  action : config
