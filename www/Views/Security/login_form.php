@@ -2,19 +2,33 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Login</title>
+    <title>Connexion</title>
+    <link rel="stylesheet" href="../../../Front-end/Workspace/dist/css/main.css">
 </head>
 <body>
 
-<form action="/login" method="post">
-    <label for="email">Email :</label>
-    <input type="text" id="email" name="email" required>
+<section class="login-container">
+    <form class="login-form" action="/login" method="post">
+        <h2 class="login-title">Connexion</h2>
 
-    <label for="password">Mot de passe:</label>
-    <input type="password" id="password" name="password" required>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" class="login-input" required>
+        </div>
 
-    <button type="submit">Connexion</button>
-</form>
+        <div class="form-group">
+            <label for="password">Mot de passe</label>
+            <input type="password" id="password" name="password" class="login-input" required>
+        </div>
+
+        <div class="login-links">
+            <a href="/register" class="login-link">Pas de compte ? S'inscrire</a>
+            <a href="/forgot-password" class="login-link">Mot de passe oublié ?</a>
+        </div>
+
+        <button type="submit" class="login-button">Se connecter</button>
+    </form>
+</section>
 
 </body>
 </html>

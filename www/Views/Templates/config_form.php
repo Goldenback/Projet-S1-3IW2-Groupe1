@@ -36,5 +36,7 @@
     <button type="submit">Enregistrer la Configuration</button>
 </form>
 
+<a href="/logout">Se déconnecter</a>
+
 </body>
 </html>

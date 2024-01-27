@@ -27,7 +27,7 @@ class Security
             if ($this->User->authenticateUser($email, $password)) {
                 session_start();
                 $_SESSION["connected"] = true;
-                header("Location: /");
+                header("Location: /Config");
                 exit();
 
             } else {
