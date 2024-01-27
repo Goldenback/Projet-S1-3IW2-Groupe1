@@ -33,7 +33,8 @@
 .login-button {
   width: 100%;
   padding: rem(12);
-  margin-bottom: rem(20);
+  margin-bottom: rem(15);
+  margin-top: rem(12);
   font-size: rem(16);
   background-color: var(--primary-color);
   color: var(--white);
@@ -49,7 +50,7 @@
 .login-links {
   display: flex;
   justify-content: space-between;
-  margin-top: rem(20);
+  margin-top: rem(15);
 }
 
 .login-link {

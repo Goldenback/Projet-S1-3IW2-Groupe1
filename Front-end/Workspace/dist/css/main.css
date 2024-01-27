@@ -218,7 +218,8 @@ img {
 .login-button {
   width: 100%;
   padding: 0.75rem;
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.9375rem;
+  margin-top: 0.75rem;
   font-size: 1rem;
   background-color: var(--primary-color);
   color: var(--white);
@@ -233,7 +234,7 @@ img {
 .login-links {
   display: flex;
   justify-content: space-between;
-  margin-top: 1.25rem;
+  margin-top: 0.9375rem;
 }
 
 .login-link {
@@ -311,7 +312,7 @@ img {
   text-decoration: underline;
 }
 
-#error-message {
+.error-message {
   color: red;
   margin-top: 0.625rem;
 }

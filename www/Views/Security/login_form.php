@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -11,6 +13,15 @@
     <form class="login-form" action="/login" method="post">
         <h2 class="login-title">Connexion</h2>
 
+        <div class="error-message <?php echo isset($_SESSION["error_message"]) ? '' : 'hidden'; ?>">
+            <?php
+            if (isset($_SESSION['error_message'])) {
+                echo $_SESSION['error_message'];
+                unset($_SESSION['error_message']);
+            }
+            ?>
+        </div>
+
         <div class="form-group">
             <label for="email">Email</label>
             <input type="email" id="email" name="email" class="login-input" required>
@@ -21,12 +32,12 @@
             <input type="password" id="password" name="password" class="login-input" required>
         </div>
 
+        <button type="submit" class="login-button">Se connecter</button>
+
         <div class="login-links">
             <a href="/register" class="login-link">Pas de compte ? S'inscrire</a>
             <a href="/forgot-password" class="login-link">Mot de passe oublié ?</a>
         </div>
-
-        <button type="submit" class="login-button">Se connecter</button>
     </form>
 </section>
 

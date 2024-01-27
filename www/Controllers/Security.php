@@ -23,17 +23,16 @@ class Security
             $email = $_POST["email"] ?? '';
             $password = $_POST["password"] ?? '';
 
-            // Vérifiez l'authentification
+            session_start();
+            // Vérifie l'authentification
             if ($this->User->authenticateUser($email, $password)) {
-                session_start();
                 $_SESSION["connected"] = true;
                 header("Location: /Config");
-                exit();
-
             } else {
-                // Authentification échouée, affiche un message d'erreur
-                echo "Authentification échouée. Veuillez réessayer.";
+                $_SESSION["error_message"] = "Email ou mot de passe incorrect !";
+                header("Location: /Login" );
             }
+            exit();
         }
 
         // Ne pas afficher de contenu HTML ou de texte avant header()
@@ -73,8 +72,6 @@ class Security
             if ($this->User->createUser($firstname, $lastname, $email, $hashedPassword, $role)) {
                 header("Location: /login");
                 exit();
-            } else {
-                echo "Erreur lors de l'inscription | réessayer";
             }
         }
 
