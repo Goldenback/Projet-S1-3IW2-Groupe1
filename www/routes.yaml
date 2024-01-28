@@ -14,6 +14,10 @@
   controller: Security
   action: register
 
+/forgot-password:
+  controller: Security
+  action: forgotPWD
+
 /mypage:
   controller: Main
   action: home
