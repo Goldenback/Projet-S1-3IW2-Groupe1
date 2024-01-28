@@ -317,4 +317,51 @@ img {
   margin-top: 0.625rem;
 }
 
+.forgot-password-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 0.9375rem;
+}
+
+.forgot-password-form {
+  background: var(--white);
+  padding: 2.5rem;
+  border-radius: 0.375rem;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 25rem;
+}
+
+.forgot-password-title {
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.forgot-password-input {
+  width: 100%;
+  padding: 0.625rem;
+  margin-bottom: 1rem;
+  border-radius: 0.375rem;
+  border: 0.0625rem solid var(--secondary-color);
+}
+
+.forgot-password-button {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 0.625rem;
+  margin-top: 0.75rem;
+  font-size: 1rem;
+  background-color: var(--primary-color);
+  color: var(--white);
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+}
+.forgot-password-button:hover {
+  background-color: var(--btn-bg-hover-color);
+}
+
 /*# sourceMappingURL=main.css.map */
