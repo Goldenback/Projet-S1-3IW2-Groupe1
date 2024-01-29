@@ -38,7 +38,7 @@
   controller : Main
   action : loadBackendView
 
-/usermanagement:
+/user_management:
   controller : Main
   action : loadBackendView
 

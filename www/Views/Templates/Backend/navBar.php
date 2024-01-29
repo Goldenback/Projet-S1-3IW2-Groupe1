@@ -35,7 +35,7 @@
     </div>
 
     <div class="nav-item">
-        <a href="/usermanagement" class="nav-link">
+        <a href="/user_management" class="nav-link">
             <span class="nav-icon">&#128209;</span>
             <span class="nav-text">Mes Informations</span>
         </a>
