@@ -4,6 +4,9 @@ namespace App\DB;
 
 use PDO;
 
+/**
+ * @method prepare(string $string)
+ */
 Class Database {
 
     public function __construct(){}

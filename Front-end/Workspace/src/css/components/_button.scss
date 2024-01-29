@@ -1,5 +1,5 @@
 .btn{
-    padding: rem(16);
+    padding: var(--pm-md);
     text-decoration: none;
     color: var(--white);
     background-color: var(--btn-bg-color);
@@ -11,10 +11,10 @@
     margin-bottom: rem(20);
 
     &-lg{
-        padding: rem(16) rem(32);
+        padding: var(--pm-lg);
     }
     &-sm{
-        padding: rem(8);
+        padding: var(--pm-sm);
     }
 
     &-primary{
