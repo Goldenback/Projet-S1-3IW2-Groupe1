@@ -21,3 +21,15 @@
 /config:
   controller : Main
   action : config
+
+/contact:
+  controller : Main
+  action : contact
+
+/usermanagement:
+  controller : Main
+  action : usermanagement
+
+/dashboard:
+  controller : Main
+  action : dashboard

@@ -1,24 +1,113 @@
-.navbar{
-    background-color: var(--bg-color);
-    .container{
-        @include flexbox(row, nowrap, space-around, center);
-    }
-    &-title{
-        font-size: var(--title-size);
-        font-family: var(--title-font);
-    }
-    &-links{
-        width: 30%;
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
+
+*, ::before, ::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+}
+
+.l-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    background-color: rgb(28, 27, 59);
+    padding-left: 0;
+    transition: width 0.5s;
+    z-index: 100;
+
+    .navbar_toggle {
         display: flex;
-        justify-content: space-around;
-        font-family: var(--main-font);
-        list-style-type: none;
+        justify-content: flex-end;
+        padding-bottom: 2rem;
+        padding-right: 0.9rem;
+
+        .menu-icon {
+            color: #FFFFFF;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
     }
-    &-links li{font-size: var(--main-size);}
-    hr{
-        color: var(--text-color);
+
+    .nav-item {
+        .nav-link {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start; // Alignement à gauche en mode étendu
+            color: #FFFFFF;
+            text-decoration: none;
+            padding: 1rem;
+
+            .nav-icon {
+                font-size: rem(22);
+                margin-right: rem(15); // l'espacement entre l'icône et le texte
+            }
+
+            .nav-text {
+                font-size: 1.1rem;
+                display: inline; // montre le texte en mode étendu
+            }
+
+            &:hover{
+                transition: 0.2s;
+                background-color: darken(rgb(12,0,53), 10%);
+            }
+        }
+    }
+
+    .logout-section {
+        position: absolute;
+        bottom: 0;
         width: 100%;
-        height: rem(2);
+        padding: 0.5rem 0;
+        text-align: center;
+
+        a {
+            color: var(--white);
+            font-weight: 700;
+            text-decoration: none;
+        }
+    }
+
+    &.active {
+        .nav-link {
+            display: flex;
+            align-items: center;
+            justify-content: right; // Aligner les icônes à droite en mode rétracté
+            color: #FFFFFF;
+            text-decoration: none;
+            padding-right: 0;
+            padding-bottom: 1rem;
+
+            .nav-icon {
+                font-size: 1.5rem;
+            }
+
+            .nav-text {
+                display: none; // Cacher le texte par défaut
+            }
+        }
     }
 }
 
+.l-navbar.active {
+    transform: translateX(rem(-200));
+    transition: 0.2s;
+
+    .nav_logo .nav_text {
+        transform: translateX(rem(100));
+    }
+}
+
+
+@media screen and (min-width: rem(768) ){
+    body {
+        padding-left: rem(250); //  pour le menu étendu
+    }
+
+    .l-navbar {
+        width: rem(250); // Largeur étendue par défaut
+    }
+}
