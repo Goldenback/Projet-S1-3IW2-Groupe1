@@ -14,14 +14,14 @@
     </div>
 
     <div class="nav-item">
-        <a href="/Config" class="nav-link">
+        <a href="/dashboard" class="nav-link">
             <span class="nav-icon">&#128200;</span>
             <span class="nav-text">Dashboard</span>
         </a>
     </div>
 
     <div class="nav-item">
-        <a href="templates" class="nav-link">
+        <a href="/templates" class="nav-link">
             <span class="nav-icon">&#128194;</span>
             <span class="nav-text">Templating</span>
         </a>

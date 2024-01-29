@@ -14,22 +14,34 @@
   controller: Security
   action: register
 
+
+
 /mypage:
   controller: Main
   action: home
-
-/config:
-  controller : Main
-  action : config
 
 /contact:
   controller : Main
   action : contact
 
-/usermanagement:
-  controller : Main
-  action : usermanagement
+
 
 /dashboard:
   controller : Main
-  action : dashboard
+  action : loadBackendView
+
+/templates:
+  controller : Main
+  action : loadBackendView
+
+/comments:
+  controller : Main
+  action : loadBackendView
+
+/usermanagement:
+  controller : Main
+  action : loadBackendView
+
+
+
+/error:

@@ -216,6 +216,7 @@ body {
 }
 
 .user-management-container {
+  align-items: center;
   max-width: 600px;
   margin: 0 auto;
   padding: 20px;
@@ -249,13 +250,13 @@ body {
   padding: 10px;
   border: none;
   border-radius: 4px;
-  background-color: #4CAF50;
+  background-color: rgb(28, 27, 59);
   color: white;
   font-size: 1.1rem;
   cursor: pointer;
 }
 .user-management-container .user-info-form button[type=submit]:hover {
-  background-color: #3d8b40;
+  background-color: #0b0b18;
 }
 
 *, ::before, ::after {

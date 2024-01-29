@@ -8,8 +8,10 @@
 <body>
 
 <section class="user-management-container">
+
     <h2>Gestion de l'Utilisateur</h2>
-    <form class="user-info-form">
+
+    <form class="user-info-form" action="/usermanagement">
         <div class="form-group">
             <label for="username">Nom d'utilisateur:</label>
             <input type="text" id="username" name="username">
@@ -32,6 +34,7 @@
         </div>
         <button type="submit">Mettre à jour</button>
     </form>
+
 </section>
 </body>
 </html>
