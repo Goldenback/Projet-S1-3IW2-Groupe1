@@ -1,0 +1,55 @@
+.admin-sidebar {
+  width: 250px;
+  background: #333;
+  color: white;
+  height: 100vh;
+
+  .sidebar-toggle {
+    text-align: center;
+    button {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 24px;
+      margin: 10px;
+      cursor: pointer;
+    }
+  }
+
+  .sidebar-menu {
+    list-style: none;
+    padding: 0;
+
+    .menu-item {
+      padding: 10px 15px;
+
+      a {
+        color: white;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+
+        .icon {
+          margin-right: 10px;
+        }
+
+        &:hover {
+          background-color: darken(#333, 10%);
+        }
+      }
+    }
+  }
+}
+
+.admin-sidebar.collapsed {
+  width: 50px;
+
+  .sidebar-menu .menu-item a {
+    justify-content: center;
+
+    .icon {
+      margin: 0;
+    }
+  }
+}
+

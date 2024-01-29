@@ -30,7 +30,29 @@ class Main
     {
         session_start();
         if($_SESSION["connected"]){
-            require(BASE_DIR . "/Views/Templates/Backend/config_form.php");
+            require(BASE_DIR . "/Views/Templates/Backend/navBar.php");
+            require(BASE_DIR . "/Views/Templates/Backend/dashboard.php");
         }
     }
+
+    public function contact() : void
+    {
+        session_start();
+        if($_SESSION["connected"]){
+            require(BASE_DIR . "/Views/Templates/Frontend/contact.php");
+        }
+    }
+
+    //faire une fonction qui va rediriger toutes les vues du backoffice
+
+    public function usermanagement() : void
+    {
+        session_start();
+        if($_SESSION["connected"]){
+            require(BASE_DIR . "/Views/Templates/Backend/navBar.php");
+            require(BASE_DIR . "/Views/Templates/Backend/user_management.php");
+        }
+    }
+
+
 }
