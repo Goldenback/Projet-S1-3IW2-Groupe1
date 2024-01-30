@@ -4,6 +4,11 @@
 @import "partials/globals";
 @import "partials/mixin";
 
-@import "components/button";
-@import "components/hero";
-@import "components/cta";
+@import "layout/navbar";
+
+@import "pages/login";
+@import "pages/register";
+@import "pages/forgotpassword";
+
+@import "pages/usermanagement";
+@import "pages/dashboard";

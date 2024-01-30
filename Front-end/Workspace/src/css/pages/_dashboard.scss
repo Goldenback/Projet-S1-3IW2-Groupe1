@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+$primary-color: #4A90E2; // Bleu
+$secondary-color: #50E3C2; // Vert
+$background-color: #F4F4F4;
+$text-color: #333;
+$font-family: 'Roboto', sans-serif;
+
+.dashboard-container {
+  font-family: $font-family;
+  background-color: $background-color;
+  color: $text-color;
+  padding: 20px;
+
+  h2 {
+    color: $primary-color;
+    margin-bottom: 20px;
+  }
+
+  .chart-container,
+  .editor-container,
+  .datatable-container {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+
+    // Ajouter des transitions pour les interactions
+    transition: all 0.3s ease;
+
+    &:hover {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    }
+  }
+
+  .chart-container {
+    height: 400px; // Ajuster selon besoin
+  }
+
+  .editor-container textarea {
+    width: 100%;
+    min-height: 200px;
+  }
+
+  .datatable-container table {
+    width: 100%;
+  }
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+  .dashboard-container {
+    padding: 10px;
+    .chart-container,
+    .editor-container,
+    .datatable-container {
+      padding: 10px;
+    }
+  }
+}

@@ -108,32 +108,32 @@ body {
 }
 
 .navbar {
-    margin-left: rem(885);
-    justify-content: center;
     transition: 0.5s;
-
+    padding-left: rem(250);
     &.navbar-active {
-        margin-left: rem(780); // marge quand le navbar est actif (donc fermé)
+        margin-left: rem(-200); // marge quand le navbar est actif (donc fermé)
         transition: 0.5s;
     }
 }
 
-@media screen and (max-width: rem(1150)) { // Pour les écrans plus petits
-    .l-navbar {
-        left: rem(-200);
+@media screen and (max-width: rem(768)) { // responsive
+    .l-navbar .nav_logo .nav_text{ //responsive du navbar
+        left: 0;
+        .nav_logo .nav_text {
+            transform: translateX(rem(100));
+            transition: 0.5s;
+        }
         &.active {
             left: 0;
         }
     }
 
-    .navbar {
-        margin: rem(100);
-        position: relative;
+    .navbar {   //responsive du contenue du back-office
         transition: 0.5s;
-
+        margin-left: rem(-200);
         &.navbar-active {
-            margin: rem(100);
             transition: 0.5s;
         }
     }
+
 }
