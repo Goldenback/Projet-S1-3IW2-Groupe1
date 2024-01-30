@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 
+
 body {
     font-family: 'Nunito', sans-serif;
 }
@@ -13,8 +14,8 @@ body {
     top: 0;
     left: 0;
     height: 100vh;
+    width: rem(250); // Largeur par défaut
     background-color: rgb(28, 27, 59);
-    padding-left: 0;
     transition: width 0.5s;
     z-index: 100;
 
@@ -42,7 +43,7 @@ body {
 
             .nav-icon {
                 font-size: rem(22);
-                margin-right: rem(15); // l'espacement entre l'icône et le texte
+                margin-right: rem(8); // l'espacement entre l'icône et le texte
             }
 
             .nav-text {
@@ -92,22 +93,47 @@ body {
     }
 }
 
-.l-navbar.active {
-    transform: translateX(rem(-200));
-    transition: 0.2s;
+.l-navbar {
+    transition: 0.5s;
 
-    .nav_logo .nav_text {
-        transform: translateX(rem(100));
+    &.l-navbar.active {
+        transform: translateX(rem(-200));
+        transition: 0.5s;
+
+        .nav_logo .nav_text {
+            transform: translateX(rem(100));
+            transition: 0.5s;
+        }
     }
 }
 
+.navbar {
+    margin-left: rem(885);
+    justify-content: center;
+    transition: 0.5s;
 
-@media screen and (min-width: rem(768) ){
-    body {
-        padding-left: rem(250); //  pour le menu étendu
+    &.navbar-active {
+        margin-left: rem(780); // marge quand le navbar est actif (donc fermé)
+        transition: 0.5s;
+    }
+}
+
+@media screen and (max-width: rem(1150)) { // Pour les écrans plus petits
+    .l-navbar {
+        left: rem(-200);
+        &.active {
+            left: 0;
+        }
     }
 
-    .l-navbar {
-        width: rem(250); // Largeur étendue par défaut
+    .navbar {
+        margin: rem(100);
+        position: relative;
+        transition: 0.5s;
+
+        &.navbar-active {
+            margin: rem(100);
+            transition: 0.5s;
+        }
     }
 }

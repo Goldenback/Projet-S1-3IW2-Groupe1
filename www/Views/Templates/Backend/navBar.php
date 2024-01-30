@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="../../../Front-end/Workspace/dist/css/main.css">
 </head>
 
-<body id="body">
+<body id="body" class="navbar">
 
 <nav class="l-navbar">
     <div id="menu-toggle" class="navbar_toggle">
@@ -61,13 +61,15 @@
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         var navbarToggle = document.querySelector('.navbar_toggle');
-        var navbar = document.querySelector('.l-navbar');
+        var body = document.querySelector('body');
 
         navbarToggle.addEventListener('click', function () {
-            navbar.classList.toggle('active');
+            document.querySelector('.l-navbar').classList.toggle('active');
+            body.classList.toggle('navbar-active');
         });
     });
 </script>
+
 
 </body>
 </html>

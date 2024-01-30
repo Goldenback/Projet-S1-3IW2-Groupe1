@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;700;900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&family=Oswald:wght@200;300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 /*Function #1*/
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
 :root {
   /*Color*/
   --text-color:#000;
@@ -45,99 +44,6 @@ img {
   height: auto;
 }
 
-*, ::before, ::after {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Nunito", sans-serif;
-}
-
-.l-navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  background-color: rgb(28, 27, 59);
-  padding-left: 0;
-  transition: width 0.5s;
-  z-index: 100;
-}
-.l-navbar .navbar_toggle {
-  display: flex;
-  justify-content: flex-end;
-  padding-bottom: 2rem;
-  padding-right: 0.9rem;
-}
-.l-navbar .navbar_toggle .menu-icon {
-  color: #FFFFFF;
-  font-size: 1.5rem;
-  cursor: pointer;
-}
-.l-navbar .nav-item .nav-link {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  color: #FFFFFF;
-  text-decoration: none;
-  padding: 1rem;
-}
-.l-navbar .nav-item .nav-link .nav-icon {
-  font-size: 1.375rem;
-  margin-right: 0.9375rem;
-}
-.l-navbar .nav-item .nav-link .nav-text {
-  font-size: 1.1rem;
-  display: inline;
-}
-.l-navbar .nav-item .nav-link:hover {
-  transition: 0.2s;
-  background-color: #000002;
-}
-.l-navbar .logout-section {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  padding: 0.5rem 0;
-  text-align: center;
-}
-.l-navbar .logout-section a {
-  color: var(--white);
-  font-weight: 700;
-  text-decoration: none;
-}
-.l-navbar.active .nav-link {
-  display: flex;
-  align-items: center;
-  justify-content: right;
-  color: #FFFFFF;
-  text-decoration: none;
-  padding-right: 0;
-  padding-bottom: 1rem;
-}
-.l-navbar.active .nav-link .nav-icon {
-  font-size: 1.5rem;
-}
-.l-navbar.active .nav-link .nav-text {
-  display: none;
-}
-
-.l-navbar.active {
-  transform: translateX(-12.5rem);
-  transition: 0.2s;
-}
-.l-navbar.active .nav_logo .nav_text {
-  transform: translateX(6.25rem);
-}
-
-@media screen and (min-width: 48rem) {
-  body {
-    padding-left: 15.625rem;
-  }
-  .l-navbar {
-    width: 15.625rem;
-  }
-}
 .btn {
   padding: var(--pm-md);
   text-decoration: none;
@@ -382,6 +288,122 @@ body {
   margin-top: 0.625rem;
 }
 
+*, ::before, ::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+}
+
+.l-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 15.625rem;
+  background-color: rgb(28, 27, 59);
+  transition: width 0.5s;
+  z-index: 100;
+}
+.l-navbar .navbar_toggle {
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 2rem;
+  padding-right: 0.9rem;
+}
+.l-navbar .navbar_toggle .menu-icon {
+  color: #FFFFFF;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.l-navbar .nav-item .nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: #FFFFFF;
+  text-decoration: none;
+  padding: 1rem;
+}
+.l-navbar .nav-item .nav-link .nav-icon {
+  font-size: 1.375rem;
+  margin-right: 0.5rem;
+}
+.l-navbar .nav-item .nav-link .nav-text {
+  font-size: 1.1rem;
+  display: inline;
+}
+.l-navbar .nav-item .nav-link:hover {
+  transition: 0.2s;
+  background-color: #000002;
+}
+.l-navbar .logout-section {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 0.5rem 0;
+  text-align: center;
+}
+.l-navbar .logout-section a {
+  color: var(--white);
+  font-weight: 700;
+  text-decoration: none;
+}
+.l-navbar.active .nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  color: #FFFFFF;
+  text-decoration: none;
+  padding-right: 0;
+  padding-bottom: 1rem;
+}
+.l-navbar.active .nav-link .nav-icon {
+  font-size: 1.5rem;
+}
+.l-navbar.active .nav-link .nav-text {
+  display: none;
+}
+
+.l-navbar {
+  transition: 0.5s;
+}
+.l-navbar.l-navbar.active {
+  transform: translateX(-12.5rem);
+  transition: 0.5s;
+}
+.l-navbar.l-navbar.active .nav_logo .nav_text {
+  transform: translateX(6.25rem);
+  transition: 0.5s;
+}
+
+.navbar {
+  margin-left: 55.3125rem;
+  justify-content: center;
+  transition: 0.5s;
+}
+.navbar.navbar-active {
+  margin-left: 48.75rem;
+  transition: 0.5s;
+}
+
+@media screen and (max-width: 71.875rem) {
+  .l-navbar {
+    left: -12.5rem;
+  }
+  .l-navbar.active {
+    left: 0;
+  }
+  .navbar {
+    margin: 6.25rem;
+    position: relative;
+    transition: 0.5s;
+  }
+  .navbar.navbar-active {
+    margin: 6.25rem;
+    transition: 0.5s;
+  }
+}
 .forgot-password-container {
   display: flex;
   align-items: center;
@@ -429,134 +451,40 @@ body {
   background-color: var(--btn-bg-hover-color);
 }
 
-*, ::before, ::after {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Nunito", sans-serif;
-}
-
-.l-navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  background-color: rgb(28, 27, 59);
-  padding-left: 0;
-  transition: width 0.5s;
-  z-index: 100;
-}
-.l-navbar .navbar_toggle {
-  display: flex;
-  justify-content: flex-end;
-  padding-bottom: 2rem;
-  padding-right: 0.9rem;
-}
-.l-navbar .navbar_toggle .menu-icon {
-  color: #FFFFFF;
-  font-size: 1.5rem;
-  cursor: pointer;
-}
-.l-navbar .nav-item .nav-link {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  color: #FFFFFF;
-  text-decoration: none;
-  padding: 1rem;
-}
-.l-navbar .nav-item .nav-link .nav-icon {
-  font-size: 1.375rem;
-  margin-right: 0.9375rem;
-}
-.l-navbar .nav-item .nav-link .nav-text {
-  font-size: 1.1rem;
-  display: inline;
-}
-.l-navbar .nav-item .nav-link:hover {
-  transition: 0.2s;
-  background-color: #000002;
-}
-.l-navbar .logout-section {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  padding: 0.5rem 0;
-  text-align: center;
-}
-.l-navbar .logout-section a {
-  color: var(--white);
-  font-weight: 700;
-  text-decoration: none;
-}
-.l-navbar.active .nav-link {
-  display: flex;
-  align-items: center;
-  justify-content: right;
-  color: #FFFFFF;
-  text-decoration: none;
-  padding-right: 0;
-  padding-bottom: 1rem;
-}
-.l-navbar.active .nav-link .nav-icon {
-  font-size: 1.5rem;
-}
-.l-navbar.active .nav-link .nav-text {
-  display: none;
-}
-
-.l-navbar.active {
-  transform: translateX(-12.5rem);
-  transition: 0.2s;
-}
-.l-navbar.active .nav_logo .nav_text {
-  transform: translateX(6.25rem);
-}
-
-@media screen and (min-width: 48rem) {
-  body {
-    padding-left: 15.625rem;
-  }
-  .l-navbar {
-    width: 15.625rem;
-  }
-}
 .user-management-container {
   align-items: center;
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
+  max-width: 37.5rem;
+  padding: 1.25rem;
   background-color: #f5f5f5;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
 }
 .user-management-container h2 {
   text-align: center;
   color: #333;
 }
 .user-management-container .user-info-form .form-group {
-  margin-bottom: 15px;
+  margin-bottom: 0.9375rem;
 }
 .user-management-container .user-info-form .form-group label {
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 0.3125rem;
 }
 .user-management-container .user-info-form .form-group input[type=text],
 .user-management-container .user-info-form .form-group input[type=email],
 .user-management-container .user-info-form .form-group input[type=password],
 .user-management-container .user-info-form .form-group select {
   width: 100%;
-  padding: 8px;
-  border-radius: 4px;
-  border: 1px solid #ddd;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  border: 0.0625rem solid #ddd;
   font-size: 1rem;
 }
 .user-management-container .user-info-form button[type=submit] {
   width: 100%;
-  padding: 10px;
+  padding: 0.625rem;
   border: none;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   background-color: rgb(28, 27, 59);
   color: white;
   font-size: 1.1rem;

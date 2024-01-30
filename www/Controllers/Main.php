@@ -37,8 +37,8 @@ class Main
             $uriView = explode('/', trim($uri, '/'));
 
             if(file_exists(BASE_DIR . "/Views/Templates/Backend/" .$uriView[0].".php")){
-                include(BASE_DIR . "/Views/Templates/Backend/navBar.php");
                 include(BASE_DIR . "/Views/Templates/Backend/" .$uriView[0].".php");
+                include(BASE_DIR . "/Views/Templates/Backend/navBar.php");
             }
             else{
                 print $_SESSION["error_message"] = "Pas de vue trouvé";
