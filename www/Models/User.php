@@ -159,12 +159,11 @@ class User
 
 
 
-
     public function authenticateUser(String $email, String $password): bool {
 
         $pdo = $this->database->getDatabaseConnection();
 
-        $stmt = $pdo->prepare("SELECT * FROM users WHERE email = :email");
+        $stmt = $pdo->prepare("SELECT pwd FROM users WHERE email = :email");
         $stmt->execute(['email' => $email]);
         $user = $stmt->fetch();
 
@@ -175,15 +174,16 @@ class User
         return false;
     }
 
-    public function createUser(String $firstname, String $lastname, String $email, String $password, String $role): bool
+    public function createUser(String $firstname, String $lastname, String $email, String $password, String $role, String $ActivationToken): bool
     {
         $pdo = $this->database->getDatabaseConnection();
 
-        $stmt = $pdo->prepare("INSERT INTO users (Firstname, Lastname, email, pwd, Role, is_validated, created_at) VALUES (?, ?, ?, ?, ?, ?, NOW())");
-        return $stmt->execute([$firstname, $lastname, $email, $password, $role, false]);
+        $stmt = $pdo->prepare("INSERT INTO users (Firstname, Lastname, email, pwd, Role, is_validated, created_at, updated_at, deleted_at, token) VALUES (?, ?, ?, ?, ?, FALSE, NOW(), NULL, NULL, ?)");
+        return $stmt->execute([$firstname, $lastname, $email, $password, $role, $ActivationToken]);
     }
 
-    public function EmailExists(String $email): bool {
+    public function EmailExists(String $email): bool
+    {
         $pdo = $this->database->getDatabaseConnection();
 
         $stmt = $pdo->prepare("SELECT COUNT(*) FROM users WHERE email = ?");
@@ -196,6 +196,49 @@ class User
         // Check if the email exists
         return $result[0] > 0;
     }
+
+
+
+    // Validation d'un compte à sa création
+    public function isTokenValid(string $token): bool //vérifie le token
+    {
+        $pdo = $this->database->getDatabaseConnection();
+        $stmt = $pdo->prepare("SELECT COUNT(*) FROM users WHERE token = :token");
+        $stmt->execute(['token' => $token]);
+        return $stmt->fetchColumn() > 0;
+    }
+
+    public function activateUser(string $token): bool //active l'utilisateur
+    {
+        $pdo = $this->database->getDatabaseConnection();
+        $stmt = $pdo->prepare("UPDATE users SET is_validated = TRUE, token = NULL WHERE token = :token");
+        $stmt->execute(['token' => $token]);
+        return $stmt->rowCount() > 0;
+    }
+
+    public function is_Validated($email): bool  //vérifie si il est activé
+    {
+        // Assurez-vous de sécuriser la valeur de l'e-mail
+        $email = htmlspecialchars($email, ENT_QUOTES, 'UTF-8');
+
+        // Requête SQL pour vérifier si le compte est activé
+        $pdo = $this->database->getDatabaseConnection();
+
+        $stmt = $pdo->prepare("SELECT is_validated FROM users WHERE email = :email");
+        $stmt->bindParam(':email', $email, PDO::PARAM_STR);
+        $stmt->execute();
+
+        // Récupère le résultat de la requête
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        // Vérifie si le compte est activé
+        if ($result && $result['is_validated'] == 'true') {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
 
 
 }

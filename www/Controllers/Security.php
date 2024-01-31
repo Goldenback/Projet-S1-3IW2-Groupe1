@@ -16,7 +16,6 @@ use PHPMailer\PHPMailer\SMTP;
 
 class Security
 {
-
     private User $User;
 
     public function __construct(){
@@ -32,21 +31,24 @@ class Security
             // Récupère les données du formulaire de connexion
             $email = $_POST["email"] ?? '';
             $password = $_POST["password"] ?? '';
-
             session_start();
             // Vérifie l'authentification
             if ($this->User->authenticateUser($email, $password)) {
-                $_SESSION["connected"] = true;
-                header("Location: /config");
-                exit();
-
+                if($this->User->is_Validated($email)){
+                    $_SESSION["connected"] = true;
+                    header("Location: /config");
+                    exit();
+                }
+                else{
+                    $_SESSION["error_message"] = "Compte non activé";
+                    header("Location: /Login");
+                }
             } else {
                 $_SESSION["error_message"] = "Email ou mot de passe incorrect !";
                 header("Location: /Login" );
             }
             exit();
         }
-
         // Ne pas afficher de contenu HTML ou de texte avant header()
         require(BASE_DIR . "/Views/Security/login_form.php");
     }
@@ -65,7 +67,7 @@ class Security
         exit();
     }
 
-    public function register(): void
+    public function register(): void //OK
     {
         // Vérifie si le formulaire a été envoyé
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -77,18 +79,72 @@ class Security
 
             $role = 'user'; //à changer
 
-            // pour hacher le mot de passe
             $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+            // Génère un token unique pour l'activation de compte
+            $activationToken = bin2hex(random_bytes(16));
 
-            //ajoute dans la bdd
-            if ($this->User->createUser($firstname, $lastname, $email, $hashedPassword, $role)) {
-                header("Location: /login");
-                exit();
+            // Ajoute l'utilisateur en base de données avec le token
+            if ($this->User->createUser($firstname, $lastname, $email, $hashedPassword, $role, $activationToken)) {
+                // Envoie l'email d'activation
+                $mail = new PHPMailer(true);
+                try {
+                    // Paramètres du serveur
+                    $mail->isSMTP();
+                    $mail->Host = 'smtp.gmail.com';
+                    $mail->SMTPAuth = true;
+                    $mail->Username = 'toma11chang@gmail.com';
+                    $mail->Password = 'cxcp numx wtqr acvt';
+                    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+                    $mail->Port = 587;
+
+                    $mail->setFrom('from@ChallengeStack.com', 'Challenge Stack 1');
+                    $mail->addAddress($email);
+
+                    // Contenu
+                    $mail->isHTML(true);
+                    $mail->Subject = 'Activation de votre compte - Challenge Stack';
+                    $mail->Body = 'Veuillez cliquer sur ce lien pour activer votre compte : <a href="localhost/activate?token=' . $activationToken . '">Activer mon compte</a>';
+
+                    $mail->send();
+                    header("Location: /login");
+                } catch (Exception $e) {
+                    $_SESSION["error_message"] = "Impossible d'envoyer le mail d'activation.";
+                }
+            } else {
+                $_SESSION["error_message"] = "Une erreur s'est produite lors de l'inscription.";
             }
         }
-
         require(BASE_DIR . "/Views/Security/register_form.php");
     }
+
+    public function activate(): void
+    {
+        session_start();
+
+        // Vérifie si le token est fourni dans l'URL
+        if (!empty($_GET['token'])) {
+            $token = $_GET['token'];
+
+            // Vérifie si le token existe dans la base de données
+            if ($this->User->isTokenValid($token)) {
+                // Active le compte utilisateur
+                if ($this->User->activateUser($token)) {
+                    $_SESSION["success_message"] = "Votre compte a été activé avec succès. Vous pouvez maintenant vous connecter.";
+                    header("Location: /login");
+                } else {
+                    $_SESSION["error_message"] = "Une erreur s'est produite lors de l'activation de votre compte.";
+                    header("Location: /error");
+                }
+            } else {
+                $_SESSION["error_message"] = "Lien d'activation invalide ou expiré.";
+                header("Location: /error");
+            }
+        } else {
+            $_SESSION["error_message"] = "Aucun token d'activation fourni.";
+            header("Location: /error");
+        }
+    }
+
 
     /**
      * @throws RandomException

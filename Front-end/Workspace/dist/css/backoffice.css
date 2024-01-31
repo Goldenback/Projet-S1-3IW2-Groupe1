@@ -295,6 +295,11 @@ body {
   margin-top: 0.625rem;
 }
 
+.success-message {
+  color: #308034;
+  margin-top: 0.625rem;
+}
+
 .forgot-password-container {
   display: flex;
   align-items: center;

@@ -22,6 +22,15 @@
             ?>
         </div>
 
+        <div class="success-message <?php echo isset($_SESSION["success_message"]) ? '' : 'hidden'; ?>">
+            <?php
+            if (isset($_SESSION['success_message'])) {
+                echo $_SESSION['success_message'];
+                unset($_SESSION['success_message']);
+            }
+            ?>
+        </div>
+
         <div class="form-group">
             <label for="email">Email</label>
             <input type="email" id="email" name="email" class="login-input" required>

@@ -15,6 +15,10 @@
   controller: Security
   action: register
 
+/activate:
+  controller: Security
+  action : activate
+
 /forgot-password:
   controller: Security
   action: forgotPWD
