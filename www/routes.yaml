@@ -41,11 +41,12 @@
 
 #Controller Main -> Pour la vue du Backend
 
+#pour admin seulement
 /dashboard:
   controller : Main
   action : loadView
 
-
+#pour utilisateur
 /config :
   controller : Main
   action : loadView

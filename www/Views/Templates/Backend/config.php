@@ -10,8 +10,8 @@
 <section class="config-container">
 
     <h1>Configuration des Pages</h1>
+    <a href="/home" target="_blank" class="button-page">Voir mon site</a><br>
 
-    <!-- Onglets pour chaque type de page -->
     <div class="tabs">
         <button class="tab-button" onclick="openTab('home')">Accueil</button>
         <button class="tab-button" onclick="openTab('about')">À Propos</button>
@@ -36,11 +36,11 @@
             </div>
 
             <div class="form-group">
-                <label for="aboutDescription">Image principale:</label>
-                <input type="text" id="aboutDescription" name="aboutDescription">
+                <label for="aboutImgUrl">Image principale:</label>
+                <input type="text" id="aboutImgUrl" name="aboutImgUrl">
             </div>
 
-            <br><hr>
+            <br>
 
             <h3>Image + description</h3>
             <div class="form-group">
@@ -52,14 +52,12 @@
                 <input type="text" id="textDesc" name="textDesc">
             </div>
             <div class="form-group">
-                <label for="imageDesc">URL image :</label>
-                <input type="text" id="imageDesc" name="imageDesc">
+                <label for="imageDescUrl">URL image :</label>
+                <input type="text" id="imageDescUrl" name="imageDescUrl">
             </div>
 
 
             <button class="submit-button" type="submit">Enregistrer</button>
-            <a href="/home" target="_blank" class="submit-button">Voir la page d'accueil</a>
-
         </form>
     </div>
 
@@ -77,7 +75,7 @@
                 <input type="text" id="aboutDescription" name="aboutDescription">
             </div>
 
-            <br><hr>
+            <br>
 
             <h3>Image + description</h3>
             <div class="form-group">
@@ -100,10 +98,44 @@
     <div id="projects" class="tab-content">
         <h3>Configuration de la Page Projets</h3>
         <form class="config-form">
+
+            <h3>Project 1</h3>
+
             <div class="form-group">
-                <label for="projectDesc">Description des Projets:</label>
-                <textarea id="projectDesc" name="projectDesc"></textarea>
+                <label for="projectTitle">Titre :</label>
+                <input type="text" id="projectTitle" name="projectTitle">
             </div>
+            <div class="form-group">
+                <label for="projectDesc">Description :</label>
+                <input type="text" id="projectDesc" name="projectDesc">
+            </div>
+            <div class="form-group">
+                <label for="projectImageUrl">URL image :</label>
+                <input type="text" id="projectImageUrl" name="projectImageUrl">
+            </div>
+
+
+            <h3>Project Gallery</h3>
+            <div class="form-group">
+                <label for="projectGalleryImageUrl">URL image :</label>
+                <input type="text" id="projectGalleryImageUrl" name="projectGalleryImageUrl">
+            </div>
+
+            <h3>Project 2</h3>
+
+            <div class="form-group">
+                <label for="projectTitle2">Titre :</label>
+                <input type="text" id="projectTitle2" name="projectTitle2">
+            </div>
+            <div class="form-group">
+                <label for="projectDesc2">Description :</label>
+                <input type="text" id="projectDesc2" name="projectDesc2">
+            </div>
+            <div class="form-group">
+                <label for="projectImage2">URL image :</label>
+                <input type="text" id="projectImage2" name="projectImage2">
+            </div>
+
             <button class="submit-button" type="submit">Enregistrer</button>
         </form>
     </div>
@@ -118,13 +150,13 @@
             </div>
 
             <div class="form-group">
-                <label for="email">Téléphone &#128222;:</label>
-                <input type="text" id="email" name="email">
+                <label for="phone">Téléphone &#128222;:</label>
+                <input type="text" id="phone" name="phone">
             </div>
 
             <div class="form-group">
-                <label for="email">Office &#128188;:</label>
-                <input type="text" id="email" name="email">
+                <label for="office">Office &#128188;:</label>
+                <input type="text" id="office" name="office">
             </div>
 
             <button class="submit-button" type="submit">Enregistrer</button>

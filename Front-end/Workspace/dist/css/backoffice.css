@@ -2,7 +2,6 @@
 /*Function #1*/
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap");
 :root {
   /*Color*/
   --text-color:#000;
@@ -436,11 +435,20 @@ body {
   font-family: "Nunito", sans-serif;
   background-color: #F4F4F4;
   color: #ffffff;
-  max-width: 800px;
+  max-width: 50rem;
   margin: 0 auto;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1.25rem;
+  border-radius: 0.625rem;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+.config-container a {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+}
+.config-container a:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }
 .config-container h1, .config-container h3 {
   color: rgb(49, 48, 103);
@@ -452,13 +460,13 @@ body {
 .config-container .tabs {
   display: flex;
   justify-content: space-around;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 }
 .config-container .tabs .tab-button {
   background-color: rgb(46, 45, 96);
   border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
+  padding: 0.625rem 1.25rem;
+  border-radius: 0.3125rem;
   color: #ffffff;
   cursor: pointer;
 }
@@ -467,15 +475,15 @@ body {
 }
 .config-container .tab-content {
   display: none;
-  padding: 20px;
-  border: 1px solid rgb(46, 45, 96);
-  border-radius: 5px;
+  padding: 1.25rem;
+  border: 0.0625rem solid rgb(46, 45, 96);
+  border-radius: 0.3125rem;
 }
 .config-container .submit-button {
   background-color: rgb(46, 45, 96);
   border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
+  padding: 0.625rem 1.25rem;
+  border-radius: 0.3125rem;
   color: #ffffff;
   cursor: pointer;
   text-decoration: none;
@@ -486,19 +494,19 @@ body {
 }
 
 .config-form .form-group {
-  margin-bottom: 15px;
+  margin-bottom: 0.9375rem;
 }
 .config-form .form-group label {
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 0.3125rem;
 }
 .config-form .form-group input[type=text],
 .config-form .form-group input[type=email],
 .config-form .form-group textarea {
   width: 100%;
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  padding: 0.5rem;
+  border: 0.0625rem solid #ccc;
+  border-radius: 0.25rem;
 }
 
 /*# sourceMappingURL=backoffice.css.map */
