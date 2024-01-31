@@ -432,11 +432,10 @@ body {
   }
 }
 .config-container {
-  font-family: "Nunito", sans-serif;
   background-color: #F4F4F4;
   color: #ffffff;
-  max-width: 50rem;
-  margin: 0 auto;
+  width: 100%;
+  margin: 0;
   padding: 1.25rem;
   border-radius: 0.625rem;
   box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
@@ -451,11 +450,11 @@ body {
   cursor: pointer;
 }
 .config-container h1, .config-container h3 {
-  color: rgb(49, 48, 103);
+  color: rgb(65, 64, 134);
   text-align: center;
 }
 .config-container label {
-  color: rgb(49, 48, 103);
+  color: rgb(65, 64, 134);
 }
 .config-container .tabs {
   display: flex;
@@ -507,6 +506,66 @@ body {
   padding: 0.5rem;
   border: 0.0625rem solid #ccc;
   border-radius: 0.25rem;
+}
+
+.comments-management-container {
+  width: 100%;
+  margin: 0;
+  padding: 20px;
+  background-color: #f5f5f5;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.comments-management-container h2 {
+  text-align: center;
+  color: rgb(65, 64, 134);
+}
+.comments-management-container .comments-list {
+  width: 100%;
+}
+.comments-management-container .comments-list .comment-item {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+.comments-management-container .comments-list .comment-item .comment-content .comment-text {
+  font-size: 1rem;
+}
+.comments-management-container .comments-list .comment-item .comment-content .comment-info {
+  font-size: 0.8rem;
+  color: #666;
+}
+.comments-management-container .comments-list .comment-item .comment-content .comment-info .comment-author,
+.comments-management-container .comments-list .comment-item .comment-content .comment-info .comment-date {
+  margin-right: 10px;
+}
+.comments-management-container .comments-list .comment-item .comment-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+.comments-management-container .comments-list .comment-item .comment-actions .btn {
+  margin-left: 10px;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border: none;
+}
+.comments-management-container .comments-list .comment-item .comment-actions .btn:hover {
+  background-color: #c4c4c4;
+}
+.comments-management-container .comments-list .comment-item .comment-actions .approve-comment {
+  background-color: #4CAF50;
+  color: white;
+}
+.comments-management-container .comments-list .comment-item .comment-actions .delete-comment {
+  background-color: #F44336;
+  color: white;
+}
+
+body {
+  margin: 0;
 }
 
 /*# sourceMappingURL=backoffice.css.map */

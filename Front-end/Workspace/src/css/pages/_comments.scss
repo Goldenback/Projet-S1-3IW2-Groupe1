@@ -1,0 +1,65 @@
+.comments-management-container {
+  width: 100%; // Largeur complète
+  margin: 0; // Aucune marge extérieure
+  padding: 20px; // Garde un padding interne
+  background-color: #f5f5f5;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  h2 {
+    text-align: center;
+    color: rgb(65, 64, 134);
+  }
+
+  .comments-list {
+    width: 100%; // Largeur complète de la liste des commentaires
+
+    .comment-item {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      padding: 15px;
+      margin-bottom: 15px;
+
+      .comment-content {
+        .comment-text {
+          font-size: 1rem;
+        }
+
+        .comment-info {
+          font-size: 0.8rem;
+          color: #666;
+
+          .comment-author,
+          .comment-date {
+            margin-right: 10px;
+          }
+        }
+      }
+
+      .comment-actions {
+        display: flex;
+        justify-content: flex-end;
+
+        .btn {
+          margin-left: 10px;
+          padding: 5px 10px;
+          border-radius: 4px;
+          cursor: pointer;
+          transition: background-color 0.3s;
+          border: none;
+
+          &:hover {
+            background-color: darken(#ddd, 10%);
+          }
+        }
+
+        .approve-comment { background-color: #4CAF50; color: white; }
+        .delete-comment { background-color: #F44336; color: white; }
+      }
+    }
+  }
+}
+
+body {
+  margin: 0; // Assurez-vous que le body n'a pas de marge
+}

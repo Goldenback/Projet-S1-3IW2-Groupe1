@@ -1,15 +1,13 @@
-$primary-color: rgb(49, 48, 103);
+$primary-color: rgb(65, 64, 134);
 $secondary-color: rgb(46, 45, 96);
 $background-color: #F4F4F4;
 $text-color: #ffffff;
-$font-family: 'Nunito', sans-serif;
 
 .config-container {
-  font-family: $font-family;
   background-color: $background-color;
   color: $text-color;
-  max-width: rem(800);
-  margin: 0 auto;
+  width: 100%;
+  margin: 0;
   padding: rem(20);
   border-radius: rem(10);
   box-shadow: 0 rem(4) rem(8) rgba(0, 0, 0, 0.1);

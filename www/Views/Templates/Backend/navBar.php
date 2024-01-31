@@ -14,7 +14,7 @@
     </div>
 
     <div class="nav-item">
-        <a href="/config" target="blank" class="nav-link">
+        <a href="/config" class="nav-link">
             <span class="nav-icon">&#128221;</span>
             <span class="nav-text">Configuration</span>
         </a>
