@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Mot de passe oublié</title>
-    <link rel="stylesheet" href="../../../Front-end/Workspace/dist/css/main.css"/>
+    <link rel="stylesheet" href="../../../Front-end/Workspace/dist/css/backoffice.css"/>
 </head>
 
 <body>

@@ -2,6 +2,7 @@
 /*Function #1*/
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap");
 :root {
   /*Color*/
   --text-color:#000;
@@ -430,6 +431,74 @@ body {
   .dashboard-container .datatable-container {
     padding: 10px;
   }
+}
+.config-container {
+  font-family: "Nunito", sans-serif;
+  background-color: #F4F4F4;
+  color: #ffffff;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.config-container h1, .config-container h3 {
+  color: rgb(49, 48, 103);
+  text-align: center;
+}
+.config-container label {
+  color: rgb(49, 48, 103);
+}
+.config-container .tabs {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+.config-container .tabs .tab-button {
+  background-color: rgb(46, 45, 96);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: #ffffff;
+  cursor: pointer;
+}
+.config-container .tabs .tab-button:hover {
+  background-color: #1d1d3d;
+}
+.config-container .tab-content {
+  display: none;
+  padding: 20px;
+  border: 1px solid rgb(46, 45, 96);
+  border-radius: 5px;
+}
+.config-container .submit-button {
+  background-color: rgb(46, 45, 96);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: #ffffff;
+  cursor: pointer;
+  text-decoration: none;
+  justify-content: center;
+}
+.config-container .submit-button:hover {
+  background-color: #15152c;
+}
+
+.config-form .form-group {
+  margin-bottom: 15px;
+}
+.config-form .form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+.config-form .form-group input[type=text],
+.config-form .form-group input[type=email],
+.config-form .form-group textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
 /*# sourceMappingURL=backoffice.css.map */

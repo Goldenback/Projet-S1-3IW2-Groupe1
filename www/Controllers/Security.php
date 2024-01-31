@@ -37,7 +37,7 @@ class Security
             // Vérifie l'authentification
             if ($this->User->authenticateUser($email, $password)) {
                 $_SESSION["connected"] = true;
-                header("Location: /dashboard");
+                header("Location: /config");
                 exit();
 
             } else {

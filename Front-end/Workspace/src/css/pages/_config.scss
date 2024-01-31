@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+
+$primary-color: rgb(49, 48, 103);
+$secondary-color: rgb(46, 45, 96);
+$background-color: #F4F4F4;
+$text-color: #ffffff;
+$font-family: 'Nunito', sans-serif;
+
+.config-container {
+  font-family: $font-family;
+  background-color: $background-color;
+  color: $text-color;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  h1, h3 {
+    color: $primary-color;
+    text-align: center;
+  }
+
+  label {
+    color: $primary-color;
+  }
+
+  .tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+
+    .tab-button {
+      background-color: $secondary-color;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      color: $text-color;
+      cursor: pointer;
+
+      &:hover {
+        background-color: darken($secondary-color, 10%);
+      }
+    }
+  }
+
+  .tab-content {
+    display: none;
+    padding: 20px;
+    border: 1px solid $secondary-color;
+    border-radius: 5px;
+  }
+
+  .submit-button {
+    background-color: $secondary-color;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: $text-color;
+    cursor: pointer;
+    text-decoration: none;
+    justify-content: center;
+
+    &:hover {
+      background-color: darken($secondary-color, 15%);
+    }
+  }
+}
+
+.config-form {
+  .form-group {
+    margin-bottom: 15px;
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+  }
+}

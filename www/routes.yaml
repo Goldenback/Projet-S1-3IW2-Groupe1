@@ -1,3 +1,4 @@
+# Controller Security
 /:
   controller: Security
   action: login
@@ -19,32 +20,49 @@
   action: forgotPWD
 
 
-/mypage:
-  controller: Main
-  action: home
+# Controller Main -> Pour la vue du Frontend
 
-/contact:
+/about:
   controller : Main
-  action : contact
+  action : loadView
+
+/contact :
+  controller : Main
+  action : loadView
+
+/home :
+  controller : Main
+  action : loadView
+
+/projects :
+  controller : Main
+  action : loadView
 
 
+#Controller Main -> Pour la vue du Backend
 
 /dashboard:
   controller : Main
-  action : loadBackendView
+  action : loadView
+
+
+/config :
+  controller : Main
+  action : loadView
 
 /templates:
   controller : Main
-  action : loadBackendView
+  action : loadView
 
 /comments:
   controller : Main
-  action : loadBackendView
+  action : loadView
 
 /user_management:
   controller : Main
-  action : loadBackendView
+  action : loadView
 
 
+#Gestion d'erreur
 
 /error:

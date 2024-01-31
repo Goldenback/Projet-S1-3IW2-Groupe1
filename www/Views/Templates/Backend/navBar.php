@@ -14,9 +14,9 @@
     </div>
 
     <div class="nav-item">
-        <a href="/dashboard" class="nav-link">
-            <span class="nav-icon">&#128200;</span>
-            <span class="nav-text">Dashboard</span>
+        <a href="/config" target="blank" class="nav-link">
+            <span class="nav-icon">&#128221;</span>
+            <span class="nav-text">Configuration</span>
         </a>
     </div>
 
@@ -38,13 +38,6 @@
         <a href="/user_management" class="nav-link">
             <span class="nav-icon">&#128209;</span>
             <span class="nav-text">Mes Informations</span>
-        </a>
-    </div>
-
-    <div class="nav-item">
-        <a href="/mypage" target="blank" class="nav-link">
-            <span class="nav-icon">&#128221;</span>
-            <span class="nav-text">Pages</span>
         </a>
     </div>
 

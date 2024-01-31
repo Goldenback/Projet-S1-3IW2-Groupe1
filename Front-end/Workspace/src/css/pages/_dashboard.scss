@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-$primary-color: #4A90E2; // Bleu
-$secondary-color: #50E3C2; // Vert
+$primary-color: #4A90E2;
+$secondary-color: #50E3C2;
 $background-color: #F4F4F4;
 $text-color: #333;
 $font-family: 'Roboto', sans-serif;
@@ -35,7 +35,7 @@ $font-family: 'Roboto', sans-serif;
   }
 
   .chart-container {
-    height: 400px; // Ajuster selon besoin
+    height: 400px;
   }
 
   .editor-container textarea {

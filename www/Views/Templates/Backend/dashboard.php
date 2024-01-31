@@ -9,7 +9,9 @@
 </head>
 <body>
 
-<div class="dashboard-container">
+<section class="dashboard-container">
+
+    <h1>Dashboard</h1>
 
     <!-- Section Dataviz avec amCharts -->
     <div id="chartdiv" style="height: 500px;"></div>
@@ -40,8 +42,7 @@
         </tbody>
     </table>
 
-
-</div>
+</section>
 
 <!-- Scripts -->
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
