@@ -1,0 +1,46 @@
+.templates-selection-container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: rem(20);
+  background-color: #f5f5f5;
+  border-radius: rem(8);
+  box-shadow: 0 rem(2) rem(4) rgba(0, 0, 0, 0.1);
+
+  h2 {
+    text-align: center;
+    color: rgb(51, 51, 105);
+  }
+
+  .templates-table {
+    width: 100%;
+    border-collapse: collapse;
+
+    th, td {
+      border: rem(1) solid #ddd;
+      padding: rem(8);
+      text-align: center;
+    }
+
+    th {
+      background-color: rgb(47, 46, 96);
+      color: white;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    .select-btn {
+      padding: rem(5) rem(10);
+      border-radius: rem(4);
+      border: none;
+      background-color: rgb(65, 64, 134);
+      color: white;
+      cursor: pointer;
+
+      &:hover {
+        background-color: darken(rgb(65, 64, 134), 15%);
+      }
+    }
+  }
+}

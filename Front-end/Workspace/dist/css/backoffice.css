@@ -511,9 +511,9 @@ body {
 .comments-management-container {
   width: 100%;
   margin: 0;
-  padding: 20px;
+  padding: 1.25rem;
   background-color: #f5f5f5;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
 }
 .comments-management-container h2 {
   text-align: center;
@@ -524,10 +524,10 @@ body {
 }
 .comments-management-container .comments-list .comment-item {
   background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  padding: 15px;
-  margin-bottom: 15px;
+  border: 0.0625rem solid #ddd;
+  border-radius: 0.25rem;
+  padding: 0.9375rem;
+  margin-bottom: 0.9375rem;
 }
 .comments-management-container .comments-list .comment-item .comment-content .comment-text {
   font-size: 1rem;
@@ -538,16 +538,16 @@ body {
 }
 .comments-management-container .comments-list .comment-item .comment-content .comment-info .comment-author,
 .comments-management-container .comments-list .comment-item .comment-content .comment-info .comment-date {
-  margin-right: 10px;
+  margin-right: 0.625rem;
 }
 .comments-management-container .comments-list .comment-item .comment-actions {
   display: flex;
   justify-content: flex-end;
 }
 .comments-management-container .comments-list .comment-item .comment-actions .btn {
-  margin-left: 10px;
-  padding: 5px 10px;
-  border-radius: 4px;
+  margin-left: 0.625rem;
+  padding: 0.3125rem 0.625rem;
+  border-radius: 0.25rem;
   cursor: pointer;
   transition: background-color 0.3s;
   border: none;
@@ -566,6 +566,46 @@ body {
 
 body {
   margin: 0;
+}
+
+.templates-selection-container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 1.25rem;
+  background-color: #f5f5f5;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+}
+.templates-selection-container h2 {
+  text-align: center;
+  color: rgb(51, 51, 105);
+}
+.templates-selection-container .templates-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.templates-selection-container .templates-table th, .templates-selection-container .templates-table td {
+  border: 0.0625rem solid #ddd;
+  padding: 0.5rem;
+  text-align: center;
+}
+.templates-selection-container .templates-table th {
+  background-color: rgb(47, 46, 96);
+  color: white;
+}
+.templates-selection-container .templates-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+.templates-selection-container .templates-table .select-btn {
+  padding: 0.3125rem 0.625rem;
+  border-radius: 0.25rem;
+  border: none;
+  background-color: rgb(65, 64, 134);
+  color: white;
+  cursor: pointer;
+}
+.templates-selection-container .templates-table .select-btn:hover {
+  background-color: #282752;
 }
 
 /*# sourceMappingURL=backoffice.css.map */

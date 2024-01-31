@@ -23,7 +23,7 @@
     <div class="nav-item">
         <a href="/templates" class="nav-link">
             <span class="nav-icon">&#128194;</span>
-            <span class="nav-text">Templating</span>
+            <span class="nav-text">Template</span>
         </a>
     </div>
 
