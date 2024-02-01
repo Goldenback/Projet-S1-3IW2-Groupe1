@@ -67,7 +67,10 @@ class Security
         exit();
     }
 
-    public function register(): void //OK
+    /**
+     * @throws RandomException
+     */
+    public function register(): void
     {
         // Vérifie si le formulaire a été envoyé
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -89,19 +92,7 @@ class Security
                 $mail = new PHPMailer(true);
                 try {
                     // Paramètres du serveur
-                    $mail->isSMTP();
-                    $mail->Host = 'smtp.gmail.com';
-                    $mail->SMTPAuth = true;
-                    $mail->Username = 'toma11chang@gmail.com';
-                    $mail->Password = 'cxcp numx wtqr acvt';
-                    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-                    $mail->Port = 587;
-
-                    $mail->setFrom('from@ChallengeStack.com', 'Challenge Stack 1');
-                    $mail->addAddress($email);
-
-                    // Contenu
-                    $mail->isHTML(true);
+                    $this->ConfigMail($mail, $email);
                     $mail->Subject = 'Activation de votre compte - Challenge Stack';
                     $mail->Body = 'Veuillez cliquer sur ce lien pour activer votre compte : <a href="localhost/activate?token=' . $activationToken . '">Activer mon compte</a>';
 
@@ -165,19 +156,7 @@ class Security
 
                     try {
                         // Paramètre du serveur
-                        $mail->isSMTP();
-                        $mail->Host = 'smtp.gmail.com'; // Mettre SMTP server pour envoyer à travers
-                        $mail->SMTPAuth = true; // Activer SMTP authentication
-                        $mail->Username = 'toma11chang@gmail.com'; // peut etre changer par le mail exprès pour le projet
-                        $mail->Password = 'cxcp numx wtqr acvt'; // mot de passe de l'application (dans gmail)
-                        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; // Activer TLS encryption
-                        $mail->Port = 587; // TCP port pour connecter
-
-                        $mail->setFrom('from@ChallengeStack.com', 'Challenge Stack 1');
-                        $mail->addAddress($email); // ajoute le mail
-
-                        // Contenue
-                        $mail->isHTML(true);
+                        $this->ConfigMail($mail, $email);
                         $mail->Subject = 'Nouveau mot de passe - Challenge Stack';
                         $mail->Body = 'Votre nouveau mot de passe est : ' . $newPassword;
 
@@ -195,6 +174,31 @@ class Security
         }
 
         require(BASE_DIR . "/Views/Security/forgot_password.php");
+    }
+
+
+
+    /**
+     * @param PHPMailer $mail
+     * @param mixed $email
+     * @return void
+     * @throws Exception
+     */
+    public function ConfigMail(PHPMailer $mail, mixed $email): void
+    {
+        $mail->isSMTP();
+        $mail->Host = 'smtp.gmail.com'; // Mettre SMTP server pour envoyer à travers
+        $mail->SMTPAuth = true; // Activer SMTP authentication
+        $mail->Username = 'toma11chang@gmail.com'; // peut etre changer par le mail exprès pour le projet
+        $mail->Password = 'cxcp numx wtqr acvt'; // mot de passe de l'application (dans gmail)
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; // Activer TLS encryption
+        $mail->Port = 587; // TCP port pour connecter
+
+        $mail->setFrom('from@ChallengeStack.com', 'Challenge Stack 1');
+        $mail->addAddress($email); // ajoute le mail
+
+        // Contenue
+        $mail->isHTML(true);
     }
 
 }
