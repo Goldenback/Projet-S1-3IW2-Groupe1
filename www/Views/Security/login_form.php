@@ -20,6 +20,7 @@
                 unset($_SESSION['error_message']);
             }
             ?>
+            <br>
         </div>
 
         <div class="success-message <?php echo isset($_SESSION["success_message"]) ? '' : 'hidden'; ?>">
@@ -29,6 +30,7 @@
                 unset($_SESSION['success_message']);
             }
             ?>
+            <br>
         </div>
 
         <div class="form-group">

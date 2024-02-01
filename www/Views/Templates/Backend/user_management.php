@@ -2,7 +2,6 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Gestion des Informations Personnelles</title>
     <link rel="stylesheet" href="../../../Front-end/Workspace/dist/css/backoffice.css">
 </head>
 <body>
@@ -33,7 +32,25 @@
     <div class="password-update-container">
         <h2>Mettre à Jour le Mot de Passe</h2>
         <div class="password-update-form">
-            <form action="/updatePassword" method="POST">
+            <form action="/update-password" method="post">
+
+                <div class="error-message <?php echo isset($_SESSION["error_message"]) ? '' : 'hidden'; ?>">
+                    <?php
+                    if (isset($_SESSION['error_message'])) {
+                        echo $_SESSION['error_message'];
+                        unset($_SESSION['error_message']);
+                    }
+                    ?>
+                </div>
+                <div class="success-message <?php echo isset($_SESSION["success_message"]) ? '' : 'hidden'; ?>">
+                    <?php
+                    if (isset($_SESSION['success_message'])) {
+                        echo $_SESSION['success_message'];
+                        unset($_SESSION['success_message']);
+                    }
+                    ?>
+                </div>
+
                 <div class="form-group">
                     <label for="currentPassword">Mot de Passe Actuel:</label>
                     <input type="password" id="currentPassword" name="currentPassword" required>

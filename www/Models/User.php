@@ -108,7 +108,7 @@ class User
     {
         $pdo = $this->database->getDatabaseConnection();
 
-        // Si l'ancien mot de passe es présent, on le valide d'abord
+        // Si l'ancien mot de passe est présent, on le valide d'abord
         if ($oldPassword !== null) {
             $stmt = $pdo->prepare("SELECT pwd FROM users WHERE email = ?");
             $stmt->bindParam(1, $email, PDO::PARAM_STR);
@@ -173,7 +173,6 @@ class User
 
         return false;
     }
-
     public function createUser(String $firstname, String $lastname, String $email, String $password, String $role, String $ActivationToken): bool
     {
         $pdo = $this->database->getDatabaseConnection();
@@ -181,7 +180,6 @@ class User
         $stmt = $pdo->prepare("INSERT INTO users (Firstname, Lastname, email, pwd, Role, is_validated, created_at, updated_at, deleted_at, token) VALUES (?, ?, ?, ?, ?, FALSE, NOW(), NULL, NULL, ?)");
         return $stmt->execute([$firstname, $lastname, $email, $password, $role, $ActivationToken]);
     }
-
     public function EmailExists(String $email): bool
     {
         $pdo = $this->database->getDatabaseConnection();
@@ -207,7 +205,6 @@ class User
         $stmt->execute(['token' => $token]);
         return $stmt->fetchColumn() > 0;
     }
-
     public function activateUser(string $token): bool //active l'utilisateur
     {
         $pdo = $this->database->getDatabaseConnection();
@@ -215,7 +212,6 @@ class User
         $stmt->execute(['token' => $token]);
         return $stmt->rowCount() > 0;
     }
-
     public function is_Validated($email): bool  //vérifie si il est activé
     {
         // Assurez-vous de sécuriser la valeur de l'e-mail

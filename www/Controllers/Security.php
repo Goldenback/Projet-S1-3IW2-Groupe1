@@ -36,6 +36,7 @@ class Security
             if ($this->User->authenticateUser($email, $password)) {
                 if($this->User->is_Validated($email)){
                     $_SESSION["connected"] = true;
+                    $_SESSION["user_email"] = $email;
                     header("Location: /config");
                     exit();
                 }
@@ -175,6 +176,54 @@ class Security
 
         require(BASE_DIR . "/Views/Security/forgot_password.php");
     }
+
+    public function updatePassword(): void
+    {
+        session_start();
+        // Vérifie si le formulaire a été soumis
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            // if else raccourci
+            //                 |vérifie si bien envoyé           |supprime les espaces blanc      |else
+            $currentPassword = isset($_POST["currentPassword"]) ? trim($_POST["currentPassword"]) : '';
+            $newPassword = isset($_POST["newPassword"]) ? trim($_POST["newPassword"]) : '';
+            $confirmPassword = isset($_POST["confirmPassword"]) ? trim($_POST["confirmPassword"]) : '';
+            $email = $_SESSION["user_email"] ?? '';
+
+            // Validation des entrées
+            if (empty($currentPassword) || empty($newPassword) || empty($confirmPassword) || empty($email)) {
+                $_SESSION["error_message"] = "Tous les champs sont requis.";
+                header("Location: /user_management");
+                exit();
+            }
+            else {
+                // Vérifie la longueur du nouveau mot de passe
+                if (strlen($newPassword) < 8) {
+                    $_SESSION["error_message"] = "Le nouveau mot de passe doit comporter au moins 8 caractères.";
+                    header("Location: /user_management");
+                    exit();
+                }
+                else {
+                    // Vérifie si les nouveaux mots de passe correspondent
+                    if ($newPassword !== $confirmPassword) {
+                        $_SESSION["error_message"] = "Les nouveaux mots de passe ne correspondent pas.";
+                        header("Location: /user_management");
+                        exit();
+                    }
+                }
+            }
+
+            // Appel à la fonction du modèle pour mettre à jour le mot de passe
+            $updated = $this->User->setPwd($email, $newPassword, $currentPassword);
+            if ($updated) {
+                $_SESSION["success_message"] = "Mot de passe mis à jour avec succès.";
+            } else {
+                $_SESSION["error_message"] = "Mot de passe actuel invalide";
+            }
+        }
+
+        header("Location: /user_management");
+    }
+
 
 
 
