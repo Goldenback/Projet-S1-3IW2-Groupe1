@@ -4,6 +4,10 @@
 @import "partials/globals";
 @import "partials/mixin";
 
+@import "layout/navbar";
+
 @import "components/button";
 @import "components/hero";
 @import "components/cta";
+
+@import "pages/contact";
