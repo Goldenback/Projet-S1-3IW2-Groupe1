@@ -4,12 +4,11 @@
     box-sizing: border-box;
 }
 
-
 body {
     font-family: 'Nunito', sans-serif;
 }
 
-.l-navbar {
+.l-sidebar {
     position: fixed;
     top: 0;
     left: 0;
@@ -19,7 +18,7 @@ body {
     transition: width 0.5s;
     z-index: 100;
 
-    .navbar_toggle {
+    .sidebar_toggle {
         display: flex;
         justify-content: flex-end;
         padding-bottom: 2rem;
@@ -32,8 +31,8 @@ body {
         }
     }
 
-    .nav-item {
-        .nav-link {
+    .side-item {
+        .side-link {
             display: flex;
             align-items: center;
             justify-content: flex-start; // Alignement à gauche en mode étendu
@@ -41,17 +40,17 @@ body {
             text-decoration: none;
             padding: 1rem;
 
-            .nav-icon {
+            .side-icon {
                 font-size: rem(22);
                 margin-right: rem(8); // l'espacement entre l'icône et le texte
             }
 
-            .nav-text {
+            .side-text {
                 font-size: 1.1rem;
                 display: inline; // montre le texte en mode étendu
             }
 
-            &:hover{
+            &:hover {
                 transition: 0.2s;
                 background-color: darken(rgb(12,0,53), 10%);
             }
@@ -73,7 +72,7 @@ body {
     }
 
     &.active {
-        .nav-link {
+        .side-link {
             display: flex;
             align-items: center;
             justify-content: right; // Aligner les icônes à droite en mode rétracté
@@ -81,45 +80,47 @@ body {
             text-decoration: none;
             padding-right: 0;
             padding-bottom: 1rem;
+            transition: 1s;
 
-            .nav-icon {
+            .side-icon {
                 font-size: 1.5rem;
             }
 
-            .nav-text {
+            .side-text {
                 display: none; // Cacher le texte par défaut
             }
         }
     }
 }
 
-.l-navbar {
+.l-sidebar {
     transition: 0.5s;
 
-    &.l-navbar.active {
+    &.l-sidebar.active {
         transform: translateX(rem(-200));
         transition: 0.5s;
 
-        .nav_logo .nav_text {
+        .side_logo .side_text {
             transform: translateX(rem(100));
             transition: 0.5s;
         }
     }
 }
 
-.navbar {
+.sidebar {
     transition: 0.5s;
     padding-left: rem(250);
-    &.navbar-active {
-        margin-left: rem(-200); // marge quand le navbar est actif (donc fermé)
+
+    &.sidebar-active {
+        margin-left: rem(-200); // marge quand le sidebar est actif (donc fermé)
         transition: 0.5s;
     }
 }
 
 @media screen and (max-width: rem(768)) { // responsive
-    .l-navbar .nav_logo .nav_text{ //responsive du navbar
-        left: 0;
-        .nav_logo .nav_text {
+    .l-sidebar {
+        .side_logo .side_text {
+            left: 0;
             transform: translateX(rem(100));
             transition: 0.5s;
         }
@@ -128,12 +129,11 @@ body {
         }
     }
 
-    .navbar {   //responsive du contenue du back-office
+    .sidebar {
         transition: 0.5s;
         margin-left: rem(-200);
-        &.navbar-active {
+        &.sidebar-active {
             transition: 0.5s;
         }
     }
-
 }

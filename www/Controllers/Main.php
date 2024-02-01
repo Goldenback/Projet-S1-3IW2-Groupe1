@@ -28,7 +28,7 @@ class Main
             //conditions pour vérifier dans quel dossier il se trouve (Backend ou Frontend)
             if(file_exists(BASE_DIR . "/Views/Templates/Backend/" .$uriView[0].".php")){
                 include(BASE_DIR . "/Views/Templates/Backend/" .$uriView[0].".php");
-                include(BASE_DIR . "/Views/Templates/Backend/navBar.php");
+                include(BASE_DIR . "/Views/Templates/Backend/sideBar.php");
             }
             else if (file_exists(BASE_DIR . "/Views/Templates/Frontend/" .$uriView[0].".php")){
                 include(BASE_DIR . "/Views/Templates/Frontend/" .$uriView[0].".php");
