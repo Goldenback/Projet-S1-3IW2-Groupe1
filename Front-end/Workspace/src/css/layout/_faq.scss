@@ -1,0 +1,109 @@
+.faq-section {
+  padding-top: rem(90);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+
+  .faq-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .faq-heading {
+      font-size: rem(48);
+      font-family: var(--main-font), sans-serif;
+      font-weight: 700;
+      line-height: rem(57.60);
+      text-align: center;
+    }
+
+    .faq-description {
+      font-size: rem(18);
+      font-family: var(--main-font), sans-serif;
+      font-weight: 400;
+      line-height: rem(27);
+      text-align: center;
+      padding-bottom: rem(20);
+    }
+
+    .faq-accordion {
+      width: 100%;
+
+      .faq-item {
+        border-top: rem(1) solid black;
+
+        &:last-child {
+          border-bottom: rem(1) solid black;
+        }
+
+        .faq-question {
+          font-size: rem(18);
+          font-family: var(--main-font), sans-serif;
+          font-weight: 700;
+          line-height: rem(27);
+          width: 100%;
+          text-align: left;
+          cursor: pointer;
+          background: none;
+          border: none;
+          padding: rem(20) 0;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          &:after {
+            display: inline-block;
+            width: rem(25);
+            height: rem(20);
+            transform: rotate(0deg);
+            content: '▼';
+            float: right;
+          }
+
+          &.is-open::after{
+            content: '▲';
+          }
+        }
+
+        .faq-answer {
+          display: none;
+          padding: 0 rem(20) rem(20) rem(20);
+        }
+      }
+    }
+
+    .faq-contact {
+      Display: flex;
+      flex-direction: column;
+      align-items: center;
+      h3 {
+        font-size: rem(32);
+        font-family: var(--main-font), sans-serif;
+        font-weight: 700;
+        text-align: center;
+      }
+
+      p {
+        font-size: rem(18);
+        font-family: var(--main-font), sans-serif;
+        font-weight: 400;
+        text-align: center;
+      }
+
+      .contact-button {
+        font-size: rem(16);
+        font-family: var(--main-font), sans-serif;
+        font-weight: 400;
+        padding: rem(12) rem(24);
+        border: rem(1) solid black;
+        background: none;
+        cursor: pointer;
+        text-decoration: none;
+        color: #000002;
+      }
+    }
+  }
+}

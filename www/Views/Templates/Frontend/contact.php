@@ -29,46 +29,7 @@
     </div>
 </section>
 
-<section class="contact-menu">
-    <div class="row">
-        <div class="content">
-            <div class="icon-envelope">
-                <div class="icon">&#128231;</div>
-            </div>
-            <div class="contact-info">
-                <div class="content">
-                    <div class="heading">Email</div>
-                    <div class="text"><?= $emailDesc ?? "your email description here" ?></div>
-                </div>
-                <div class="link"> <?= $email ?? 'exemple@mymail.com' ?> </div>
-            </div>
-        </div>
-        <div class="content">
-            <div class="icon-phone">
-                <div class="icon">&#128222;</div>
-            </div>
-            <div class="contact-info">
-                <div class="content">
-                    <div class="heading">Phone</div>
-                    <div class="text"><?= $phoneDesc ?? 'Your phone description here' ?></div>
-                </div>
-                <div class="link"><?= $phoneNumber ?? '+ 01 02 03 04 05' ?></div>
-            </div>
-        </div>
-        <div class="content">
-            <div class="icon-map">
-                <div class="icon">&#128188;</div>
-            </div>
-            <div class="contact-info">
-                <div class="content">
-                    <div class="heading">Office</div>
-                    <div class="text"><?= $officeDesc ?? "your adresse description here" ?></div>
-                </div>
-                <div class="link"><?= $officeAdresse ?? 'your adresse' ?></div>
-            </div>
-        </div>
-    </div>
-</section>
+<?php include("layout/contact-data.php") ?>
 
 <section class="contact-location">
     <div class="section-title">
@@ -98,43 +59,29 @@
     </div>
 </section>
 
-<section class="contact-us">
-    <div class="section-title">
-        <div class="content">
-            <div class="heading">Contact us</div>
-            <div class="tagline">Get in touch</div>
-            <div class="text">Have a question or need assistance ? Fill out the form below.</div>
+<?php include("layout/contact-us.php")?>
+
+<section class="newsletter-signup">
+    <div class="newsletter-signup__container">
+        <div class="newsletter-signup__content">
+            <h2 class="newsletter-signup__heading">Stay Updated with Our Newsletter</h2>
+            <p class="newsletter-signup__text">Subscribe to our newsletter for news and event updates</p>
+        </div>
+        <div class="newsletter-signup__actions">
+            <form class="newsletter-signup__form" action="/newsletter-mail">
+                <input type="email" placeholder="Your email address" name="newslettermail" class="newsletter-signup__input" required/>
+                <button type="submit" class="newsletter-signup__submit">Subscribe</button>
+            </form>
+            <p class="newsletter-signup__disclaimer">By clicking Sign Up, you confirm your agreement to our Terms and Conditions</p>
         </div>
     </div>
-
-    <form class="form" action="/sendMessage">
-
-        <div class="inputs">
-            <div class="input">
-                <label for="first-name">First name</label>
-                <input type="text" id="first-name" placeholder="Placeholder">
-            </div>
-            <div class="input">
-                <label for="last-name">Last name</label>
-                <input type="text" id="last-name" placeholder="Placeholder">
-            </div>
-        </div>
-
-        <div class="inputs">
-            <div class="input">
-                <label for="email">Email</label>
-                <input type="email" id="email" placeholder="Placeholder">
-            </div>
-            <div class="input">
-                <label for="phone">Phone number</label>
-                <input type="tel" id="phone" placeholder="Placeholder">
-            </div>
-        </div>
-
-        <button class="btn" type="submit">Envoyer</button>
-    </form>
 </section>
 
+<?php include("layout/FAQ.php")?>
+
+<br><br>
+
+<?php include("layout/footer.php")?>
 
 
 
