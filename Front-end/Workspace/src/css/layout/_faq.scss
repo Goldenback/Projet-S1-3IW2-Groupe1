@@ -1,108 +1,124 @@
-.faq-section {
-  padding-top: rem(90);
+.Faq {
+  background: white;
+  padding: rem(112) rem(64);
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
-  box-sizing: border-box;
+  gap: rem(80);
 
-  .faq-container {
+  .Container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    gap: rem(80);
+  }
 
-    .faq-heading {
+  .SectionTitle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: rem(24);
+
+    .Heading {
       font-size: rem(48);
-      font-family: var(--main-font), sans-serif;
       font-weight: 700;
-      line-height: rem(57.60);
+      line-height: rem(57.6);
+      color: black;
       text-align: center;
     }
 
-    .faq-description {
+    .Text {
       font-size: rem(18);
-      font-family: var(--main-font), sans-serif;
       font-weight: 400;
       line-height: rem(27);
+      color: black;
       text-align: center;
-      padding-bottom: rem(20);
     }
+  }
 
-    .faq-accordion {
-      width: 100%;
+  .Accordion {
+    width: 100%;
 
-      .faq-item {
-        border-top: rem(1) solid black;
+    .faq-item {
+      border-top: 1px solid black;
 
-        &:last-child {
-          border-bottom: rem(1) solid black;
-        }
-
-        .faq-question {
-          font-size: rem(18);
-          font-family: var(--main-font), sans-serif;
-          font-weight: 700;
-          line-height: rem(27);
-          width: 100%;
-          text-align: left;
-          cursor: pointer;
-          background: none;
-          border: none;
-          padding: rem(20) 0;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-
-          &:after {
-            display: inline-block;
-            width: rem(25);
-            height: rem(20);
-            transform: rotate(0deg);
-            content: '▼';
-            float: right;
-          }
-
-          &.is-open::after{
-            content: '▲';
-          }
-        }
-
-        .faq-answer {
-          display: none;
-          padding: 0 rem(20) rem(20) rem(20);
-        }
-      }
-    }
-
-    .faq-contact {
-      Display: flex;
-      flex-direction: column;
-      align-items: center;
-      h3 {
-        font-size: rem(32);
-        font-family: var(--main-font), sans-serif;
-        font-weight: 700;
-        text-align: center;
+      &:last-child {
+        border-bottom: 1px solid black;
       }
 
-      p {
+      .faq-question {
         font-size: rem(18);
-        font-family: var(--main-font), sans-serif;
-        font-weight: 400;
-        text-align: center;
+        font-family: Roboto, sans-serif;
+        font-weight: 700;
+        line-height: rem(27);
+        width: 100%;
+        text-align: left;
+        cursor: pointer;
+        background: none;
+        border: none;
+        padding: rem(20) 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &:after {
+          display: inline-block;
+          width: rem(25);
+          height: rem(20);
+          transform: rotate(0deg);
+          content: '▼';
+          float: right;
+        }
+
+        &.is-open::after {
+          content: '▲';
+        }
       }
 
-      .contact-button {
-        font-size: rem(16);
-        font-family: var(--main-font), sans-serif;
-        font-weight: 400;
-        padding: rem(12) rem(24);
-        border: rem(1) solid black;
-        background: none;
-        cursor: pointer;
-        text-decoration: none;
-        color: #000002;
+      .faq-answer {
+        display: none;
+        padding: 0 rem(20) rem(20) rem(20);
+      }
+    }
+  }
+
+  .Content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: rem(24);
+
+    .Heading {
+      font-size: rem(32);
+      font-weight: 700;
+      text-align: center;
+      color: black;
+    }
+
+    .Text {
+      font-size: rem(18);
+      font-weight: 400;
+      text-align: center;
+      color: black;
+    }
+
+    .Button {
+      padding: rem(12) rem(24);
+      border: 1px solid black;
+      font-size: rem(16);
+      font-weight: 400;
+      line-height: rem(24);
+      color: black;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: rem(8);
+      cursor: pointer;
+
+      &:hover {
+        background-color: black;
+        color: white;
       }
     }
   }

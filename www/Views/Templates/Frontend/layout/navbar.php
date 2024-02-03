@@ -8,7 +8,7 @@
 
 <body>
 
-<nav class="navbar" style="background-color: <?= $backgroundColor ?? '' ?> ">
+<nav class="navbar" style="background-color: <?= $backgroundColor ?? 'white' ?> ">
     <div class="container">
         <h2 class="navbar-title">
             <?= $urlLogo ?? 'Logo'?>

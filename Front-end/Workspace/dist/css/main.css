@@ -391,47 +391,52 @@ img {
   line-height: 1.5rem;
 }
 
-.faq-section {
-  padding-top: 5.625rem;
+.Faq {
+  background: white;
+  padding: 7rem 4rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
-  box-sizing: border-box;
+  gap: 5rem;
 }
-.faq-section .faq-container {
+.Faq .Container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  gap: 5rem;
 }
-.faq-section .faq-container .faq-heading {
+.Faq .SectionTitle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+.Faq .SectionTitle .Heading {
   font-size: 3rem;
-  font-family: var(--main-font), sans-serif;
   font-weight: 700;
   line-height: 3.6rem;
+  color: black;
   text-align: center;
 }
-.faq-section .faq-container .faq-description {
+.Faq .SectionTitle .Text {
   font-size: 1.125rem;
-  font-family: var(--main-font), sans-serif;
   font-weight: 400;
   line-height: 1.6875rem;
+  color: black;
   text-align: center;
-  padding-bottom: 1.25rem;
 }
-.faq-section .faq-container .faq-accordion {
+.Faq .Accordion {
   width: 100%;
 }
-.faq-section .faq-container .faq-accordion .faq-item {
-  border-top: 0.0625rem solid black;
+.Faq .Accordion .faq-item {
+  border-top: 1px solid black;
 }
-.faq-section .faq-container .faq-accordion .faq-item:last-child {
-  border-bottom: 0.0625rem solid black;
+.Faq .Accordion .faq-item:last-child {
+  border-bottom: 1px solid black;
 }
-.faq-section .faq-container .faq-accordion .faq-item .faq-question {
+.Faq .Accordion .faq-item .faq-question {
   font-size: 1.125rem;
-  font-family: var(--main-font), sans-serif;
+  font-family: Roboto, sans-serif;
   font-weight: 700;
   line-height: 1.6875rem;
   width: 100%;
@@ -444,7 +449,7 @@ img {
   justify-content: space-between;
   align-items: center;
 }
-.faq-section .faq-container .faq-accordion .faq-item .faq-question:after {
+.Faq .Accordion .faq-item .faq-question:after {
   display: inline-block;
   width: 1.5625rem;
   height: 1.25rem;
@@ -452,40 +457,48 @@ img {
   content: "▼";
   float: right;
 }
-.faq-section .faq-container .faq-accordion .faq-item .faq-question.is-open::after {
+.Faq .Accordion .faq-item .faq-question.is-open::after {
   content: "▲";
 }
-.faq-section .faq-container .faq-accordion .faq-item .faq-answer {
+.Faq .Accordion .faq-item .faq-answer {
   display: none;
   padding: 0 1.25rem 1.25rem 1.25rem;
 }
-.faq-section .faq-container .faq-contact {
-  Display: flex;
+.Faq .Content {
+  display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 1.5rem;
 }
-.faq-section .faq-container .faq-contact h3 {
+.Faq .Content .Heading {
   font-size: 2rem;
-  font-family: var(--main-font), sans-serif;
   font-weight: 700;
   text-align: center;
+  color: black;
 }
-.faq-section .faq-container .faq-contact p {
+.Faq .Content .Text {
   font-size: 1.125rem;
-  font-family: var(--main-font), sans-serif;
   font-weight: 400;
   text-align: center;
+  color: black;
 }
-.faq-section .faq-container .faq-contact .contact-button {
-  font-size: 1rem;
-  font-family: var(--main-font), sans-serif;
-  font-weight: 400;
+.Faq .Content .Button {
   padding: 0.75rem 1.5rem;
-  border: 0.0625rem solid black;
-  background: none;
-  cursor: pointer;
+  border: 1px solid black;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  color: black;
   text-decoration: none;
-  color: #000002;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+.Faq .Content .Button:hover {
+  background-color: black;
+  color: white;
 }
 
 .footer {
@@ -953,6 +966,499 @@ img {
   font-size: 0.75rem;
   line-height: 1.125rem;
   font-family: var(--main-font), sans-serif;
+}
+
+.Header-about {
+  width: 100%;
+  height: 29.375rem;
+  padding: 7rem 4rem;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5rem;
+}
+.Header-about .Container {
+  height: 15.375rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+.Header-about .SectionTitle {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.Header-about .SectionTitle .Tagline {
+  text-align: center;
+  color: black;
+  font-size: 1rem;
+  font-family: Roboto, sans-serif;
+  font-weight: 600;
+  line-height: 1.5rem;
+}
+.Header-about .SectionTitle .Content {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+.Header-about .SectionTitle .Content .ShortHeadingHere {
+  color: black;
+  font-size: 3.5rem;
+  font-family: Roboto, sans-serif;
+  font-weight: 700;
+  line-height: 4.2rem;
+}
+.Header-about .SectionTitle .Content .Description {
+  color: black;
+  font-size: 1.125rem;
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  line-height: 1.6875rem;
+}
+.Header-about .Actions {
+  padding-top: 1rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.Layout1-about {
+  width: 100%;
+  height: 54rem;
+  padding: 7rem 4rem;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5rem;
+}
+.Layout1-about .Container {
+  align-self: stretch;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5rem;
+}
+.Layout1-about .Content {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+.Layout1-about .Content .IconRelume {
+  width: 3rem;
+  height: 3rem;
+  padding: 0.25rem 0.375rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: contain;
+}
+.Layout1-about .Content .ContentText {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+.Layout1-about .Content .ContentText .Heading {
+  color: black;
+  font-size: 2.5rem;
+  font-family: Roboto, sans-serif;
+  font-weight: 700;
+  line-height: 3rem;
+}
+.Layout1-about .Content .ContentText .Text {
+  color: black;
+  font-size: 1.125rem;
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  line-height: 1.6875rem;
+}
+.Layout1-about .PlaceholderImage {
+  flex: 1 1 0;
+  height: 40rem;
+  object-fit: cover;
+}
+
+.Layout2-about {
+  width: 100%;
+  height: 54rem;
+  padding: 7rem 4rem;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5rem;
+}
+.Layout2-about .Container {
+  align-self: stretch;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5rem;
+}
+.Layout2-about .Content {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+}
+.Layout2-about .Content .ContentHeader {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+.Layout2-about .Content .ContentHeader .Heading {
+  color: black;
+  font-size: 2.5rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  line-height: 3rem;
+}
+.Layout2-about .Content .ContentHeader .Text {
+  color: black;
+  font-size: 1.125rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  line-height: 1.6875rem;
+}
+.Layout2-about .Content .List {
+  align-self: stretch;
+  padding: 0.5rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+.Layout2-about .Content .List .ListItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+.Layout2-about .Content .List .ListItem .Number {
+  color: black;
+  font-size: 3rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  line-height: 3.6rem;
+}
+.Layout2-about .Content .List .ListItem .Text {
+  color: black;
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+.Layout2-about .PlaceholderImage {
+  flex: 1 1 0;
+  height: 40rem;
+  object-fit: cover;
+}
+
+.Team-about {
+  width: 100%;
+  height: 100%;
+  padding: 7rem 4rem;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5rem;
+}
+.Team-about .SectionTitle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.Team-about .SectionTitle .Subheading, .Team-about .SectionTitle .Heading, .Team-about .SectionTitle .Description {
+  text-align: center;
+  color: black;
+  font-family: "Roboto", sans-serif;
+}
+.Team-about .SectionTitle .Subheading {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+}
+.Team-about .SectionTitle .Heading {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 3.6rem;
+}
+.Team-about .SectionTitle .Description {
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.6875rem;
+}
+.Team-about .Content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6rem;
+}
+.Team-about .Content .Row {
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+}
+.Team-about .Content .Card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+.Team-about .Content .Card .PlaceholderImage {
+  width: 100%;
+  height: auto;
+}
+.Team-about .Content .Card .CardContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.Team-about .Content .Card .Name, .Team-about .Content .Card .JobTitle, .Team-about .Content .Card .Bio {
+  text-align: center;
+  color: black;
+  font-family: "Roboto", sans-serif;
+}
+.Team-about .Content .Card .Name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.875rem;
+}
+.Team-about .Content .Card .JobTitle {
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.6875rem;
+}
+.Team-about .Content .Card .Bio {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+.Team-about .Content .Card .SocialIcons {
+  display: flex;
+  gap: 0.875rem;
+}
+.Team-about .HiringSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+.Team-about .HiringSection .Heading {
+  text-align: center;
+  color: black;
+  font-size: 2rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  line-height: 2.6rem;
+}
+.Team-about .HiringSection .Text {
+  text-align: center;
+  color: black;
+  font-size: 1.125rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  line-height: 1.6875rem;
+}
+
+.Logo1-about {
+  width: 100%;
+  height: 36.5rem;
+  padding: 7rem 4rem;
+  background: white;
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+}
+.Logo1-about .Container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5rem;
+  width: 100%;
+  flex-direction: row;
+}
+.Logo1-about .Container .Content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+.Logo1-about .Container .Content .Heading {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 3.6rem;
+  color: black;
+  font-family: "Roboto", sans-serif;
+}
+.Logo1-about .Container .Content .Text {
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.6875rem;
+  color: black;
+  font-family: "Roboto", sans-serif;
+}
+.Logo1-about .Container .Content .Actions {
+  display: flex;
+  gap: 1.5rem;
+}
+.Logo1-about .Container .Logos {
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+  width: 9.375rem;
+}
+.Logo1-about .Container .Logos .Logo {
+  padding: 0.875rem;
+  background: #F4F4F4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Logo1-about .Container .Logos .Logo img {
+  max-width: 100%;
+  height: auto;
+}
+
+.Logo2-about {
+  width: 100%;
+  height: 13.5rem;
+  padding: 5rem 4rem;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+}
+.Logo2-about .Container {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 4rem;
+  width: 100%;
+}
+.Logo2-about .Container .Heading {
+  width: 20rem;
+  color: black;
+  font-size: 1.125rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  line-height: 1.6875rem;
+}
+.Logo2-about .Container .Logos {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 2rem;
+  flex: 1;
+}
+.Logo2-about .Container .Logos .Logo {
+  width: 7.5rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Logo2-about .Container .Logos .Logo img {
+  max-width: 100%;
+  height: auto;
+}
+
+.Cta-about {
+  width: 100%;
+  height: 26.3125rem;
+  padding: 7rem 4rem;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 5rem;
+}
+.Cta-about .Column {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.Cta-about .Column .Content {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.Cta-about .Column .Content .Heading {
+  color: white;
+  font-size: 3rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  line-height: 0.9375rem;
+}
+.Cta-about .Column .Content .Text {
+  color: white;
+  font-size: 1.125rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  line-height: 1.6875rem;
+}
+.Cta-about .Column .Actions {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1rem;
+  padding-top: 1rem;
+}
+.Cta-about .Column .Actions .Button.btn-white {
+  background: none;
+  border: 0.0625rem solid white;
+}
+.Cta-about .Column .Actions .Button.btn-white a {
+  text-decoration: none;
+  color: white;
+}
+
+.Button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  line-height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border: 0.0625rem solid black;
+}
+.Button.Primary {
+  background: black;
+}
+.Button.Primary a {
+  text-decoration: none;
+  color: white;
+}
+.Button.Secondary a {
+  text-decoration: none;
+  color: black;
 }
 
 /*# sourceMappingURL=main.css.map */

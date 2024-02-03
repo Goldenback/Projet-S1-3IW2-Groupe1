@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="../../../Front-end/Workspace/dist/css/main.css" />
 </head>
 
-
 <body>
 
 <section class="header-contact">
@@ -20,7 +19,7 @@
         </div>
         <div class="actions">
             <div class="btn-primary">
-                <a href="/contact" class="btn">Contact</a>
+                <a href="#contact-us" class="btn">Contact</a>
             </div>
             <div class="btn-secondary">
                 <a href="/about" class="btn">Learn more</a>

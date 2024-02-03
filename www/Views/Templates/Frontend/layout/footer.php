@@ -1,4 +1,4 @@
-<div class="footer">
+<footer class="footer">
     <div class="content">
         <div class="column logo-column">
             <div class="logo">
@@ -48,4 +48,5 @@
             </div>
         </div>
     </div>
-</div>
+</>
+

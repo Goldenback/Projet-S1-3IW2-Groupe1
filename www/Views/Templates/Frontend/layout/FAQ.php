@@ -1,10 +1,10 @@
-<section class="faq-section">
-    <div class="faq-container">
-        <h2 class="faq-heading">FAQs</h2>
-        <p class="faq-description">Find answers to common questions and concerns about our platform and services.</p>
-        <div class="faq-accordion">
-
-            <?php //Faire une for pour afficher les questions réponses et supprimer ce qui est en dessous ?>
+<section class="Faq">
+    <div class="Container">
+        <div class="SectionTitle">
+            <h2 class="Heading">FAQs</h2>
+            <p class="Text">Find answers to common questions and concerns about our platform.</p>
+        </div>
+        <div class="Accordion">
 
             <div class="faq-item">
                 <button class="faq-question"><?= $question ?? 'Question here ...' ?></button>
@@ -27,13 +27,15 @@
                 <div class="faq-answer"><?= $answear ?? 'Answer here' ?></div>
             </div>
         </div>
-        <div class="faq-contact">
-            <h3>Still have questions?</h3>
-            <p>Contact us for further assistance.</p>
-            <a href="#contact-us" class="contact-button">Contact Us</a>
+        <div class="Content">
+            <h2 class="Heading">Still have questions?</h2>
+            <p class="Text">Contact our support team for assistance.</p>
+            <a href="/contact#contact-us" class="Button">Contact Us</a>
         </div>
     </div>
 </section>
+
+
 
 <script>
     document.addEventListener('DOMContentLoaded', function () {

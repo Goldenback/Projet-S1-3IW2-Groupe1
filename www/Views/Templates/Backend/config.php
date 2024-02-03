@@ -10,7 +10,7 @@
 <section class="config-container">
 
     <h1>Configuration des Pages</h1>
-    <a href="/home" target="_blank" class="button-page">Voir mon site</a><br>
+    <a href="/#" target="_blank" class="button-page">Voir mon site</a><br>
 
     <div class="tabs">
         <button class="tab-button" onclick="openTab('home')">Accueil</button>
