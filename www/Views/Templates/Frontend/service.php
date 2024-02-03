@@ -1,7 +1,15 @@
-<?php
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../Front-end/Workspace/dist/css/main.css" />
+</head>
 
-//affiche des projets
+<body>
 
-// Images + texte en lien qui va pointer vers un lien externe
+<?php include("layout/navbar.php") ?>
 
-echo "Page projects";
+
+</body>
+</html>

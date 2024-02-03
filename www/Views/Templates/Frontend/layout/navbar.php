@@ -1,13 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../../Front-end/Workspace/dist/css/main.css" />
-</head>
-
-<body>
-
 <nav class="navbar" style="background-color: <?= $backgroundColor ?? 'white' ?> ">
     <div class="container">
         <h2 class="navbar-title">
@@ -18,10 +8,13 @@
                 <a href="/about">About Us</a>
             </li>
             <li>
-                <a href="/service">Projects</a>
+                <a href="/portfolio">Portfolio</a>
             </li>
             <li>
-                <a href="/home">Services</a>
+                <a href="/project">Projects</a>
+            </li>
+            <li>
+                <a href="/service">Services</a>
             </li>
         </ul>
         <a href="/contact" class="btn">Contact</a>
@@ -29,5 +22,3 @@
     <hr>
 </nav>
 
-</body>
-</html>

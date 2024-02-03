@@ -8,6 +8,8 @@
 
 <body>
 
+<?php include("layout/navbar.php") ?>
+
 <section class="Header-about">
     <div class="Container">
         <div class="SectionTitle">

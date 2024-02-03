@@ -23,7 +23,8 @@
         align-items: flex-start;
 
         .content-info {
-          display: flex;
+          align-self: stretch;
+          display: inline-flex;
           flex-direction: column;
           align-items: flex-start;
           gap: rem(24);
@@ -33,16 +34,6 @@
           width: rem(63);
           height: rem(27);
           position: relative;
-
-          .vector {
-            position: absolute;
-            background: black;
-
-            &.vector1 { width: rem(12.68); height: rem(20.02); left: rem(0.56); top: rem(0.98); }
-            &.vector2 { width: rem(15.43); height: rem(15.29); left: rem(13.86); top: rem(6.02); }
-            &.vector3 { width: rem(15.12); height: rem(20.38); left: rem(30.27); top: rem(6.02); }
-            &.vector4 { width: rem(15.43); height: rem(15.29); left: rem(47.23); top: rem(6.02); }
-          }
         }
 
         .social-links {
@@ -55,6 +46,11 @@
           a {
             text-decoration: none;
             font-size: rem(24);
+
+            img {
+              width: rem(24);
+              height: rem(24);
+            }
           }
         }
       }
@@ -95,9 +91,13 @@
 }
 
 .address, .contact, .link, .footer-link, .phone, .email, .copyright {
-  font-family: var(--main-font);
+  font-family: Roboto, sans-serif;
 
-  &.address, &.contact { font-weight: 600; }
+  &.address, &.contact {
+    font-weight: 600;
+    font-size: rem(14);
+
+  }
 
   &.phone, &.email {
     text-decoration: underline;
@@ -120,5 +120,8 @@
     font-size: rem(14);
     line-height: rem(21);
     word-wrap: break-word;
+    a {
+      color: black;
+    }
   }
 }

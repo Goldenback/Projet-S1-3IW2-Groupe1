@@ -1,37 +1,10 @@
 # Attention à vos noms de route (exemple de mauvaise route : forgotPassword) → pas de majuscule entre !
 
-# Controller Security
-/:
-  controller: Security
-  action: login
-
-/login:
-  controller: Security
-  action: login
-
-/logout:
-  controller: Security
-  action: logout
-
-/register:
-  controller: Security
-  action: register
-
-/activate:
-  controller: Security
-  action : activate
-
-/forgot-password:
-  controller: Security
-  action: forgotPWD
-
-/update-password:
-  controller : Security
-  action : updatePassword
-
-
 # Controller Main → Pour la vue du Frontend
 #La fonction loadView → (/about → about = nom du fichier)
+/:
+  controller: Main
+  action: loadFrontEndView
 
 /about:
   controller : Main
@@ -42,6 +15,14 @@
   action : loadFrontEndView
 
 /home :
+  controller : Main
+  action : loadFrontEndView
+
+/portfolio :
+  controller : Main
+  action : loadFrontEndView
+
+/project :
   controller : Main
   action : loadFrontEndView
 
@@ -74,6 +55,32 @@
 /user_management:
   controller : Main
   action : loadbackendView
+
+# Controller Security
+
+/login:
+  controller: Security
+  action: login
+
+/logout:
+  controller: Security
+  action: logout
+
+/register:
+  controller: Security
+  action: register
+
+/activate:
+  controller: Security
+  action : activate
+
+/forgot-password:
+  controller: Security
+  action: forgotPWD
+
+/update-password:
+  controller : Security
+  action : updatePassword
 
 
 #Gestion d'erreur
