@@ -35,19 +35,19 @@
 
 /about:
   controller : Main
-  action : loadView
+  action : loadFrontEndView
 
 /contact :
   controller : Main
-  action : loadView
+  action : loadFrontEndView
 
 /home :
   controller : Main
-  action : loadView
+  action : loadFrontEndView
 
 /service :
   controller : Main
-  action : loadView
+  action : loadFrontEndView
 
 
 #Controller Main -> Pour la vue du Backend
@@ -56,24 +56,24 @@
 #pour admin seulement
 /dashboard:
   controller : Main
-  action : loadView
+  action : loadbackendView
 
 #pour utilisateur
 /config :
   controller : Main
-  action : loadView
+  action : loadbackendView
 
 /templates:
   controller : Main
-  action : loadView
+  action : loadbackendView
 
 /comments:
   controller : Main
-  action : loadView
+  action : loadbackendView
 
 /user_management:
   controller : Main
-  action : loadView
+  action : loadbackendView
 
 
 #Gestion d'erreur

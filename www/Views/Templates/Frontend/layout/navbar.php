@@ -18,7 +18,7 @@
                 <a href="/about">About Us</a>
             </li>
             <li>
-                <a href="/projects">Projects</a>
+                <a href="/service">Projects</a>
             </li>
             <li>
                 <a href="/home">Services</a>
