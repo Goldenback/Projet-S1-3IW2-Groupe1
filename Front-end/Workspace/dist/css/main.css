@@ -1950,4 +1950,438 @@ img {
   gap: 1rem;
 }
 
+.project-header {
+  width: 100%;
+  height: 24.6875rem;
+  padding: 7rem 4rem;
+  background: white;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+}
+.project-header .Content {
+  height: 10.6875rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.5rem;
+}
+.project-header .Content .Heading {
+  align-self: stretch;
+  text-align: center;
+  color: black;
+  font-size: 3.5rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  line-height: 4.2rem;
+  word-wrap: break-word;
+}
+.project-header .Content .Text {
+  align-self: stretch;
+  text-align: center;
+  color: black;
+  font-size: 1.125rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  line-height: 1.6875rem;
+  word-wrap: break-word;
+}
+.project-header .Content .Tags {
+  align-self: stretch;
+  display: inline-flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+.project-header .Content .Tags .Tag {
+  padding: 0.25rem 0.5rem;
+  background: #F4F4F4;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.project-header .Content .Tags .Tag div {
+  color: black;
+  font-size: 0.875rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  line-height: 1.3125rem;
+  word-wrap: break-word;
+}
+
+.project-content {
+  width: 100%;
+  height: auto;
+  padding: 7rem 4rem;
+  background: white;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5rem;
+}
+.project-content .Container {
+  align-self: stretch;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 5rem;
+}
+.project-content .Container .PlaceholderImage {
+  flex: 1 1 0;
+  height: 40rem;
+}
+.project-content .Container .Content {
+  flex: 1 1 0;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+.project-content .Container .Content .Heading {
+  align-self: stretch;
+  color: black;
+  font-size: 3rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  line-height: 3.6rem;
+  word-wrap: break-word;
+}
+.project-content .Container .Content .RichText {
+  align-self: stretch;
+  height: 18.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.project-content .Container .Content .RichText .Content {
+  align-self: stretch;
+  padding-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.project-content .Container .Content .RichText .Content .Paragraph {
+  align-self: stretch;
+  color: black;
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  line-height: 1.5rem;
+  word-wrap: break-word;
+}
+
+.project-gallery {
+  width: 100%;
+  height: auto;
+  padding: 7rem 4rem;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5rem;
+}
+.project-gallery .SectionTitle {
+  height: 6.8125rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.5rem;
+}
+.project-gallery .SectionTitle .Heading, .project-gallery .SectionTitle .Text {
+  align-self: stretch;
+  text-align: center;
+  color: black;
+  font-size: 3rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  line-height: 3.6rem;
+  word-wrap: break-word;
+}
+.project-gallery .PlaceholderImage1 {
+  align-self: stretch;
+  height: 46.125rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+.project-layout {
+  width: 100%;
+  height: 54rem;
+  padding: 7rem 4rem;
+  background: white;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 5rem;
+}
+.project-layout .Container {
+  align-self: stretch;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5rem;
+}
+.project-layout .Container .Content {
+  flex: 1 1 0;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1.5rem;
+}
+.project-layout .Container .Content .SectionTitle {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1rem;
+  align-self: stretch;
+  height: 18rem;
+}
+.project-layout .Container .Content .SectionTitle .Subheading {
+  text-align: center;
+  color: black;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+}
+.project-layout .Container .Content .SectionTitle .Heading {
+  color: black;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 3.6rem;
+  align-self: stretch;
+}
+.project-layout .Container .Content .SectionTitle .Text {
+  color: black;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.6875rem;
+  align-self: stretch;
+}
+.project-layout .Container .Content .List {
+  display: inline-flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1.5rem;
+  padding: 0.5rem 0;
+  align-self: stretch;
+}
+.project-layout .Container .Content .List .ListItem {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1rem;
+  flex: 1 1 0;
+}
+.project-layout .Container .Content .List .ListItem .SubheadingOne,
+.project-layout .Container .Content .List .ListItem .SubheadingTwo {
+  color: black;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.75rem;
+  align-self: stretch;
+}
+.project-layout .Container .Content .List .ListItem .Text {
+  color: black;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  align-self: stretch;
+}
+.project-layout .Container .Content .Actions {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1.5rem;
+  padding-top: 1rem;
+}
+.project-layout .Container .PlaceholderImage {
+  flex: 1 1 0;
+  height: 40rem;
+}
+
+.project-layout2 {
+  width: 100%;
+  height: 84.125rem;
+  padding: 7rem 4rem;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 15.625rem;
+}
+.project-layout2 .Content {
+  align-self: stretch;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 5rem;
+}
+.project-layout2 .Content .Column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+.project-layout2 .Content .Column .Subheading {
+  align-self: stretch;
+  color: black;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+}
+.project-layout2 .Content .Column .Heading, .project-layout2 .Content .Column Text {
+  align-self: stretch;
+  color: black;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 3.6rem;
+}
+.project-layout2 .Content .Column .Actions {
+  padding-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1.5rem;
+}
+.project-layout2 .PlaceholderImage {
+  align-self: stretch;
+  height: 46.125rem;
+}
+
+.project-faq {
+  padding: 7rem 4rem;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.project-faq .Container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.project-faq .SectionTitle {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.0625rem;
+}
+.project-faq .SectionTitle .Heading {
+  font-size: 3rem;
+  font-weight: 700;
+}
+.project-faq .SectionTitle .Text {
+  font-size: 1.125rem;
+  font-weight: 400;
+}
+.project-faq .Accordion {
+  width: 100%;
+}
+.project-faq .Accordion .faq-item {
+  width: 100%;
+  border-bottom: 0.0625rem solid #eaeaea;
+}
+.project-faq .Accordion .faq-item .faq-question {
+  width: 100%;
+  text-align: left;
+  font-size: 1.125rem;
+  font-weight: 700;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 0;
+}
+.project-faq .Accordion .faq-item .faq-question:after {
+  content: "▼";
+  font-size: 1.5rem;
+  transition: transform 0.3s;
+}
+.project-faq .Accordion .faq-item .faq-question.is-open::after {
+  transform: rotate(0deg);
+}
+.project-faq .Accordion .faq-item .faq-answer {
+  display: none;
+  padding: 0 1.25rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-top: 0.5rem;
+}
+.project-faq .Content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.project-faq .Content a {
+  color: black;
+  text-decoration: none;
+}
+
+.project-cta {
+  width: 100%;
+  height: 26.3125rem;
+  padding: 7rem 4rem;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 5rem;
+}
+.project-cta .column {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+.project-cta .column .content .heading {
+  color: white;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 3.6rem;
+}
+.project-cta .column .content .text {
+  color: white;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.6875rem;
+}
+.project-cta .column .Actions {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1rem;
+  padding-top: 1rem;
+}
+.project-cta .column .Actions .Button.btn-white {
+  background: none;
+  border: 0.0625rem solid white;
+}
+.project-cta .column .Actions .Button.btn-white a {
+  text-decoration: none;
+  color: white;
+}
+
 /*# sourceMappingURL=main.css.map */
