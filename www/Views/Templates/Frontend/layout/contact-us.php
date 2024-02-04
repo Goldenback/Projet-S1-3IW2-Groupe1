@@ -85,7 +85,7 @@
                 <textarea class="type-your-message" id="messageArea" name="messageArea" placeholder="Type your message..." required></textarea>
             </div>
         </div>
-        <button class="btn" type="submit">Send</button>
+        <button class="Button Primary" type="submit">Send</button>
     </form>
 </section>
 

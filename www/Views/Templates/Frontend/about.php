@@ -20,12 +20,8 @@
             </div>
         </div>
         <div class="Actions">
-            <div class="Button Primary">
-                <a href="/service">Learn More</a>
-            </div>
-            <div class="Button Secondary">
-                <a href="/register">Sign Up</a>
-            </div>
+            <a href="/service" class="Button Primary">Learn More</a>
+            <a href="/register" class="Button Secondary">Sign Up</a>
         </div>
     </div>
 </section>
@@ -148,12 +144,8 @@
             <h2 class="Heading">Awards and Recognitions</h2>
             <p class="Text">Our platform and team have been recognized for excellence in the industry.</p>
             <div class="Actions">
-                <div class="Button Primary">
-                    <a href="/about">Learn More</a>
-                </div>
-                <div class="Button Secondary">
-                    <a href="/register">Sign Up</a>
-                </div>
+                <a href="/about" class="Button Primary">Learn More</a>
+                <a href="/register" class="Button Secondary">Sign Up</a>
             </div>
         </div>
         <div class="Logos">
@@ -204,12 +196,8 @@
             <p class="Text">Unlock your creative potential with our intuitive site builder designed for artists.</p>
         </div>
         <div class="Actions">
-            <div class="Button Primary">
-                <a href="/about">Learn More</a>
-            </div>
-            <div class="Button btn-white">
-                <a href="/register">Sign Up</a>
-            </div>
+            <a href="/about" class="Button Primary">Learn More</a>
+            <a href="/register" class="Button Secondary">Sign Up</a>
         </div>
     </div>
 </section>

@@ -73,12 +73,8 @@
                 </div>
             </div>
             <div class="Actions">
-                <div class="Button Primary">
-                    <a href="/service">Learn More</a>
-                </div>
-                <div class="Button Secondary">
-                    <a href="/register">Sign Up</a>
-                </div>
+                <a href="/service" class="Button Primary">Learn More</a>
+                <a href="/register" class="Button Secondary">Sign Up</a>
             </div>
         </div>
         <img class="PlaceholderImage" src="https://via.placeholder.com/616x640" />
@@ -94,12 +90,8 @@
         <div class="Column">
             <div class="Text">At Simplify, we understand the unique challenges that artists face when it comes to showcasing their work and connecting with their audience. That's why we've created a site builder specifically designed for artists, including photographers, musicians, and artists agencies. Our platform empowers artists to easily create stunning websites that beautifully showcase their talent and projects. With our intuitive tools and customizable templates, artists can bring their vision to life and engage with their audience like never before.</div>
             <div class="Actions">
-                <div class="Button Primary">
-                    <a href="/service">Learn More</a>
-                </div>
-                <div class="Button Secondary">
-                    <a href="/register">Sign Up</a>
-                </div>
+                <a href="/service" class="Button Primary">Learn More</a>
+                <a href="/register" class="Button Secondary">Sign Up</a>
             </div>
         </div>
     </div>
@@ -168,12 +160,8 @@
             <p class="text">Explore a diverse collection of art projects created by talented artists.</p>
         </div>
         <div class="Actions">
-            <div class="Button Primary">
-                <a href="/service">Explore</a>
-            </div>
-            <div class="Button btn-white">
-                <a href="/contact">Contact</a>
-            </div>
+            <a href="/service" class="Button Primary">Explore</a>
+            <a href="/contact" class="Button Secondary">Contact</a>
         </div>
     </div>
 </section>

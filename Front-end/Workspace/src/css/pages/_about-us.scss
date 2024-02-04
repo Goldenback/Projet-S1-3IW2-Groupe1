@@ -514,29 +514,3 @@
     }
   }
 }
-
-.Button {
-  padding: rem(12) rem(24);
-  font-size: rem(16);
-  font-family: Roboto, sans-serif;
-  font-weight: 400;
-  line-height: rem(24);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: rem(8);
-  border: rem(1) solid black;
-
-  &.Primary {
-    background: black;
-    a {
-      text-decoration: none;
-      color: white;
-    }
-  }
-
-  &.Secondary a{
-    text-decoration: none;
-    color: black;
-  }
-}

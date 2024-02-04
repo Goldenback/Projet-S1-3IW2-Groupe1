@@ -93,12 +93,8 @@
         <div class="Column">
             <p class="Text">Our platform provides artists with a user-friendly solution for managing and showcasing their portfolios. With our intuitive interface and powerful features, you can easily organize your work, create stunning galleries, and impress potential clients. Whether you're a photographer, musician, or artist agency, our platform is designed to meet your specific needs and help you stand out in a competitive market.</p>
             <div class="Actions">
-                <div class="Button Primary">
-                    <a href="/service">Learn More</a>
-                </div>
-                <div class="Button Secondary">
-                    <a href="/register">Sign Up</a>
-                </div>
+                <a href="/service" class="Button Primary">Learn More</a>
+                <a href="/register" class="Button Secondary">Sign Up</a>
             </div>
         </div>
     </div>
@@ -187,12 +183,8 @@
         <div class="Heading">Create Your Stunning Portfolio</div>
         <div class="Text">Showcase your work and impress potential clients with a professional portfolio website.</div>
         <div class="Actions">
-            <div class="Button Primary">
-                <a href="/register">Get Started</a>
-            </div>
-            <div class="Button Secondary">
-                <a href="/service">Learn More</a>
-            </div>
+            <a href="/register" class="Button Primary">Get Started</a>
+            <a href="/service" class="Button Secondary">Learn More</a>
         </div>
     </div>
 </section>
