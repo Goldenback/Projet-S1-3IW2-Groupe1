@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Inscription</title>
+    <title>Simplify</title>
     <link rel="stylesheet" href="../../../Front-end/Workspace/dist/css/backoffice.css"/>
 </head>
 <body>
@@ -38,7 +38,7 @@
         </div>
 
         <div class="register-links">
-            <a href="/login" class="login-link">Se connecter</a>
+            <a href="/login" class="register-link">Se connecter</a>
         </div>
 
     </form>

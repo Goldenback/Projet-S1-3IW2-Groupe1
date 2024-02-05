@@ -6,7 +6,6 @@
   min-height: 100vh;
   padding: rem(15);
 }
-
 .login-form {
   background: var(--white);
   padding: rem(40);
@@ -17,7 +16,7 @@
 }
 
 .login-title {
-  color: var(--primary-color);
+  color: var(--text-color);
   margin-bottom: rem(24);
   text-align: center;
 }
@@ -27,7 +26,7 @@
   padding: rem(10);
   margin-bottom: rem(16);
   border-radius: rem(6);
-  border: rem(1) solid var(--secondary-color);
+  border: rem(1) solid var(--black);
 }
 
 .login-button {
@@ -36,7 +35,7 @@
   margin-bottom: rem(15);
   margin-top: rem(12);
   font-size: rem(16);
-  background-color: var(--primary-color);
+  background-color: var(--black-bg-color);
   color: var(--white);
   border: none;
   border-radius: rem(6);
@@ -54,7 +53,7 @@
 }
 
 .login-link {
-  color: var(--primary-color);
+  color: var(--black);
   text-decoration: none;
   font-size: rem(14);
   transition: color var(--transition-duration);

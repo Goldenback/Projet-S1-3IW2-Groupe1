@@ -5,11 +5,14 @@
   /*Color*/
   --text-color:#000;
   --white:#FFF;
+  --black:#000;
   --btn-bg-color:#000;
   --bg-color:#FFF2D8;
   --btn-bg-hover-color: #1a1a1a;
   --primary-color: #113946;
   --secondary-color: #EAD7BB;
+  --black-bg-color: #000;
+  --error-message: #ff0000;
   /*Radius*/
   --main-radius: 0.375rem;
   /*Fonts*/
@@ -187,6 +190,7 @@ img {
 .CTA-form input {
   padding: var(--pm-md);
 }
+/* Site principal */
 body {
   padding-top: 6.25rem;
 }
@@ -2798,5 +2802,9 @@ body {
   line-height: 1.125rem;
   color: black;
 }
+
+/* ------------------------- */
+/* Front-end page Artiste */
+/* ------------------------- */
 
 /*# sourceMappingURL=main.css.map */

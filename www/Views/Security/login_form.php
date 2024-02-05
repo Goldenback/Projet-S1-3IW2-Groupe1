@@ -4,7 +4,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Connexion</title>
+    <title>Simplify</title>
     <link rel="stylesheet" href="../../../Front-end/Workspace/dist/css/backoffice.css">
 </head>
 <body>

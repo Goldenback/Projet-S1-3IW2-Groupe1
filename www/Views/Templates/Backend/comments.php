@@ -2,12 +2,12 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Gestion des Commentaires</title>
-    <link rel="stylesheet" href="../../../Front-end/Workspace/dist/css/main.css">
+    <title>Simplify</title>
+    <link rel="stylesheet" href="../../../Front-end/Workspace/dist/css/backoffice.css">
 </head>
 <body>
 
-<div class="comments-management-container">
+<section class="comments-management-container">
     <h2>Gestion des Commentaires</h2>
     <div class="comments-list">
 
@@ -32,7 +32,7 @@
 
 
     </div>
-</div>
+</section>
 
 </body>
 </html>

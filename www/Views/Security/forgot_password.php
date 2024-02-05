@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Mot de passe oublié</title>
+    <title>Simplify</title>
     <link rel="stylesheet" href="../../../Front-end/Workspace/dist/css/backoffice.css"/>
 </head>
 

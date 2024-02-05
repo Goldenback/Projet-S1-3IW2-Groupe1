@@ -3,6 +3,7 @@ $white : #FFF;
 $bg-color : #FFF2D8;
 $primary-color : #113946;
 $secondary-color : #EAD7BB;
+$error : #ff0000;
 $centered : auto;
 
 
@@ -11,11 +12,14 @@ $centered : auto;
 
     --text-color:#{$black};
     --white:#{$white};
+    --black:#{$black};
     --btn-bg-color:#{$black};
     --bg-color:#{$bg-color};
     --btn-bg-hover-color: #{lighten($black, 10%)};
-   --primary-color : #{$primary-color};
-   --secondary-color : #{$secondary-color};
+    --primary-color : #{$primary-color};
+    --secondary-color : #{$secondary-color};
+    --black-bg-color : #{$black};
+    --error-message : #{$error};
 
 
     /*Radius*/
