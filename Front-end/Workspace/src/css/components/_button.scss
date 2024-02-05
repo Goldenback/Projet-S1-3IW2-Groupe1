@@ -8,7 +8,6 @@
     line-height: rem(18);
     text-align: center;
     align-items: center;
-    margin-bottom: rem(20);
 
     &-lg{
         padding: var(--pm-lg);
@@ -33,6 +32,41 @@
     }
 }
 
+.Button {
+    padding: rem(12) rem(24);
+    font-size: rem(16);
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    line-height: rem(24);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: rem(8);
+    border: rem(1) solid black;
+    text-decoration: none;
 
+    &.Primary {
+        background: black;
+        text-decoration: none;
+        color: white;
+
+        &:hover {
+            background-color: white;
+            color: black;
+            transition: 0.3s ease-in-out;
+        }
+    }
+
+    &.Secondary {
+        text-decoration: none;
+        color: black;
+
+        &:hover {
+            color: white;
+            background-color: black;
+            transition: 0.3s ease-in-out;
+        }
+    }
+}
 
 .row{margin: rem(50) 0 rem(50) 0;}

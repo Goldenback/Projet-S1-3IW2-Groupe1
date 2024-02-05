@@ -1,0 +1,95 @@
+$primary-color: rgb(65, 64, 134);
+$secondary-color: rgb(46, 45, 96);
+$background-color: #F4F4F4;
+$text-color: #ffffff;
+
+.config-container {
+  background-color: $background-color;
+  color: $text-color;
+  width: 100%;
+  margin: 0;
+  padding: rem(20);
+  border-radius: rem(10);
+  box-shadow: 0 rem(4) rem(8) rgba(0, 0, 0, 0.1);
+
+  a {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+
+  h1, h3 {
+    color: $primary-color;
+    text-align: center;
+  }
+
+  label {
+    color: $primary-color;
+  }
+
+  .tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: rem(20);
+
+    .tab-button {
+      background-color: $secondary-color;
+      border: none;
+      padding: rem(10) rem(20);
+      border-radius: rem(5);
+      color: $text-color;
+      cursor: pointer;
+
+      &:hover {
+        background-color: darken($secondary-color, 10%);
+      }
+    }
+  }
+
+  .tab-content {
+    display: none;
+    padding: rem(20);
+    border: rem(1) solid $secondary-color;
+    border-radius: rem(5);
+  }
+
+  .submit-button {
+    background-color: $secondary-color;
+    border: none;
+    padding: rem(10) rem(20);
+    border-radius: rem(5);
+    color: $text-color;
+    cursor: pointer;
+    text-decoration: none;
+    justify-content: center;
+
+    &:hover {
+      background-color: darken($secondary-color, 15%);
+    }
+  }
+}
+
+.config-form {
+  .form-group {
+    margin-bottom: rem(15);
+
+    label {
+      display: block;
+      margin-bottom: rem(5);
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: rem(8);
+      border: rem(1) solid #ccc;
+      border-radius: rem(4);
+    }
+  }
+}

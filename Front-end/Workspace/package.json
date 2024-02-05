@@ -9,7 +9,8 @@
     "sass": "sass src/css/main.scss dist/css/main.css",
     "watch": "concurrently \"vite build --watch\" \"sass --watch src/css/main.scss dist/css/main.css\"",
     "watch-vite": "vite build --watch",
-    "watch-sass": "sass --watch src/css/main.scss dist/css/main.css"
+    "watch-sass": "sass --watch src/css/main.scss dist/css/main.css",
+    "watch-sass-backoffice": "sass --watch src/css/backoffice.scss dist/css/backoffice.css"
   },
   "author": "",
   "license": "ISC",

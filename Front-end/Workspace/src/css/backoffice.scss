@@ -1,0 +1,17 @@
+@import "partials/fonts";
+@import "partials/functions"; /*Function #1*/
+@import "partials/variables"; /*Variables #2*/
+@import "partials/globals";
+@import "partials/mixin";
+
+@import "layout/sidebar";
+
+@import "pages/login";
+@import "pages/register";
+@import "pages/forgotpassword";
+
+@import "pages/usermanagement";
+@import "pages/dashboard";
+@import "pages/config";
+@import "pages/comments";
+@import "pages/template";

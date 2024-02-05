@@ -1,10 +1,62 @@
+# Attention à vos noms de route (exemple de mauvaise route : forgotPassword) → pas de majuscule entre !
+
+# Controller Main → Pour la vue du Frontend
+#La fonction loadView → (/about → about = nom du fichier)
 /:
   controller: Main
-  action: home
+  action: loadFrontEndView
 
-/config:
+/about:
   controller : Main
-  action : config
+  action : loadFrontEndView
+
+/contact :
+  controller : Main
+  action : loadFrontEndView
+
+/home :
+  controller : Main
+  action : loadFrontEndView
+
+/portfolio :
+  controller : Main
+  action : loadFrontEndView
+
+/project :
+  controller : Main
+  action : loadFrontEndView
+
+/service :
+  controller : Main
+  action : loadFrontEndView
+
+
+#Controller Main -> Pour la vue du Backend
+#La fonction loadView → (/dashboard → dashboard = nom du fichier)
+
+#pour admin seulement
+/dashboard:
+  controller : Main
+  action : loadbackendView
+
+#pour utilisateur
+/config :
+  controller : Main
+  action : loadbackendView
+
+/templates:
+  controller : Main
+  action : loadbackendView
+
+/comments:
+  controller : Main
+  action : loadbackendView
+
+/user_management:
+  controller : Main
+  action : loadbackendView
+
+# Controller Security
 
 /login:
   controller: Security
@@ -17,3 +69,19 @@
 /register:
   controller: Security
   action: register
+
+/activate:
+  controller: Security
+  action : activate
+
+/forgot-password:
+  controller: Security
+  action: forgotPWD
+
+/update-password:
+  controller : Security
+  action : updatePassword
+
+
+#Gestion d'erreur
+/error:

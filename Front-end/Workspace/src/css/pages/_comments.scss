@@ -1,0 +1,61 @@
+.comments-management-container {
+  width: 100%;
+  margin: 0;
+  padding: rem(20);
+  background-color: #f5f5f5;
+  box-shadow: 0 rem(2) rem(4) rgba(0, 0, 0, 0.1);
+
+  h2 {
+    text-align: center;
+    color: rgb(65, 64, 134);
+  }
+
+  .comments-list {
+    width: 100%;
+
+    .comment-item {
+      background-color: #fff;
+      border: rem(1) solid #ddd;
+      border-radius: rem(4);
+      padding: rem(15);
+      margin-bottom: rem(15);
+
+      .comment-content {
+        .comment-text {
+          font-size: 1rem;
+        }
+
+        .comment-info {
+          font-size: 0.8rem;
+          color: #666;
+
+          .comment-author,
+          .comment-date {
+            margin-right: rem(10);
+          }
+        }
+      }
+
+      .comment-actions {
+        display: flex;
+        justify-content: flex-end;
+
+        .btn {
+          margin-left: rem(10);
+          padding: rem(5) rem(10);
+          border-radius: rem(4);
+          cursor: pointer;
+          transition: background-color 0.3s;
+          border: none;
+
+          &:hover {
+            background-color: darken(#ddd, 10%);
+          }
+        }
+
+        .approve-comment { background-color: #4CAF50; color: white; }
+        .delete-comment { background-color: #F44336; color: white; }
+      }
+    }
+  }
+}
