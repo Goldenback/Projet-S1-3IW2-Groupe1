@@ -1,5 +1,13 @@
+body {
+  padding-top: rem(100);
+}
+
 .navbar{
   background-color: var(--bg-color);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
 
   .container{
     @include flexbox(row, nowrap, space-around, center);
