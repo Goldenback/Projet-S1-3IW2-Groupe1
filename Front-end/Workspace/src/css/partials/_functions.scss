@@ -1,0 +1,19 @@
+@function rem($pxVal){
+    @return calc($pxVal / 16 * 1rem);
+}
+
+@function is-light($bg-color) {
+    $red: red($bg-color);
+    $green: green($bg-color);
+    $blue: blue($bg-color);
+  
+    $luminance: (0.299 * $red + 0.587 * $green + 0.114 * $blue) / 255;
+  
+    @if $luminance > 0.5 {
+      @return true; // Couleur claire
+    } @else {
+      @return false; // Couleur sombre
+    }
+  }
+
+  

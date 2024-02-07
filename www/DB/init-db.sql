@@ -9,10 +9,11 @@ CREATE TABLE IF NOT EXISTS users (
     pwd VARCHAR(255) NOT NULL,
     email VARCHAR(255) NOT NULL,
     Role VARCHAR(50) NOT NULL,
-    is_validated VARCHAR(50) NOT NULL,
+    is_validated BOOLEAN,
     created_at TIMESTAMP NOT NULL,
     updated_at TIMESTAMP DEFAULT NULL,
-    deleted_at TIMESTAMP DEFAULT NULL
+    deleted_at TIMESTAMP DEFAULT NULL,
+    token VARCHAR(255)
     );
 
 --

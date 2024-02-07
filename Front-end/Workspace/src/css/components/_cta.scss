@@ -1,0 +1,30 @@
+.CTA{
+    border: 1px solid var(--text-color);
+    padding: var(--pm-xxlg);
+    font-family: var(--main-font);
+    max-width: 35vw;
+    margin: auto;
+    background-color: var(--transparent);
+
+
+    .content{
+        text-align: center;
+        &-title{
+            font-size: var(--title-size);
+            display: inline;
+            margin: auto;
+            
+        }
+        &-text{
+            font-size: var(--main-size);
+
+        }
+    }
+    &-form{
+        text-align: center;
+        margin-top: var(--pm-xlg);
+       
+        input{padding: var(--pm-md);}
+        a{}
+    }
+}
