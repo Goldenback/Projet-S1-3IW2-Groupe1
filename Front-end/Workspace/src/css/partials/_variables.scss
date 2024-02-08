@@ -1,5 +1,6 @@
 $black : #000;
 $white : #FFF;
+$img-bg-color : #F4F4F4;
 $bg-color : #FFF2D8;
 $primary-color : #113946;
 $secondary-color : #EAD7BB;
@@ -12,6 +13,7 @@ $centered : auto;
 
     --text-color:#{$black};
     --white:#{$white};
+    --img-bg-color: #{$img-bg-color};
     --black:#{$black};
     --btn-bg-color:#{$black};
     --bg-color:#{$bg-color};
@@ -31,12 +33,14 @@ $centered : auto;
     --main-font: #{$text-font};
     --title-font: #{$title-font};
 
+    --website-font-family: #{$website-font-family};
+
     /*trans*/
 
     --transition-duration:0.3s;
 
     /*Font size*/
-    --main-size : #{rem(16)};
+    --main-size : #{rem(18)};
     --title-size : #{rem(32)};
     --main-title-size : #{rem(80)};
     --subtitle-size : #{rem(24)};

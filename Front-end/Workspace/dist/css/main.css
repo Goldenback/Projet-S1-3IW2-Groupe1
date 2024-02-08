@@ -5,6 +5,7 @@
   /*Color*/
   --text-color:#000;
   --white:#FFF;
+  --img-bg-color: #F4F4F4;
   --black:#000;
   --btn-bg-color:#000;
   --bg-color:#FFF2D8;
@@ -18,10 +19,11 @@
   /*Fonts*/
   --main-font: Lato;
   --title-font: Playfair Display;
+  --website-font-family: Roboto, sans-serif;
   /*trans*/
   --transition-duration:0.3s;
   /*Font size*/
-  --main-size: 1rem;
+  --main-size: 1.125rem;
   --title-size: 2rem;
   --main-title-size: 5rem;
   --subtitle-size: 1.5rem;
@@ -772,7 +774,7 @@ body {
   width: 100%;
   height: 29.375rem;
   padding: 7rem 4rem;
-  background: white;
+  background: var(--white);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -794,9 +796,9 @@ body {
 }
 .Header-about .SectionTitle .Tagline {
   text-align: center;
-  color: black;
+  color: var(--black);
   font-size: 1rem;
-  font-family: Roboto, sans-serif;
+  font-family: var(--website-font-family);
   font-weight: 600;
   line-height: 1.5rem;
 }
@@ -808,16 +810,16 @@ body {
   gap: 1.5rem;
 }
 .Header-about .SectionTitle .Content .ShortHeadingHere {
-  color: black;
+  color: var(--black);
   font-size: 3.5rem;
-  font-family: Roboto, sans-serif;
+  font-family: var(--website-font-family);
   font-weight: 700;
   line-height: 4.2rem;
 }
 .Header-about .SectionTitle .Content .Description {
-  color: black;
-  font-size: 1.125rem;
-  font-family: Roboto, sans-serif;
+  color: var(--black);
+  font-size: var(--main-size);
+  font-family: var(--website-font-family);
   font-weight: 400;
   line-height: 1.6875rem;
 }
@@ -869,30 +871,30 @@ body {
   gap: 1.5rem;
 }
 .Layout1-about .Content .ContentText .Heading {
-  color: black;
+  color: var(--black);
   font-size: 2.5rem;
-  font-family: Roboto, sans-serif;
+  font-family: var(--website-font-family);
   font-weight: 700;
   line-height: 3rem;
 }
 .Layout1-about .Content .ContentText .Text {
-  color: black;
-  font-size: 1.125rem;
-  font-family: Roboto, sans-serif;
+  color: var(--black);
+  font-size: var(--main-size);
+  font-family: var(--website-font-family);
   font-weight: 400;
   line-height: 1.6875rem;
 }
 .Layout1-about .PlaceholderImage {
   flex: 1 1 0;
+  width: 38.5rem;
   height: 40rem;
-  object-fit: cover;
 }
 
 .Layout2-about {
   width: 100%;
   height: 54rem;
   padding: 7rem 4rem;
-  background: white;
+  background: var(--white);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -920,16 +922,16 @@ body {
   gap: 1.5rem;
 }
 .Layout2-about .Content .ContentHeader .Heading {
-  color: black;
+  color: var(--black);
   font-size: 2.5rem;
-  font-family: "Roboto", sans-serif;
+  font-family: var(--website-font-family);
   font-weight: 700;
   line-height: 3rem;
 }
 .Layout2-about .Content .ContentHeader .Text {
-  color: black;
-  font-size: 1.125rem;
-  font-family: "Roboto", sans-serif;
+  color: var(--black);
+  font-size: var(--main-size);
+  font-family: var(--website-font-family);
   font-weight: 400;
   line-height: 1.6875rem;
 }
@@ -937,7 +939,6 @@ body {
   align-self: stretch;
   padding: 0.5rem 0;
   display: flex;
-  flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   gap: 1.5rem;
@@ -950,16 +951,16 @@ body {
   gap: 0.5rem;
 }
 .Layout2-about .Content .List .ListItem .Number {
-  color: black;
+  color: var(--black);
   font-size: 3rem;
-  font-family: "Roboto", sans-serif;
+  font-family: var(--website-font-family);
   font-weight: 700;
   line-height: 3.6rem;
 }
 .Layout2-about .Content .List .ListItem .Text {
-  color: black;
+  color: var(--black);
   font-size: 1rem;
-  font-family: "Roboto", sans-serif;
+  font-family: var(--website-font-family);
   font-weight: 400;
   line-height: 1.5rem;
 }
@@ -973,7 +974,7 @@ body {
   width: 100%;
   height: 100%;
   padding: 7rem 4rem;
-  background: white;
+  background: var(--white);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -987,11 +988,11 @@ body {
 }
 .Team-about .SectionTitle .Subheading, .Team-about .SectionTitle .Heading, .Team-about .SectionTitle .Description {
   text-align: center;
-  color: black;
-  font-family: "Roboto", sans-serif;
+  color: var(--black);
+  font-family: var(--website-font-family);
 }
 .Team-about .SectionTitle .Subheading {
-  font-size: 1rem;
+  font-size: var(--subtitle-size);
   font-weight: 600;
   line-height: 1.5rem;
 }
@@ -1001,7 +1002,7 @@ body {
   line-height: 3.6rem;
 }
 .Team-about .SectionTitle .Description {
-  font-size: 1.125rem;
+  font-size: var(--main-size);
   font-weight: 400;
   line-height: 1.6875rem;
 }
@@ -1034,8 +1035,8 @@ body {
 }
 .Team-about .Content .Card .Name, .Team-about .Content .Card .JobTitle, .Team-about .Content .Card .Bio {
   text-align: center;
-  color: black;
-  font-family: "Roboto", sans-serif;
+  color: var(--black);
+  font-family: var(--website-font-family);
 }
 .Team-about .Content .Card .Name {
   font-size: 1.25rem;
@@ -1043,12 +1044,12 @@ body {
   line-height: 1.875rem;
 }
 .Team-about .Content .Card .JobTitle {
-  font-size: 1.125rem;
+  font-size: var(--main-size);
   font-weight: 400;
   line-height: 1.6875rem;
 }
 .Team-about .Content .Card .Bio {
-  font-size: 1rem;
+  font-size: var(--main-size);
   font-weight: 400;
   line-height: 1.5rem;
 }
@@ -1064,17 +1065,17 @@ body {
 }
 .Team-about .HiringSection .Heading {
   text-align: center;
-  color: black;
+  color: var(--black);
   font-size: 2rem;
-  font-family: "Roboto", sans-serif;
+  font-family: var(--website-font-family);
   font-weight: 700;
   line-height: 2.6rem;
 }
 .Team-about .HiringSection .Text {
   text-align: center;
-  color: black;
+  color: var(--black);
   font-size: 1.125rem;
-  font-family: "Roboto", sans-serif;
+  font-family: var(--website-font-family);
   font-weight: 400;
   line-height: 1.6875rem;
 }
@@ -1083,7 +1084,7 @@ body {
   width: 100%;
   height: 36.5rem;
   padding: 7rem 4rem;
-  background: white;
+  background: var(--white);
   display: flex;
   align-items: center;
   gap: 5rem;
@@ -1092,13 +1093,13 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 5rem;
+  gap: 0.5rem;
   width: 100%;
   flex-direction: row;
 }
 .Logo1-about .Container .Content {
   flex: 1;
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
@@ -1108,15 +1109,15 @@ body {
   font-size: 3rem;
   font-weight: 700;
   line-height: 3.6rem;
-  color: black;
-  font-family: "Roboto", sans-serif;
+  color: var(--black);
+  font-family: var(--website-font-family);
 }
 .Logo1-about .Container .Content .Text {
-  font-size: 1.125rem;
+  font-size: var(--main-size);
   font-weight: 400;
   line-height: 1.6875rem;
-  color: black;
-  font-family: "Roboto", sans-serif;
+  color: var(--black);
+  font-family: var(--website-font-family);
 }
 .Logo1-about .Container .Content .Actions {
   display: flex;
@@ -1126,16 +1127,18 @@ body {
   display: flex;
   gap: 0.5rem;
   flex-direction: column;
-  width: 9.375rem;
 }
 .Logo1-about .Container .Logos .Logo {
-  padding: 0.875rem;
-  background: #F4F4F4;
-  display: flex;
+  width: 19rem;
+  height: 5.25rem;
+  flex-direction: column;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
+  gap: 0.875rem;
 }
 .Logo1-about .Container .Logos .Logo img {
+  background-color: var(--img-bg-color);
   max-width: 100%;
   height: auto;
 }
@@ -1144,7 +1147,7 @@ body {
   width: 100%;
   height: 13.5rem;
   padding: 5rem 4rem;
-  background: white;
+  background: var(--white);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1160,9 +1163,9 @@ body {
 }
 .Logo2-about .Container .Heading {
   width: 20rem;
-  color: black;
-  font-size: 1.125rem;
-  font-family: "Roboto", sans-serif;
+  color: var(--black);
+  font-size: var(--main-size);
+  font-family: var(--website-font-family);
   font-weight: 700;
   line-height: 1.6875rem;
 }
@@ -1170,12 +1173,11 @@ body {
   display: flex;
   justify-content: end;
   align-items: center;
-  gap: 2rem;
   flex: 1;
 }
 .Logo2-about .Container .Logos .Logo {
-  width: 7.5rem;
-  height: 3rem;
+  width: 10.625rem;
+  height: 3.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1189,7 +1191,8 @@ body {
   width: 100%;
   height: 26.3125rem;
   padding: 7rem 4rem;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%);
+  background-color: var(--black);
+  background-image: url("../../../assets/img/cta-img.png");
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -1208,16 +1211,16 @@ body {
   align-items: flex-start;
 }
 .Cta-about .Column .Content .Heading {
-  color: white;
+  color: var(--white);
   font-size: 3rem;
-  font-family: "Roboto", sans-serif;
+  font-family: var(--website-font-family);
   font-weight: 700;
   line-height: 0.9375rem;
 }
 .Cta-about .Column .Content .Text {
-  color: white;
-  font-size: 1.125rem;
-  font-family: "Roboto", sans-serif;
+  color: var(--white);
+  font-size: var(--main-size);
+  font-family: var(--website-font-family);
   font-weight: 400;
   line-height: 1.6875rem;
 }
@@ -1226,15 +1229,18 @@ body {
   justify-content: flex-start;
   align-items: flex-start;
   gap: 1rem;
-  padding-top: 1rem;
+  padding-top: var(--pm-md);
 }
 .Cta-about .Column .Actions .Button.btn-white {
   background: none;
-  border: 0.0625rem solid white;
+  border: 0.0625rem solid var(--white);
+  color: var(--white);
 }
-.Cta-about .Column .Actions .Button.btn-white a {
-  text-decoration: none;
-  color: white;
+.Cta-about .Column .Actions .Button.btn-white:hover {
+  color: var(--white);
+  background-color: var(--black);
+  transition: var(--transition-duration) ease-in-out;
+  border-color: var(--black);
 }
 
 .Portfolio-Header {

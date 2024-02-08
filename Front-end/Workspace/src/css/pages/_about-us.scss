@@ -2,7 +2,7 @@
   width: 100%;
   height: rem(470);
   padding: rem(112) rem(64);
-  background: white;
+  background: var(--white);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -25,9 +25,9 @@
 
     .Tagline {
       text-align: center;
-      color: black;
+      color: var(--black);
       font-size: rem(16);
-      font-family: Roboto, sans-serif;
+      font-family: var(--website-font-family);
       font-weight: 600;
       line-height: rem(24);
     }
@@ -40,17 +40,17 @@
       gap: rem(24);
 
       .ShortHeadingHere {
-        color: black;
+        color: var(--black);
         font-size: rem(56);
-        font-family: Roboto, sans-serif;
+        font-family: var(--website-font-family);
         font-weight: 700;
         line-height: rem(67.20);
       }
 
       .Description {
-        color: black;
-        font-size: rem(18);
-        font-family: Roboto, sans-serif;
+        color: var(--black);
+        font-size: var(--main-size);
+        font-family: var(--website-font-family);
         font-weight: 400;
         line-height: rem(27);
       }
@@ -108,17 +108,17 @@
       gap: rem(24);
 
       .Heading {
-        color: black;
+        color: var(--black);
         font-size: rem(40);
-        font-family: Roboto, sans-serif;
+        font-family: var(--website-font-family);
         font-weight: 700;
         line-height: rem(48);
       }
 
       .Text {
-        color: black;
-        font-size: rem(18);
-        font-family: Roboto, sans-serif;
+        color: var(--black);
+        font-size: var(--main-size);
+        font-family: var(--website-font-family);
         font-weight: 400;
         line-height: rem(27);
       }
@@ -127,8 +127,8 @@
 
   .PlaceholderImage {
     flex: 1 1 0;
+    width: rem(616);
     height: rem(640);
-    object-fit: cover;
   }
 }
 
@@ -136,7 +136,7 @@
   width: 100%;
   height: rem(864);
   padding: rem(112) rem(64);
-  background: white;
+  background: var(--white);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -165,17 +165,17 @@
       gap: rem(24);
 
       .Heading {
-        color: black;
+        color: var(--black);
         font-size: rem(40);
-        font-family: 'Roboto', sans-serif;
+        font-family: var(--website-font-family);
         font-weight: 700;
         line-height: rem(48);
       }
 
       .Text {
-        color: black;
-        font-size: rem(18);
-        font-family: 'Roboto', sans-serif;
+        color: var(--black);
+        font-size: var(--main-size);
+        font-family: var(--website-font-family);
         font-weight: 400;
         line-height: rem(27);
       }
@@ -185,7 +185,6 @@
       align-self: stretch;
       padding: rem(8) 0;
       display: flex;
-      flex-direction: column;
       justify-content: flex-start;
       align-items: flex-start;
       gap: rem(24);
@@ -198,17 +197,17 @@
         gap: rem(8);
 
         .Number {
-          color: black;
+          color: var(--black);
           font-size: rem(48);
-          font-family: 'Roboto', sans-serif;
+          font-family: var(--website-font-family);
           font-weight: 700;
           line-height: rem(57.60);
         }
 
         .Text {
-          color: black;
+          color: var(--black);
           font-size: rem(16);
-          font-family: 'Roboto', sans-serif;
+          font-family: var(--website-font-family);
           font-weight: 400;
           line-height: rem(24);
         }
@@ -220,6 +219,7 @@
     flex: 1 1 0;
     height: rem(640);
     object-fit: cover;
+
   }
 }
 
@@ -227,7 +227,7 @@
   width: 100%;
   height: 100%;
   padding: rem(112) rem(64);
-  background: white;
+  background: var(--white);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -240,11 +240,11 @@
     gap: rem(16);
     .Subheading, .Heading, .Description {
       text-align: center;
-      color: black;
-      font-family: 'Roboto', sans-serif;
+      color: var(--black);
+      font-family: var(--website-font-family);
     }
     .Subheading {
-      font-size: rem(16);
+      font-size: var(--subtitle-size);
       font-weight: 600;
       line-height: rem(24);
     }
@@ -254,7 +254,7 @@
       line-height: rem(57.60);
     }
     .Description {
-      font-size: rem(18);
+      font-size: var(--main-size);
       font-weight: 400;
       line-height: rem(27);
     }
@@ -288,8 +288,8 @@
       }
       .Name, .JobTitle, .Bio {
         text-align: center;
-        color: black;
-        font-family: 'Roboto', sans-serif;
+        color: var(--black);
+        font-family: var(--website-font-family);
       }
       .Name {
         font-size: rem(20);
@@ -297,12 +297,12 @@
         line-height: rem(30);
       }
       .JobTitle {
-        font-size: rem(18);
+        font-size: var(--main-size);
         font-weight: 400;
         line-height: rem(27);
       }
       .Bio {
-        font-size: rem(16);
+        font-size: var(--main-size);
         font-weight: 400;
         line-height: rem(24);
       }
@@ -320,17 +320,17 @@
     gap: rem(24);
     .Heading {
       text-align: center;
-      color: black;
+      color: var(--black);
       font-size: rem(32);
-      font-family: 'Roboto', sans-serif;
+      font-family: var(--website-font-family);
       font-weight: 700;
       line-height: rem(41.60);
     }
     .Text {
       text-align: center;
-      color: black;
+      color: var(--black);
       font-size: rem(18);
-      font-family: 'Roboto', sans-serif;
+      font-family: var(--website-font-family);
       font-weight: 400;
       line-height: rem(27);
     }
@@ -341,7 +341,7 @@
   width: 100%;
   height: rem(584);
   padding: rem(112) rem(64);
-  background: white;
+  background: var(--white);
   display: flex;
   align-items: center;
   gap: rem(80);
@@ -350,13 +350,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: rem(80);
+    gap: 0.5rem;
     width: 100%;
     flex-direction: row;
 
     .Content {
       flex: 1;
-      display: flex;
+      display: inline-flex;
       flex-direction: column;
       justify-content: center;
       align-items: flex-start;
@@ -366,16 +366,16 @@
         font-size: rem(48);
         font-weight: 700;
         line-height: rem(57.60);
-        color: black;
-        font-family: 'Roboto', sans-serif;
+        color: var(--black);
+        font-family: var(--website-font-family);
       }
 
       .Text {
-        font-size: rem(18);
+        font-size: var(--main-size);
         font-weight: 400;
         line-height: rem(27);
-        color: black;
-        font-family: 'Roboto', sans-serif;
+        color: var(--black);
+        font-family: var(--website-font-family);
       }
 
       .Actions {
@@ -388,16 +388,18 @@
       display: flex;
       gap: rem(8);
       flex-direction: column;
-      width: rem(150);
 
       .Logo {
-        padding: rem(14);
-        background: #F4F4F4;
-        display: flex;
+        width: rem(304);
+        height: rem(84);
+        flex-direction: column;
+        display: inline-flex;
         justify-content: center;
         align-items: center;
+        gap: rem(14);
 
         img {
+          background-color: var(--img-bg-color);
           max-width: 100%;
           height: auto;
         }
@@ -410,7 +412,7 @@
   width: 100%;
   height: rem(216);
   padding: rem(80) rem(64);
-  background: white;
+  background: var(--white);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -426,9 +428,9 @@
 
     .Heading {
       width: rem(320);
-      color: black;
-      font-size: rem(18);
-      font-family: 'Roboto', sans-serif;
+      color: var(--black);
+      font-size: var(--main-size);
+      font-family: var(--website-font-family);
       font-weight: 700;
       line-height: rem(27);
     }
@@ -437,12 +439,11 @@
       display: flex;
       justify-content: end;
       align-items: center;
-      gap: rem(32);
       flex: 1;
 
       .Logo {
-        width: rem(120);
-        height: rem(48);
+        width: rem(170);
+        height: rem(56);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -459,7 +460,8 @@
   width: 100%;
   height: rem(421);
   padding: rem(112) rem(64);
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%);
+  background-color: var(--black);
+  background-image: url('../../../assets/img/cta-img.png');
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -478,17 +480,17 @@
       align-items: flex-start;
 
       .Heading {
-        color: white;
+        color: var(--white);
         font-size: rem(48);
-        font-family: 'Roboto', sans-serif;
+        font-family: var(--website-font-family);
         font-weight: 700;
         line-height: rem(15);
       }
 
       .Text {
-        color: white;
-        font-size: rem(18);
-        font-family: 'Roboto', sans-serif;
+        color: var(--white);
+        font-size: var(--main-size);
+        font-family: var(--website-font-family);
         font-weight: 400;
         line-height: rem(27);
       }
@@ -499,15 +501,19 @@
       justify-content: flex-start;
       align-items: flex-start;
       gap: rem(16);
-      padding-top: rem(16);
+      padding-top: var(--pm-md);
 
       .Button {
         &.btn-white {
           background: none;
-          border: rem(1) solid white;
-          a {
-            text-decoration: none;
-            color: white;
+          border: rem(1) solid var(--white);
+          color: var(--white);
+
+          &:hover {
+            color: var(--white);
+            background-color: var(--black);
+            transition: var(--transition-duration) ease-in-out;
+            border-color: var(--black);
           }
         }
       }

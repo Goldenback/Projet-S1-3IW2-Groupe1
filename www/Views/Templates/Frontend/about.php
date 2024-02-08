@@ -37,7 +37,7 @@
                 <div class="Text">Our platform was founded with the vision of providing artists with a user-friendly and customizable website builder. With a team of experienced professionals, we are dedicated to helping artists of all disciplines create stunning online portfolios that reflect their unique style and captivate their audience.</div>
             </div>
         </div>
-        <img class="PlaceholderImage" src="https://via.placeholder.com/616x640" alt="Placeholder Image">
+        <img class="PlaceholderImage" src="../../../Front-end/Workspace/assets/img/layout-1.png" alt="Back-office">
     </div>
 </section>
 
@@ -59,7 +59,7 @@
                 </div>
             </div>
         </div>
-        <img class="PlaceholderImage" src="https://via.placeholder.com/616x640" alt="Placeholder Image">
+        <img class="PlaceholderImage" src="../../../Front-end/Workspace/assets/img/layout-2.png" alt="Placeholder Image">
     </div>
 </section>
 
@@ -76,9 +76,9 @@
             <div class="Card">
                 <img class="PlaceholderImage" src="https://via.placeholder.com/405x395" alt="John Doe">
                 <div class="CardContent">
-                    <div class="Name">John Doe</div>
-                    <div class="JobTitle">Graphic Designer</div>
-                    <div class="Bio">John is a passionate graphic designer with a keen eye for detail.</div>
+                    <div class="Name">RIMANI Ilies</div>
+                    <div class="JobTitle">Web Developper Full-stack</div>
+                    <div class="Bio">He is a passionate Web Developper with a keen eye for detail.</div>
                 </div>
                 <div class="SocialIcons">
                     <div class="IconLinkedin"></div>
@@ -88,11 +88,11 @@
             </div>
 
             <div class="Card">
-                <img class="PlaceholderImage" src="https://via.placeholder.com/405x395" alt="John Doe">
+                <img class="PlaceholderImage" src="https://via.placeholder.com/405x395" alt="CHANG Toma">
                 <div class="CardContent">
-                    <div class="Name">John Doe</div>
-                    <div class="JobTitle">Graphic Designer</div>
-                    <div class="Bio">John is a passionate graphic designer with a keen eye for detail.</div>
+                    <div class="Name">CHANG Toma</div>
+                    <div class="JobTitle">Web Developer Full-stack</div>
+                    <div class="Bio">He is a passionate Web Developper with a keen eye for detail.</div>
                 </div>
                 <div class="SocialIcons">
                     <div class="IconLinkedin"></div>
@@ -101,26 +101,14 @@
                 </div>
             </div>
 
-            <div class="Card">
-                <img class="PlaceholderImage" src="https://via.placeholder.com/405x395" alt="John Doe">
-                <div class="CardContent">
-                    <div class="Name">John Doe</div>
-                    <div class="JobTitle">Graphic Designer</div>
-                    <div class="Bio">John is a passionate graphic designer with a keen eye for detail.</div>
-                </div>
-                <div class="SocialIcons">
-                    <div class="IconLinkedin"></div>
-                    <div class="IconX"></div>
-                    <div class="IconDribble"></div>
-                </div>
-            </div>
+
 
             <div class="Card">
                 <img class="PlaceholderImage" src="https://via.placeholder.com/405x395" alt="John Doe">
                 <div class="CardContent">
-                    <div class="Name">John Doe</div>
-                    <div class="JobTitle">Graphic Designer</div>
-                    <div class="Bio">John is a passionate graphic designer with a keen eye for detail.</div>
+                    <div class="Name">BERQUER Maleaume</div>
+                    <div class="JobTitle">Web Developper Full-stack</div>
+                    <div class="Bio">He is a passionate Web Developper with a keen eye for detail.</div>
                 </div>
                 <div class="SocialIcons">
                     <div class="IconLinkedin"></div>
@@ -130,7 +118,52 @@
             </div>
         </div>
     </div>
-    <!-- Hiring Section -->
+    <div class="Content">
+        <div class="Row">
+            <div class="Card">
+                <img class="PlaceholderImage" src="https://via.placeholder.com/405x395" alt="John Doe">
+                <div class="CardContent">
+                    <div class="Name">BURNAY Robyn</div>
+                    <div class="JobTitle">Web Developper Full-stack</div>
+                    <div class="Bio">He is a passionate Web Developper with a keen eye for detail.</div>
+                </div>
+                <div class="SocialIcons">
+                    <div class="IconLinkedin"></div>
+                    <div class="IconX"></div>
+                    <div class="IconDribble"></div>
+                </div>
+            </div>
+            <div class="Card">
+                <img class="PlaceholderImage" src="https://via.placeholder.com/405x395" alt="John Doe">
+                <div class="CardContent">
+                    <div class="Name">John Doe</div>
+                    <div class="JobTitle">Graphic Designer</div>
+                    <div class="Bio">He is a passionate Web Developper with a keen eye for detail.</div>
+                </div>
+                <div class="SocialIcons">
+                    <div class="IconLinkedin"></div>
+                    <div class="IconX"></div>
+                    <div class="IconDribble"></div>
+                </div>
+            </div>
+            <div class="Card">
+                <img class="PlaceholderImage" src="https://via.placeholder.com/405x395" alt="John Doe">
+                <div class="CardContent">
+                    <div class="Name">John Doe</div>
+                    <div class="JobTitle">Graphic Designer</div>
+                    <div class="Bio">He is a passionate Web Developper with a keen eye for detail.</div>
+                </div>
+                <div class="SocialIcons">
+                    <div class="IconLinkedin"></div>
+                    <div class="IconX"></div>
+                    <div class="IconDribble"></div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
     <div class="HiringSection">
         <div class="Heading">We're hiring!</div>
         <div class="Text">Join our team of talented professionals.</div>
@@ -150,18 +183,30 @@
         </div>
         <div class="Logos">
             <div class="Logo">
-                <img src="../../../Front-end/Workspace/assets/icon-svg/cube-fill-svgrepo-com.svg">
+                <img src="../../../Front-end/Workspace/assets/icon-svg/webflow.svg">
             </div>
             <div class="Logo">
-                <img src="../../../Front-end/Workspace/assets/icon-svg/webflow-svgrepo-com.svg">
+                <img src="../../../Front-end/Workspace/assets/icon-svg/relume.svg">
+            </div>
+            <div class="Logo">
+                <img src="../../../Front-end/Workspace/assets/icon-svg/webflow.svg">
+            </div>
+            <div class="Logo">
+                <img src="../../../Front-end/Workspace/assets/icon-svg/relume.svg">
             </div>
         </div>
         <div class="Logos">
             <div class="Logo">
-                <img src="../../../Front-end/Workspace/assets/icon-svg/cube-fill-svgrepo-com.svg">
+                <img src="../../../Front-end/Workspace/assets/icon-svg/webflow.svg">
             </div>
             <div class="Logo">
-                <img src="../../../Front-end/Workspace/assets/icon-svg/webflow-svgrepo-com.svg">
+                <img src="../../../Front-end/Workspace/assets/icon-svg/relume.svg">
+            </div>
+            <div class="Logo">
+                <img src="../../../Front-end/Workspace/assets/icon-svg/webflow.svg">
+            </div>
+            <div class="Logo">
+                <img src="../../../Front-end/Workspace/assets/icon-svg/relume.svg">
             </div>
         </div>
     </div>
@@ -172,16 +217,19 @@
         <h2 class="Heading">Trusted by industry-leading companies around the globe</h2>
         <div class="Logos">
             <div class="Logo">
-                <img src="../../../Front-end/Workspace/assets/icon-svg/cube-fill-svgrepo-com.svg">
+                <img src="../../../Front-end/Workspace/assets/icon-svg/webflow-2.svg">
             </div>
             <div class="Logo">
-                <img src="../../../Front-end/Workspace/assets/icon-svg/webflow-svgrepo-com.svg">
+                <img src="../../../Front-end/Workspace/assets/icon-svg/relume-2.svg">
             </div>
             <div class="Logo">
-                <img src="../../../Front-end/Workspace/assets/icon-svg/cube-fill-svgrepo-com.svg">
+                <img src="../../../Front-end/Workspace/assets/icon-svg/webflow-2.svg">
             </div>
             <div class="Logo">
-                <img src="../../../Front-end/Workspace/assets/icon-svg/webflow-svgrepo-com.svg">
+                <img src="../../../Front-end/Workspace/assets/icon-svg/relume-2.svg">
+            </div>
+            <div class="Logo">
+                <img src="../../../Front-end/Workspace/assets/icon-svg/webflow-2.svg">
             </div>
         </div>
     </div>
@@ -196,8 +244,8 @@
             <p class="Text">Unlock your creative potential with our intuitive site builder designed for artists.</p>
         </div>
         <div class="Actions">
-            <a href="/about" class="Button Primary">Learn More</a>
-            <a href="/register" class="Button Secondary">Sign Up</a>
+            <a href="/about" class="Button Primary">Sign Up</a>
+            <a href="/register" class="Button btn-white ">Learn More</a>
         </div>
     </div>
 </section>
