@@ -471,19 +471,18 @@ body {
 .contact-menu {
   width: 100%;
   padding: 7rem 4rem;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 5rem;
 }
 .contact-menu .row {
-  align-self: flex-start;
   display: flex;
+  align-self: flex-start;
   gap: 3rem;
 }
 .contact-menu .row .content {
   flex: 1 1 0%;
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: none;
   align-items: flex-start;
   gap: 1.5rem;
 }
@@ -493,8 +492,11 @@ body {
   width: 3rem;
   height: 3rem;
   display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
+  gap: 0;
   padding: 0.5rem 0.25rem;
   font-size: 2.1875rem;
 }
@@ -516,6 +518,7 @@ body {
 .contact-menu .row .content .contact-info {
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
   gap: 1.5rem;
@@ -525,6 +528,7 @@ body {
   height: 5.125rem;
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: center;
   gap: 1rem;
@@ -532,8 +536,8 @@ body {
 .contact-menu .row .content .contact-info .content .heading {
   align-self: stretch;
   color: var(--text-color);
-  font-size: 2rem;
-  font-family: var(--title-font);
+  font-size: var(--title-size);
+  font-family: var(--website-font-family);
   font-weight: 700;
   line-height: 2.6rem;
 }
@@ -541,18 +545,18 @@ body {
   align-self: stretch;
   color: var(--text-color);
   font-size: var(--main-size);
-  font-family: var(--main-font);
+  font-family: var(--website-font-family);
   font-weight: 400;
-  line-height: 1.5rem;
+  line-height: var(--line-height);
 }
 .contact-menu .row .content .contact-info .link {
   align-self: stretch;
   color: var(--text-color);
   font-size: var(--main-size);
-  font-family: var(--main-font);
+  font-family: var(--website-font-family);
   font-weight: 400;
   text-decoration: underline;
-  line-height: 1.5rem;
+  line-height: var(--line-height);
 }
 
 .Faq {
