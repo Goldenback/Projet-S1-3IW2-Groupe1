@@ -1,10 +1,6 @@
 .contact-us {
   padding-top: rem(200);
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  gap: rem(60);
+  @include flexbox(column, nowrap, flex-start, center, rem(100));
   width: 100%;
 
   .section-title {
@@ -15,27 +11,23 @@
     .tagline {
       text-align: center;
       color: var(--text-color);
-      font-size: rem(16);
-      font-family: var(--main-font);
+      font-size: var( --main-size);
+      font-family: var(--website-font-family);
       font-weight: 600;
-      line-height: rem(24);
+      line-height: var(--subtitle-size);
     }
 
     .content {
       align-self: stretch;
       height: rem(109);
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: center;
-      gap: rem(24);
+      @include flexbox(column, nowrap, flex-start, center, rem(24));
 
       .heading {
         align-self: stretch;
         text-align: center;
         color: var(--text-color);
-        font-size: rem(48);
-        font-family: var(--title-font);
+        font-size: var(--heading-size);
+        font-family: var(--website-font-family);
         font-weight: 700;
         line-height: rem(57.60);
       }
@@ -44,47 +36,41 @@
         align-self: stretch;
         text-align: center;
         color: var(--text-color);
-        font-size: rem(18);
+        font-size: var( --main-size);
         font-family: var(--main-font);
         font-weight: 400;
-        line-height: rem(27);
+        line-height: var(--line-height);
       }
     }
   }
 
   .form {
-    display: inline-flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    gap: rem(24);
+    @include flexbox(column, nowrap, flex-start, center, rem(24));
 
     .inputs {
       align-self: stretch;
       display: inline-flex;
+
       justify-content: flex-start;
       align-items: flex-start;
       gap: rem(24);
 
       .input {
         flex: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        gap: rem(8);
+        @include flexbox(column, nowrap, flex-start, none, rem(8));
 
         label {
           color: var(--text-color);
-          font-size: rem(16);
-          font-family: var(--main-font);
+          font-size: var(--main-size);
+          font-family: var(--website-font-family);
           font-weight: 400;
-          line-height: rem(24);
+          line-height: var(--line-height);
         }
 
         input {
           padding: rem(12);
           background: var(--white);
-          border: rem(1) solid var(--text-color);
+          border: rem(1) solid var(--black);
         }
       }
     }
@@ -93,16 +79,14 @@
   .radios {
     width: rem(768);
     padding: rem(16) 0;
-    display: flex;
-    flex-direction: column;
-    gap: rem(16);
+    @include flexbox(column, nowrap, none, none, rem(16));
 
     &-title {
       color: var(--text-color);
-      font-size: rem(16);
-      font-family: var(--main-font), sans-serif;
+      font-size: var(--main-size);
+      font-family: var(--website-font-family);
       font-weight: 400;
-      line-height: rem(24);
+      line-height: var(--line-height);
     }
 
     &-content {
@@ -112,29 +96,25 @@
 
     &-column {
       flex: 1;
-      display: flex;
-      flex-direction: column;
-      gap: rem(14);
+      @include flexbox(column, nowrap, none, none, rem(16));
     }
 
     .radios-option {
-      display: flex;
-      align-items: center;
-      gap: rem(12);
+      @include flexbox(none, nowrap, none, center, rem(12));
 
       input[type="checkbox"] {
         width: rem(18);
         height: rem(18);
-        background: white;
-        border: rem(1) solid black;
+        background: var(--white);
+        border: rem(1) solid var(--black);
       }
 
       .radios-label {
-        color: black;
-        font-size: rem(16);
-        font-family: var(--main-font), sans-serif;
+        color: var(--text-color);
+        font-size: var(--main-size);
+        font-family: var(--website-font-family);
         font-weight: 400;
-        line-height: rem(24);
+        line-height: var(--line-height);
       }
     }
   }
@@ -144,30 +124,28 @@
     flex-direction: column;
 
     .message-title {
-      color: black;
-      font-size: rem(16);
-      font-family: var(--main-font), sans-serif;
+      color: var(--text-color);
+      font-size: var(--main-size);
+      font-family: var(--website-font-family);
       font-weight: 400;
-      line-height: rem(24);
+      line-height: var(--line-height);
     }
 
     .text-area {
       width: 100%;
       height: rem(180);
       background: var(--white);
-      border: rem(1) solid black;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: flex-start;
+      border: rem(1) solid var(--black);
+
+      @include flexbox(column, nowrap, flex-start, flex-start);
 
       .type-your-message {
         flex: 1;
-        color: black;
-        font-size: rem(16);
-        font-family: var(--main-font), sans-serif;
+        color: va(--text-color);
+        font-size: var(--main-size);
+        font-family: var(--website-font-family);
         font-weight: 400;
-        line-height: rem(24);
+        line-height: var(--line-height);
         width: 100%;
         border: none;
         resize: none;
@@ -178,84 +156,11 @@
     select {
       padding: rem(12);
       background: var(--white);
-      border: rem(1) solid var(--text-color);
+      border: rem(1) solid var(--black);
       width: 100%;
-      font-size: rem(16);
-      line-height: rem(24);
+      font-size: var(--main-size);
+      line-height: var(--line-height);
       appearance: none;
     }
   }
-
-
-  .newsletter-signup {
-    width: 100%;
-    background: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: rem(80);
-
-    &__container {
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      gap: rem(80);
-      width: 100%;
-    }
-
-    &__content, &__actions {
-      display: flex;
-      flex-direction: column;
-      gap: rem(24);
-    }
-
-    &__heading {
-      color: black;
-      font-size: rem(40);
-      font-weight: 700;
-      line-height: rem(48);
-      font-family: var(--main-font), sans-serif;
-    }
-
-    &__text {
-      color: black;
-      font-size: rem(18);
-      font-weight: 400;
-      line-height: rem(27);
-      font-family: var(--main-font), sans-serif;
-    }
-
-    &__form {
-      display: flex;
-      gap: rem(16);
-      align-items: center;
-    }
-
-    &__input {
-      flex: 1;
-      height: rem(48);
-      padding: rem(12);
-      border: rem(1) solid black;
-      font-family: var(--main-font), sans-serif;
-    }
-
-    &__submit {
-      padding: rem(12) rem(24);
-      background: black;
-      color: white;
-      border: rem(1) solid black;
-      font-family: var(--main-font), sans-serif;
-      cursor: pointer;
-    }
-
-    &__disclaimer {
-      color: black;
-      font-size: rem(12);
-      line-height: rem(18);
-      font-family: var(--main-font), sans-serif;
-    }
-  }
-
-
 }

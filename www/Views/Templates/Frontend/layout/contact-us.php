@@ -36,10 +36,11 @@
             <div class="input">
                 <label for="topic">Choose a topic</label>
                 <select id="topic" name="topic" class="input-large" required>
-                    <option value="">Select one...</option>
-                    <option value="option1">Option 1</option>
-                    <option value="option2">Option 2</option>
-                    <option value="option3">Option 3</option>
+                    <option value="other">Other</option>
+                    <option value="bugs">Report a Bug</option>
+                    <option value="features">Suggest a Feature</option>
+                    <option value="account">Account Issues</option>
+                    <option value="feedback">Provide Feedback</option>
                 </select>
             </div>
         </div>
@@ -50,30 +51,30 @@
             <div class="radios-content">
                 <div class="radios-column">
                     <label class="radios-option">
-                        <input type="checkbox" name="option" value="1">
-                        <span class="radios-label">Option 1</span>
+                        <input type="checkbox" name="option" value="Student">
+                        <span class="radios-label">Student</span>
                     </label>
                     <label class="radios-option">
-                        <input type="checkbox" name="option" value="1">
-                        <span class="radios-label">Option 1</span>
+                        <input type="checkbox" name="option" value="Professional">
+                        <span class="radios-label">Professional</span>
                     </label>
                     <label class="radios-option">
-                        <input type="checkbox" name="option" value="1">
-                        <span class="radios-label">Option 1</span>
+                        <input type="checkbox" name="option" value="Entrepreneur">
+                        <span class="radios-label">Entrepreneur</span>
                     </label>
                 </div>
                 <div class="radios-column">
                     <label class="radios-option">
-                        <input type="checkbox" name="option" value="1">
-                        <span class="radios-label">Option 1</span>
+                        <input type="checkbox" name="option" value="Developper">
+                        <span class="radios-label">Developper</span>
                     </label>
                     <label class="radios-option">
-                        <input type="checkbox" name="option" value="1">
-                        <span class="radios-label">Option 1</span>
+                        <input type="checkbox" name="option" value="Designer">
+                        <span class="radios-label">Designer</span>
                     </label>
                     <label class="radios-option">
-                        <input type="checkbox" name="option" value="1">
-                        <span class="radios-label">Option 1</span>
+                        <input type="checkbox" name="option" value="Other">
+                        <span class="radios-label">Other</span>
                     </label>
                 </div>
             </div>

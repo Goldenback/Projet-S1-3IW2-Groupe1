@@ -33,6 +33,7 @@
   --main-title-size: 5rem;
   --subtitle-size: 1.5rem;
   --heading-size: 3rem;
+  --line-height: 1.6875rem;
   /*Letter spacing*/
   --title-spacing: 0.3125rem;
   /*padding & margins */
@@ -288,9 +289,10 @@ body {
   padding-top: 12.5rem;
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: center;
-  gap: 3.75rem;
+  gap: 6.25rem;
   width: 100%;
 }
 .contact-us .section-title {
@@ -301,16 +303,17 @@ body {
 .contact-us .section-title .tagline {
   text-align: center;
   color: var(--text-color);
-  font-size: 1rem;
-  font-family: var(--main-font);
+  font-size: var(--main-size);
+  font-family: var(--website-font-family);
   font-weight: 600;
-  line-height: 1.5rem;
+  line-height: var(--subtitle-size);
 }
 .contact-us .section-title .content {
   align-self: stretch;
   height: 6.8125rem;
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: center;
   gap: 1.5rem;
@@ -319,8 +322,8 @@ body {
   align-self: stretch;
   text-align: center;
   color: var(--text-color);
-  font-size: 3rem;
-  font-family: var(--title-font);
+  font-size: var(--heading-size);
+  font-family: var(--website-font-family);
   font-weight: 700;
   line-height: 3.6rem;
 }
@@ -328,14 +331,15 @@ body {
   align-self: stretch;
   text-align: center;
   color: var(--text-color);
-  font-size: 1.125rem;
+  font-size: var(--main-size);
   font-family: var(--main-font);
   font-weight: 400;
-  line-height: 1.6875rem;
+  line-height: var(--line-height);
 }
 .contact-us .form {
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: center;
   gap: 1.5rem;
@@ -351,34 +355,39 @@ body {
   flex: 1;
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
   justify-content: flex-start;
+  align-items: none;
   gap: 0.5rem;
 }
 .contact-us .form .inputs .input label {
   color: var(--text-color);
-  font-size: 1rem;
-  font-family: var(--main-font);
+  font-size: var(--main-size);
+  font-family: var(--website-font-family);
   font-weight: 400;
-  line-height: 1.5rem;
+  line-height: var(--line-height);
 }
 .contact-us .form .inputs .input input {
   padding: 0.75rem;
   background: var(--white);
-  border: 0.0625rem solid var(--text-color);
+  border: 0.0625rem solid var(--black);
 }
 .contact-us .radios {
   width: 48rem;
   padding: 1rem 0;
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: none;
+  align-items: none;
   gap: 1rem;
 }
 .contact-us .radios-title {
   color: var(--text-color);
-  font-size: 1rem;
-  font-family: var(--main-font), sans-serif;
+  font-size: var(--main-size);
+  font-family: var(--website-font-family);
   font-weight: 400;
-  line-height: 1.5rem;
+  line-height: var(--line-height);
 }
 .contact-us .radios-content {
   display: flex;
@@ -388,25 +397,31 @@ body {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 0.875rem;
+  flex-wrap: nowrap;
+  justify-content: none;
+  align-items: none;
+  gap: 1rem;
 }
 .contact-us .radios .radios-option {
   display: flex;
+  flex-direction: none;
+  flex-wrap: nowrap;
+  justify-content: none;
   align-items: center;
   gap: 0.75rem;
 }
 .contact-us .radios .radios-option input[type=checkbox] {
   width: 1.125rem;
   height: 1.125rem;
-  background: white;
-  border: 0.0625rem solid black;
+  background: var(--white);
+  border: 0.0625rem solid var(--black);
 }
 .contact-us .radios .radios-option .radios-label {
-  color: black;
-  font-size: 1rem;
-  font-family: var(--main-font), sans-serif;
+  color: var(--text-color);
+  font-size: var(--main-size);
+  font-family: var(--website-font-family);
   font-weight: 400;
-  line-height: 1.5rem;
+  line-height: var(--line-height);
 }
 .contact-us .message-container {
   width: 100%;
@@ -414,29 +429,31 @@ body {
   flex-direction: column;
 }
 .contact-us .message-container .message-title {
-  color: black;
-  font-size: 1rem;
-  font-family: var(--main-font), sans-serif;
+  color: var(--text-color);
+  font-size: var(--main-size);
+  font-family: var(--website-font-family);
   font-weight: 400;
-  line-height: 1.5rem;
+  line-height: var(--line-height);
 }
 .contact-us .message-container .text-area {
   width: 100%;
   height: 11.25rem;
   background: var(--white);
-  border: 0.0625rem solid black;
+  border: 0.0625rem solid var(--black);
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: flex-start;
+  gap: 0;
 }
 .contact-us .message-container .text-area .type-your-message {
   flex: 1;
-  color: black;
-  font-size: 1rem;
-  font-family: var(--main-font), sans-serif;
+  color: va(--text-color);
+  font-size: var(--main-size);
+  font-family: var(--website-font-family);
   font-weight: 400;
-  line-height: 1.5rem;
+  line-height: var(--line-height);
   width: 100%;
   border: none;
   resize: none;
@@ -444,72 +461,11 @@ body {
 .contact-us .input select {
   padding: 0.75rem;
   background: var(--white);
-  border: 0.0625rem solid var(--text-color);
+  border: 0.0625rem solid var(--black);
   width: 100%;
-  font-size: 1rem;
-  line-height: 1.5rem;
+  font-size: var(--main-size);
+  line-height: var(--line-height);
   appearance: none;
-}
-.contact-us .newsletter-signup {
-  width: 100%;
-  background: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 5rem;
-}
-.contact-us .newsletter-signup__container {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 5rem;
-  width: 100%;
-}
-.contact-us .newsletter-signup__content, .contact-us .newsletter-signup__actions {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-.contact-us .newsletter-signup__heading {
-  color: black;
-  font-size: 2.5rem;
-  font-weight: 700;
-  line-height: 3rem;
-  font-family: var(--main-font), sans-serif;
-}
-.contact-us .newsletter-signup__text {
-  color: black;
-  font-size: 1.125rem;
-  font-weight: 400;
-  line-height: 1.6875rem;
-  font-family: var(--main-font), sans-serif;
-}
-.contact-us .newsletter-signup__form {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-}
-.contact-us .newsletter-signup__input {
-  flex: 1;
-  height: 3rem;
-  padding: 0.75rem;
-  border: 0.0625rem solid black;
-  font-family: var(--main-font), sans-serif;
-}
-.contact-us .newsletter-signup__submit {
-  padding: 0.75rem 1.5rem;
-  background: black;
-  color: white;
-  border: 0.0625rem solid black;
-  font-family: var(--main-font), sans-serif;
-  cursor: pointer;
-}
-.contact-us .newsletter-signup__disclaimer {
-  color: black;
-  font-size: 0.75rem;
-  line-height: 1.125rem;
-  font-family: var(--main-font), sans-serif;
 }
 
 .contact-menu {
@@ -635,7 +591,7 @@ body {
 .Faq .SectionTitle .Text {
   font-size: var(--main-size);
   font-weight: 400;
-  line-height: 1.6875rem;
+  line-height: var(--line-height);
   color: var(--text-color);
   text-align: center;
 }
@@ -652,7 +608,7 @@ body {
   font-size: var(--main-size);
   font-family: var(--website-font-family);
   font-weight: 700;
-  line-height: 1.6875rem;
+  line-height: var(--line-height);
   width: 48rem;
   text-align: left;
   cursor: pointer;
@@ -703,7 +659,7 @@ body {
   border: 0.0625rem solid var(--black);
   font-size: var(--main-size);
   font-weight: 400;
-  line-height: 1.5rem;
+  line-height: var(--line-height);
   color: var(--black);
   text-decoration: none;
   display: inline-flex;
