@@ -1,37 +1,28 @@
 .Faq {
-  background: white;
+  background: var(--bg-color-white);
   padding: rem(112) rem(64);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: rem(80);
+  @include flexbox(column, nowrap, center, center, rem(80));
 
   .Container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: rem(80);
+    @include flexbox(column, nowrap, center, center, rem(80));
   }
 
   .SectionTitle {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: rem(24);
+    @include flexbox(column, nowrap, center, center, rem(24));
 
     .Heading {
-      font-size: rem(48);
+      font-size: var(--heading-size);
       font-weight: 700;
       line-height: rem(57.6);
-      color: black;
+      color: var(--text-color);
       text-align: center;
     }
 
     .Text {
-      font-size: rem(18);
+      font-size: var(--main-size);
       font-weight: 400;
       line-height: rem(27);
-      color: black;
+      color: var(--text-color);
       text-align: center;
     }
   }
@@ -40,15 +31,15 @@
     width: 100%;
 
     .faq-item {
-      border-top: 1px solid black;
+      border-top: rem(1) solid var(--black);
 
       &:last-child {
-        border-bottom: 1px solid black;
+        border-bottom: rem(1) solid var(--black);
       }
 
       .faq-question {
-        font-size: rem(18);
-        font-family: Roboto, sans-serif;
+        font-size: var(--main-size);
+        font-family: var(--website-font-family);
         font-weight: 700;
         line-height: rem(27);
         width: rem(768);
@@ -67,7 +58,6 @@
           height: rem(20);
           transform: rotate(0deg);
           content: '▼';
-          float: right;
         }
 
         &.is-open::after {
@@ -76,6 +66,7 @@
       }
 
       .faq-answer {
+        font-family: var(--website-font-family);
         display: none;
         padding: 0 rem(20) rem(20) rem(20);
       }
@@ -83,32 +74,29 @@
   }
 
   .Content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: rem(24);
+    @include flexbox(column, nowrap, center, center, rem(24));
 
     .Heading {
-      font-size: rem(32);
+      font-size: var(--title-size);
       font-weight: 700;
       text-align: center;
-      color: black;
+      color: var(--text-color);
     }
 
     .Text {
-      font-size: rem(18);
+      font-size: var(--main-size);
       font-weight: 400;
       text-align: center;
-      color: black;
+      color: var(--text-color);
     }
 
     .Button {
       padding: rem(12) rem(24);
-      border: 1px solid black;
-      font-size: rem(16);
+      border: rem(1) solid var(--black);
+      font-size: var(--main-size);
       font-weight: 400;
       line-height: rem(24);
-      color: black;
+      color: var(--black);
       text-decoration: none;
       display: inline-flex;
       align-items: center;
@@ -117,8 +105,8 @@
       cursor: pointer;
 
       &:hover {
-        background-color: black;
-        color: white;
+        background-color: var(--black);
+        color: var(--bg-color-white);
       }
     }
   }

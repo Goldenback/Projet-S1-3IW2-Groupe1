@@ -11,23 +11,29 @@ $centered : auto;
 :root{
     /*Color*/
 
-    --text-color:#{$black};
-    --white:#{$white};
-    --img-bg-color: #{$img-bg-color};
-    --black:#{$black};
-    --btn-bg-color:#{$black};
-    --bg-color:#{$bg-color};
-    --btn-bg-hover-color: #{lighten($black, 10%)};
+    --white: #{$white};
+    --black: #{$black};
+
+    --text-color: #{$black};
+    --link-color-dark: #{$white};
+
     --primary-color : #{$primary-color};
     --secondary-color : #{$secondary-color};
-    --black-bg-color : #{$black};
-    --error-message : #{$error};
+    
+    --bg-color-dark: #{$black};
+    --bg-color-white: #{$white};
+    --btn-bg-color: #{$black};
+    --btn-bg-hover-color: #{lighten($black, 10%)};
 
-    --bg-color-dark: $black;
-    --link-color-dark: $white;
-    --dropdown-bg-color-dark: #ffffff;
+    --bg-color:#{$bg-color};
+    --black-bg-color : #{$black};
+
+    --img-bg-color: #{$img-bg-color};
+
+    --dropdown-bg-color-dark: #{$white};
     --dropdown-link-hover-bg-color-dark: #c9c9c9;
 
+    --error-message : #{$error};
 
     /*Radius*/
 
@@ -49,6 +55,7 @@ $centered : auto;
     --title-size : #{rem(32)};
     --main-title-size : #{rem(80)};
     --subtitle-size : #{rem(24)};
+    --heading-size : #{rem(48)};
 
     /*Letter spacing*/
 

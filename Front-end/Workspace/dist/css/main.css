@@ -3,21 +3,22 @@
 /*Function #1*/
 :root {
   /*Color*/
-  --text-color:#000;
-  --white:#FFF;
-  --img-bg-color: #F4F4F4;
-  --black:#000;
-  --btn-bg-color:#000;
-  --bg-color:#FFF2D8;
-  --btn-bg-hover-color: #1a1a1a;
+  --white: #FFF;
+  --black: #000;
+  --text-color: #000;
+  --link-color-dark: #FFF;
   --primary-color: #113946;
   --secondary-color: #EAD7BB;
+  --bg-color-dark: #000;
+  --bg-color-white: #FFF;
+  --btn-bg-color: #000;
+  --btn-bg-hover-color: #1a1a1a;
+  --bg-color:#FFF2D8;
   --black-bg-color: #000;
-  --error-message: #ff0000;
-  --bg-color-dark: $black;
-  --link-color-dark: $white;
-  --dropdown-bg-color-dark: #ffffff;
+  --img-bg-color: #F4F4F4;
+  --dropdown-bg-color-dark: #FFF;
   --dropdown-link-hover-bg-color-dark: #c9c9c9;
+  --error-message: #ff0000;
   /*Radius*/
   --main-radius: 0.375rem;
   /*Fonts*/
@@ -31,6 +32,7 @@
   --title-size: 2rem;
   --main-title-size: 5rem;
   --subtitle-size: 1.5rem;
+  --heading-size: 3rem;
   /*Letter spacing*/
   --title-spacing: 0.3125rem;
   /*padding & margins */
@@ -223,6 +225,7 @@ body {
   flex-wrap: nowrap;
   justify-content: space-around;
   align-items: center;
+  gap: 0;
 }
 .navbar .logo-container {
   display: flex;
@@ -597,51 +600,57 @@ body {
 }
 
 .Faq {
-  background: white;
+  background: var(--bg-color-white);
   padding: 7rem 4rem;
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
   align-items: center;
   gap: 5rem;
 }
 .Faq .Container {
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
   align-items: center;
   gap: 5rem;
 }
 .Faq .SectionTitle {
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
   align-items: center;
   gap: 1.5rem;
 }
 .Faq .SectionTitle .Heading {
-  font-size: 3rem;
+  font-size: var(--heading-size);
   font-weight: 700;
   line-height: 3.6rem;
-  color: black;
+  color: var(--text-color);
   text-align: center;
 }
 .Faq .SectionTitle .Text {
-  font-size: 1.125rem;
+  font-size: var(--main-size);
   font-weight: 400;
   line-height: 1.6875rem;
-  color: black;
+  color: var(--text-color);
   text-align: center;
 }
 .Faq .Accordion {
   width: 100%;
 }
 .Faq .Accordion .faq-item {
-  border-top: 1px solid black;
+  border-top: 0.0625rem solid var(--black);
 }
 .Faq .Accordion .faq-item:last-child {
-  border-bottom: 1px solid black;
+  border-bottom: 0.0625rem solid var(--black);
 }
 .Faq .Accordion .faq-item .faq-question {
-  font-size: 1.125rem;
-  font-family: Roboto, sans-serif;
+  font-size: var(--main-size);
+  font-family: var(--website-font-family);
   font-weight: 700;
   line-height: 1.6875rem;
   width: 48rem;
@@ -660,40 +669,42 @@ body {
   height: 1.25rem;
   transform: rotate(0deg);
   content: "▼";
-  float: right;
 }
 .Faq .Accordion .faq-item .faq-question.is-open::after {
   content: "▲";
 }
 .Faq .Accordion .faq-item .faq-answer {
+  font-family: var(--website-font-family);
   display: none;
   padding: 0 1.25rem 1.25rem 1.25rem;
 }
 .Faq .Content {
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
   align-items: center;
   gap: 1.5rem;
 }
 .Faq .Content .Heading {
-  font-size: 2rem;
+  font-size: var(--title-size);
   font-weight: 700;
   text-align: center;
-  color: black;
+  color: var(--text-color);
 }
 .Faq .Content .Text {
-  font-size: 1.125rem;
+  font-size: var(--main-size);
   font-weight: 400;
   text-align: center;
-  color: black;
+  color: var(--text-color);
 }
 .Faq .Content .Button {
   padding: 0.75rem 1.5rem;
-  border: 1px solid black;
-  font-size: 1rem;
+  border: 0.0625rem solid var(--black);
+  font-size: var(--main-size);
   font-weight: 400;
   line-height: 1.5rem;
-  color: black;
+  color: var(--black);
   text-decoration: none;
   display: inline-flex;
   align-items: center;
@@ -702,8 +713,8 @@ body {
   cursor: pointer;
 }
 .Faq .Content .Button:hover {
-  background-color: black;
-  color: white;
+  background-color: var(--black);
+  color: var(--bg-color-white);
 }
 
 .footer {
