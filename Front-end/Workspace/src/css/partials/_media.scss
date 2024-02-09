@@ -1,0 +1,9 @@
+@media (prefers-color-scheme: dark) {
+    :root {
+      --bg-color: var(--bg-color-dark);
+      --text-color: var(--text-color);
+      --link-color: var(--link-color-dark);
+      --dropdown-bg-color: var(--dropdown-bg-color-dark);
+      --dropdown-link-hover-bg-color: var(--dropdown-link-hover-bg-color-dark);
+    }
+  }

@@ -1,38 +1,80 @@
 body {
-  padding-top: rem(100);
+  padding-top: rem(50);
 }
 
-.navbar{
-  background-color: var(--bg-color);
+.navbar {
+  background-color: var(--white);
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 1000;
 
-  .container{
+  .container {
     @include flexbox(row, nowrap, space-around, center);
   }
 
-  .logo{
-    width: rem(63);
-    height: rem(27);
-    position: relative;
+  .logo-container {
+    display: flex;
+    align-items: center;
+
+    .logo {
+      width: rem(70);
+      height: rem(65);
+      position: relative;
+    }
   }
-  &-links{
+
+  .navbar-links {
     width: 30%;
     display: flex;
     justify-content: space-around;
-    font-family: var(--main-font);
+    font-family: var(--website-font-family);
     list-style-type: none;
+
+    li {
+      position: relative;
+      font-size: var(--main-size);
+
+      &:hover .dropdown-content {
+        display: block;
+        justify-content: center;
+        list-style-type: none;
+      }
+    }
+
+    a {
+      font-size: var(--main-size);
+      text-decoration: none;
+      color: var(--text-color);
+      display: block;
+      text-align: left;
+    }
   }
-  &-links li a{
-    font-size: var(--main-size);
-    text-decoration: none;
-    color: black;
+
+  .more .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--dropdown-bg-color);
+    min-width: 10rem;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.2);
+    z-index: 1;
+    padding: 0;
+
+    li a {
+      color: var(--text-color);
+      padding: 0.75rem;
+      display: block;
+      &:hover {
+        background-color: var(--dropdown-link-hover-bg-color);
+      }
+    }
   }
-  hr{
-    color: var(--text-color);
+
+  .line {
     width: 100%;
-    height: rem(2);
+    display: block;
+    background-color: var(--black);
+    height: rem(1);
+    border: none;
   }
 }
