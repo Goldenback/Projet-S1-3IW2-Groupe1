@@ -1,8 +1,12 @@
 <nav class="navbar" style="background-color: <?= $backgroundColor ?? 'white' ?> ">
     <div class="container">
-        <h2 class="navbar-title">
-            <?= $urlLogo ?? 'Logo'?>
-        </h2>
+        <div class="logo">
+            <div class="logo">
+                <a href="/about">
+                    <img src="../../../Front-end/Workspace/assets/img/logo/simplify.png">
+                </a>
+            </div>
+        </div>
         <ul class="navbar-links">
             <li>
                 <a href="/about">About Us</a>

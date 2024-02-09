@@ -12,9 +12,11 @@ body {
   .container{
     @include flexbox(row, nowrap, space-around, center);
   }
-  &-title{
-    font-size: var(--title-size);
-    font-family: var(--title-font);
+
+  .logo{
+    width: rem(63);
+    height: rem(27);
+    position: relative;
   }
   &-links{
     width: 30%;

@@ -211,9 +211,10 @@ body {
   justify-content: space-around;
   align-items: center;
 }
-.navbar-title {
-  font-size: var(--title-size);
-  font-family: var(--title-font);
+.navbar .logo {
+  width: 3.9375rem;
+  height: 1.6875rem;
+  position: relative;
 }
 .navbar-links {
   width: 30%;
@@ -670,11 +671,18 @@ body {
 }
 .footer .content {
   width: 100%;
-  display: flex;
+  height: 15.25rem;
+  justify-content: flex-start;
+  align-items: flex-start;
+  display: inline-flex;
   gap: 4rem;
 }
 .footer .content .column {
-  display: flex;
+  width: 82rem;
+  height: 15.25rem;
+  justify-content: flex-start;
+  align-items: flex-start;
+  display: inline-flex;
   flex-direction: column;
   gap: 2rem;
 }
@@ -740,7 +748,7 @@ body {
 }
 
 .address, .contact, .link, .footer-link, .phone, .email, .copyright {
-  font-family: Roboto, sans-serif;
+  font-family: var(--website-font-family);
 }
 .address.address, .address.contact, .contact.address, .contact.contact, .link.address, .link.contact, .footer-link.address, .footer-link.contact, .phone.address, .phone.contact, .email.address, .email.contact, .copyright.address, .copyright.contact {
   font-weight: 600;
@@ -757,7 +765,7 @@ body {
   word-wrap: break-word;
   width: 11.25rem;
   height: auto;
-  color: black;
+  color: var(--black);
 }
 .address.footer-link, .contact.footer-link, .link.footer-link, .footer-link.footer-link, .phone.footer-link, .email.footer-link, .copyright.footer-link {
   font-weight: 400;
@@ -767,7 +775,7 @@ body {
   word-wrap: break-word;
 }
 .address.footer-link a, .contact.footer-link a, .link.footer-link a, .footer-link.footer-link a, .phone.footer-link a, .email.footer-link a, .copyright.footer-link a {
-  color: black;
+  color: var(--black);
 }
 
 .Header-about {
@@ -834,7 +842,7 @@ body {
   width: 100%;
   height: 54rem;
   padding: 7rem 4rem;
-  background: white;
+  background: var(--white);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -1020,12 +1028,13 @@ body {
 .Team-about .Content .Card {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   gap: 1.5rem;
 }
 .Team-about .Content .Card .PlaceholderImage {
-  width: 100%;
-  height: auto;
+  width: 25.3125rem;
+  height: 24.6875rem;
 }
 .Team-about .Content .Card .CardContent {
   display: flex;
@@ -1056,6 +1065,12 @@ body {
 .Team-about .Content .Card .SocialIcons {
   display: flex;
   gap: 0.875rem;
+  justify-content: center;
+  align-items: center;
+}
+.Team-about .Content .Card .SocialIcons .IconLinkedin, .Team-about .Content .Card .SocialIcons .IconX, .Team-about .Content .Card .SocialIcons .IconDribble {
+  width: 2.5rem;
+  height: 2rem;
 }
 .Team-about .HiringSection {
   display: flex;
@@ -1192,7 +1207,6 @@ body {
   height: 26.3125rem;
   padding: 7rem 4rem;
   background-color: var(--black);
-  background-image: url("../../../assets/img/cta-img.png");
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

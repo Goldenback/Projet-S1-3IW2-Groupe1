@@ -30,14 +30,14 @@
     <div class="Container">
         <div class="Content">
             <div class="IconRelume">
-                <img src="../../../Front-end/Workspace/assets/icon-svg/cube-fill-svgrepo-com.svg">
+                <img src="../../../Front-end/Workspace/assets/svg/icon/cube-fill-svgrepo-com.svg">
             </div>
             <div class="ContentText">
                 <div class="Heading">Empowering artists to showcase their talent and connect with their audience.</div>
                 <div class="Text">Our platform was founded with the vision of providing artists with a user-friendly and customizable website builder. With a team of experienced professionals, we are dedicated to helping artists of all disciplines create stunning online portfolios that reflect their unique style and captivate their audience.</div>
             </div>
         </div>
-        <img class="PlaceholderImage" src="../../../Front-end/Workspace/assets/img/layout-1.png" alt="Back-office">
+        <img class="PlaceholderImage" src="../../../Front-end/Workspace/assets/img/page-about/layout-1.png" alt="Back-office">
     </div>
 </section>
 
@@ -59,7 +59,7 @@
                 </div>
             </div>
         </div>
-        <img class="PlaceholderImage" src="../../../Front-end/Workspace/assets/img/layout-2.png" alt="Placeholder Image">
+        <img class="PlaceholderImage" src="../../../Front-end/Workspace/assets/img/page-about/layout-2.png" alt="Back-office">
     </div>
 </section>
 
@@ -81,27 +81,49 @@
                     <div class="Bio">He is a passionate Web Developper with a keen eye for detail.</div>
                 </div>
                 <div class="SocialIcons">
-                    <div class="IconLinkedin"></div>
-                    <div class="IconX"></div>
-                    <div class="IconDribble"></div>
+                    <div class="IconLinkedin">
+                        <a href="#">
+                            <img src="../../../Front-end/Workspace/assets/svg/social/mini-linkedin.svg">
+                        </a>
+                    </div>
+                    <div class="IconX">
+                        <a href="#">
+                        <img src="../../../Front-end/Workspace/assets/svg/social/x-transparent.svg">
+                        </a>
+                    </div>
+                    <div class="IconDribble">
+                        <a href="#">
+                            <img src="../../../Front-end/Workspace/assets/svg/social/dribble.svg">
+                        </a>
+                    </div>
                 </div>
             </div>
 
             <div class="Card">
-                <img class="PlaceholderImage" src="https://via.placeholder.com/405x395" alt="CHANG Toma">
+                <img class="PlaceholderImage" src="../../../Front-end/Workspace/assets/img/team/CHANG-Toma.png" alt="CHANG Toma">
                 <div class="CardContent">
                     <div class="Name">CHANG Toma</div>
                     <div class="JobTitle">Web Developer Full-stack</div>
                     <div class="Bio">He is a passionate Web Developper with a keen eye for detail.</div>
                 </div>
                 <div class="SocialIcons">
-                    <div class="IconLinkedin"></div>
-                    <div class="IconX"></div>
-                    <div class="IconDribble"></div>
+                    <div class="IconLinkedin">
+                        <a href="https://www.linkedin.com/in/toma-chang">
+                            <img src="../../../Front-end/Workspace/assets/svg/social/mini-linkedin.svg">
+                        </a>
+                    </div>
+                    <div class="IconX">
+                        <a href="#">
+                            <img src="../../../Front-end/Workspace/assets/svg/social/x-transparent.svg">
+                        </a>
+                    </div>
+                    <div class="IconDribble">
+                        <a href="#">
+                            <img src="../../../Front-end/Workspace/assets/svg/social/dribble.svg">
+                        </a>
+                    </div>
                 </div>
             </div>
-
-
 
             <div class="Card">
                 <img class="PlaceholderImage" src="https://via.placeholder.com/405x395" alt="John Doe">
@@ -111,9 +133,21 @@
                     <div class="Bio">He is a passionate Web Developper with a keen eye for detail.</div>
                 </div>
                 <div class="SocialIcons">
-                    <div class="IconLinkedin"></div>
-                    <div class="IconX"></div>
-                    <div class="IconDribble"></div>
+                    <div class="IconLinkedin">
+                        <a href="#">
+                            <img src="../../../Front-end/Workspace/assets/svg/social/mini-linkedin.svg">
+                        </a>
+                    </div>
+                    <div class="IconX">
+                        <a href="#">
+                            <img src="../../../Front-end/Workspace/assets/svg/social/x-transparent.svg">
+                        </a>
+                    </div>
+                    <div class="IconDribble">
+                        <a href="#">
+                            <img src="../../../Front-end/Workspace/assets/svg/social/dribble.svg">
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -128,9 +162,21 @@
                     <div class="Bio">He is a passionate Web Developper with a keen eye for detail.</div>
                 </div>
                 <div class="SocialIcons">
-                    <div class="IconLinkedin"></div>
-                    <div class="IconX"></div>
-                    <div class="IconDribble"></div>
+                    <div class="IconLinkedin">
+                        <a href="#">
+                            <img src="../../../Front-end/Workspace/assets/svg/social/mini-linkedin.svg">
+                        </a>
+                    </div>
+                    <div class="IconX">
+                        <a href="#">
+                            <img src="../../../Front-end/Workspace/assets/svg/social/x-transparent.svg">
+                        </a>
+                    </div>
+                    <div class="IconDribble">
+                        <a href="#">
+                            <img src="../../../Front-end/Workspace/assets/svg/social/dribble.svg">
+                        </a>
+                    </div>
                 </div>
             </div>
             <div class="Card">
@@ -141,9 +187,21 @@
                     <div class="Bio">He is a passionate Web Developper with a keen eye for detail.</div>
                 </div>
                 <div class="SocialIcons">
-                    <div class="IconLinkedin"></div>
-                    <div class="IconX"></div>
-                    <div class="IconDribble"></div>
+                    <div class="IconLinkedin">
+                        <a href="#">
+                            <img src="../../../Front-end/Workspace/assets/svg/social/mini-linkedin.svg">
+                        </a>
+                    </div>
+                    <div class="IconX">
+                        <a href="#">
+                            <img src="../../../Front-end/Workspace/assets/svg/social/x-transparent.svg">
+                        </a>
+                    </div>
+                    <div class="IconDribble">
+                        <a href="#">
+                            <img src="../../../Front-end/Workspace/assets/svg/social/dribble.svg">
+                        </a>
+                    </div>
                 </div>
             </div>
             <div class="Card">
@@ -154,9 +212,21 @@
                     <div class="Bio">He is a passionate Web Developper with a keen eye for detail.</div>
                 </div>
                 <div class="SocialIcons">
-                    <div class="IconLinkedin"></div>
-                    <div class="IconX"></div>
-                    <div class="IconDribble"></div>
+                    <div class="IconLinkedin">
+                        <a href="#">
+                            <img src="../../../Front-end/Workspace/assets/svg/social/mini-linkedin.svg">
+                        </a>
+                    </div>
+                    <div class="IconX">
+                        <a href="#">
+                            <img src="../../../Front-end/Workspace/assets/svg/social/x-transparent.svg">
+                        </a>
+                    </div>
+                    <div class="IconDribble">
+                        <a href="#">
+                            <img src="../../../Front-end/Workspace/assets/svg/social/dribble.svg">
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -183,30 +253,30 @@
         </div>
         <div class="Logos">
             <div class="Logo">
-                <img src="../../../Front-end/Workspace/assets/icon-svg/webflow.svg">
+                <img src="../../../Front-end/Workspace/assets/svg/brand/webflow.svg">
             </div>
             <div class="Logo">
-                <img src="../../../Front-end/Workspace/assets/icon-svg/relume.svg">
+                <img src="../../../Front-end/Workspace/assets/svg/brand/relume.svg">
             </div>
             <div class="Logo">
-                <img src="../../../Front-end/Workspace/assets/icon-svg/webflow.svg">
+                <img src="../../../Front-end/Workspace/assets/svg/brand/webflow.svg">
             </div>
             <div class="Logo">
-                <img src="../../../Front-end/Workspace/assets/icon-svg/relume.svg">
+                <img src="../../../Front-end/Workspace/assets/svg/brand/relume.svg">
             </div>
         </div>
         <div class="Logos">
             <div class="Logo">
-                <img src="../../../Front-end/Workspace/assets/icon-svg/webflow.svg">
+                <img src="../../../Front-end/Workspace/assets/svg/brand/webflow.svg">
             </div>
             <div class="Logo">
-                <img src="../../../Front-end/Workspace/assets/icon-svg/relume.svg">
+                <img src="../../../Front-end/Workspace/assets/svg/brand/relume.svg">
             </div>
             <div class="Logo">
-                <img src="../../../Front-end/Workspace/assets/icon-svg/webflow.svg">
+                <img src="../../../Front-end/Workspace/assets/svg/brand/webflow.svg">
             </div>
             <div class="Logo">
-                <img src="../../../Front-end/Workspace/assets/icon-svg/relume.svg">
+                <img src="../../../Front-end/Workspace/assets/svg/brand/relume.svg">
             </div>
         </div>
     </div>
@@ -217,19 +287,19 @@
         <h2 class="Heading">Trusted by industry-leading companies around the globe</h2>
         <div class="Logos">
             <div class="Logo">
-                <img src="../../../Front-end/Workspace/assets/icon-svg/webflow-2.svg">
+                <img src="../../../Front-end/Workspace/assets/svg/brand/webflow-2.svg">
             </div>
             <div class="Logo">
-                <img src="../../../Front-end/Workspace/assets/icon-svg/relume-2.svg">
+                <img src="../../../Front-end/Workspace/assets/svg/brand/relume-2.svg">
             </div>
             <div class="Logo">
-                <img src="../../../Front-end/Workspace/assets/icon-svg/webflow-2.svg">
+                <img src="../../../Front-end/Workspace/assets/svg/brand/webflow-2.svg">
             </div>
             <div class="Logo">
-                <img src="../../../Front-end/Workspace/assets/icon-svg/relume-2.svg">
+                <img src="../../../Front-end/Workspace/assets/svg/brand/relume-2.svg">
             </div>
             <div class="Logo">
-                <img src="../../../Front-end/Workspace/assets/icon-svg/webflow-2.svg">
+                <img src="../../../Front-end/Workspace/assets/svg/brand/webflow-2.svg">
             </div>
         </div>
     </div>

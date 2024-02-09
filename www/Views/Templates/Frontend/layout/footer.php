@@ -3,12 +3,16 @@
     <div class="content">
         <div class="column logo-column">
             <div class="logo">
-                <div class="logo"> <?= $logo ?? 'Logo' ?></div>
+                <div class="logo">
+                    <a href="/about">
+                        <img src="../../../Front-end/Workspace/assets/img/logo/simplify.png">
+                    </a>
+                </div>
             </div>
             <div class="content-info">
                 <div class="address-block">
                     <div class="address">Address:</div>
-                    <div class="address-detail"><?= $adresse ?? 'Your adresse here, 12345 country' ?></div>
+                    <div class="address-detail"><?= $adresse ?? '18 Rue des étudiants, 12345 France' ?></div>
                 </div>
                 <div class="contact-block">
                     <div class="contact">Contact:</div>
@@ -18,20 +22,20 @@
                     </div>
                 </div>
                 <div class="social-links">
-                    <a href="<?= $facebook ?? 'error'?>" class=" icon icon-facebook">
-                        <img src="../../../Front-end/Workspace/assets/icon-svg/facebook.svg">
+                    <a href="<?= $facebook ?? 'error'?>" class="icon">
+                        <img src="../../../Front-end/Workspace/assets/svg/social/facebook.svg">
                     </a>
-                    <a href="<?= $instagram ?? 'error'?>" class=" icon icon-Instagram">
-                        <img src="../../../Front-end/Workspace/assets/icon-svg/instagram.svg">
+                    <a href="<?= $instagram ?? 'error'?>" class="icon">
+                        <img src="../../../Front-end/Workspace/assets/svg/social/instagram.svg">
                     </a>
-                    <a href="<?= $instagram ?? 'error'?>" class=" icon icon-x">
-                        <img src="../../../Front-end/Workspace/assets/icon-svg/x.svg">
+                    <a href="<?= $instagram ?? 'error'?>" class="icon">
+                        <img src="../../../Front-end/Workspace/assets/svg/social/x.svg">
                     </a>
-                    <a href="<?= $linkedin ?? 'error'?>" class="icon icon-facebook">
-                        <img src="../../../Front-end/Workspace/assets/icon-svg/linkedin.svg">
+                    <a href="<?= $linkedin ?? 'error'?>" class="icon">
+                        <img src="../../../Front-end/Workspace/assets/svg/social/linkedin.svg">
                     </a>
-                    <a href="<?= $youtube ?? 'error'?>" class="icon icon-facebook">
-                        <img src="../../../Front-end/Workspace/assets/icon-svg/youtube.svg">
+                    <a href="<?= $youtube ?? 'error'?>" class="icon">
+                        <img src="../../../Front-end/Workspace/assets/svg/social/youtube.svg">
                     </a>
                 </div>
             </div>

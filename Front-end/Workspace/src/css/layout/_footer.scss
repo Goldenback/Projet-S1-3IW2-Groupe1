@@ -10,11 +10,18 @@
 
   .content {
     width: 100%;
-    display: flex;
+    height: rem(244);
+    justify-content: flex-start;
+    align-items: flex-start;
+    display: inline-flex;
     gap: rem(64);
 
     .column {
-      display: flex;
+      width: rem(1312);
+      height: rem(244);
+      justify-content: flex-start;
+      align-items: flex-start;
+      display: inline-flex;
       flex-direction: column;
       gap: rem(32);
 
@@ -91,7 +98,7 @@
 }
 
 .address, .contact, .link, .footer-link, .phone, .email, .copyright {
-  font-family: Roboto, sans-serif;
+  font-family: var(--website-font-family);
 
   &.address, &.contact {
     font-weight: 600;
@@ -111,7 +118,7 @@
     word-wrap: break-word;
     width: rem(180);
     height: auto;
-    color: black;
+    color: var(--black);
   }
 
   &.footer-link {
@@ -121,7 +128,7 @@
     line-height: rem(21);
     word-wrap: break-word;
     a {
-      color: black;
+      color: var(--black);
     }
   }
 }
