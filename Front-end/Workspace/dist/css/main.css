@@ -1647,8 +1647,11 @@ body {
   height: 3rem;
   padding: 0.609375rem 2.6875rem;
   display: flex;
+  flex-direction: none;
+  flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
+  gap: 0;
 }
 .Portfolio-Logo .Content .Logo.Relume {
   height: 3.5rem;
@@ -1659,9 +1662,9 @@ body {
   width: 100%;
   height: auto;
   padding: 7rem 4rem;
-  background: white;
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: flex-start;
   gap: 5rem;
@@ -1670,26 +1673,30 @@ body {
   height: 11.25rem;
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: flex-start;
+  gap: 0;
 }
 .Portfolio-feedback .SectionTitle .Heading {
-  color: black;
-  font-size: 3rem;
-  font-family: "Roboto", sans-serif;
+  color: var(--text-color);
+  font-size: var(--heading-size);
+  font-family: var(--website-font-family);
   font-weight: 700;
   line-height: 3.6rem;
 }
 .Portfolio-feedback .SectionTitle .Text {
-  color: black;
-  font-size: 1.125rem;
-  font-family: "Roboto", sans-serif;
+  color: var(--text-color);
+  font-size: var(--main-size);
+  font-family: var(--website-font-family);
   font-weight: 400;
-  line-height: 1.6875rem;
+  line-height: var(--line-height);
 }
 .Portfolio-feedback .Content {
   width: 100%;
   display: flex;
+  flex-direction: none;
+  flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: flex-start;
   gap: 4rem;
@@ -1697,25 +1704,29 @@ body {
 .Portfolio-feedback .Content .Column {
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: flex-start;
   gap: 1.25rem;
 }
 .Portfolio-feedback .Content .Column .Stars {
   display: flex;
+  flex-direction: none;
+  flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: flex-start;
+  gap: 0;
 }
 .Portfolio-feedback .Content .Column .Stars img {
   width: 1.25rem;
   height: 1.180625rem;
 }
 .Portfolio-feedback .Content .Column .Quote {
-  color: black;
-  font-size: 1.25rem;
-  font-family: "Roboto", sans-serif;
+  color: var(--text-color);
+  font-size: var(--main-size);
+  font-family: var(--website-font-family);
   font-weight: 700;
-  line-height: 1.75rem;
+  line-height: var(--line-height);
 }
 .Portfolio-feedback .Content .Column .Avatar {
   width: 100%;
@@ -1728,6 +1739,7 @@ body {
 .Portfolio-feedback .Content .Column .Avatar .AvatarImage {
   width: 3.5rem;
   height: 3.5rem;
+  object-fit: fill;
   border-radius: 624.9375rem;
 }
 .Portfolio-feedback .Content .Column .Avatar .AvatarContent {
@@ -1738,10 +1750,10 @@ body {
 }
 .Portfolio-feedback .Content .Column .Avatar .AvatarContent .Name,
 .Portfolio-feedback .Content .Column .Avatar .AvatarContent .Role {
-  color: black;
-  font-size: 1rem;
-  font-family: "Roboto", sans-serif;
-  line-height: 1.5rem;
+  color: var(--text-color);
+  font-size: var(--main-size);
+  font-family: var(--website-font-family);
+  line-height: var(--line-height);
   word-wrap: break-word;
 }
 .Portfolio-feedback .Content .Column .Avatar .AvatarContent .Name {
@@ -1754,22 +1766,24 @@ body {
   width: 3.8125rem;
   height: 0;
   transform: rotate(90deg);
-  border: 0.0625rem solid black;
+  border: 0.0625rem solid var(--black);
 }
 .Portfolio-feedback .Content .Column .Avatar .CompanyLogo {
   width: 7.5rem;
   height: 3rem;
   padding: 0.609375rem 0.1875rem;
   display: flex;
+  flex-direction: none;
+  flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
+  gap: 0;
 }
 
 .Portfolio-cta {
   width: 100%;
-  height: 26.3125rem;
-  padding: 14.125rem 6.25rem;
-  background: white;
+  height: auto;
+  padding: 7rem 4rem;
   display: inline-flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -1780,6 +1794,7 @@ body {
   height: 12.3125rem;
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: center;
   gap: 1.5rem;
@@ -1787,9 +1802,9 @@ body {
 .Portfolio-cta .Content .Heading {
   align-self: stretch;
   text-align: center;
-  color: black;
-  font-size: 3rem;
-  font-family: "Roboto", sans-serif;
+  color: var(--text-color);
+  font-size: var(--heading-size);
+  font-family: var(--website-font-family);
   font-weight: 700;
   line-height: 3.6rem;
   word-wrap: break-word;
@@ -1797,11 +1812,11 @@ body {
 .Portfolio-cta .Content .Text {
   align-self: stretch;
   text-align: center;
-  color: black;
-  font-size: 1.125rem;
-  font-family: "Roboto", sans-serif;
+  color: var(--text-color);
+  font-size: var(--main-size);
+  font-family: var(--website-font-family);
   font-weight: 400;
-  line-height: 1.6875rem;
+  line-height: var(--line-height);
   word-wrap: break-word;
 }
 .Portfolio-cta .Content .Actions {

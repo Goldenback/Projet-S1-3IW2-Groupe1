@@ -310,9 +310,7 @@
         width: rem(200);
         height: rem(48);
         padding: rem(9.75) rem(43);
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flexbox(none, nowrap, center, center);
       }
 
       &.Relume {
@@ -327,56 +325,38 @@
   width: 100%;
   height: auto;
   padding: rem(112) rem(64);
-  background: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: rem(80);
+  @include flexbox(column, nowrap, flex-start, flex-start, rem(80));
 
   .SectionTitle {
     height: rem(180);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+    @include flexbox(column, nowrap, flex-start, flex-start);
 
     .Heading {
-      color: black;
-      font-size: rem(48);
-      font-family: "Roboto", sans-serif;
+      color: var(--text-color);
+      font-size: var(--heading-size);
+      font-family: var(--website-font-family);
       font-weight: 700;
       line-height: rem(57.6);
     }
 
     .Text {
-      color: black;
-      font-size: rem(18);
-      font-family: "Roboto", sans-serif;
+      color: var(--text-color);
+      font-size: var(--main-size);
+      font-family: var(--website-font-family);
       font-weight: 400;
-      line-height: rem(27);
+      line-height: var(--line-height);
     }
   }
 
   .Content {
     width: 100%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: rem(64);
+    @include flexbox(none, nowrap, flex-start, flex-start, rem(64));
 
     .Column {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: flex-start;
-      gap: rem(20);
+      @include flexbox(column, nowrap, flex-start, flex-start, rem(20));
 
       .Stars {
-        display: flex;
-        justify-content: flex-start;
-        align-items: flex-start;
-
+        @include flexbox(none, nowrap, flex-start, flex-start);
         img {
           width: rem(20);
           height: rem(18.89);
@@ -384,11 +364,11 @@
       }
 
       .Quote {
-        color: black;
-        font-size: rem(20);
-        font-family: "Roboto", sans-serif;
+        color: var(--text-color);
+        font-size: var(--main-size);
+        font-family: var(--website-font-family);
         font-weight: 700;
-        line-height: rem(28);
+        line-height: var(--line-height);
       }
 
       .Avatar {
@@ -402,7 +382,8 @@
         .AvatarImage {
           width: rem(56);
           height: rem(56);
-          border-radius: rem(9999);
+          object-fit: fill;
+          border-radius: rem(9999); //Pour arrondir au max
         }
 
         .AvatarContent {
@@ -413,10 +394,10 @@
 
           .Name,
           .Role {
-            color: black;
-            font-size: rem(16);
-            font-family: "Roboto", sans-serif;
-            line-height: rem(24);
+            color: var(--text-color);
+            font-size: var(--main-size);
+            font-family: var(--website-font-family);
+            line-height: var(--line-height);
             word-wrap: break-word;
           }
 
@@ -433,16 +414,14 @@
           width: rem(61);
           height: 0;
           transform: rotate(90deg);
-          border: rem(1) solid black;
+          border: rem(1) solid var(--black);
         }
 
         .CompanyLogo {
           width: rem(120);
           height: rem(48);
           padding: rem(9.75) rem(3);
-          display: flex;
-          justify-content: center;
-          align-items: center;
+          @include flexbox(none, nowrap, center, center);
         }
       }
     }
@@ -451,9 +430,8 @@
 
 .Portfolio-cta {
   width: 100%;
-  height: rem(421);
-  padding: rem(226) rem(100);
-  background: white;
+  height: auto;
+  padding: rem(112) rem(64);
   display: inline-flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -462,18 +440,14 @@
 
   .Content {
     height: rem(197);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    gap: rem(24);
+    @include flexbox(column, nowrap, flex-start, center, rem(24));
 
     .Heading {
       align-self: stretch;
       text-align: center;
-      color: black;
-      font-size: rem(48);
-      font-family: "Roboto", sans-serif;
+      color: var(--text-color);
+      font-size: var(--heading-size);
+      font-family: var(--website-font-family);
       font-weight: 700;
       line-height: rem(57.6);
       word-wrap: break-word;
@@ -482,11 +456,11 @@
     .Text {
       align-self: stretch;
       text-align: center;
-      color: black;
-      font-size: rem(18);
-      font-family: "Roboto", sans-serif;
+      color: var(--text-color);
+      font-size: var(--main-size);
+      font-family: var(--website-font-family);
       font-weight: 400;
-      line-height: rem(27);
+      line-height: var(--line-height);
       word-wrap: break-word;
     }
 
