@@ -1,7 +1,7 @@
 <nav class="navbar">
     <div class="container">
         <div class="logo-container">
-          <a href="/">
+          <a href="/about">
             <img class="logo" src="../../../Front-end/Workspace/assets/img/logo/simplify.png">
           </a>
         </div>

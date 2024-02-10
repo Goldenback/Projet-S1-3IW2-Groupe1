@@ -1,62 +1,54 @@
-.Portfolio-Header {
+.Portfolio-container {
   width: 100%;
-  height: rem(958);
+  height: auto;
   padding-bottom: rem(80);
-  background: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  gap: rem(80);
+  background: var(--bg-color-white);
+  @include flexbox(column, nowrap, flex-start, center, rem(80));
 
-  .PlaceholderImage {
-    align-self: stretch;
-    flex: 1 1 0;
-  }
+  .background-image {
+    width: 100%;
+    position: relative;
 
-  .Content {
-    height: rem(171);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    gap: rem(24);
-
-    .Heading,
-    .Text {
-      width: rem(768);
-      text-align: center;
-      color: black;
-      font-size: rem(56);
-      font-family: 'Roboto', sans-serif;
-      font-weight: 700;
-      line-height: rem(67.20);
-
-      &.Text {
-        font-size: rem(18);
-        font-weight: 400;
-        line-height: rem(27);
-      }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
-    .Tags {
-      width: rem(768);
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      gap: rem(8);
+    .content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: var(--text-color);
+      @include flexbox(column, nowrap, center, center, rem(24));
 
-      .Tag {
-        padding: rem(4) rem(8);
-        background: #F4F4F4;
+      h1 {
+        color: var(--bg-color-white);
+        font-size: rem(56);
+        font-family: var(--website-font-family);
+        font-weight: 700;
+        line-height: rem(67.2);
+      }
+
+      p {
+        color: var(--bg-color-white);
+        font-size: var(--main-size);
+        font-family: var(--website-font-family);
+        font-weight: 400;
+        line-height: var(--line-height);
+      }
+
+      .tags {
         display: flex;
-        justify-content: flex-start;
-        align-items: flex-start;
+        gap: rem(8);
 
-        div {
-          color: black;
-          font-size: rem(14);
-          font-family: 'Roboto', sans-serif;
+        span {
+          padding: rem(4) rem(8);
+          background: var(--img-bg-color);
+          font-size: var(--main-size);
+          font-family: var(--website-font-family);
           font-weight: 600;
           line-height: rem(21);
         }
@@ -67,68 +59,56 @@
 
 .Portfolio-Gallery {
   width: 100%;
-  height: rem(1511);
-  padding: rem(400) rem(64) rem(112) rem(64);
-  background: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  gap: rem(150);
+  height: auto;
+  padding: rem(112) rem(64);
+  background: var(--bg-color-white);
+  @include flexbox(column, nowrap, flex-start, center, rem(150));
 
   .SectionTitle {
     height: rem(109);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
+    @include flexbox(column, nowrap, flex-start, center);
 
     .Heading {
       width: 100%;
       text-align: center;
-      color: black;
-      font-size: rem(48);
-      font-family: 'Roboto', sans-serif;
+      color: var(--text-color);
+      font-size: var(--heading-size);
+      font-family: var(--website-font-family);
       font-weight: 700;
-      line-height: rem(57.60);
+      line-height: rem(57.6);
     }
 
     .Text {
       width: 100%;
       text-align: center;
-      color: black;
-      font-size: rem(18);
-      font-family: 'Roboto', sans-serif;
+      color: var(--text-color);
+      font-size: var(--main-size);
+      font-family: var(--website-font-family);
       font-weight: 400;
-      line-height: rem(27);
+      line-height: var(--line-height)
     }
   }
 
   .Content {
     align-self: center;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: rem(24);
+    @include flexbox(none, nowrap, flex-start, flex-start, rem(24));
 
     div {
       flex: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: flex-start;
-      gap: rem(32);
+      @include flexbox(column, nowrap, flex-start, flex-start, rem(32));
 
-      img {
+      .PlaceholderImage1,
+      .PlaceholderImage4 {
         width: rem(640);
-        &:first-child {
-          flex: 1 1 0;
-        }
+        height: rem(640);
+        object-fit: cover;
       }
 
       .PlaceholderImage2,
       .PlaceholderImage3 {
+        width: rem(640);
         height: rem(426);
+        object-fit: cover;
       }
     }
   }
@@ -137,137 +117,101 @@
 .Portfolio {
   width: 100%;
   height: rem(1148);
-  padding: rem(400) rem(64) rem(200) rem(64);
-  background: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  gap: rem(180);
+  padding: rem(112) rem(64);
+  @include flexbox(column, nowrap, flex-start, center, rem(180));
 
   .SectionTitle {
     height: rem(149);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
+    @include flexbox(column, nowrap, flex-start, center);
 
     .Subheading {
       text-align: center;
-      color: black;
-      font-size: rem(16);
-      font-family: 'Roboto', sans-serif;
+      color: var(--text-color);
+      font-size: var(--main-size);
+      font-family: var(--website-font-family);
       font-weight: 600;
-      line-height: rem(24);
+      line-height: var(--line-height)
     }
 
     .Content {
       width: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: center;
-      gap: rem(0);
+      @include flexbox(column, nowrap, flex-start, center);
 
       .Heading {
         text-align: center;
-        color: black;
-        font-size: rem(48);
-        font-family: 'Roboto', sans-serif;
+        color: var(--text-color);
+        font-size: var(--heading-size);
+        font-family: var(--website-font-family);
         font-weight: 700;
         line-height: rem(57.6);
       }
 
       .Text {
         text-align: center;
-        color: black;
-        font-size: rem(18);
-        font-family: 'Roboto', sans-serif;
+        color: var(--text-color);
+        font-size: var(--main-size);
+        font-family: var(--website-font-family);
         font-weight: 400;
-        line-height: rem(27);
+        line-height: var(--line-height)
       }
     }
   }
 
   .Content {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    gap: rem(10);
+    @include flexbox(column, nowrap, flex-start, center);
 
     .PortfolioList {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: center;
-      gap: rem(48);
+      @include flexbox(column, nowrap, flex-start, center, rem(48));
 
       .Row {
         width: rem(1312);
-        display: flex;
-        justify-content: flex-start;
-        align-items: flex-start;
-        gap: rem(48);
+        @include flexbox(none, nowrap, flex-start, flex-start, rem(48));
 
         .Card {
           flex: 1;
-          display: flex;
-          flex-direction: column;
-          justify-content: flex-start;
-          align-items: flex-start;
-          gap: rem(24);
+          @include flexbox(column, nowrap, flex-start, flex-start);
 
           .PlaceholderImage {
-            width: 100%;
+            width: rem(632);
             height: rem(400);
+            object-fit: cover;
           }
 
           .Content {
             width: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: flex-start;
+            @include flexbox(column, nowrap, flex-start, flex-start);
 
             .Text {
-              display: flex;
-              flex-direction: column;
-              justify-content: flex-start;
-              align-items: flex-start;
-              gap: rem(0);
+              @include flexbox(column, nowrap, flex-start, flex-start);
 
               .Heading {
-                color: black;
-                font-size: rem(24);
-                font-family: 'Roboto', sans-serif;
+                color: var(--text-color);
+                font-size: var(--subtitle-size);
+                font-family: var(--website-font-family);
                 font-weight: 700;
                 line-height: rem(33.6);
               }
 
               .Text {
-                color: black;
-                font-size: rem(16);
-                font-family: 'Roboto', sans-serif;
+                color: var(--text-color);
+                font-size: var(--main-size);
+                font-family: var(--website-font-family);
                 font-weight: 400;
-                line-height: rem(24);
+                line-height: var(--line-height)
               }
             }
 
             .Tags {
-              display: flex;
-              justify-content: flex-start;
-              align-items: flex-start;
-              gap: rem(8);
+              @include flexbox(none, nowrap, flex-start, flex-start, rem(8));
 
               .Tag {
                 padding: rem(4) rem(8);
-                background: #F4F4F4;
-                color: black;
-                font-size: rem(14);
-                font-family: 'Roboto', sans-serif;
+                background: var(--img-bg-color);
+                color: var(--text-color);
+                font-size: var(--main-size);
+                font-family: var(--website-font-family);
                 font-weight: 600;
-                line-height: rem(21);
+                line-height: var(--line-height)
               }
             }
           }
@@ -279,14 +223,9 @@
 
 .Portfolio-Layout {
   width: 100%;
-  height: rem(1292);
-  padding: rem(400) rem(64) rem(200) rem(64);
-  background: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: rem(80);
+  height: auto;
+  padding: rem(112) rem(64);
+  @include flexbox(column, nowrap, flex-start, flex-start, rem(80));
 
   .Content {
     align-self: center;
@@ -297,26 +236,22 @@
 
     .Column {
       flex: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: flex-start;
-      gap: rem(16);
+      @include flexbox(column, nowrap, flex-start, flex-start, rem(16));
 
       .Subheading {
         align-self: stretch;
-        color: black;
-        font-size: rem(16);
-        font-family: 'Roboto', sans-serif;
+        color: var(--text-color);
+        font-size: var(--main-size);
+        font-family: var(--website-font-family);
         font-weight: 600;
-        line-height: rem(24);
+        line-height: var(--line-height)
       }
 
       .Heading {
         align-self: stretch;
-        color: black;
-        font-size: rem(48);
-        font-family: 'Roboto', sans-serif;
+        color: var(--text-color);
+        font-size: var(--heading-size);
+        font-family: var(--website-font-family);
         font-weight: 700;
         line-height: rem(57.6);
       }
@@ -335,48 +270,43 @@
 
       .Text {
         align-self: stretch;
-        color: black;
-        font-size: rem(18);
-        font-family: 'Roboto', sans-serif;
+        color: var(--text-color);
+        font-size: var(--main-size);
+        font-family: var(--website-font-family);
         font-weight: 400;
-        line-height: rem(27);
+        line-height: var(--line-height)
       }
     }
   }
 
   .PlaceholderImage {
     align-self: stretch;
-    height: rem(738);
+    width: 100%;
+    height: rem(838);
+    object-fit: fill;
   }
 }
 
 .Portfolio-Logo {
   width: 100%;
-  height: rem(291);
-  padding: rem(400) rem(64) rem(200) rem(64);
-  background: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  gap: rem(48);
+  height: auto;
+  padding: rem(112) rem(64);
+  @include flexbox(column, nowrap, flex-start, center, rem(48));
 
   .Heading {
-    color: black;
-    font-size: rem(18);
-    font-family: 'Roboto', sans-serif;
+    color: var(--text-color);
+    font-size: var(--main-size);
+    font-family: var(--website-font-family);
     font-weight: 700;
-    line-height: rem(27);
+    line-height: var(--line-height)
   }
 
   .Content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: rem(24);
+    @include flexbox(none, nowrap, center, center, rem(24));
 
     .Logo {
-      &.Webflow, &.Relume {
+      &.Webflow,
+      &.Relume {
         width: rem(200);
         height: rem(48);
         padding: rem(9.75) rem(43);
@@ -414,15 +344,15 @@
     .Heading {
       color: black;
       font-size: rem(48);
-      font-family: 'Roboto', sans-serif;
+      font-family: "Roboto", sans-serif;
       font-weight: 700;
-      line-height: rem(57.60);
+      line-height: rem(57.6);
     }
 
     .Text {
       color: black;
       font-size: rem(18);
-      font-family: 'Roboto', sans-serif;
+      font-family: "Roboto", sans-serif;
       font-weight: 400;
       line-height: rem(27);
     }
@@ -456,7 +386,7 @@
       .Quote {
         color: black;
         font-size: rem(20);
-        font-family: 'Roboto', sans-serif;
+        font-family: "Roboto", sans-serif;
         font-weight: 700;
         line-height: rem(28);
       }
@@ -481,10 +411,11 @@
           justify-content: flex-start;
           align-items: flex-start;
 
-          .Name, .Role {
+          .Name,
+          .Role {
             color: black;
             font-size: rem(16);
-            font-family: 'Roboto', sans-serif;
+            font-family: "Roboto", sans-serif;
             line-height: rem(24);
             word-wrap: break-word;
           }
@@ -512,10 +443,8 @@
           display: flex;
           justify-content: center;
           align-items: center;
-
         }
       }
-
     }
   }
 }
@@ -544,7 +473,7 @@
       text-align: center;
       color: black;
       font-size: rem(48);
-      font-family: 'Roboto', sans-serif;
+      font-family: "Roboto", sans-serif;
       font-weight: 700;
       line-height: rem(57.6);
       word-wrap: break-word;
@@ -555,7 +484,7 @@
       text-align: center;
       color: black;
       font-size: rem(18);
-      font-family: 'Roboto', sans-serif;
+      font-family: "Roboto", sans-serif;
       font-weight: 400;
       line-height: rem(27);
       word-wrap: break-word;

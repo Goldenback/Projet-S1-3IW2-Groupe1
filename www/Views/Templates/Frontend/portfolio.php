@@ -10,18 +10,22 @@
 
 <?php include("layout/navbar.php") ?>
 
-<section class="Portfolio-Header">
-    <img class="PlaceholderImage" src="https://via.placeholder.com/1440x627" alt="Placeholder Image" />
-    <div class="Content">
-        <h2 class="Heading">Creative Photography Project</h2>
-        <p class="Text">Capturing Moments Through the Lens of Artistry</p>
-        <div class="Tags">
-            <div class="Tag TagOne">Landscape</div>
-            <div class="Tag TagTwo">Nature</div>
-            <div class="Tag TagThree">Abstract</div>
-        </div>
+<section class="Portfolio-container">
+
+  <div class="background-image hero">
+    <img src="../../../Front-end/Workspace/assets/img/page-portfolio/background.png" alt="Background">
+    <div class="content">
+      <h1>Creative Photography Project</h1>
+      <p>Capturing Moments Through the Lens of Artistry</p>
+      <div class="tags">
+        <span>Landscape</span>
+        <span>Nature</span>
+        <span>Abstract</span>
+      </div>
     </div>
+  </div>
 </section>
+
 
 <section class="Portfolio-Gallery">
     <div class="SectionTitle">
@@ -30,12 +34,12 @@
     </div>
     <div class="Content">
         <div>
-            <img class="PlaceholderImage1" src="https://via.placeholder.com/640x640" alt="Artist Work 1" />
-            <img class="PlaceholderImage2" src="https://via.placeholder.com/640x426" alt="Artist Work 2" />
+            <img class="PlaceholderImage1" src="../../../Front-end/Workspace/assets/img/page-portfolio/gallery.png" alt="Artist Work 1" />
+            <img class="PlaceholderImage2" src="../../../Front-end/Workspace/assets/img/page-portfolio/gallery2.png" alt="Artist Work 2" />
         </div>
         <div>
-            <img class="PlaceholderImage3" src="https://via.placeholder.com/640x426" alt="Artist Work 3" />
-            <img class="PlaceholderImage1" src="https://via.placeholder.com/640x640" alt="Artist Work 1" />
+            <img class="PlaceholderImage3" src="../../../Front-end/Workspace/assets/img/page-portfolio/gallery3.png" alt="Artist Work 4" />
+            <img class="PlaceholderImage4" src="../../../Front-end/Workspace/assets/img/page-portfolio/gallery4.png" alt="Artist Work 4" />
         </div>
     </div>
 </section>
@@ -52,10 +56,10 @@
         <div class="PortfolioList">
             <div class="Row">
                 <div class="Card">
-                    <img class="PlaceholderImage" src="https://via.placeholder.com/632x400" alt="Art Project One">
+                    <img class="PlaceholderImage" src="../../../Front-end/Workspace/assets/img/page-portfolio/web-site1.png" alt="Art Project One">
                     <div class="Content">
                         <div class="Text">
-                            <h3 class="Heading">Art Project One</h3>
+                            <h3 class="Heading">Nature's Canvas</h3>
                             <p class="Text">Captivating Photography Collection</p>
                         </div>
                         <div class="Tags">
@@ -66,10 +70,10 @@
                     </div>
                 </div>
                 <div class="Card">
-                    <img class="PlaceholderImage" src="https://via.placeholder.com/632x400" alt="Art Project Two">
+                    <img class="PlaceholderImage" src="../../../Front-end/Workspace/assets/img/page-portfolio/web-site2.png" alt="Art Project Two">
                     <div class="Content">
                         <div class="Text">
-                            <h3 class="Heading">Art Project Two</h3>
+                            <h3 class="Heading">Harmonic Blues</h3>
                             <p class="Text">Soulful Music Collection</p>
                         </div>
                         <div class="Tags">
@@ -98,26 +102,32 @@
             </div>
         </div>
     </div>
-    <img class="PlaceholderImage" src="https://via.placeholder.com/1312x738" alt="Showcase Image"/>
+    <img class="PlaceholderImage" src="../../../Front-end/Workspace/assets/img/page-portfolio/layout.png" alt="Showcase Image"/>
 </section>
 
 <section class="Portfolio-Logo">
     <h2 class="Heading">Trusted by industry-leading companies worldwide</h2>
     <div class="Content">
         <div class="Logo Webflow">
-            <img src="../../../Front-end/Workspace/assets/icon-svg/webflow-svgrepo-com.svg">
+            <img src="../../../Front-end/Workspace/assets/svg/brand/webflow-2.svg">
         </div>
         <div class="Logo Relume">
-            <img src="../../../Front-end/Workspace/assets/icon-svg/cube-fill-svgrepo-com.svg">
+            <img src="../../../Front-end/Workspace/assets/svg/brand/relume-2.svg">
         </div>
         <div class="Logo Webflow">
-            <img src="../../../Front-end/Workspace/assets/icon-svg/webflow-svgrepo-com.svg">
+            <img src="../../../Front-end/Workspace/assets/svg/brand/webflow-2.svg">
         </div>
         <div class="Logo Relume">
-            <img src="../../../Front-end/Workspace/assets/icon-svg/cube-fill-svgrepo-com.svg">
+            <img src="../../../Front-end/Workspace/assets/svg/brand/relume-2.svg">
         </div>
         <div class="Logo Webflow">
-            <img src="../../../Front-end/Workspace/assets/icon-svg/webflow-svgrepo-com.svg">
+            <img src="../../../Front-end/Workspace/assets/svg/brand/webflow-2.svg">
+        </div>
+        <div class="Logo Relume">
+            <img src="../../../Front-end/Workspace/assets/svg/brand/relume-2.svg">
+        </div>
+        <div class="Logo Webflow">
+            <img src="../../../Front-end/Workspace/assets/svg/brand/webflow-2.svg">
         </div>
     </div>
 </section>
