@@ -2,18 +2,14 @@
   width: 100%;
   height: rem(538);
   padding: rem(80) rem(64);
-  background: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: rem(64);
+  @include flexbox(column, nowrap, unset, center, rem(64));
 
   .content {
     width: 100%;
     height: rem(244);
+    display: inline-flex;
     justify-content: flex-start;
     align-items: flex-start;
-    display: inline-flex;
     gap: rem(64);
 
     .column {
@@ -52,17 +48,21 @@
 
           a {
             text-decoration: none;
-            font-size: rem(24);
+            font-size: var(--subtitle-size);
+            font-family: var(--website-font-family);
+            font-family: var(--website-font-family);
 
             img {
               width: rem(24);
               height: rem(24);
+              object-fit: cover;
             }
           }
         }
       }
 
       &.links-column {
+        font-family: var(--website-font-family);
         justify-content: flex-end;
         flex-direction: row;
 
@@ -79,14 +79,15 @@
     align-self: stretch;
     display: flex;
     flex-direction: column;
+    font-family: var(--website-font-family);
 
-    .divider { height: rem(1); background: black; }
+    .divider { height: rem(1); background: var(--black); }
 
     .row {
       justify-content: space-between;
       display: flex;
       text-decoration: none;
-      color: black;
+      color: var(--black);
 
       .footer-links {
         display: flex;
@@ -107,28 +108,30 @@
   }
 
   &.phone, &.email {
-    text-decoration: underline;
+    text-decoration: none;
   }
 
   &.link {
     font-weight: 700;
     text-decoration: none;
     font-size: rem(16);
-    line-height: rem(24);
-    word-wrap: break-word;
+    line-height: var(--line-height);
     width: rem(180);
     height: auto;
-    color: var(--black);
+    color: var(--text-color);
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   &.footer-link {
     font-weight: 400;
     text-decoration: underline;
-    font-size: rem(14);
-    line-height: rem(21);
-    word-wrap: break-word;
+    font-size: var(--main-size);
+    line-height: var(--line-height);
     a {
-      color: var(--black);
+      color: var(--text-color);
     }
   }
 }

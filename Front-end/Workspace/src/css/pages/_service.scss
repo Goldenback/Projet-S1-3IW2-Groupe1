@@ -126,16 +126,22 @@
     .subheading {
       font-size: var(--main-size);
       font-weight: 600;
+      color: var(--text-color);
+      line-height: var(--line-height);
     }
 
     .heading {
       font-size: var(--heading-size);
       font-weight: 700;
+      color: var(--text-color);
+      line-height: var(--line-height);
     }
 
     .text {
       font-size: var(--main-size);
       font-weight: 400;
+      color: var(--text-color);
+      line-height: var(--line-height);
     }
   }
 
@@ -158,12 +164,14 @@
           text-align: center;
           font-size: var(--title-size);
           font-weight: 700;
+          line-height: var(--line-height);
         }
 
         .text {
           text-align: center;
           font-size: var(--main-size);
           font-weight: 400;
+          line-height: var(--line-height);
         }
       }
     }
