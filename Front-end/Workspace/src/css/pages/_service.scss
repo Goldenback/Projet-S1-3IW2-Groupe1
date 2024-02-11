@@ -2,24 +2,17 @@
   width: 100%;
   height: auto;
   padding: rem(112) rem(64);
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  gap: rem(80);
+  @include flexbox(column, nowrap, flex-start, center, rem(80));
+  font-family: var(--website-font-family);
 
   .column {
     height: rem(273);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    gap: rem(24);
+    @include flexbox(column, nowrap, flex-start, center, rem(24));
 
     .content {
       .headline {
         text-align: center;
-        color: black;
+        color: var(--text-color);
         font-size: rem(56);
         font-weight: 700;
         line-height: rem(67.2);
@@ -27,18 +20,15 @@
 
       .description {
         text-align: center;
-        color: black;
-        font-size: rem(18);
+        color: var(--text-color);
+        font-size: var(--main-size);
         font-weight: 400;
-        line-height: rem(27);
+        line-height: var(--line-height);
       }
     }
 
     .Actions {
-      display: flex;
-      justify-content: flex-start;
-      align-items: flex-start;
-      gap: rem(16);
+      @include flexbox(unset, nowrap, flex-start, flex-start, rem(16));
       padding-top: rem(16);
     }
   }
@@ -46,6 +36,7 @@
   .placeholder-image {
     align-self: stretch;
     height: rem(738);
+    object-fit: cover;
   }
 }
 
@@ -53,84 +44,65 @@
   width: 100%;
   height: auto;
   padding: rem(112) rem(64);
-  background: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: rem(80);
+  @include flexbox(column, nowrap, unset, unset, rem(80));
+  font-family: var(--website-font-family);
+  box-sizing: border-box;
 
   .container {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: rem(80);
+    @include flexbox(row, nowrap, space-between, center, rem(80));
 
     .content {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: flex-start;
+      @include flexbox(column, nowrap, flex-start, flex-start);
 
       .section-title {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        gap: rem(16);
+        @include flexbox(column, nowrap, flex-start, flex-start, rem(16));
 
         .subheading {
           text-align: center;
-          font-size: rem(16);
+          font-size: var(--main-size);
           font-weight: 600;
         }
 
         .heading {
-          font-size: rem(48);
+          font-size: var(--heading-size);
           font-weight: 700;
         }
 
         .text {
-          font-size: rem(18);
+          font-size: var(--main-size);
           font-weight: 400;
         }
       }
 
       .list {
-        display: flex;
-        justify-content: flex-start;
-        align-items: flex-start;
-        gap: rem(24);
+        width: rem(616);
+        height: auto;
+        @include flexbox(unset, nowrap, flex-start, flex-start, rem(24));
 
         .list-item {
-          display: flex;
-          flex-direction: column;
-          justify-content: flex-start;
-          align-items: flex-start;
+          @include flexbox(column, nowrap, flex-start, flex-start);
 
           .number {
-            font-size: rem(48);
+            font-size: var(--heading-size);
             font-weight: 700;
           }
 
           .text {
-            font-size: rem(16);
+            font-size: var(--main-size);
             font-weight: 400;
           }
         }
       }
 
       .Actions {
-        display: flex;
-        justify-content: flex-start;
-        align-items: flex-start;
-        gap: rem(16);
+        @include flexbox(unset, nowrap, flex-start, flex-start, rem(16));
         padding-top: rem(16);
       }
     }
 
     .placeholder-image {
       flex: 1 1 0;
+      width: rem(616);
       height: rem(640);
     }
   }
@@ -140,85 +112,64 @@
   width: 100%;
   height: auto;
   padding: rem(112) rem(64);
-  background: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  gap: rem(80);
+  @include flexbox(column, nowrap, flex-start, center, rem(80));
+  font-family: var(--website-font-family);
 
   .section-title {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    gap: rem(16);
+    @include flexbox(column, nowrap, flex-start, center, rem(16));
 
     .subheading, .heading, .text {
       text-align: center;
-      color: black;
+      color: var(--text-color);
     }
 
     .subheading {
-      font-size: rem(16);
+      font-size: var(--main-size);
       font-weight: 600;
     }
 
     .heading {
-      font-size: rem(48);
+      font-size: var(--heading-size);
       font-weight: 700;
     }
 
     .text {
-      font-size: rem(18);
+      font-size: var(--main-size);
       font-weight: 400;
     }
   }
 
   .content {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    gap: rem(48);
+    @include flexbox(column, nowrap, flex-start, center, rem(48));
 
     .row {
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      gap: rem(48);
+      @include flexbox(unset, nowrap, center, flex-start, rem(48));
 
       .column {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        gap: rem(32);
+        @include flexbox(column, nowrap, flex-start, center, rem(32));
 
         img {
-          align-self: center;
+          width: rem(405.33);
           height: rem(240);
+          object-fit: cover;
         }
 
         .heading {
           text-align: center;
-          font-size: rem(32);
+          font-size: var(--title-size);
           font-weight: 700;
         }
 
         .text {
           text-align: center;
-          font-size: rem(16);
+          font-size: var(--main-size);
           font-weight: 400;
         }
       }
     }
 
     .Actions {
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      gap: rem(24);
+      @include flexbox(unset, nowrap, flex-start, center, rem(24));
     }
   }
 }
@@ -227,54 +178,47 @@
   width: 100%;
   height: auto;
   padding: rem(112) rem(64);
-  background: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  gap: rem(80);
+  @include flexbox(column, nowrap, flex-start, center, rem(80));
+  font-family: var(--website-font-family);
 
   .section-title {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    gap: rem(24);
+    @include flexbox(column, nowrap, flex-start, center, rem(24));
 
     .heading {
-      font-size: rem(48);
+      font-size: var(--heading-size);
       font-weight: 700;
       line-height: rem(57.6);
-      color: black;
+      color: var(--text-color);
       text-align: center;
     }
 
     .text {
-      font-size: rem(18);
+      font-size: var(--main-size);
       font-weight: 400;
-      line-height: rem(27);
-      color: black;
+      line-height: var(--line-height);
+      color: var(--text-color);
       text-align: center;
     }
   }
 
   .gallery-content {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: rem(32);
+    @include flexbox(unset, nowrap, center, flex-start, rem(32));
     width: 100%;
 
     .image-column {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: center;
-      gap: rem(32);
+      @include flexbox(column, nowrap, flex-start, center, rem(32));
 
-      img {
+      .placeholder-image1,
+      .placeholder-image4 {
         width: rem(640);
-        height: auto;
+        height: rem(640);
+        object-fit: cover;
+      }
+
+      .placeholder-image2,
+      .placeholder-image3 {
+        width: rem(640);
+        height: rem(426);
         object-fit: cover;
       }
     }
@@ -285,26 +229,14 @@
   width: 100%;
   height: auto;
   padding: rem(112) rem(64);
-  background: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: rem(80);
+  @include flexbox(column, nowrap, center, center, rem(80));
 
   .Content {
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: rem(64);
+    @include flexbox(unset, nowrap, center, center, rem(64));
 
     .Column {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      gap: rem(20);
+      @include flexbox(column, nowrap, center, center, rem(20));
 
       .Stars {
         display: flex;
@@ -315,11 +247,11 @@
       }
 
       .Quote {
-        color: black;
-        font-size: rem(20);
-        font-family: 'Roboto', sans-serif;
+        color: var(--text-color);
+        font-size: var(--main-size);
+        font-family: var(--website-font-family);
         font-weight: 700;
-        line-height: rem(28);
+        line-height: var(--line-height);
       }
 
       .Avatar {
@@ -333,6 +265,7 @@
         .AvatarImage {
           width: rem(56);
           height: rem(56);
+          object-fit: cover;
           border-radius: rem(9999); //pour être rond
         }
 
@@ -343,10 +276,10 @@
           align-items: flex-start;
 
           .Name, .Role {
-            color: black;
-            font-size: rem(16);
-            font-family: 'Roboto', sans-serif;
-            line-height: rem(24);
+            color: var(--text-color);
+            font-size: var(--main-size);
+            font-family: var(--website-font-family);
+            line-height: var(--line-height);
             word-wrap: break-word;
           }
 
@@ -363,17 +296,14 @@
           width: rem(61);
           height: 0;
           transform: rotate(90deg);
-          border: rem(1) solid black;
+          border: rem(1) solid var(--black);
         }
 
         .CompanyLogo {
           width: rem(120);
           height: rem(48);
           padding: rem(9.75) rem(3);
-          display: flex;
-          justify-content: center;
-          align-items: center;
-
+          @include flexbox(unset, nowrap, center, center);
         }
       }
 
@@ -385,54 +315,44 @@
   width: 100%;
   height: auto;
   padding: rem(112) rem(64);
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: rem(80);
+  @include flexbox(column, nowrap, unset, unset, rem(80));
+  box-sizing: border-box;
 
   .container {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: rem(80);
+    @include flexbox(row, nowrap, space-between, center, rem(80));
   }
 
   .column {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: rem(24);
+    @include flexbox(column, nowrap, flex-start, flex-start, rem(24));
 
     .content {
       .heading {
-        font-size: rem(48);
+        font-size: var(--heading-size);
         font-weight: 700;
+        font-family: var(--website-font-family);
         line-height: rem(57.6);
-        color: black;
+        color: var(--text-color);
       }
 
       .text {
-        font-size: rem(18);
+        font-size: var(--main-size);
         font-weight: 400;
-        line-height: rem(27);
-        color: black;
+        font-family: var(--website-font-family);
+        line-height: var(--line-height);
+        color: var(--text-color);
       }
     }
 
     .actions {
       padding-top: rem(16);
-      display: flex;
-      justify-content: flex-start;
-      align-items: flex-start;
-      gap: rem(16);
+      @include flexbox(unset, nowrap, flex-start, flex-start, rem(16));
     }
   }
 
   .placeholder-image {
-    flex: 1 1 0;
+    width: rem(616);
     height: rem(400);
+    object-fit: cover;
   }
 }
 
@@ -440,81 +360,105 @@
   width: 100%;
   height: auto;
   padding: rem(112) rem(64);
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: rem(80);
+  @include flexbox(column, nowrap, unset, unset, rem(80));
+  box-sizing: border-box;
 
   .container {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: rem(240);
+    @include flexbox(row, nowrap, space-between, center, rem(80));
   }
 
   .column {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: rem(16);
+    @include flexbox(column, nowrap, flex-start, flex-start, rem(16));
 
     .content {
       h2.heading {
-        font-size: rem(48);
+        font-size: var(--heading-size);
         font-weight: 700;
+        font-family: var(--website-font-family);
         line-height: rem(57.6);
-        color: black;
+        color: var(--black);
       }
 
       p.text {
-        font-size: rem(18);
+        font-size: var(--main-size);
         font-weight: 400;
-        line-height: rem(27);
-        color: black;
+        font-family: var(--website-font-family);
+        line-height: var(--line-height);
+        color: var(--black);
       }
     }
 
     form.actions {
-      display: flex;
-      flex-direction: column;
-      gap: rem(16);
+      @include flexbox(column, nowrap, unset, unset, rem(16));
 
       .form-group {
         display: flex;
         gap: rem(16);
 
         .text-input {
-          flex: 1;
+          flex: 1 1 0;
+          width: rem(394);
           height: rem(48);
           padding: rem(12);
-          background: white;
-          border: rem(1) solid black;
-          font-size: rem(16);
-          line-height: rem(24);
+          border: rem(1) solid var(--black);
+          font-size: var(--main-size);
+          line-height: var(--line-height);
+          font-family: var(--website-font-family);
         }
-
-        .btn-primary {
-          height: rem(48);
-          padding: rem(12) rem(24);
-          background: black;
-          color: white;
-          border: none;
-          cursor: pointer;
-        }
+        
       }
 
       p.terms {
         font-size: rem(12);
-        line-height: rem(18);
-        color: black;
+        font-family: var(--website-font-family);
+        line-height: var(--line-height);
+        color: var(--black);
       }
     }
   }
 
   .placeholder-image {
-    flex: 1 1 0;
+    width: rem(616);
     height: rem(400);
+    object-fit: cover;
+  }
+}
+
+@media (max-width: rem(768)) {
+  .service-header, .service-layout1, .service-layout2, .service-gallery, .service-cta1, .service-cta2 {
+    padding: rem(56) rem(32);
+    
+    .container {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .column, .content, .section-title, .gallery-content, .form-group, .Actions {
+      width: 100%;
+      align-items: center;
+      text-align: center;
+    }
+
+    .placeholder-image, .AvatarImage, img {
+      width: auto;
+      height: auto;
+      max-width: 100%;
+    }
+
+    form.actions, .form-group {
+      flex-direction: column;
+    }
+
+    .form-group {
+      gap: 10px;
+    }
+
+    .text-input {
+      width: 100%;
+    }
+
+    .Avatar, .Stars, .CompanyLogo {
+      justify-content: center;
+    }
   }
 }

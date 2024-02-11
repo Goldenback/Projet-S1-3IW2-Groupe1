@@ -2,7 +2,6 @@
   width: 100%;
   height: auto;
   padding-bottom: rem(80);
-  background: var(--bg-color-white);
   @include flexbox(column, nowrap, flex-start, center, rem(80));
 
   .background-image {

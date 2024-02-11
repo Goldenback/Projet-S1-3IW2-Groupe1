@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Simplify</title>
+    <title>Service</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../Front-end/Workspace/dist/css/main.css" />
 </head>
@@ -22,7 +22,7 @@
             <a href="/register" class="Button Secondary">Sign Up</a>
         </div>
     </div>
-    <img src="https://via.placeholder.com/1312x738" alt="Placeholder Image" class="placeholder-image">
+    <img src="../../../Front-end/Workspace/assets/img/page-services/banner.png" alt="Placeholder Image" class="placeholder-image">
 </section>
 
 <section class="service-layout1">
@@ -48,7 +48,7 @@
                 <a href="/register" class="Button Secondary">Sign Up</a>
             </div>
         </div>
-        <img src="https://via.placeholder.com/616x640" alt="Placeholder" class="placeholder-image">
+        <img src="../../../Front-end/Workspace/assets/img/page-services/layout-1.png" alt="Placeholder" class="placeholder-image">
     </div>
 </section>
 
@@ -61,17 +61,17 @@
     <div class="content">
         <div class="row">
             <div class="column">
-                <img src="https://via.placeholder.com/405x240" alt="Placeholder Image" class="placeholder-image">
+                <img src="../../../Front-end/Workspace/assets/img/page-services/stunting-portfolio.png" alt="Placeholder Image" class="placeholder-image">
                 <h3 class="heading">Create Stunning Portfolios</h3>
                 <p class="text">Showcase your work with beautifully designed portfolios that highlight your artistic talent.</p>
             </div>
             <div class="column">
-                <img src="https://via.placeholder.com/405x240" alt="Placeholder Image" class="placeholder-image">
+                <img src="../../../Front-end/Workspace/assets/img/page-services/effortless-layout.png" alt="Placeholder Image" class="placeholder-image">
                 <h3 class="heading">Effortlessly Manage Bookings</h3>
                 <p class="text">Streamline your booking process and keep track of your schedule with our intuitive management tools.</p>
             </div>
             <div class="column">
-                <img src="https://via.placeholder.com/405x240" alt="Placeholder Image" class="placeholder-image">
+                <img src="../../../Front-end/Workspace/assets/img/page-services/boost-layout.png" alt="Placeholder Image" class="placeholder-image">
                 <h3 class="heading">Boost Your Online Sales</h3>
                 <p class="text">Expand your reach and increase your revenue by selling your artwork online through our platform.</p>
             </div>
@@ -90,12 +90,12 @@
     </div>
     <div class="gallery-content">
         <div class="image-column">
-            <img src="https://via.placeholder.com/640x640" alt="Artist Work 1" class="placeholder-image1">
-            <img src="https://via.placeholder.com/640x426" alt="Artist Work 2" class="placeholder-image2">
+            <img src="../../../Front-end/Workspace/assets/img/page-services/gallery-1.png" alt="Artist Work 1" class="placeholder-image1">
+            <img src="../../../Front-end/Workspace/assets/img/page-services/gallery-2.png" alt="Artist Work 2" class="placeholder-image2">
         </div>
         <div class="image-column">
-            <img src="https://via.placeholder.com/640x426" alt="Artist Work 3" class="placeholder-image3">
-            <img src="https://via.placeholder.com/640x640" alt="Artist Work 4" class="placeholder-image4">
+            <img src="../../../Front-end/Workspace/assets/img/page-services/gallery-3.png" alt="Artist Work 3" class="placeholder-image3">
+            <img src="../../../Front-end/Workspace/assets/img/page-services/gallery-4.png" alt="Artist Work 4" class="placeholder-image4">
         </div>
     </div>
 </section>
@@ -104,23 +104,23 @@
     <div class="Content">
         <div class="Column">
             <div class="Stars">
-                <img src="../../../Front-end/Workspace/assets/icon-svg/stars-svgrepo-com.svg">
-                <img src="../../../Front-end/Workspace/assets/icon-svg/stars-svgrepo-com.svg">
-                <img src="../../../Front-end/Workspace/assets/icon-svg/stars-svgrepo-com.svg">
-                <img src="../../../Front-end/Workspace/assets/icon-svg/stars-svgrepo-com.svg">
-                <img src="../../../Front-end/Workspace/assets/icon-svg/stars-svgrepo-com.svg">
+                <img src="../../../Front-end/Workspace/assets/svg/icon/star.svg">
+                <img src="../../../Front-end/Workspace/assets/svg/icon/star.svg">
+                <img src="../../../Front-end/Workspace/assets/svg/icon/star.svg">
+                <img src="../../../Front-end/Workspace/assets/svg/icon/star.svg">
+                <img src="../../../Front-end/Workspace/assets/svg/icon/star.svg">
             </div>
             <p class="Quote">
                 I absolutely love this site builder ! It's so easy to use and has all the features I need to showcase my artwork. </p>
             <div class="Avatar">
-                <img src="https://via.placeholder.com/56x56" alt="John Doe" class="AvatarImage">
+                <img src="../../../Front-end/Workspace/assets/img/page-services/profil-picture.png" alt="John Doe" class="AvatarImage">
                 <div class="AvatarContent">
-                    <div class="Name">John Doe</div>
-                    <div class="Role">Photographer, ABC Studio</div>
+                    <div class="Name">Jean Doe</div>
+                    <div class="Role">Photographer, CBA Studio</div>
                 </div>
                 <div class="Divider"></div>
                 <div class="CompanyLogo WebflowBlack">
-                    <img src="../../../Front-end/Workspace/assets/icon-svg/webflow-svgrepo-com.svg">
+                    <img src="../../../Front-end/Workspace/assets/svg/brand/webflow-2.svg">
                 </div>
             </div>
         </div>
@@ -134,11 +134,11 @@
                 <p class="text">Join our platform and showcase your artistic talent to the world.</p>
             </div>
             <div class="actions">
-                <a href="/register" class="Button Primary">Sign Out</a>
+                <a href="/register" class="Button Primary">Register</a>
                 <a href="/about" class="Button Secondary">Learn More</a>
             </div>
         </div>
-        <img class="placeholder-image" src="https://via.placeholder.com/616x400" alt="Creative Portfolio">
+        <img class="placeholder-image" src="../../../Front-end/Workspace/assets/img/page-services/CTA-1.png" alt="Creative Portfolio">
     </div>
 </section>
 
@@ -159,11 +159,9 @@
                 <p class="terms">Sign Up and unlock the power of our website builder.</p>
             </form>
         </div>
-        <img class="placeholder-image" src="https://via.placeholder.com/616x400" alt="Website Builder">
+        <img class="placeholder-image" src="../../../Front-end/Workspace/assets/img/page-services/CTA-2.png" alt="Website Builder">
     </div>
 </section>
-
-
 
 <?php include("layout/footer.php") ?>
 

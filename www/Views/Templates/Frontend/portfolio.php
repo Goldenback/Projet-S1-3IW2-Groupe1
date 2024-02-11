@@ -26,7 +26,6 @@
   </div>
 </section>
 
-
 <section class="Portfolio-Gallery">
     <div class="SectionTitle">
         <h2 class="Heading">Curated Artists</h2>
