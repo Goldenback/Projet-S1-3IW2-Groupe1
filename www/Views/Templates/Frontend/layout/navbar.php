@@ -22,7 +22,7 @@
                 </ul>
             </li>
         </ul>
-        <a href="/contact" class="btn">Contact</a>
+        <a href="/contact" class="Button Primary">Contact</a>
     </div>
     <div class="line"></div>
 </nav>
