@@ -65,7 +65,7 @@ img {
     --dropdown-link-hover-bg-color: var(--dropdown-link-hover-bg-color-dark);
   }
 }
-@media (max-width: 46.125rem) {
+@media screen and (max-width: 48rem) {
   .Header-about,
   .Layout1-about, .Layout2-about,
   .Team-about,
@@ -648,6 +648,21 @@ img {
   .contact-cta .actions .form .subscribe-button {
     width: 100%;
     margin-bottom: 1rem;
+  }
+  .l-sidebar .side_logo .side_text {
+    left: 0;
+    transform: translateX(6.25rem);
+    transition: 0.5s;
+  }
+  .l-sidebar.active {
+    left: 0;
+  }
+  .sidebar {
+    transition: 0.5s;
+    margin-left: -12.5rem;
+  }
+  .sidebar.sidebar-active {
+    transition: 0.5s;
   }
 }
 .btn {

@@ -8,7 +8,7 @@
     }
 }
 
-@media (max-width: rem(738)) {
+@media screen and (max-width: rem(768)) {
 
   .Header-about,
   .Layout1-about, .Layout2-about,
@@ -222,6 +222,23 @@
     }
   }
 
-  
+  .l-sidebar {
+    .side_logo .side_text {
+        left: 0;
+        transform: translateX(rem(100));
+        transition: 0.5s;
+    }
+    &.active {
+        left: 0;
+    }
+  }
+  .sidebar {
+    transition: 0.5s;
+    margin-left: rem(-200);
+    &.sidebar-active {
+        transition: 0.5s;
+    }
+  }
+
 }
 
