@@ -186,6 +186,40 @@
     }
   }
 
-  //contact responsive
+  .contact-header,
+  .contact-map,
+  .contact-cta {
+    padding: 2rem rem(32);
+
+    .container,
+    .section-title,
+    .content {
+      @include flexbox(column, nowrap, center, center, rem(24));
+    }
+
+    .section-title .subheading,
+    .section-title .heading,
+    .section-title .text,
+    .content .heading, 
+    .content .text {
+      text-align: center;
+      font-size: calc(#{var(--main-size)} * 0.9); 
+    }
+
+    .row {
+      @include flexbox(column, nowrap, center, center, rem(24));
+    }
+
+    .column .content,
+    .actions .form {
+      @include flexbox(column, nowrap, center, center, rem(16));
+    }
+
+    .actions .form .text-input,
+    .actions .form .subscribe-button {
+      width: 100%;
+      margin-bottom: rem(16); 
+    }
+  }
 }
 

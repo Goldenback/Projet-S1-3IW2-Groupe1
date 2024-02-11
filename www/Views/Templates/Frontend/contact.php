@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Simplify</title>
+    <title>Contact</title>
     <link rel="stylesheet" href="../../../Front-end/Workspace/dist/css/main.css" />
 </head>
 
@@ -34,7 +34,7 @@
     </div>
     <div class="row">
         <div class="column">
-            <img src="https://via.placeholder.com/624x384" alt="Sydney">
+            <img class="img" src="../../../Front-end/Workspace/assets/img/page-contact/sydney.png" alt="Sydney">
             <div class="content">
                 <h3 class="heading">Sydney</h3>
                 <p class="text">123 Main St, Sydney NSW 2000, Australia</p>
@@ -42,7 +42,7 @@
             </div>
         </div>
         <div class="column">
-            <img src="https://via.placeholder.com/624x384" alt="New York">
+            <img class="img" src="../../../Front-end/Workspace/assets/img/page-contact/NewYork.png" alt="New York">
             <div class="content">
                 <h3 class="heading">New York</h3>
                 <p class="text">123 Broadway, New York, NY 10000, USA</p>

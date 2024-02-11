@@ -578,6 +578,77 @@ img {
   .project-cta .Button {
     padding: 0.75rem 1.5rem;
   }
+  .contact-header,
+  .contact-map,
+  .contact-cta {
+    padding: 2rem 2rem;
+  }
+  .contact-header .container,
+  .contact-header .section-title,
+  .contact-header .content,
+  .contact-map .container,
+  .contact-map .section-title,
+  .contact-map .content,
+  .contact-cta .container,
+  .contact-cta .section-title,
+  .contact-cta .content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .contact-header .section-title .subheading,
+  .contact-header .section-title .heading,
+  .contact-header .section-title .text,
+  .contact-header .content .heading,
+  .contact-header .content .text,
+  .contact-map .section-title .subheading,
+  .contact-map .section-title .heading,
+  .contact-map .section-title .text,
+  .contact-map .content .heading,
+  .contact-map .content .text,
+  .contact-cta .section-title .subheading,
+  .contact-cta .section-title .heading,
+  .contact-cta .section-title .text,
+  .contact-cta .content .heading,
+  .contact-cta .content .text {
+    text-align: center;
+    font-size: calc(var(--main-size) * 0.9);
+  }
+  .contact-header .row,
+  .contact-map .row,
+  .contact-cta .row {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .contact-header .column .content,
+  .contact-header .actions .form,
+  .contact-map .column .content,
+  .contact-map .actions .form,
+  .contact-cta .column .content,
+  .contact-cta .actions .form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  .contact-header .actions .form .text-input,
+  .contact-header .actions .form .subscribe-button,
+  .contact-map .actions .form .text-input,
+  .contact-map .actions .form .subscribe-button,
+  .contact-cta .actions .form .text-input,
+  .contact-cta .actions .form .subscribe-button {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
 }
 .btn {
   padding: var(--pm-md);
@@ -2434,7 +2505,7 @@ body {
 }
 .project-header .Content .Tags .Tag {
   padding: 0.25rem 0.5rem;
-  background: #F4F4F4;
+  background: var(--img-bg-color);
   display: flex;
   flex-direction: unset;
   flex-wrap: nowrap;
@@ -3390,6 +3461,7 @@ body {
   padding: 4rem 4rem;
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: flex-start;
   gap: 5rem;
@@ -3398,34 +3470,38 @@ body {
   height: auto;
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: flex-start;
   gap: 1.5rem;
 }
 .contact-header .container .section-title {
   text-align: start;
+  font-family: var(--website-font-family);
 }
 .contact-header .container .section-title .tagline {
-  font-size: 1rem;
+  font-size: var(--main-size);
   font-weight: 600;
-  line-height: 1.5rem;
-  color: black;
+  line-height: var(--subtitle-size);
+  color: var(--text-color);
 }
 .contact-header .container .section-title .short-heading-here {
   font-size: 3.5rem;
   font-weight: 700;
   line-height: 4.2rem;
-  color: black;
+  color: var(--text-color);
 }
 .contact-header .container .section-title .text {
-  font-size: 1.125rem;
+  font-size: var(--main-size);
   font-weight: 400;
-  line-height: 1.6875rem;
-  color: black;
+  line-height: var(--line-height);
+  color: var(--text-color);
 }
 .contact-header .container .actions {
   padding-top: 1rem;
   display: flex;
+  flex-direction: unset;
+  flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: flex-start;
   gap: 1rem;
@@ -3435,17 +3511,15 @@ body {
   width: 100%;
   height: auto;
   padding: 4rem 4rem;
-  background: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
 }
 .contact-map .section-title {
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: flex-start;
+  gap: 0;
+  font-family: var(--website-font-family);
 }
 .contact-map .section-title .subheading,
 .contact-map .section-title .heading,
@@ -3453,41 +3527,62 @@ body {
   text-align: center;
 }
 .contact-map .section-title .subheading {
-  font-size: 1rem;
+  color: var(--text-color);
+  font-size: var(--main-size);
   font-weight: 600;
+  line-height: var(--line-height);
 }
 .contact-map .section-title .heading {
-  font-size: 3rem;
+  color: var(--text-color);
+  font-size: var(--heading-size);
   font-weight: 700;
 }
 .contact-map .section-title .text {
-  font-size: 1.125rem;
+  color: var(--text-color);
+  font-size: var(--main-size);
   font-weight: 400;
+  line-height: var(--line-height);
 }
 .contact-map .row {
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
   gap: 4rem;
 }
 .contact-map .row .column {
+  display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
+  gap: 0;
 }
 .contact-map .row .column .content {
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: flex-start;
+  gap: 0;
+  font-family: var(--website-font-family);
 }
 .contact-map .row .column .content .heading {
-  font-size: 2rem;
+  color: var(--text-color);
+  font-size: var(--subtitle-size);
   font-weight: 700;
 }
 .contact-map .row .column .content .text {
-  font-size: 1rem;
+  color: var(--text-color);
+  font-size: var(--main-size);
   font-weight: 400;
+  line-height: var(--line-height);
+}
+.contact-map .row .column .img {
+  width: 39rem;
+  height: 24rem;
+  object-fit: cover;
 }
 
 .contact-cta {
@@ -3496,11 +3591,15 @@ body {
   padding: 7rem 4rem;
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
   justify-content: flex-start;
+  align-items: unset;
   gap: 5rem;
 }
 .contact-cta .container {
   display: flex;
+  flex-direction: unset;
+  flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: center;
   gap: 5rem;
@@ -3509,53 +3608,60 @@ body {
   flex: 1;
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: unset;
   align-items: flex-start;
+  gap: 0;
+  font-family: var(--website-font-family);
 }
 .contact-cta .container .content .heading {
-  font-size: 2.5rem;
+  font-size: var(--heading-size);
   font-weight: 700;
-  line-height: 3rem;
-  color: black;
+  line-height: var(--heading-size);
+  color: var(--text-color);
 }
 .contact-cta .container .content .text {
-  font-size: 1.125rem;
+  font-size: var(--main-size);
   font-weight: 400;
-  line-height: 1.6875rem;
-  color: black;
+  line-height: var(--line-height);
+  color: var(--text-color);
 }
 .contact-cta .container .actions {
   width: 32.0625rem;
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: unset;
   align-items: flex-start;
   gap: 1rem;
 }
 .contact-cta .container .actions .form {
   display: flex;
   gap: 1rem;
+  font-family: var(--website-font-family);
 }
 .contact-cta .container .actions .form .text-input {
   width: 24.625rem;
   flex: 1;
   height: 3rem;
   padding: 0.75rem;
-  background: white;
-  border: 0.0625rem solid black;
-  font-size: 1rem;
+  border: 0.0625rem solid var(--black);
+  font-size: var(--main-size);
 }
 .contact-cta .container .actions .form .subscribe-button {
   height: 3rem;
   padding: 0.75rem 1.5rem;
-  background: black;
-  color: white;
-  border: 0.0625rem solid black;
-  font-size: 1rem;
+  background: var(--btn-bg-color);
+  color: var(--white);
+  border: 0.0625rem solid var(-black);
+  font-size: var(--main-size);
   cursor: pointer;
 }
 .contact-cta .container .actions .terms {
+  font-family: var(--website-font-family);
   font-size: 0.75rem;
-  line-height: 1.125rem;
-  color: black;
+  line-height: var(--main-size);
+  color: var(--text-color);
 }
 
 /* ------------------------- */
