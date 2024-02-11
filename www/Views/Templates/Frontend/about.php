@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>About</title>
+    <title>About Us</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../Front-end/Workspace/dist/css/main.css" />
 </head>
@@ -31,7 +31,7 @@
     <div class="Container">
         <div class="Content">
             <div class="IconRelume">
-                <img src="../../../Front-end/Workspace/assets/svg/icon/cube-fill-svgrepo-com.svg">
+                <img src="../../../Front-end/Workspace/assets/svg/icon/cube.svg">
             </div>
             <div class="ContentText">
                 <div class="Heading">Empowering artists to showcase their talent and connect with their audience.</div>
@@ -233,12 +233,6 @@
         </div>
 
 
-    </div>
-
-    <div class="HiringSection">
-        <div class="Heading">We're hiring!</div>
-        <div class="Text">Join our team of talented professionals.</div>
-        <div class="Button">View Open Positions</div>
     </div>
 </section>
 

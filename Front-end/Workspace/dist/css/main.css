@@ -128,7 +128,6 @@ img {
   color: white;
   background-color: black;
   transition: 0.3s ease-in-out;
-  cursor: pointer;
 }
 
 .row {
@@ -801,9 +800,10 @@ body {
   width: 100%;
   height: 29.375rem;
   padding: 7rem 4rem;
-  background: var(--white);
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: unset;
   align-items: flex-start;
   gap: 5rem;
 }
@@ -811,6 +811,8 @@ body {
   height: 15.375rem;
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: unset;
   align-items: flex-start;
   gap: 1.5rem;
 }
@@ -818,6 +820,8 @@ body {
   align-self: stretch;
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: unset;
   align-items: flex-start;
   gap: 1rem;
 }
@@ -827,12 +831,14 @@ body {
   font-size: 1rem;
   font-family: var(--website-font-family);
   font-weight: 600;
-  line-height: 1.5rem;
+  line-height: var(--line-height);
 }
 .Header-about .SectionTitle .Content {
   align-self: stretch;
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: unset;
   align-items: flex-start;
   gap: 1.5rem;
 }
@@ -861,15 +867,18 @@ body {
   width: 100%;
   height: 54rem;
   padding: 7rem 4rem;
-  background: var(--white);
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: unset;
   align-items: flex-start;
   gap: 5rem;
 }
 .Layout1-about .Container {
   align-self: stretch;
   display: flex;
+  flex-direction: unset;
+  flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: center;
   gap: 5rem;
@@ -878,6 +887,8 @@ body {
   flex: 1 1 0;
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: unset;
   align-items: flex-start;
   gap: 1.5rem;
 }
@@ -886,14 +897,19 @@ body {
   height: 3rem;
   padding: 0.25rem 0.375rem;
   display: flex;
+  flex-direction: unset;
+  flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
+  gap: 0;
   background-size: contain;
 }
 .Layout1-about .Content .ContentText {
   align-self: stretch;
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: unset;
   align-items: flex-start;
   gap: 1.5rem;
 }
@@ -902,34 +918,38 @@ body {
   font-size: 2.5rem;
   font-family: var(--website-font-family);
   font-weight: 700;
-  line-height: 3rem;
+  line-height: var(--heading-size);
 }
 .Layout1-about .Content .ContentText .Text {
   color: var(--black);
   font-size: var(--main-size);
   font-family: var(--website-font-family);
   font-weight: 400;
-  line-height: 1.6875rem;
+  line-height: var(--line-height);
 }
 .Layout1-about .PlaceholderImage {
   flex: 1 1 0;
   width: 38.5rem;
   height: 40rem;
+  object-fit: cover;
 }
 
 .Layout2-about {
   width: 100%;
   height: 54rem;
   padding: 7rem 4rem;
-  background: var(--white);
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: unset;
   align-items: flex-start;
   gap: 5rem;
 }
 .Layout2-about .Container {
   align-self: stretch;
   display: flex;
+  flex-direction: unset;
+  flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: center;
   gap: 5rem;
@@ -938,6 +958,8 @@ body {
   flex: 1 1 0;
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: unset;
   align-items: flex-start;
   gap: 2rem;
 }
@@ -945,6 +967,8 @@ body {
   align-self: stretch;
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: unset;
   align-items: flex-start;
   gap: 1.5rem;
 }
@@ -953,19 +977,21 @@ body {
   font-size: 2.5rem;
   font-family: var(--website-font-family);
   font-weight: 700;
-  line-height: 3rem;
+  line-height: var(--heading-size);
 }
 .Layout2-about .Content .ContentHeader .Text {
   color: var(--black);
   font-size: var(--main-size);
   font-family: var(--website-font-family);
   font-weight: 400;
-  line-height: 1.6875rem;
+  line-height: var(--line-height);
 }
 .Layout2-about .Content .List {
   align-self: stretch;
   padding: 0.5rem 0;
   display: flex;
+  flex-direction: unset;
+  flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: flex-start;
   gap: 1.5rem;
@@ -973,43 +999,48 @@ body {
 .Layout2-about .Content .List .ListItem {
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: flex-start;
   gap: 0.5rem;
 }
 .Layout2-about .Content .List .ListItem .Number {
   color: var(--black);
-  font-size: 3rem;
+  font-size: var(--heading-size);
   font-family: var(--website-font-family);
   font-weight: 700;
   line-height: 3.6rem;
 }
 .Layout2-about .Content .List .ListItem .Text {
   color: var(--black);
-  font-size: 1rem;
+  font-size: var(--main-size);
   font-family: var(--website-font-family);
   font-weight: 400;
-  line-height: 1.5rem;
+  line-height: var(--line-height);
 }
 .Layout2-about .PlaceholderImage {
   flex: 1 1 0;
+  width: 38.5rem;
   height: 40rem;
   object-fit: cover;
 }
 
 .Team-about {
   width: 100%;
-  height: 100%;
+  height: auto;
   padding: 7rem 4rem;
-  background: var(--white);
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: unset;
   align-items: center;
   gap: 5rem;
 }
 .Team-about .SectionTitle {
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: unset;
   align-items: center;
   gap: 1rem;
 }
@@ -1021,32 +1052,38 @@ body {
 .Team-about .SectionTitle .Subheading {
   font-size: var(--subtitle-size);
   font-weight: 600;
-  line-height: 1.5rem;
+  line-height: var(--line-height);
 }
 .Team-about .SectionTitle .Heading {
-  font-size: 3rem;
+  font-size: var(--heading-size);
   font-weight: 700;
   line-height: 3.6rem;
 }
 .Team-about .SectionTitle .Description {
   font-size: var(--main-size);
   font-weight: 400;
-  line-height: 1.6875rem;
+  line-height: var(--line-height);
 }
 .Team-about .Content {
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: unset;
   align-items: center;
   gap: 6rem;
 }
 .Team-about .Content .Row {
   display: flex;
+  flex-direction: unset;
+  flex-wrap: nowrap;
   justify-content: space-between;
+  align-items: unset;
   gap: 3rem;
 }
 .Team-about .Content .Card {
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
   gap: 1.5rem;
@@ -1054,10 +1091,13 @@ body {
 .Team-about .Content .Card .PlaceholderImage {
   width: 25.3125rem;
   height: 24.6875rem;
+  object-fit: cover;
 }
 .Team-about .Content .Card .CardContent {
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: unset;
   align-items: center;
   gap: 1rem;
 }
@@ -1067,69 +1107,53 @@ body {
   font-family: var(--website-font-family);
 }
 .Team-about .Content .Card .Name {
-  font-size: 1.25rem;
+  font-size: var(--subtitle-size);
   font-weight: 600;
-  line-height: 1.875rem;
+  line-height: var(--line-height);
 }
 .Team-about .Content .Card .JobTitle {
   font-size: var(--main-size);
   font-weight: 400;
-  line-height: 1.6875rem;
+  line-height: var(--line-height);
 }
 .Team-about .Content .Card .Bio {
   font-size: var(--main-size);
   font-weight: 400;
-  line-height: 1.5rem;
+  line-height: var(--line-height);
 }
 .Team-about .Content .Card .SocialIcons {
   display: flex;
-  gap: 0.875rem;
+  flex-direction: unset;
+  flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
+  gap: 0.875rem;
 }
 .Team-about .Content .Card .SocialIcons .IconLinkedin, .Team-about .Content .Card .SocialIcons .IconX, .Team-about .Content .Card .SocialIcons .IconDribble {
   width: 2.5rem;
   height: 2rem;
-}
-.Team-about .HiringSection {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.5rem;
-}
-.Team-about .HiringSection .Heading {
-  text-align: center;
-  color: var(--black);
-  font-size: 2rem;
-  font-family: var(--website-font-family);
-  font-weight: 700;
-  line-height: 2.6rem;
-}
-.Team-about .HiringSection .Text {
-  text-align: center;
-  color: var(--black);
-  font-size: 1.125rem;
-  font-family: var(--website-font-family);
-  font-weight: 400;
-  line-height: 1.6875rem;
 }
 
 .Logo1-about {
   width: 100%;
   height: 36.5rem;
   padding: 7rem 4rem;
-  background: var(--white);
   display: flex;
+  flex-direction: unset;
+  flex-wrap: nowrap;
+  justify-content: unset;
   align-items: center;
   gap: 5rem;
 }
 .Logo1-about .Container {
   display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
+  gap: 5rem;
   gap: 0.5rem;
   width: 100%;
-  flex-direction: row;
 }
 .Logo1-about .Container .Content {
   flex: 1;
@@ -1140,7 +1164,7 @@ body {
   gap: 1.5rem;
 }
 .Logo1-about .Container .Content .Heading {
-  font-size: 3rem;
+  font-size: var(--heading-size);
   font-weight: 700;
   line-height: 3.6rem;
   color: var(--black);
@@ -1149,7 +1173,7 @@ body {
 .Logo1-about .Container .Content .Text {
   font-size: var(--main-size);
   font-weight: 400;
-  line-height: 1.6875rem;
+  line-height: var(--line-height);
   color: var(--black);
   font-family: var(--website-font-family);
 }
@@ -1159,8 +1183,11 @@ body {
 }
 .Logo1-about .Container .Logos {
   display: flex;
-  gap: 0.5rem;
   flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: unset;
+  align-items: unset;
+  gap: 0.5rem;
 }
 .Logo1-about .Container .Logos .Logo {
   width: 19rem;
@@ -1175,21 +1202,24 @@ body {
   background-color: var(--img-bg-color);
   max-width: 100%;
   height: auto;
+  object-fit: cover;
 }
 
 .Logo2-about {
   width: 100%;
   height: 13.5rem;
   padding: 5rem 4rem;
-  background: var(--white);
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
   gap: 5rem;
 }
 .Logo2-about .Container {
   display: flex;
+  flex-direction: unset;
+  flex-wrap: nowrap;
   justify-content: start;
   align-items: center;
   gap: 4rem;
@@ -1201,24 +1231,31 @@ body {
   font-size: var(--main-size);
   font-family: var(--website-font-family);
   font-weight: 700;
-  line-height: 1.6875rem;
+  line-height: var(--line-height);
 }
 .Logo2-about .Container .Logos {
   display: flex;
+  flex-direction: unset;
+  flex-wrap: nowrap;
   justify-content: end;
   align-items: center;
+  gap: 0;
   flex: 1;
 }
 .Logo2-about .Container .Logos .Logo {
   width: 10.625rem;
   height: 3.5rem;
   display: flex;
+  flex-direction: unset;
+  flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
+  gap: 4rem;
 }
 .Logo2-about .Container .Logos .Logo img {
   max-width: 100%;
   height: auto;
+  object-fit: cover;
 }
 
 .Cta-about {
@@ -1228,6 +1265,7 @@ body {
   background-color: var(--black);
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: flex-start;
   gap: 5rem;
@@ -1235,30 +1273,37 @@ body {
 .Cta-about .Column {
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: flex-start;
+  gap: 0;
 }
 .Cta-about .Column .Content {
+  display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: flex-start;
+  gap: 0;
 }
 .Cta-about .Column .Content .Heading {
   color: var(--white);
-  font-size: 3rem;
+  font-size: var(--heading-size);
   font-family: var(--website-font-family);
   font-weight: 700;
-  line-height: 0.9375rem;
+  line-height: var(--line-height);
 }
 .Cta-about .Column .Content .Text {
   color: var(--white);
   font-size: var(--main-size);
   font-family: var(--website-font-family);
   font-weight: 400;
-  line-height: 1.6875rem;
+  line-height: var(--line-height);
 }
 .Cta-about .Column .Actions {
   display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: flex-start;
   gap: 1rem;
@@ -1276,6 +1321,129 @@ body {
   border-color: var(--black);
 }
 
+@media (max-width: 48rem) {
+  .Header-about,
+  .Layout1-about, .Layout2-about,
+  .Team-about,
+  .Logo1-about, .Logo2-about,
+  .Cta-about {
+    padding: 3.5rem 2rem;
+  }
+  .Header-about .Container,
+  .Header-about .Column,
+  .Header-about .Content,
+  .Header-about .SectionTitle,
+  .Header-about .ContentHeader,
+  .Header-about .CardContent,
+  .Header-about .Actions,
+  .Layout1-about .Container,
+  .Layout1-about .Column,
+  .Layout1-about .Content,
+  .Layout1-about .SectionTitle,
+  .Layout1-about .ContentHeader,
+  .Layout1-about .CardContent,
+  .Layout1-about .Actions, .Layout2-about .Container,
+  .Layout2-about .Column,
+  .Layout2-about .Content,
+  .Layout2-about .SectionTitle,
+  .Layout2-about .ContentHeader,
+  .Layout2-about .CardContent,
+  .Layout2-about .Actions,
+  .Team-about .Container,
+  .Team-about .Column,
+  .Team-about .Content,
+  .Team-about .SectionTitle,
+  .Team-about .ContentHeader,
+  .Team-about .CardContent,
+  .Team-about .Actions,
+  .Logo1-about .Container,
+  .Logo1-about .Column,
+  .Logo1-about .Content,
+  .Logo1-about .SectionTitle,
+  .Logo1-about .ContentHeader,
+  .Logo1-about .CardContent,
+  .Logo1-about .Actions, .Logo2-about .Container,
+  .Logo2-about .Column,
+  .Logo2-about .Content,
+  .Logo2-about .SectionTitle,
+  .Logo2-about .ContentHeader,
+  .Logo2-about .CardContent,
+  .Logo2-about .Actions,
+  .Cta-about .Container,
+  .Cta-about .Column,
+  .Cta-about .Content,
+  .Cta-about .SectionTitle,
+  .Cta-about .ContentHeader,
+  .Cta-about .CardContent,
+  .Cta-about .Actions {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .Header-about .Tagline, .Header-about .ShortHeadingHere,
+  .Header-about .Description, .Header-about .Heading,
+  .Header-about .Text, .Header-about .Number,
+  .Layout1-about .Tagline,
+  .Layout1-about .ShortHeadingHere,
+  .Layout1-about .Description,
+  .Layout1-about .Heading,
+  .Layout1-about .Text,
+  .Layout1-about .Number, .Layout2-about .Tagline, .Layout2-about .ShortHeadingHere,
+  .Layout2-about .Description, .Layout2-about .Heading,
+  .Layout2-about .Text, .Layout2-about .Number,
+  .Team-about .Tagline,
+  .Team-about .ShortHeadingHere,
+  .Team-about .Description,
+  .Team-about .Heading,
+  .Team-about .Text,
+  .Team-about .Number,
+  .Logo1-about .Tagline,
+  .Logo1-about .ShortHeadingHere,
+  .Logo1-about .Description,
+  .Logo1-about .Heading,
+  .Logo1-about .Text,
+  .Logo1-about .Number, .Logo2-about .Tagline, .Logo2-about .ShortHeadingHere,
+  .Logo2-about .Description, .Logo2-about .Heading,
+  .Logo2-about .Text, .Logo2-about .Number,
+  .Cta-about .Tagline,
+  .Cta-about .ShortHeadingHere,
+  .Cta-about .Description,
+  .Cta-about .Heading,
+  .Cta-about .Text,
+  .Cta-about .Number {
+    font-size: calc(var(--main-size) * 0.9);
+  }
+  .Header-about .PlaceholderImage,
+  .Header-about .IconRelume,
+  .Header-about .Logo,
+  .Layout1-about .PlaceholderImage,
+  .Layout1-about .IconRelume,
+  .Layout1-about .Logo, .Layout2-about .PlaceholderImage,
+  .Layout2-about .IconRelume,
+  .Layout2-about .Logo,
+  .Team-about .PlaceholderImage,
+  .Team-about .IconRelume,
+  .Team-about .Logo,
+  .Logo1-about .PlaceholderImage,
+  .Logo1-about .IconRelume,
+  .Logo1-about .Logo, .Logo2-about .PlaceholderImage,
+  .Logo2-about .IconRelume,
+  .Logo2-about .Logo,
+  .Cta-about .PlaceholderImage,
+  .Cta-about .IconRelume,
+  .Cta-about .Logo {
+    width: 100%;
+    height: auto;
+  }
+  .Header-about .Actions,
+  .Layout1-about .Actions, .Layout2-about .Actions,
+  .Team-about .Actions,
+  .Logo1-about .Actions, .Logo2-about .Actions,
+  .Cta-about .Actions {
+    flex-direction: column;
+    gap: 0.625rem;
+  }
+}
 .Portfolio-container {
   width: 100%;
   height: auto;
@@ -1334,7 +1502,7 @@ body {
   font-size: var(--main-size);
   font-family: var(--website-font-family);
   font-weight: 600;
-  line-height: 1.3125rem;
+  line-height: var(--line-height);
 }
 
 .Portfolio-Gallery {
@@ -1379,7 +1547,7 @@ body {
 .Portfolio-Gallery .Content {
   align-self: center;
   display: flex;
-  flex-direction: none;
+  flex-direction: unset;
   flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: flex-start;
@@ -1479,7 +1647,7 @@ body {
 .Portfolio .Content .PortfolioList .Row {
   width: 82rem;
   display: flex;
-  flex-direction: none;
+  flex-direction: unset;
   flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: flex-start;
@@ -1532,7 +1700,7 @@ body {
 }
 .Portfolio .Content .PortfolioList .Row .Card .Content .Tags {
   display: flex;
-  flex-direction: none;
+  flex-direction: unset;
   flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: flex-start;
@@ -1636,7 +1804,7 @@ body {
 }
 .Portfolio-Logo .Content {
   display: flex;
-  flex-direction: none;
+  flex-direction: unset;
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
@@ -1647,7 +1815,7 @@ body {
   height: 3rem;
   padding: 0.609375rem 2.6875rem;
   display: flex;
-  flex-direction: none;
+  flex-direction: unset;
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
@@ -1695,7 +1863,7 @@ body {
 .Portfolio-feedback .Content {
   width: 100%;
   display: flex;
-  flex-direction: none;
+  flex-direction: unset;
   flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: flex-start;
@@ -1711,7 +1879,7 @@ body {
 }
 .Portfolio-feedback .Content .Column .Stars {
   display: flex;
-  flex-direction: none;
+  flex-direction: unset;
   flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: flex-start;
@@ -1773,7 +1941,7 @@ body {
   height: 3rem;
   padding: 0.609375rem 0.1875rem;
   display: flex;
-  flex-direction: none;
+  flex-direction: unset;
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;

@@ -49,7 +49,7 @@
           font-size: var(--main-size);
           font-family: var(--website-font-family);
           font-weight: 600;
-          line-height: rem(21);
+          line-height: var(--line-height);
         }
       }
     }
@@ -84,13 +84,13 @@
       font-size: var(--main-size);
       font-family: var(--website-font-family);
       font-weight: 400;
-      line-height: var(--line-height)
+      line-height: var(--line-height);
     }
   }
 
   .Content {
     align-self: center;
-    @include flexbox(none, nowrap, flex-start, flex-start, rem(24));
+    @include flexbox(unset, nowrap, flex-start, flex-start, rem(24));
 
     div {
       flex: 1;
@@ -164,7 +164,7 @@
 
       .Row {
         width: rem(1312);
-        @include flexbox(none, nowrap, flex-start, flex-start, rem(48));
+        @include flexbox(unset, nowrap, flex-start, flex-start, rem(48));
 
         .Card {
           flex: 1;
@@ -201,7 +201,7 @@
             }
 
             .Tags {
-              @include flexbox(none, nowrap, flex-start, flex-start, rem(8));
+              @include flexbox(unset, nowrap, flex-start, flex-start, rem(8));
 
               .Tag {
                 padding: rem(4) rem(8);
@@ -301,7 +301,7 @@
   }
 
   .Content {
-    @include flexbox(none, nowrap, center, center, rem(24));
+    @include flexbox(unset, nowrap, center, center, rem(24));
 
     .Logo {
       &.Webflow,
@@ -309,7 +309,7 @@
         width: rem(200);
         height: rem(48);
         padding: rem(9.75) rem(43);
-        @include flexbox(none, nowrap, center, center);
+        @include flexbox(unset, nowrap, center, center);
       }
 
       &.Relume {
@@ -349,13 +349,13 @@
 
   .Content {
     width: 100%;
-    @include flexbox(none, nowrap, flex-start, flex-start, rem(64));
+    @include flexbox(unset, nowrap, flex-start, flex-start, rem(64));
 
     .Column {
       @include flexbox(column, nowrap, flex-start, flex-start, rem(20));
 
       .Stars {
-        @include flexbox(none, nowrap, flex-start, flex-start);
+        @include flexbox(unset, nowrap, flex-start, flex-start);
         img {
           width: rem(20);
           height: rem(18.89);
@@ -420,7 +420,7 @@
           width: rem(120);
           height: rem(48);
           padding: rem(9.75) rem(3);
-          @include flexbox(none, nowrap, center, center);
+          @include flexbox(unset, nowrap, center, center);
         }
       }
     }

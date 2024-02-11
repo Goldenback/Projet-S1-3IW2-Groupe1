@@ -2,26 +2,16 @@
   width: 100%;
   height: rem(470);
   padding: rem(112) rem(64);
-  background: var(--white);
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: rem(80);
+  @include flexbox(column, nowrap, unset, flex-start, rem(80));
 
   .Container {
     height: rem(246);
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: rem(24);
+    @include flexbox(column, nowrap, unset, flex-start, rem(24));
   }
 
   .SectionTitle {
     align-self: stretch;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: rem(16);
+    @include flexbox(column, nowrap, unset, flex-start, rem(16));
 
     .Tagline {
       text-align: center;
@@ -29,15 +19,12 @@
       font-size: rem(16);
       font-family: var(--website-font-family);
       font-weight: 600;
-      line-height: rem(24);
+        line-height: var(--line-height);
     }
 
     .Content {
       align-self: stretch;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: rem(24);
+      @include flexbox(column, nowrap, unset, flex-start, rem(24));
 
       .ShortHeadingHere {
         color: var(--black);
@@ -69,50 +56,35 @@
   width: 100%;
   height: rem(864);
   padding: rem(112) rem(64);
-  background: var(--white);
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: rem(80);
+  @include flexbox(column, nowrap, unset, flex-start, rem(80));
 
   .Container {
     align-self: stretch;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: rem(80);
+    @include flexbox(unset, nowrap, flex-start, center, rem(80));
   }
 
   .Content {
     flex: 1 1 0;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: rem(24);
+    @include flexbox(column, nowrap, unset, flex-start, rem(24));
 
     .IconRelume {
       width: rem(48);
       height: rem(48);
       padding: rem(4) rem(6);
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      @include flexbox(unset, nowrap, center, center);
       background-size: contain;
     }
 
     .ContentText {
       align-self: stretch;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: rem(24);
+      @include flexbox(column, nowrap, unset, flex-start, rem(24));
 
       .Heading {
         color: var(--black);
         font-size: rem(40);
         font-family: var(--website-font-family);
         font-weight: 700;
-        line-height: rem(48);
+        line-height: var(--heading-size);
       }
 
       .Text {
@@ -120,7 +92,7 @@
         font-size: var(--main-size);
         font-family: var(--website-font-family);
         font-weight: 400;
-        line-height: rem(27);
+        line-height: var(--line-height);
       }
     }
   }
@@ -129,6 +101,7 @@
     flex: 1 1 0;
     width: rem(616);
     height: rem(640);
+    object-fit: cover;
   }
 }
 
@@ -136,40 +109,27 @@
   width: 100%;
   height: rem(864);
   padding: rem(112) rem(64);
-  background: var(--white);
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: rem(80);
+  @include flexbox(column, nowrap, unset, flex-start, rem(80));
 
   .Container {
     align-self: stretch;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: rem(80);
+    @include flexbox(unset, nowrap, flex-start, center, rem(80));
   }
 
   .Content {
     flex: 1 1 0;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: rem(32);
+    @include flexbox(column, nowrap, unset, flex-start, rem(32));
 
     .ContentHeader {
       align-self: stretch;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: rem(24);
+      @include flexbox(column, nowrap, unset, flex-start, rem(24));
 
       .Heading {
         color: var(--black);
         font-size: rem(40);
         font-family: var(--website-font-family);
         font-weight: 700;
-        line-height: rem(48);
+        line-height: var(--heading-size);
       }
 
       .Text {
@@ -177,28 +137,21 @@
         font-size: var(--main-size);
         font-family: var(--website-font-family);
         font-weight: 400;
-        line-height: rem(27);
+        line-height: var(--line-height)
       }
     }
 
     .List {
       align-self: stretch;
       padding: rem(8) 0;
-      display: flex;
-      justify-content: flex-start;
-      align-items: flex-start;
-      gap: rem(24);
+      @include flexbox(unset, nowrap, flex-start, flex-start, rem(24));
 
       .ListItem {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        gap: rem(8);
+        @include flexbox(column, nowrap, flex-start, flex-start, rem(8));
 
         .Number {
           color: var(--black);
-          font-size: rem(48);
+          font-size: var(--heading-size);
           font-family: var(--website-font-family);
           font-weight: 700;
           line-height: rem(57.60);
@@ -206,10 +159,10 @@
 
         .Text {
           color: var(--black);
-          font-size: rem(16);
+          font-size: var(--main-size);
           font-family: var(--website-font-family);
           font-weight: 400;
-          line-height: rem(24);
+          line-height: var(--line-height)
         }
       }
     }
@@ -217,27 +170,21 @@
 
   .PlaceholderImage {
     flex: 1 1 0;
+    width: rem(616);
     height: rem(640);
     object-fit: cover;
-
   }
 }
 
 .Team-about {
   width: 100%;
-  height: 100%;
+  height: auto;
   padding: rem(112) rem(64);
-  background: var(--white);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: rem(80);
+  @include flexbox(column, nowrap, unset, center, rem(80));
 
   .SectionTitle {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: rem(16);
+    @include flexbox(column, nowrap, unset, center, rem(16));
+
     .Subheading, .Heading, .Description {
       text-align: center;
       color: var(--black);
@@ -246,46 +193,36 @@
     .Subheading {
       font-size: var(--subtitle-size);
       font-weight: 600;
-      line-height: rem(24);
+      line-height: var(--line-height)
     }
     .Heading {
-      font-size: rem(48);
+      font-size: var(--heading-size);
       font-weight: 700;
       line-height: rem(57.60);
     }
     .Description {
       font-size: var(--main-size);
       font-weight: 400;
-      line-height: rem(27);
+      line-height: var(--line-height)
     }
   }
 
   .Content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: rem(96);
+    @include flexbox(column, nowrap, unset, center, rem(96));
+
     .Row {
-      display: flex;
-      justify-content: space-between;
-      gap: rem(48);
+      @include flexbox(unset, nowrap, space-between, unset, rem(48));
     }
     .Card {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      gap: rem(24);
+      @include flexbox(column, nowrap, center, center, rem(24));
 
       .PlaceholderImage {
         width: rem(405);
         height: rem(395);
+        object-fit: cover;
       }
       .CardContent {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: rem(16);
+        @include flexbox(column, nowrap, unset, center, rem(16));
       }
       .Name, .JobTitle, .Bio {
         text-align: center;
@@ -293,25 +230,22 @@
         font-family: var(--website-font-family);
       }
       .Name {
-        font-size: rem(20);
+        font-size:var(--subtitle-size);
         font-weight: 600;
-        line-height: rem(30);
+        line-height: var(--line-height)
       }
       .JobTitle {
         font-size: var(--main-size);
         font-weight: 400;
-        line-height: rem(27);
+        line-height: var(--line-height)
       }
       .Bio {
         font-size: var(--main-size);
         font-weight: 400;
-        line-height: rem(24);
+        line-height: var(--line-height)
       }
       .SocialIcons {
-        display: flex;
-        gap: rem(14);
-        justify-content: center;
-        align-items: center;
+        @include flexbox(unset, nowrap, center, center, rem(14));
 
         .IconLinkedin, .IconX, .IconDribble {
           width: rem(40);
@@ -320,47 +254,18 @@
       }
     }
   }
-
-  .HiringSection {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: rem(24);
-    .Heading {
-      text-align: center;
-      color: var(--black);
-      font-size: rem(32);
-      font-family: var(--website-font-family);
-      font-weight: 700;
-      line-height: rem(41.60);
-    }
-    .Text {
-      text-align: center;
-      color: var(--black);
-      font-size: rem(18);
-      font-family: var(--website-font-family);
-      font-weight: 400;
-      line-height: rem(27);
-    }
-  }
 }
 
 .Logo1-about {
   width: 100%;
   height: rem(584);
   padding: rem(112) rem(64);
-  background: var(--white);
-  display: flex;
-  align-items: center;
-  gap: rem(80);
+  @include flexbox(unset, nowrap, unset, center, rem(80));
 
   .Container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flexbox(row, nowrap, space-between, center, rem(80));
     gap: 0.5rem;
     width: 100%;
-    flex-direction: row;
 
     .Content {
       flex: 1;
@@ -371,7 +276,7 @@
       gap: rem(24);
 
       .Heading {
-        font-size: rem(48);
+        font-size: var(--heading-size);
         font-weight: 700;
         line-height: rem(57.60);
         color: var(--black);
@@ -381,7 +286,7 @@
       .Text {
         font-size: var(--main-size);
         font-weight: 400;
-        line-height: rem(27);
+        line-height: var(--line-height);
         color: var(--black);
         font-family: var(--website-font-family);
       }
@@ -393,9 +298,7 @@
     }
 
     .Logos {
-      display: flex;
-      gap: rem(8);
-      flex-direction: column;
+      @include flexbox(column, nowrap, unset, unset, rem(8));
 
       .Logo {
         width: rem(304);
@@ -410,6 +313,7 @@
           background-color: var(--img-bg-color);
           max-width: 100%;
           height: auto;
+          object-fit: cover;
         }
       }
     }
@@ -420,18 +324,10 @@
   width: 100%;
   height: rem(216);
   padding: rem(80) rem(64);
-  background: var(--white);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: rem(80);
+  @include flexbox(column, nowrap, center, center, rem(80));
 
   .Container {
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    gap: rem(64);
+    @include flexbox(unset, nowrap, start, center, rem(64));
     width: 100%;
 
     .Heading {
@@ -440,24 +336,21 @@
       font-size: var(--main-size);
       font-family: var(--website-font-family);
       font-weight: 700;
-      line-height: rem(27);
+      line-height: var(--line-height);
     }
 
     .Logos {
-      display: flex;
-      justify-content: end;
-      align-items: center;
+      @include flexbox(unset, nowrap, end, center);
       flex: 1;
 
       .Logo {
         width: rem(170);
         height: rem(56);
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flexbox(unset, nowrap, center, center, rem(64));
         img {
           max-width: 100%;
           height: auto;
+          object-fit: cover;
         }
       }
     }
@@ -469,29 +362,20 @@
   height: rem(421);
   padding: rem(112) rem(64);
   background-color: var(--black);
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: rem(80);
+  @include flexbox(column, nowrap, flex-start, flex-start, rem(80));
 
   .Column {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+    @include flexbox(column, nowrap, flex-start, flex-start);
 
     .Content {
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: flex-start;
+      @include flexbox(column, nowrap, flex-start, flex-start);
 
       .Heading {
         color: var(--white);
-        font-size: rem(48);
+        font-size: var(--heading-size);
         font-family: var(--website-font-family);
         font-weight: 700;
-        line-height: rem(15);
+        line-height: var(--line-height);
       }
 
       .Text {
@@ -499,15 +383,12 @@
         font-size: var(--main-size);
         font-family: var(--website-font-family);
         font-weight: 400;
-        line-height: rem(27);
+        line-height: var(--line-height);
       }
     }
 
     .Actions {
-      display: flex;
-      justify-content: flex-start;
-      align-items: flex-start;
-      gap: rem(16);
+      @include flexbox(row, nowrap, flex-start, flex-start, rem(16));
       padding-top: var(--pm-md);
 
       .Button {
@@ -524,6 +405,46 @@
           }
         }
       }
+    }
+  }
+}
+
+@media (max-width: rem(768)) {
+  .Header-about,
+  .Layout1-about, .Layout2-about,
+  .Team-about,
+  .Logo1-about, .Logo2-about,
+  .Cta-about {
+    padding: rem(56) rem(32);
+    
+    .Container,
+    .Column,
+    .Content,
+    .SectionTitle,
+    .ContentHeader,
+    .CardContent,
+    .Actions {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .Tagline, .ShortHeadingHere,
+    .Description, .Heading,
+    .Text, .Number {
+      font-size: calc(var(--main-size) * 0.9);
+    }
+
+    .PlaceholderImage,
+    .IconRelume,
+    .Logo {
+      width: 100%;
+      height: auto;
+    }
+
+    .Actions {
+      flex-direction: column;
+      gap: rem(10);
     }
   }
 }
