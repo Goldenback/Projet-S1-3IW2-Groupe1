@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>Project</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../Front-end/Workspace/dist/css/main.css" />
 </head>
@@ -24,7 +25,7 @@
 
 <section class="project-content">
     <div class="Container">
-        <img class="PlaceholderImage" src="https://via.placeholder.com/616x640" alt="Artistic Project Showcase">
+        <img class="PlaceholderImage" src="../../../Front-end/Workspace/assets/img/page-project/content-1.png" alt="Artistic Project Showcase">
         <div class="Content">
             <div class="Heading">A Journey Through Artistic Excellence</div>
             <div class="RichText">
@@ -48,7 +49,7 @@
         <div class="Heading">Project Gallery</div>
         <div class="Text">Explore the stunning visuals from the project</div>
     </div>
-    <img class="PlaceholderImage1" src="https://via.placeholder.com/1312x738" alt="Project Visuals">
+    <img class="PlaceholderImage1" src="../../../Front-end/Workspace/assets/img/page-project/gallery-1.png" alt="Project Visuals">
 </section>
 
 <section class="project-layout">
@@ -78,7 +79,7 @@
                 <a href="/register" class="Button Secondary">Sign Up</a>
             </div>
         </div>
-        <img class="PlaceholderImage" src="https://via.placeholder.com/616x640" />
+        <img class="PlaceholderImage" src="../../../Front-end/Workspace/assets/img/page-project/layout-1.png" />
     </div>
 </section>
 
@@ -96,7 +97,7 @@
             </div>
         </div>
     </div>
-    <img class="PlaceholderImage" src="https://via.placeholder.com/1312x738" alt="Creative Project Showcase">
+    <img class="PlaceholderImage" src="../../../Front-end/Workspace/assets/img/page-project/layout-2.png" alt="Creative Project Showcase">
 </section>
 
 <section class="project-faq">
@@ -149,7 +150,7 @@
         <div class="Content">
             <h2 class="StillHaveAQuestions">Still have questions ?</h2>
             <p class="Text">Contact our support team for assistance.</p>
-            <a href="/contact#contact-us" class="Button">Contact Us</a>
+            <a href="/contact#contact-us" class="Button Secondary">Contact Us</a>
         </div>
     </div>
 </section>
@@ -162,7 +163,7 @@
         </div>
         <div class="Actions">
             <a href="/service" class="Button Primary">Explore</a>
-            <a href="/contact" class="Button Secondary">Contact</a>
+            <a href="/contact" class="Button btn-white">Contact</a>
         </div>
     </div>
 </section>
@@ -182,17 +183,14 @@
                 if (answer.style.display === 'block') {
                     answer.style.display = 'none';
                     this.classList.remove('is-open');
-                    this.innerHTML = this.innerHTML.replace('▲', '▼');
                 } else {
                     document.querySelectorAll('.faq-answer').forEach(ans => ans.style.display = 'none');
                     document.querySelectorAll('.faq-question').forEach(q => {
                         q.classList.remove('is-open');
-                        q.innerHTML = q.innerHTML.replace('▲', '▼');
                     });
 
                     answer.style.display = 'block';
                     this.classList.add('is-open');
-                    this.innerHTML = this.innerHTML.replace('▼', '▲');
                 }
             });
         });

@@ -65,6 +65,520 @@ img {
     --dropdown-link-hover-bg-color: var(--dropdown-link-hover-bg-color-dark);
   }
 }
+@media (max-width: 46.125rem) {
+  .Header-about,
+  .Layout1-about, .Layout2-about,
+  .Team-about,
+  .Logo1-about, .Logo2-about,
+  .Cta-about {
+    padding: 3.5rem 2rem;
+  }
+  .Header-about .Container,
+  .Header-about .Column,
+  .Header-about .Content,
+  .Header-about .SectionTitle,
+  .Header-about .ContentHeader,
+  .Header-about .CardContent,
+  .Header-about .Actions,
+  .Layout1-about .Container,
+  .Layout1-about .Column,
+  .Layout1-about .Content,
+  .Layout1-about .SectionTitle,
+  .Layout1-about .ContentHeader,
+  .Layout1-about .CardContent,
+  .Layout1-about .Actions, .Layout2-about .Container,
+  .Layout2-about .Column,
+  .Layout2-about .Content,
+  .Layout2-about .SectionTitle,
+  .Layout2-about .ContentHeader,
+  .Layout2-about .CardContent,
+  .Layout2-about .Actions,
+  .Team-about .Container,
+  .Team-about .Column,
+  .Team-about .Content,
+  .Team-about .SectionTitle,
+  .Team-about .ContentHeader,
+  .Team-about .CardContent,
+  .Team-about .Actions,
+  .Logo1-about .Container,
+  .Logo1-about .Column,
+  .Logo1-about .Content,
+  .Logo1-about .SectionTitle,
+  .Logo1-about .ContentHeader,
+  .Logo1-about .CardContent,
+  .Logo1-about .Actions, .Logo2-about .Container,
+  .Logo2-about .Column,
+  .Logo2-about .Content,
+  .Logo2-about .SectionTitle,
+  .Logo2-about .ContentHeader,
+  .Logo2-about .CardContent,
+  .Logo2-about .Actions,
+  .Cta-about .Container,
+  .Cta-about .Column,
+  .Cta-about .Content,
+  .Cta-about .SectionTitle,
+  .Cta-about .ContentHeader,
+  .Cta-about .CardContent,
+  .Cta-about .Actions {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .Header-about .Tagline, .Header-about .ShortHeadingHere,
+  .Header-about .Description, .Header-about .Heading,
+  .Header-about .Text, .Header-about .Number,
+  .Layout1-about .Tagline,
+  .Layout1-about .ShortHeadingHere,
+  .Layout1-about .Description,
+  .Layout1-about .Heading,
+  .Layout1-about .Text,
+  .Layout1-about .Number, .Layout2-about .Tagline, .Layout2-about .ShortHeadingHere,
+  .Layout2-about .Description, .Layout2-about .Heading,
+  .Layout2-about .Text, .Layout2-about .Number,
+  .Team-about .Tagline,
+  .Team-about .ShortHeadingHere,
+  .Team-about .Description,
+  .Team-about .Heading,
+  .Team-about .Text,
+  .Team-about .Number,
+  .Logo1-about .Tagline,
+  .Logo1-about .ShortHeadingHere,
+  .Logo1-about .Description,
+  .Logo1-about .Heading,
+  .Logo1-about .Text,
+  .Logo1-about .Number, .Logo2-about .Tagline, .Logo2-about .ShortHeadingHere,
+  .Logo2-about .Description, .Logo2-about .Heading,
+  .Logo2-about .Text, .Logo2-about .Number,
+  .Cta-about .Tagline,
+  .Cta-about .ShortHeadingHere,
+  .Cta-about .Description,
+  .Cta-about .Heading,
+  .Cta-about .Text,
+  .Cta-about .Number {
+    font-size: calc(var(--main-size) * 0.9);
+  }
+  .Header-about .PlaceholderImage,
+  .Header-about .IconRelume,
+  .Header-about .Logo,
+  .Layout1-about .PlaceholderImage,
+  .Layout1-about .IconRelume,
+  .Layout1-about .Logo, .Layout2-about .PlaceholderImage,
+  .Layout2-about .IconRelume,
+  .Layout2-about .Logo,
+  .Team-about .PlaceholderImage,
+  .Team-about .IconRelume,
+  .Team-about .Logo,
+  .Logo1-about .PlaceholderImage,
+  .Logo1-about .IconRelume,
+  .Logo1-about .Logo, .Logo2-about .PlaceholderImage,
+  .Logo2-about .IconRelume,
+  .Logo2-about .Logo,
+  .Cta-about .PlaceholderImage,
+  .Cta-about .IconRelume,
+  .Cta-about .Logo {
+    width: 100%;
+    height: auto;
+  }
+  .Header-about .Actions,
+  .Layout1-about .Actions, .Layout2-about .Actions,
+  .Team-about .Actions,
+  .Logo1-about .Actions, .Logo2-about .Actions,
+  .Cta-about .Actions {
+    flex-direction: column;
+    gap: 0.625rem;
+  }
+  .Portfolio-container,
+  .Portfolio-Gallery,
+  .Portfolio,
+  .Portfolio-Layout,
+  .Portfolio-Logo,
+  .Portfolio-feedback,
+  .Portfolio-cta {
+    padding: 3.5rem 2rem;
+  }
+  .Portfolio-container .Content,
+  .Portfolio-container .Container,
+  .Portfolio-container .SectionTitle,
+  .Portfolio-Gallery .Content,
+  .Portfolio-Gallery .Container,
+  .Portfolio-Gallery .SectionTitle,
+  .Portfolio .Content,
+  .Portfolio .Container,
+  .Portfolio .SectionTitle,
+  .Portfolio-Layout .Content,
+  .Portfolio-Layout .Container,
+  .Portfolio-Layout .SectionTitle,
+  .Portfolio-Logo .Content,
+  .Portfolio-Logo .Container,
+  .Portfolio-Logo .SectionTitle,
+  .Portfolio-feedback .Content,
+  .Portfolio-feedback .Container,
+  .Portfolio-feedback .SectionTitle,
+  .Portfolio-cta .Content,
+  .Portfolio-cta .Container,
+  .Portfolio-cta .SectionTitle {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  .Portfolio-container .Heading,
+  .Portfolio-container .Subheading,
+  .Portfolio-container .Text,
+  .Portfolio-Gallery .Heading,
+  .Portfolio-Gallery .Subheading,
+  .Portfolio-Gallery .Text,
+  .Portfolio .Heading,
+  .Portfolio .Subheading,
+  .Portfolio .Text,
+  .Portfolio-Layout .Heading,
+  .Portfolio-Layout .Subheading,
+  .Portfolio-Layout .Text,
+  .Portfolio-Logo .Heading,
+  .Portfolio-Logo .Subheading,
+  .Portfolio-Logo .Text,
+  .Portfolio-feedback .Heading,
+  .Portfolio-feedback .Subheading,
+  .Portfolio-feedback .Text,
+  .Portfolio-cta .Heading,
+  .Portfolio-cta .Subheading,
+  .Portfolio-cta .Text {
+    text-align: center;
+    font-size: calc(var(--main-size) * 0.9);
+  }
+  .Portfolio-container .PlaceholderImage,
+  .Portfolio-container .PlaceholderImage1,
+  .Portfolio-Gallery .PlaceholderImage,
+  .Portfolio-Gallery .PlaceholderImage1,
+  .Portfolio .PlaceholderImage,
+  .Portfolio .PlaceholderImage1,
+  .Portfolio-Layout .PlaceholderImage,
+  .Portfolio-Layout .PlaceholderImage1,
+  .Portfolio-Logo .PlaceholderImage,
+  .Portfolio-Logo .PlaceholderImage1,
+  .Portfolio-feedback .PlaceholderImage,
+  .Portfolio-feedback .PlaceholderImage1,
+  .Portfolio-cta .PlaceholderImage,
+  .Portfolio-cta .PlaceholderImage1 {
+    width: 100%;
+    height: auto;
+  }
+  .Portfolio-container .Tags,
+  .Portfolio-container .List,
+  .Portfolio-container .ListItem,
+  .Portfolio-Gallery .Tags,
+  .Portfolio-Gallery .List,
+  .Portfolio-Gallery .ListItem,
+  .Portfolio .Tags,
+  .Portfolio .List,
+  .Portfolio .ListItem,
+  .Portfolio-Layout .Tags,
+  .Portfolio-Layout .List,
+  .Portfolio-Layout .ListItem,
+  .Portfolio-Logo .Tags,
+  .Portfolio-Logo .List,
+  .Portfolio-Logo .ListItem,
+  .Portfolio-feedback .Tags,
+  .Portfolio-feedback .List,
+  .Portfolio-feedback .ListItem,
+  .Portfolio-cta .Tags,
+  .Portfolio-cta .List,
+  .Portfolio-cta .ListItem {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .Portfolio-container .Tag,
+  .Portfolio-container .Actions,
+  .Portfolio-Gallery .Tag,
+  .Portfolio-Gallery .Actions,
+  .Portfolio .Tag,
+  .Portfolio .Actions,
+  .Portfolio-Layout .Tag,
+  .Portfolio-Layout .Actions,
+  .Portfolio-Logo .Tag,
+  .Portfolio-Logo .Actions,
+  .Portfolio-feedback .Tag,
+  .Portfolio-feedback .Actions,
+  .Portfolio-cta .Tag,
+  .Portfolio-cta .Actions {
+    gap: 0.5rem;
+  }
+  .Portfolio-container .Button,
+  .Portfolio-Gallery .Button,
+  .Portfolio .Button,
+  .Portfolio-Layout .Button,
+  .Portfolio-Logo .Button,
+  .Portfolio-feedback .Button,
+  .Portfolio-cta .Button {
+    padding: 0.75rem 1.5rem;
+  }
+  .service-header,
+  .service-layout1,
+  .service-layout2,
+  .service-gallery,
+  .service-cta1,
+  .service-cta2 {
+    padding: 3.5rem 2rem;
+  }
+  .service-header .container,
+  .service-layout1 .container,
+  .service-layout2 .container,
+  .service-gallery .container,
+  .service-cta1 .container,
+  .service-cta2 .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .service-header .column, .service-header .content, .service-header .section-title, .service-header .gallery-content, .service-header .form-group, .service-header .Actions,
+  .service-layout1 .column,
+  .service-layout1 .content,
+  .service-layout1 .section-title,
+  .service-layout1 .gallery-content,
+  .service-layout1 .form-group,
+  .service-layout1 .Actions,
+  .service-layout2 .column,
+  .service-layout2 .content,
+  .service-layout2 .section-title,
+  .service-layout2 .gallery-content,
+  .service-layout2 .form-group,
+  .service-layout2 .Actions,
+  .service-gallery .column,
+  .service-gallery .content,
+  .service-gallery .section-title,
+  .service-gallery .gallery-content,
+  .service-gallery .form-group,
+  .service-gallery .Actions,
+  .service-cta1 .column,
+  .service-cta1 .content,
+  .service-cta1 .section-title,
+  .service-cta1 .gallery-content,
+  .service-cta1 .form-group,
+  .service-cta1 .Actions,
+  .service-cta2 .column,
+  .service-cta2 .content,
+  .service-cta2 .section-title,
+  .service-cta2 .gallery-content,
+  .service-cta2 .form-group,
+  .service-cta2 .Actions {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+  .service-header .placeholder-image, .service-header .AvatarImage, .service-header img,
+  .service-layout1 .placeholder-image,
+  .service-layout1 .AvatarImage,
+  .service-layout1 img,
+  .service-layout2 .placeholder-image,
+  .service-layout2 .AvatarImage,
+  .service-layout2 img,
+  .service-gallery .placeholder-image,
+  .service-gallery .AvatarImage,
+  .service-gallery img,
+  .service-cta1 .placeholder-image,
+  .service-cta1 .AvatarImage,
+  .service-cta1 img,
+  .service-cta2 .placeholder-image,
+  .service-cta2 .AvatarImage,
+  .service-cta2 img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+  }
+  .service-header form.actions, .service-header .form-group,
+  .service-layout1 form.actions,
+  .service-layout1 .form-group,
+  .service-layout2 form.actions,
+  .service-layout2 .form-group,
+  .service-gallery form.actions,
+  .service-gallery .form-group,
+  .service-cta1 form.actions,
+  .service-cta1 .form-group,
+  .service-cta2 form.actions,
+  .service-cta2 .form-group {
+    flex-direction: column;
+  }
+  .service-header .form-group,
+  .service-layout1 .form-group,
+  .service-layout2 .form-group,
+  .service-gallery .form-group,
+  .service-cta1 .form-group,
+  .service-cta2 .form-group {
+    gap: 10px;
+  }
+  .service-header .text-input,
+  .service-layout1 .text-input,
+  .service-layout2 .text-input,
+  .service-gallery .text-input,
+  .service-cta1 .text-input,
+  .service-cta2 .text-input {
+    width: 100%;
+  }
+  .service-header .Avatar, .service-header .Stars, .service-header .CompanyLogo,
+  .service-layout1 .Avatar,
+  .service-layout1 .Stars,
+  .service-layout1 .CompanyLogo,
+  .service-layout2 .Avatar,
+  .service-layout2 .Stars,
+  .service-layout2 .CompanyLogo,
+  .service-gallery .Avatar,
+  .service-gallery .Stars,
+  .service-gallery .CompanyLogo,
+  .service-cta1 .Avatar,
+  .service-cta1 .Stars,
+  .service-cta1 .CompanyLogo,
+  .service-cta2 .Avatar,
+  .service-cta2 .Stars,
+  .service-cta2 .CompanyLogo {
+    justify-content: center;
+  }
+  .project-header,
+  .project-content,
+  .project-gallery,
+  .project-layout,
+  .project-layout2,
+  .project-faq,
+  .project-cta {
+    padding: 3.5rem 2rem;
+  }
+  .project-header .Content,
+  .project-header .Container,
+  .project-header .SectionTitle,
+  .project-header .Actions,
+  .project-content .Content,
+  .project-content .Container,
+  .project-content .SectionTitle,
+  .project-content .Actions,
+  .project-gallery .Content,
+  .project-gallery .Container,
+  .project-gallery .SectionTitle,
+  .project-gallery .Actions,
+  .project-layout .Content,
+  .project-layout .Container,
+  .project-layout .SectionTitle,
+  .project-layout .Actions,
+  .project-layout2 .Content,
+  .project-layout2 .Container,
+  .project-layout2 .SectionTitle,
+  .project-layout2 .Actions,
+  .project-faq .Content,
+  .project-faq .Container,
+  .project-faq .SectionTitle,
+  .project-faq .Actions,
+  .project-cta .Content,
+  .project-cta .Container,
+  .project-cta .SectionTitle,
+  .project-cta .Actions {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  .project-header .Heading,
+  .project-header .Subheading,
+  .project-header .Text,
+  .project-header .Paragraph,
+  .project-content .Heading,
+  .project-content .Subheading,
+  .project-content .Text,
+  .project-content .Paragraph,
+  .project-gallery .Heading,
+  .project-gallery .Subheading,
+  .project-gallery .Text,
+  .project-gallery .Paragraph,
+  .project-layout .Heading,
+  .project-layout .Subheading,
+  .project-layout .Text,
+  .project-layout .Paragraph,
+  .project-layout2 .Heading,
+  .project-layout2 .Subheading,
+  .project-layout2 .Text,
+  .project-layout2 .Paragraph,
+  .project-faq .Heading,
+  .project-faq .Subheading,
+  .project-faq .Text,
+  .project-faq .Paragraph,
+  .project-cta .Heading,
+  .project-cta .Subheading,
+  .project-cta .Text,
+  .project-cta .Paragraph {
+    text-align: center;
+    font-size: calc(var(--main-size) * 0.9);
+  }
+  .project-header .PlaceholderImage,
+  .project-header .PlaceholderImage1,
+  .project-content .PlaceholderImage,
+  .project-content .PlaceholderImage1,
+  .project-gallery .PlaceholderImage,
+  .project-gallery .PlaceholderImage1,
+  .project-layout .PlaceholderImage,
+  .project-layout .PlaceholderImage1,
+  .project-layout2 .PlaceholderImage,
+  .project-layout2 .PlaceholderImage1,
+  .project-faq .PlaceholderImage,
+  .project-faq .PlaceholderImage1,
+  .project-cta .PlaceholderImage,
+  .project-cta .PlaceholderImage1 {
+    width: 100%;
+    height: auto;
+  }
+  .project-header .Tags,
+  .project-header .List,
+  .project-header .ListItem,
+  .project-content .Tags,
+  .project-content .List,
+  .project-content .ListItem,
+  .project-gallery .Tags,
+  .project-gallery .List,
+  .project-gallery .ListItem,
+  .project-layout .Tags,
+  .project-layout .List,
+  .project-layout .ListItem,
+  .project-layout2 .Tags,
+  .project-layout2 .List,
+  .project-layout2 .ListItem,
+  .project-faq .Tags,
+  .project-faq .List,
+  .project-faq .ListItem,
+  .project-cta .Tags,
+  .project-cta .List,
+  .project-cta .ListItem {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .project-header .Tag,
+  .project-header .Actions,
+  .project-content .Tag,
+  .project-content .Actions,
+  .project-gallery .Tag,
+  .project-gallery .Actions,
+  .project-layout .Tag,
+  .project-layout .Actions,
+  .project-layout2 .Tag,
+  .project-layout2 .Actions,
+  .project-faq .Tag,
+  .project-faq .Actions,
+  .project-cta .Tag,
+  .project-cta .Actions {
+    gap: 0.5rem;
+  }
+  .project-header .Button,
+  .project-content .Button,
+  .project-gallery .Button,
+  .project-layout .Button,
+  .project-layout2 .Button,
+  .project-faq .Button,
+  .project-cta .Button {
+    padding: 0.75rem 1.5rem;
+  }
+}
 .btn {
   padding: var(--pm-md);
   text-decoration: none;
@@ -827,7 +1341,7 @@ body {
 }
 .Header-about .SectionTitle .Tagline {
   text-align: center;
-  color: var(--black);
+  color: var(--text-color);
   font-size: 1rem;
   font-family: var(--website-font-family);
   font-weight: 600;
@@ -843,18 +1357,18 @@ body {
   gap: 1.5rem;
 }
 .Header-about .SectionTitle .Content .ShortHeadingHere {
-  color: var(--black);
+  color: var(--text-color);
   font-size: 3.5rem;
   font-family: var(--website-font-family);
   font-weight: 700;
   line-height: 4.2rem;
 }
 .Header-about .SectionTitle .Content .Description {
-  color: var(--black);
+  color: var(--text-color);
   font-size: var(--main-size);
   font-family: var(--website-font-family);
   font-weight: 400;
-  line-height: 1.6875rem;
+  line-height: var(--line-height);
 }
 .Header-about .Actions {
   padding-top: 1rem;
@@ -914,14 +1428,14 @@ body {
   gap: 1.5rem;
 }
 .Layout1-about .Content .ContentText .Heading {
-  color: var(--black);
+  color: var(--text-color);
   font-size: 2.5rem;
   font-family: var(--website-font-family);
   font-weight: 700;
   line-height: var(--heading-size);
 }
 .Layout1-about .Content .ContentText .Text {
-  color: var(--black);
+  color: var(--text-color);
   font-size: var(--main-size);
   font-family: var(--website-font-family);
   font-weight: 400;
@@ -1321,129 +1835,6 @@ body {
   border-color: var(--black);
 }
 
-@media (max-width: 48rem) {
-  .Header-about,
-  .Layout1-about, .Layout2-about,
-  .Team-about,
-  .Logo1-about, .Logo2-about,
-  .Cta-about {
-    padding: 3.5rem 2rem;
-  }
-  .Header-about .Container,
-  .Header-about .Column,
-  .Header-about .Content,
-  .Header-about .SectionTitle,
-  .Header-about .ContentHeader,
-  .Header-about .CardContent,
-  .Header-about .Actions,
-  .Layout1-about .Container,
-  .Layout1-about .Column,
-  .Layout1-about .Content,
-  .Layout1-about .SectionTitle,
-  .Layout1-about .ContentHeader,
-  .Layout1-about .CardContent,
-  .Layout1-about .Actions, .Layout2-about .Container,
-  .Layout2-about .Column,
-  .Layout2-about .Content,
-  .Layout2-about .SectionTitle,
-  .Layout2-about .ContentHeader,
-  .Layout2-about .CardContent,
-  .Layout2-about .Actions,
-  .Team-about .Container,
-  .Team-about .Column,
-  .Team-about .Content,
-  .Team-about .SectionTitle,
-  .Team-about .ContentHeader,
-  .Team-about .CardContent,
-  .Team-about .Actions,
-  .Logo1-about .Container,
-  .Logo1-about .Column,
-  .Logo1-about .Content,
-  .Logo1-about .SectionTitle,
-  .Logo1-about .ContentHeader,
-  .Logo1-about .CardContent,
-  .Logo1-about .Actions, .Logo2-about .Container,
-  .Logo2-about .Column,
-  .Logo2-about .Content,
-  .Logo2-about .SectionTitle,
-  .Logo2-about .ContentHeader,
-  .Logo2-about .CardContent,
-  .Logo2-about .Actions,
-  .Cta-about .Container,
-  .Cta-about .Column,
-  .Cta-about .Content,
-  .Cta-about .SectionTitle,
-  .Cta-about .ContentHeader,
-  .Cta-about .CardContent,
-  .Cta-about .Actions {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  .Header-about .Tagline, .Header-about .ShortHeadingHere,
-  .Header-about .Description, .Header-about .Heading,
-  .Header-about .Text, .Header-about .Number,
-  .Layout1-about .Tagline,
-  .Layout1-about .ShortHeadingHere,
-  .Layout1-about .Description,
-  .Layout1-about .Heading,
-  .Layout1-about .Text,
-  .Layout1-about .Number, .Layout2-about .Tagline, .Layout2-about .ShortHeadingHere,
-  .Layout2-about .Description, .Layout2-about .Heading,
-  .Layout2-about .Text, .Layout2-about .Number,
-  .Team-about .Tagline,
-  .Team-about .ShortHeadingHere,
-  .Team-about .Description,
-  .Team-about .Heading,
-  .Team-about .Text,
-  .Team-about .Number,
-  .Logo1-about .Tagline,
-  .Logo1-about .ShortHeadingHere,
-  .Logo1-about .Description,
-  .Logo1-about .Heading,
-  .Logo1-about .Text,
-  .Logo1-about .Number, .Logo2-about .Tagline, .Logo2-about .ShortHeadingHere,
-  .Logo2-about .Description, .Logo2-about .Heading,
-  .Logo2-about .Text, .Logo2-about .Number,
-  .Cta-about .Tagline,
-  .Cta-about .ShortHeadingHere,
-  .Cta-about .Description,
-  .Cta-about .Heading,
-  .Cta-about .Text,
-  .Cta-about .Number {
-    font-size: calc(var(--main-size) * 0.9);
-  }
-  .Header-about .PlaceholderImage,
-  .Header-about .IconRelume,
-  .Header-about .Logo,
-  .Layout1-about .PlaceholderImage,
-  .Layout1-about .IconRelume,
-  .Layout1-about .Logo, .Layout2-about .PlaceholderImage,
-  .Layout2-about .IconRelume,
-  .Layout2-about .Logo,
-  .Team-about .PlaceholderImage,
-  .Team-about .IconRelume,
-  .Team-about .Logo,
-  .Logo1-about .PlaceholderImage,
-  .Logo1-about .IconRelume,
-  .Logo1-about .Logo, .Logo2-about .PlaceholderImage,
-  .Logo2-about .IconRelume,
-  .Logo2-about .Logo,
-  .Cta-about .PlaceholderImage,
-  .Cta-about .IconRelume,
-  .Cta-about .Logo {
-    width: 100%;
-    height: auto;
-  }
-  .Header-about .Actions,
-  .Layout1-about .Actions, .Layout2-about .Actions,
-  .Team-about .Actions,
-  .Logo1-about .Actions, .Logo2-about .Actions,
-  .Cta-about .Actions {
-    flex-direction: column;
-    gap: 0.625rem;
-  }
-}
 .Portfolio-container {
   width: 100%;
   height: auto;
@@ -1999,7 +2390,6 @@ body {
   width: 100%;
   height: 24.6875rem;
   padding: 7rem 4rem;
-  background: white;
   display: inline-flex;
   flex-direction: column;
   justify-content: center;
@@ -2010,6 +2400,7 @@ body {
   height: 10.6875rem;
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: center;
   gap: 1.5rem;
@@ -2017,9 +2408,9 @@ body {
 .project-header .Content .Heading {
   align-self: stretch;
   text-align: center;
-  color: black;
+  color: var(--text-color);
   font-size: 3.5rem;
-  font-family: "Roboto", sans-serif;
+  font-family: var(--website-font-family);
   font-weight: 700;
   line-height: 4.2rem;
   word-wrap: break-word;
@@ -2027,11 +2418,11 @@ body {
 .project-header .Content .Text {
   align-self: stretch;
   text-align: center;
-  color: black;
-  font-size: 1.125rem;
-  font-family: "Roboto", sans-serif;
+  color: var(--text-color);
+  font-size: var(--main-size);
+  font-family: var(--website-font-family);
   font-weight: 400;
-  line-height: 1.6875rem;
+  line-height: var(--line-height);
   word-wrap: break-word;
 }
 .project-header .Content .Tags {
@@ -2045,15 +2436,18 @@ body {
   padding: 0.25rem 0.5rem;
   background: #F4F4F4;
   display: flex;
+  flex-direction: unset;
+  flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: flex-start;
+  gap: 0;
 }
 .project-header .Content .Tags .Tag div {
-  color: black;
-  font-size: 0.875rem;
-  font-family: "Roboto", sans-serif;
+  color: var(--black);
+  font-size: var(--main-size);
+  font-family: var(--website-font-family);
   font-weight: 600;
-  line-height: 1.3125rem;
+  line-height: var(--line-height);
   word-wrap: break-word;
 }
 
@@ -2061,7 +2455,6 @@ body {
   width: 100%;
   height: auto;
   padding: 7rem 4rem;
-  background: white;
   display: inline-flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -2076,8 +2469,9 @@ body {
   gap: 5rem;
 }
 .project-content .Container .PlaceholderImage {
-  flex: 1 1 0;
+  width: 38.5rem;
   height: 40rem;
+  object-fit: cover;
 }
 .project-content .Container .Content {
   flex: 1 1 0;
@@ -2089,9 +2483,9 @@ body {
 }
 .project-content .Container .Content .Heading {
   align-self: stretch;
-  color: black;
-  font-size: 3rem;
-  font-family: "Roboto", sans-serif;
+  color: var(--text-color);
+  font-size: var(--heading-size);
+  font-family: var(--website-font-family);
   font-weight: 700;
   line-height: 3.6rem;
   word-wrap: break-word;
@@ -2101,24 +2495,28 @@ body {
   height: 18.5rem;
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: flex-start;
+  gap: 0;
 }
 .project-content .Container .Content .RichText .Content {
   align-self: stretch;
   padding-bottom: 1rem;
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: flex-start;
+  gap: 0;
 }
 .project-content .Container .Content .RichText .Content .Paragraph {
   align-self: stretch;
-  color: black;
-  font-size: 1rem;
-  font-family: "Roboto", sans-serif;
+  color: var(--text-color);
+  font-size: var(--main-size);
+  font-family: var(--website-font-family);
   font-weight: 400;
-  line-height: 1.5rem;
+  line-height: var(--line-height);
   word-wrap: break-word;
 }
 
@@ -2126,9 +2524,9 @@ body {
   width: 100%;
   height: auto;
   padding: 7rem 4rem;
-  background: white;
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: center;
   gap: 5rem;
@@ -2137,6 +2535,7 @@ body {
   height: 6.8125rem;
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: center;
   gap: 1.5rem;
@@ -2144,17 +2543,16 @@ body {
 .project-gallery .SectionTitle .Heading, .project-gallery .SectionTitle .Text {
   align-self: stretch;
   text-align: center;
-  color: black;
-  font-size: 3rem;
-  font-family: "Roboto", sans-serif;
+  color: var(--text-color);
+  font-size: var(--heading-size);
+  font-family: var(--website-font-family);
   font-weight: 700;
   line-height: 3.6rem;
   word-wrap: break-word;
 }
 .project-gallery .PlaceholderImage1 {
-  align-self: stretch;
+  width: 82rem;
   height: 46.125rem;
-  width: 100%;
   object-fit: cover;
 }
 
@@ -2162,7 +2560,6 @@ body {
   width: 100%;
   height: 54rem;
   padding: 7rem 4rem;
-  background: white;
   display: inline-flex;
   flex-direction: column;
   align-items: flex-start;
@@ -2187,31 +2584,35 @@ body {
 .project-layout .Container .Content .SectionTitle {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  flex-wrap: nowrap;
   justify-content: flex-start;
+  align-items: flex-start;
   gap: 1rem;
   align-self: stretch;
   height: 18rem;
 }
 .project-layout .Container .Content .SectionTitle .Subheading {
   text-align: center;
-  color: black;
-  font-size: 1rem;
+  color: var(--text-color);
+  font-size: var(--main-size);
   font-weight: 600;
-  line-height: 1.5rem;
+  font-family: var(--website-font-family);
+  line-height: var(--line-height);
 }
 .project-layout .Container .Content .SectionTitle .Heading {
-  color: black;
-  font-size: 3rem;
+  color: var(--text-color);
+  font-size: var(--heading-size);
   font-weight: 700;
+  font-family: var(--website-font-family);
   line-height: 3.6rem;
   align-self: stretch;
 }
 .project-layout .Container .Content .SectionTitle .Text {
-  color: black;
-  font-size: 1.125rem;
+  color: var(--text-color);
+  font-size: var(--main-size);
   font-weight: 400;
-  line-height: 1.6875rem;
+  font-family: var(--website-font-family);
+  line-height: var(--line-height);
   align-self: stretch;
 }
 .project-layout .Container .Content .List {
@@ -2232,17 +2633,19 @@ body {
 }
 .project-layout .Container .Content .List .ListItem .SubheadingOne,
 .project-layout .Container .Content .List .ListItem .SubheadingTwo {
-  color: black;
-  font-size: 1.25rem;
+  color: var(--text-color);
+  font-size: var(--main-size);
   font-weight: 700;
-  line-height: 1.75rem;
+  font-family: var(--website-font-family);
+  line-height: var(--line-height);
   align-self: stretch;
 }
 .project-layout .Container .Content .List .ListItem .Text {
-  color: black;
-  font-size: 1rem;
+  color: var(--text-color);
+  font-size: var(--main-size);
   font-weight: 400;
-  line-height: 1.5rem;
+  font-family: var(--website-font-family);
+  line-height: var(--line-height);
   align-self: stretch;
 }
 .project-layout .Container .Content .Actions {
@@ -2254,88 +2657,109 @@ body {
 }
 .project-layout .Container .PlaceholderImage {
   flex: 1 1 0;
+  width: 38.5rem;
   height: 40rem;
+  object-fit: cover;
 }
 
 .project-layout2 {
   width: 100%;
   height: 84.125rem;
   padding: 7rem 4rem;
-  background: white;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  flex-wrap: nowrap;
   justify-content: flex-start;
-  gap: 15.625rem;
+  align-items: center;
+  gap: 5rem;
+  font-family: var(--website-font-family);
 }
 .project-layout2 .Content {
   align-self: stretch;
   display: flex;
-  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: nowrap;
   justify-content: flex-start;
+  align-items: flex-start;
   gap: 5rem;
 }
 .project-layout2 .Content .Column {
   flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  flex-wrap: nowrap;
   justify-content: flex-start;
+  align-items: flex-start;
   gap: 1rem;
 }
 .project-layout2 .Content .Column .Subheading {
   align-self: stretch;
-  color: black;
-  font-size: 1rem;
+  color: var(--text-color);
+  font-size: var(--main-size);
   font-weight: 600;
-  line-height: 1.5rem;
+  font-family: var(--website-font-family);
+  line-height: var(--line-height);
 }
 .project-layout2 .Content .Column .Heading, .project-layout2 .Content .Column Text {
   align-self: stretch;
-  color: black;
-  font-size: 3rem;
+  color: var(--text-color);
+  font-size: var(--heading-size);
   font-weight: 700;
+  font-family: var(--website-font-family);
   line-height: 3.6rem;
 }
 .project-layout2 .Content .Column .Actions {
   padding-top: 1rem;
   display: flex;
-  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
   justify-content: flex-start;
+  align-items: center;
   gap: 1.5rem;
 }
 .project-layout2 .PlaceholderImage {
-  align-self: stretch;
+  width: 82rem;
   height: 46.125rem;
+  object-fit: cover;
 }
 
 .project-faq {
   padding: 7rem 4rem;
-  background: white;
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: unset;
   align-items: flex-start;
+  gap: 0;
 }
 .project-faq .Container {
   width: 100%;
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: unset;
   align-items: flex-start;
+  gap: 0;
 }
 .project-faq .SectionTitle {
   width: 100%;
   text-align: center;
+  font-family: var(--website-font-family);
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: unset;
   align-items: flex-start;
   gap: 0.0625rem;
 }
 .project-faq .SectionTitle .Heading {
-  font-size: 3rem;
+  font-family: var(--website-font-family);
+  font-size: var(--heading-size);
   font-weight: 700;
 }
 .project-faq .SectionTitle .Text {
-  font-size: 1.125rem;
+  font-family: var(--website-font-family);
+  font-size: var(--main-size);
   font-weight: 400;
 }
 .project-faq .Accordion {
@@ -2348,14 +2772,17 @@ body {
 .project-faq .Accordion .faq-item .faq-question {
   width: 100%;
   text-align: left;
-  font-size: 1.125rem;
+  font-size: var(--main-size);
   font-weight: 700;
   background: none;
   border: none;
   cursor: pointer;
   display: flex;
+  flex-direction: unset;
+  flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
+  gap: 0;
   padding: 1.25rem 0;
 }
 .project-faq .Accordion .faq-item .faq-question:after {
@@ -2364,7 +2791,7 @@ body {
   transition: transform 0.3s;
 }
 .project-faq .Accordion .faq-item .faq-question.is-open::after {
-  transform: rotate(0deg);
+  content: "▲";
 }
 .project-faq .Accordion .faq-item .faq-answer {
   display: none;
@@ -2376,10 +2803,13 @@ body {
 .project-faq .Content {
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: unset;
   align-items: flex-start;
+  gap: 0;
 }
 .project-faq .Content a {
-  color: black;
+  color: var(--text-color);
   text-decoration: none;
 }
 
@@ -2387,9 +2817,10 @@ body {
   width: 100%;
   height: 26.3125rem;
   padding: 7rem 4rem;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%);
+  background: var(--black);
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: flex-start;
   gap: 5rem;
@@ -2397,24 +2828,30 @@ body {
 .project-cta .column {
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: flex-start;
   gap: 1.5rem;
 }
+.project-cta .column .content {
+  font-family: var(--website-font-family);
+}
 .project-cta .column .content .heading {
-  color: white;
-  font-size: 3rem;
+  color: var(--white);
+  font-size: var(--heading-size);
   font-weight: 700;
   line-height: 3.6rem;
 }
 .project-cta .column .content .text {
-  color: white;
-  font-size: 1.125rem;
+  color: var(--white);
+  font-size: var(--main-size);
   font-weight: 400;
-  line-height: 1.6875rem;
+  line-height: var(--line-height);
 }
 .project-cta .column .Actions {
   display: flex;
+  flex-direction: unset;
+  flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: flex-start;
   gap: 1rem;
@@ -2422,11 +2859,14 @@ body {
 }
 .project-cta .column .Actions .Button.btn-white {
   background: none;
-  border: 0.0625rem solid white;
+  border: 0.0625rem solid var(--white);
+  color: var(--white);
 }
-.project-cta .column .Actions .Button.btn-white a {
-  text-decoration: none;
-  color: white;
+.project-cta .column .Actions .Button.btn-white:hover {
+  color: var(--white);
+  background-color: var(--black);
+  transition: var(--transition-duration) ease-in-out;
+  border-color: var(--black);
 }
 
 .service-header {
@@ -2944,37 +3384,6 @@ body {
   object-fit: cover;
 }
 
-@media (max-width: 48rem) {
-  .service-header, .service-layout1, .service-layout2, .service-gallery, .service-cta1, .service-cta2 {
-    padding: 3.5rem 2rem;
-  }
-  .service-header .container, .service-layout1 .container, .service-layout2 .container, .service-gallery .container, .service-cta1 .container, .service-cta2 .container {
-    flex-direction: column;
-    align-items: center;
-  }
-  .service-header .column, .service-header .content, .service-header .section-title, .service-header .gallery-content, .service-header .form-group, .service-header .Actions, .service-layout1 .column, .service-layout1 .content, .service-layout1 .section-title, .service-layout1 .gallery-content, .service-layout1 .form-group, .service-layout1 .Actions, .service-layout2 .column, .service-layout2 .content, .service-layout2 .section-title, .service-layout2 .gallery-content, .service-layout2 .form-group, .service-layout2 .Actions, .service-gallery .column, .service-gallery .content, .service-gallery .section-title, .service-gallery .gallery-content, .service-gallery .form-group, .service-gallery .Actions, .service-cta1 .column, .service-cta1 .content, .service-cta1 .section-title, .service-cta1 .gallery-content, .service-cta1 .form-group, .service-cta1 .Actions, .service-cta2 .column, .service-cta2 .content, .service-cta2 .section-title, .service-cta2 .gallery-content, .service-cta2 .form-group, .service-cta2 .Actions {
-    width: 100%;
-    align-items: center;
-    text-align: center;
-  }
-  .service-header .placeholder-image, .service-header .AvatarImage, .service-header img, .service-layout1 .placeholder-image, .service-layout1 .AvatarImage, .service-layout1 img, .service-layout2 .placeholder-image, .service-layout2 .AvatarImage, .service-layout2 img, .service-gallery .placeholder-image, .service-gallery .AvatarImage, .service-gallery img, .service-cta1 .placeholder-image, .service-cta1 .AvatarImage, .service-cta1 img, .service-cta2 .placeholder-image, .service-cta2 .AvatarImage, .service-cta2 img {
-    width: auto;
-    height: auto;
-    max-width: 100%;
-  }
-  .service-header form.actions, .service-header .form-group, .service-layout1 form.actions, .service-layout1 .form-group, .service-layout2 form.actions, .service-layout2 .form-group, .service-gallery form.actions, .service-gallery .form-group, .service-cta1 form.actions, .service-cta1 .form-group, .service-cta2 form.actions, .service-cta2 .form-group {
-    flex-direction: column;
-  }
-  .service-header .form-group, .service-layout1 .form-group, .service-layout2 .form-group, .service-gallery .form-group, .service-cta1 .form-group, .service-cta2 .form-group {
-    gap: 10px;
-  }
-  .service-header .text-input, .service-layout1 .text-input, .service-layout2 .text-input, .service-gallery .text-input, .service-cta1 .text-input, .service-cta2 .text-input {
-    width: 100%;
-  }
-  .service-header .Avatar, .service-header .Stars, .service-header .CompanyLogo, .service-layout1 .Avatar, .service-layout1 .Stars, .service-layout1 .CompanyLogo, .service-layout2 .Avatar, .service-layout2 .Stars, .service-layout2 .CompanyLogo, .service-gallery .Avatar, .service-gallery .Stars, .service-gallery .CompanyLogo, .service-cta1 .Avatar, .service-cta1 .Stars, .service-cta1 .CompanyLogo, .service-cta2 .Avatar, .service-cta2 .Stars, .service-cta2 .CompanyLogo {
-    justify-content: center;
-  }
-}
 .contact-header {
   width: 100%;
   height: auto;

@@ -15,11 +15,11 @@
 
     .Tagline {
       text-align: center;
-      color: var(--black);
+      color: var(--text-color);
       font-size: rem(16);
       font-family: var(--website-font-family);
       font-weight: 600;
-        line-height: var(--line-height);
+      line-height: var(--line-height);
     }
 
     .Content {
@@ -27,7 +27,7 @@
       @include flexbox(column, nowrap, unset, flex-start, rem(24));
 
       .ShortHeadingHere {
-        color: var(--black);
+        color: var(--text-color);
         font-size: rem(56);
         font-family: var(--website-font-family);
         font-weight: 700;
@@ -35,11 +35,11 @@
       }
 
       .Description {
-        color: var(--black);
+        color: var(--text-color);
         font-size: var(--main-size);
         font-family: var(--website-font-family);
         font-weight: 400;
-        line-height: rem(27);
+        line-height: var(--line-height);
       }
     }
   }
@@ -80,7 +80,7 @@
       @include flexbox(column, nowrap, unset, flex-start, rem(24));
 
       .Heading {
-        color: var(--black);
+        color: var(--text-color);
         font-size: rem(40);
         font-family: var(--website-font-family);
         font-weight: 700;
@@ -88,7 +88,7 @@
       }
 
       .Text {
-        color: var(--black);
+        color: var(--text-color);
         font-size: var(--main-size);
         font-family: var(--website-font-family);
         font-weight: 400;
@@ -405,46 +405,6 @@
           }
         }
       }
-    }
-  }
-}
-
-@media (max-width: rem(768)) {
-  .Header-about,
-  .Layout1-about, .Layout2-about,
-  .Team-about,
-  .Logo1-about, .Logo2-about,
-  .Cta-about {
-    padding: rem(56) rem(32);
-    
-    .Container,
-    .Column,
-    .Content,
-    .SectionTitle,
-    .ContentHeader,
-    .CardContent,
-    .Actions {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-
-    .Tagline, .ShortHeadingHere,
-    .Description, .Heading,
-    .Text, .Number {
-      font-size: calc(var(--main-size) * 0.9);
-    }
-
-    .PlaceholderImage,
-    .IconRelume,
-    .Logo {
-      width: 100%;
-      height: auto;
-    }
-
-    .Actions {
-      flex-direction: column;
-      gap: rem(10);
     }
   }
 }

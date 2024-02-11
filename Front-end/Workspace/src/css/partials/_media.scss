@@ -6,4 +6,186 @@
       --dropdown-bg-color: var(--dropdown-bg-color-dark);
       --dropdown-link-hover-bg-color: var(--dropdown-link-hover-bg-color-dark);
     }
+}
+
+@media (max-width: rem(738)) {
+
+  .Header-about,
+  .Layout1-about, .Layout2-about,
+  .Team-about,
+  .Logo1-about, .Logo2-about,
+  .Cta-about {
+    padding: rem(56) rem(32);
+
+    .Container,
+    .Column,
+    .Content,
+    .SectionTitle,
+    .ContentHeader,
+    .CardContent,
+    .Actions {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .Tagline, .ShortHeadingHere,
+    .Description, .Heading,
+    .Text, .Number {
+      font-size: calc(var(--main-size) * 0.9);
+    }
+
+    .PlaceholderImage,
+    .IconRelume,
+    .Logo {
+      width: 100%;
+      height: auto;
+    }
+
+    .Actions {
+      flex-direction: column;
+      gap: rem(10);
+    }
   }
+
+  .Portfolio-container,
+  .Portfolio-Gallery,
+  .Portfolio,
+  .Portfolio-Layout,
+  .Portfolio-Logo,
+  .Portfolio-feedback,
+  .Portfolio-cta {
+    padding: rem(56) rem(32);
+
+    .Content,
+    .Container,
+    .SectionTitle {
+      @include flexbox(column, nowrap, center, center, rem(16));
+    }
+
+    .Heading,
+    .Subheading,
+    .Text {
+      text-align: center;
+      font-size: calc(#{var(--main-size)} * 0.9);
+    }
+
+    .PlaceholderImage,
+    .PlaceholderImage1 {
+      width: 100%;
+      height: auto;
+    }
+
+    .Tags,
+    .List,
+    .ListItem {
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .Tag,
+    .Actions {
+      gap: rem(8);
+    }
+
+    .Button {
+      padding: rem(12) rem(24);
+    }
+  }
+
+  .service-header, 
+  .service-layout1, 
+  .service-layout2, 
+  .service-gallery, 
+  .service-cta1, 
+  .service-cta2 {
+    padding: rem(56) rem(32);
+    
+    .container {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .column, .content, .section-title, .gallery-content, .form-group, .Actions {
+      width: 100%;
+      align-items: center;
+      text-align: center;
+    }
+
+    .placeholder-image, .AvatarImage, img {
+      width: auto;
+      height: auto;
+      max-width: 100%;
+    }
+
+    form.actions, .form-group {
+      flex-direction: column;
+    }
+
+    .form-group {
+      gap: 10px;
+    }
+
+    .text-input {
+      width: 100%;
+    }
+
+    .Avatar, .Stars, .CompanyLogo {
+      justify-content: center;
+    }
+  }
+
+  .project-header,
+  .project-content,
+  .project-gallery,
+  .project-layout,
+  .project-layout2,
+  .project-faq,
+  .project-cta {
+    padding: rem(56) rem(32);
+
+    .Content,
+    .Container,
+    .SectionTitle,
+    .Actions {
+      @include flexbox(column, nowrap, center, center, rem(16));
+    }
+
+    .Heading,
+    .Subheading,
+    .Text,
+    .Paragraph {
+      text-align: center;
+      font-size: calc(var(--main-size) * 0.9);
+    }
+
+    .PlaceholderImage,
+    .PlaceholderImage1 {
+      width: 100%;
+      height: auto;
+    }
+
+    .Tags,
+    .List,
+    .ListItem {
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .Tag,
+    .Actions {
+      gap: rem(8);
+    }
+
+    .Button {
+      padding: rem(12) rem(24);
+    }
+  }
+
+  //contact responsive
+}
+
