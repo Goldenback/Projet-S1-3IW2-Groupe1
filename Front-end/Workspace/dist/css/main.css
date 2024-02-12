@@ -88,49 +88,134 @@ img {
     --error-message: #FF6B6B;
   }
 }
-@media only screen and (max-width: 30rem) {
-  body, .Header-about, .Layout1-about, .Layout2-about, .Team-about, .Logo1-about, .Logo2-about, .Cta-about, .Portfolio-container, .Portfolio-Gallery, .Portfolio, .Portfolio-Layout, .Portfolio-Logo, .Portfolio-feedback, .Portfolio-cta, .service-header, .service-layout1, .service-layout2, .service-gallery, .service-cta1, .service-cta2, .project-header, .project-content, .project-gallery, .project-layout, .project-layout2, .project-faq, .project-cta, .contact-header, .contact-map, .contact-cta {
-    padding: 1.5rem;
-  }
-  h1, h2, h3, h4, h5, h6, .Text, .Heading, .Subheading, .Paragraph, .tagline, .short-heading-here, .description, .number {
-    font-size: calc(var(--main-size) * 0.8);
-  }
-  img, .PlaceholderImage, .IconRelume, .Logo {
-    max-width: 100%;
-    height: auto;
-  }
-  .Container, .Column, .Content, .SectionTitle, .ContentHeader, .CardContent, .Actions, .row, .column {
+@media screen and (max-width: 48rem) {
+  .navbar {
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    padding: 0.5rem 0;
   }
-  .Button, .btn, .subscribe-button, .actions .form .text-input {
-    padding: 0.875rem 1.75rem;
-    font-size: calc(var(--main-size) * 0.9);
+  .navbar .logo-container {
+    margin-bottom: 1rem;
+  }
+  .navbar .navbar-links {
+    flex-direction: column;
     width: 100%;
   }
-  .Button input[type=text], .Button input[type=email], .Button textarea, .Button .text-input, .btn input[type=text], .btn input[type=email], .btn textarea, .btn .text-input, .subscribe-button input[type=text], .subscribe-button input[type=email], .subscribe-button textarea, .subscribe-button .text-input, .actions .form .text-input input[type=text], .actions .form .text-input input[type=email], .actions .form .text-input textarea, .actions .form .text-input .text-input {
-    padding: 0.75rem;
-    font-size: calc(var(--main-size) * 0.9);
+  .navbar .navbar-links li {
+    padding: 0.5rem 0;
   }
-  .Button .navbar, .Button .sidebar, .Button .l-sidebar, .btn .navbar, .btn .sidebar, .btn .l-sidebar, .subscribe-button .navbar, .subscribe-button .sidebar, .subscribe-button .l-sidebar, .actions .form .text-input .navbar, .actions .form .text-input .sidebar, .actions .form .text-input .l-sidebar {
-    display: flex;
+  .navbar .theme-switcher {
+    position: relative;
+    right: 0;
+    padding-top: 1rem;
+  }
+  .contact-menu {
+    padding: 3.5rem 2rem;
+  }
+  .contact-menu .row {
     flex-direction: column;
+    gap: 1.5rem;
+  }
+  .contact-menu .icon-envelope, .contact-menu .icon-phone, .contact-menu .icon-map {
+    font-size: 1.875rem;
+  }
+  .contact-menu .contact-info {
+    align-items: flex-start;
+  }
+  .contact-us {
+    padding-top: 6.25rem;
+    gap: 3.125rem;
+  }
+  .contact-us .inputs, .contact-us .radios-content {
+    flex-direction: row;
+  }
+  .contact-us .inputs, .contact-us .radios, .contact-us .message-container {
+    width: 100%;
+    padding: 0 1rem;
+    box-sizing: border-box;
+  }
+  .Faq {
+    padding: 3.5rem 2rem;
+  }
+  .Faq .Accordion .faq-item .faq-question {
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
+    width: 50%;
+  }
+  .footer {
+    padding: 32px;
+  }
+  .footer .content {
+    flex-direction: column;
+  }
+  .footer .column {
+    width: 100%;
+    align-items: center;
+  }
+  .footer .logo-column, .footer .links-column {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer .social-links, .footer .footer-links {
     justify-content: center;
+  }
+  .footer .link-list {
     align-items: center;
   }
-  .Button .navbar-links, .Button .dropdown-content, .Button .sidebar-content, .btn .navbar-links, .btn .dropdown-content, .btn .sidebar-content, .subscribe-button .navbar-links, .subscribe-button .dropdown-content, .subscribe-button .sidebar-content, .actions .form .text-input .navbar-links, .actions .form .text-input .dropdown-content, .actions .form .text-input .sidebar-content {
+  .Header-about, .Layout1-about, .Layout2-about, .Team-about, .Logo1-about, .Logo2-about, .Cta-about {
+    padding: 3.5rem 2rem;
+  }
+  .Header-about .Accordion .faq-item .faq-question, .Header-about .Content, .Layout1-about .Accordion .faq-item .faq-question, .Layout1-about .Content, .Layout2-about .Accordion .faq-item .faq-question, .Layout2-about .Content, .Team-about .Accordion .faq-item .faq-question, .Team-about .Content, .Logo1-about .Accordion .faq-item .faq-question, .Logo1-about .Content, .Logo2-about .Accordion .faq-item .faq-question, .Logo2-about .Content, .Cta-about .Accordion .faq-item .faq-question, .Cta-about .Content {
+    padding: 1.25rem 1.25rem;
+  }
+  .Portfolio-container {
+    padding: 56px 32px;
+  }
+  .Portfolio-Gallery .Content div,
+  .Portfolio-Layout .Content .Column,
+  .Portfolio-feedback .Content .Column {
     flex-direction: column;
     align-items: center;
-    gap: 0.75rem;
   }
-  .Button .sidebar, .Button .l-sidebar, .btn .sidebar, .btn .l-sidebar, .subscribe-button .sidebar, .subscribe-button .l-sidebar, .actions .form .text-input .sidebar, .actions .form .text-input .l-sidebar {
-    width: 80%;
-    transform: translateX(-100%);
-    transition: transform 0.3s ease-in-out;
+  .tags span, .Tags .Tag, .Actions, .PortfolioList .Row {
+    display: flex;
+    flex-direction: unset;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: unset;
+    gap: 0.5rem;
   }
-  .Button .sidebar-active, .Button .l-sidebar.active, .btn .sidebar-active, .btn .l-sidebar.active, .subscribe-button .sidebar-active, .subscribe-button .l-sidebar.active, .actions .form .text-input .sidebar-active, .actions .form .text-input .l-sidebar.active {
-    transform: translateX(0);
+  .project-header {
+    padding: 3.5rem 2rem;
+  }
+  .project-content .Container, .project-layout .Container, .project-layout2 .Content {
+    flex-direction: column;
+    gap: 2rem; /* Augmente l'espace entre les éléments pour une disposition verticale */
+  }
+  .Tags, .Actions {
+    justify-content: center; /* Centrage des tags et actions */
+    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne suivante si nécessaire */
+  }
+  .service-header {
+    padding: 3.5rem 2rem; /* Réduction du padding pour les tablettes */
+  }
+  .service-layout1 .container, .service-layout2 .content, .service-gallery .gallery-content {
+    flex-direction: column;
+    gap: 2rem; /* Augmente l'espace entre les éléments pour une disposition verticale */
+  }
+  .service-layout1 .container .Actions, .service-layout1 .container .actions, .service-layout1 .container .list, .service-layout1 .container .List, .service-layout2 .content .Actions, .service-layout2 .content .actions, .service-layout2 .content .list, .service-layout2 .content .List, .service-gallery .gallery-content .Actions, .service-gallery .gallery-content .actions, .service-gallery .gallery-content .list, .service-gallery .gallery-content .List {
+    justify-content: center; /* Centrage des actions et listes pour les petits écrans */
+    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne suivante si nécessaire */
+    gap: 1rem; /* Ajuste l'espacement entre les éléments */
+  }
+  .contact-header, .contact-map, .contact-cta {
+    padding: 2rem; /* Réduction du padding pour les tablettes */
+  }
+  .contact-header .row, .contact-map .row, .contact-cta .row {
+    flex-direction: column; /*Change la disposition pour une meilleure visualisation sur tablette */
+  }
+  .contact-header .actions .form, .contact-header .actions, .contact-map .actions .form, .contact-map .actions, .contact-cta .actions .form, .contact-cta .actions {
+    flex-direction: column; /* Ajuste la disposition des actions pour les petits écrans */
+    gap: 1rem; /* Espacement entre les éléments du formulaire */
   }
 }
 .btn {
