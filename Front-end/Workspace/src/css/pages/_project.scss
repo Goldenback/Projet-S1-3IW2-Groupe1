@@ -47,7 +47,7 @@
         @include flexbox(unset, nowrap, flex-start, flex-start);
 
         div {
-          color: var(--black);
+          color: var(--white);
           font-size: var(--main-size);
           font-family: var(--website-font-family);
           font-weight: 600;
@@ -183,10 +183,10 @@
         @include flexbox(column, nowrap, flex-start, flex-start, rem(16));
         align-self: stretch;
         height: rem(288);
+        color: var(--text-color);
 
         .Subheading {
           text-align: center;
-          color: var(--text-color);
           font-size: var(--main-size);
           font-weight: 600;
           font-family: var(--website-font-family);
@@ -194,7 +194,6 @@
         }
 
         .Heading {
-          color: var(--text-color);
           font-size: var(--heading-size);
           font-weight: 700;
           font-family: var(--website-font-family);
@@ -203,7 +202,6 @@
         }
 
         .Text {
-          color: var(--text-color);
           font-size: var(--main-size);
           font-weight: 400;
           font-family: var(--website-font-family);
@@ -227,10 +225,10 @@
           justify-content: flex-start;
           gap: rem(16);
           flex: 1 1 0;
+          color: var(--text-color);
 
           .SubheadingOne,
           .SubheadingTwo {
-            color: var(--text-color);
             font-size: var(--main-size);
             font-weight: 700;
             font-family: var(--website-font-family);
@@ -239,7 +237,6 @@
           }
 
           .Text {
-            color: var(--text-color);
             font-size: var(--main-size);
             font-weight: 400;
             font-family: var(--website-font-family);
@@ -281,10 +278,10 @@
     .Column {
       flex: 1;
       @include flexbox(column, nowrap, flex-start, flex-start, rem(16));
+      color: var(--text-color);
 
       .Subheading {
         align-self: stretch;
-        color: var(--text-color);
         font-size: var(--main-size);
         font-weight: 600;
         font-family: var(--website-font-family);
@@ -293,7 +290,6 @@
 
       .Heading, Text {
         align-self: stretch;
-        color: var(--text-color);
         font-size: var(--heading-size);
         font-weight: 700;
         font-family: var(--website-font-family);
@@ -328,6 +324,7 @@
     text-align: center;
     font-family: var(--website-font-family);
     @include flexbox(column, nowrap, unset, flex-start, rem(1));
+    color: var(--text-color);
 
     .Heading {
       font-family: var(--website-font-family);
@@ -348,8 +345,10 @@
     .faq-item {
       width: 100%;
       border-bottom: rem(1) solid #eaeaea;
+      color: var(--text-color);
 
       .faq-question {
+        color: var(--text-color);
         width: 100%;
         text-align: left;
         font-size: var(--main-size);
@@ -383,9 +382,9 @@
 
   .Content {
     @include flexbox(column, nowrap, unset, flex-start);
+    color: var(--text-color);
 
     a {
-      color: var(--text-color);
       text-decoration: none;
     }
 
@@ -396,7 +395,7 @@
   width: 100%;
   height: rem(421);
   padding: rem(112) rem(64);
-  background: var(--black);
+  background-color: var(--reverse-bg-color);
   @include flexbox(column, nowrap, flex-start, flex-start, rem(80));
 
   .column {
@@ -404,15 +403,15 @@
 
     .content {
       font-family: var(--website-font-family);
+      color: var(--reverse-text-color);
+
       .heading {
-        color: var(--white);
         font-size: var(--heading-size);
         font-weight: 700;
         line-height: rem(57.6);
       }
 
       .text {
-        color: var(--white);
         font-size: var(--main-size);
         font-weight: 400;
         line-height: var(--line-height);
@@ -426,14 +425,14 @@
       .Button {
         &.btn-white {
           background: none;
-          border: rem(1) solid var(--white);
-          color: var(--white);
+          border: rem(1) solid var(--website-bg-color);
+          color: var(--website-bg-color);
 
           &:hover {
-            color: var(--white);
-            background-color: var(--black);
+            color: var(--text-color);
+            background-color: var(--website-bg-color);
             transition: var(--transition-duration) ease-in-out;
-            border-color: var(--black);
+            border-color: var(--btn-bg-hover-color);
           }
         }
       }

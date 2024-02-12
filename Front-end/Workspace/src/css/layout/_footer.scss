@@ -50,7 +50,6 @@
             text-decoration: none;
             font-size: var(--subtitle-size);
             font-family: var(--website-font-family);
-            font-family: var(--website-font-family);
 
             img {
               width: rem(24);
@@ -81,13 +80,16 @@
     flex-direction: column;
     font-family: var(--website-font-family);
 
-    .divider { height: rem(1); background: var(--black); }
+    .divider { 
+      height: rem(1); 
+      background: var(--text-color); 
+    }
 
     .row {
       justify-content: space-between;
       display: flex;
       text-decoration: none;
-      color: var(--black);
+      color: var(--text-color);
 
       .footer-links {
         display: flex;
@@ -98,13 +100,13 @@
   }
 }
 
-.address, .contact, .link, .footer-link, .phone, .email, .copyright {
+.address, .contact, .link, .footer-link, .phone, .email, .copyright, .address-detail {
   font-family: var(--website-font-family);
+  color: var(--text-color);
 
   &.address, &.contact {
     font-weight: 600;
     font-size: rem(14);
-
   }
 
   &.phone, &.email {

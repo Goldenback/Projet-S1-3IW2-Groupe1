@@ -8,30 +8,43 @@ $error : #ff0000;
 $centered : auto;
 
 
+.dark-mode {
+  --text-color: #ffffff;
+  --reverse-text-color: #{$black};
+
+  --website-bg-color: #121212;
+  --reverse-bg-color :#{$white};
+
+  --btn-bg-color: #000000;
+
+  --dropdown-bg-color: #ffffff;
+  --dropdown-link-hover-bg-color : #{darken($white, 10%)};
+
+}
+
 :root{
     /*Color*/
-
     --white: #{$white};
     --black: #{$black};
 
     --text-color: #{$black};
-    --link-color-dark: #{$white};
+    --reverse-text-color: #{$white};
+
+    --bg-color:#{$bg-color};
+
+    --website-bg-color : #{$white};
+    --reverse-bg-color : #{$black};
 
     --primary-color : #{$primary-color};
     --secondary-color : #{$secondary-color};
     
-    --bg-color-dark: #{$black};
-    --bg-color-white: #{$white};
-    --btn-bg-color: #{$black};
+    --btn-bg-color: #{$white};
     --btn-bg-hover-color: #{lighten($black, 10%)};
 
-    --bg-color:#{$bg-color};
-    --black-bg-color : #{$black};
+    --img-bg-color: #{darken($white, 50%)};
 
-    --img-bg-color: #{$img-bg-color};
-
-    --dropdown-bg-color-dark: #{$white};
-    --dropdown-link-hover-bg-color-dark: #c9c9c9;
+    --dropdown-bg-color : #{$white};
+    --dropdown-link-hover-bg-color : #{lighten($black, 10%)};
 
     --error-message : #{$error};
 

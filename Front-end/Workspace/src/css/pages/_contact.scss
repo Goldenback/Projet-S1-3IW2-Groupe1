@@ -155,7 +155,7 @@
           flex: 1;
           height: rem(48);
           padding: rem(12);
-          border: rem(1) solid var(--black);
+          border: rem(1) solid var(--text-color);
           font-size: var(--main-size);
         }
 
@@ -163,8 +163,8 @@
           height: rem(48);
           padding: rem(12) rem(24);
           background: var(--btn-bg-color);
-          color: var(--white);
-          border: rem(1) solid var(-black);
+          color: var(--text-color);
+          border: rem(1) solid var(--reverse-bg-color);
           font-size: var(--main-size);
           cursor: pointer;
         }

@@ -56,6 +56,7 @@
 
       .section-title {
         @include flexbox(column, nowrap, flex-start, flex-start, rem(16));
+        color: var(--text-color);
 
         .subheading {
           text-align: center;
@@ -78,6 +79,7 @@
         width: rem(616);
         height: auto;
         @include flexbox(unset, nowrap, flex-start, flex-start, rem(24));
+        color: var(--text-color);
 
         .list-item {
           @include flexbox(column, nowrap, flex-start, flex-start);
@@ -117,36 +119,34 @@
 
   .section-title {
     @include flexbox(column, nowrap, flex-start, center, rem(16));
+    color: var(--text-color);
 
     .subheading, .heading, .text {
       text-align: center;
-      color: var(--text-color);
     }
 
     .subheading {
       font-size: var(--main-size);
       font-weight: 600;
-      color: var(--text-color);
       line-height: var(--line-height);
     }
 
     .heading {
       font-size: var(--heading-size);
       font-weight: 700;
-      color: var(--text-color);
       line-height: var(--line-height);
     }
 
     .text {
       font-size: var(--main-size);
       font-weight: 400;
-      color: var(--text-color);
       line-height: var(--line-height);
     }
   }
 
   .content {
     @include flexbox(column, nowrap, flex-start, center, rem(48));
+    color: var(--text-color);
 
     .row {
       @include flexbox(unset, nowrap, center, flex-start, rem(48));
@@ -304,7 +304,7 @@
           width: rem(61);
           height: 0;
           transform: rotate(90deg);
-          border: rem(1) solid var(--black);
+          border: rem(1) solid var(--reverse-bg-color);
         }
 
         .CompanyLogo {
@@ -377,6 +377,7 @@
 
   .column {
     @include flexbox(column, nowrap, flex-start, flex-start, rem(16));
+    color: var(--text-color);
 
     .content {
       h2.heading {
@@ -384,7 +385,6 @@
         font-weight: 700;
         font-family: var(--website-font-family);
         line-height: rem(57.6);
-        color: var(--black);
       }
 
       p.text {
@@ -392,7 +392,6 @@
         font-weight: 400;
         font-family: var(--website-font-family);
         line-height: var(--line-height);
-        color: var(--black);
       }
     }
 
@@ -408,7 +407,7 @@
           width: rem(394);
           height: rem(48);
           padding: rem(12);
-          border: rem(1) solid var(--black);
+          border: rem(1) solid var(--reverse-bg-color);
           font-size: var(--main-size);
           line-height: var(--line-height);
           font-family: var(--website-font-family);
@@ -420,7 +419,7 @@
         font-size: rem(12);
         font-family: var(--website-font-family);
         line-height: var(--line-height);
-        color: var(--black);
+        color: var(--text-color);
       }
     }
   }

@@ -20,11 +20,10 @@
       left: 50%;
       transform: translate(-50%, -50%);
       text-align: center;
-      color: var(--text-color);
+      color: var(--white);
       @include flexbox(column, nowrap, center, center, rem(24));
 
       h1 {
-        color: var(--bg-color-white);
         font-size: rem(56);
         font-family: var(--website-font-family);
         font-weight: 700;
@@ -32,7 +31,6 @@
       }
 
       p {
-        color: var(--bg-color-white);
         font-size: var(--main-size);
         font-family: var(--website-font-family);
         font-weight: 400;

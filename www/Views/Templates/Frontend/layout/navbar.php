@@ -25,13 +25,29 @@
         <a href="/contact" class="Button Primary">Contact</a>
     </div>
     <div class="line"></div>
+    <label class="switch">
+      <input type="checkbox" id="toggleDarkMode">
+      <span class="slider round"></span>
+    </label>
 </nav>
 <script>
+
   document.addEventListener('DOMContentLoaded', () => {
   const moreButton = document.querySelector('.navbar-links .more');
   moreButton.addEventListener('click', function() {
     this.querySelector('.dropdown-content').classList.toggle('show');
   });
 });
+
+const toggleDarkMode = document.getElementById('toggleDarkMode');
+  toggleDarkMode.addEventListener('click', () => {
+    const isDarkMode = document.body.classList.toggle('dark-mode');
+    localStorage.setItem('darkMode', isDarkMode ? 'enabled' : 'disabled');
+  });
+
+  if (localStorage.getItem('darkMode') === 'enabled') {
+    document.body.classList.add('dark-mode');
+  }
+
 
 </script>

@@ -1,5 +1,4 @@
 .Faq {
-  background: var(--bg-color-white);
   padding: rem(112) rem(64);
   @include flexbox(column, nowrap, center, center, rem(80));
 
@@ -9,12 +8,13 @@
 
   .SectionTitle {
     @include flexbox(column, nowrap, center, center, rem(24));
+    color: var(--text-color);
+    font-family: var(--website-font-family);
 
     .Heading {
       font-size: var(--heading-size);
       font-weight: 700;
       line-height: rem(57.6);
-      color: var(--text-color);
       text-align: center;
     }
 
@@ -22,7 +22,6 @@
       font-size: var(--main-size);
       font-weight: 400;
       line-height: var(--line-height);
-      color: var(--text-color);
       text-align: center;
     }
   }
@@ -31,15 +30,16 @@
     width: 100%;
 
     .faq-item {
-      border-top: rem(1) solid var(--black);
+      border-top: rem(1) solid var(--reverse-bg-color);
+      font-family: var(--website-font-family);
 
       &:last-child {
-        border-bottom: rem(1) solid var(--black);
+        border-bottom: rem(1) solid var(--reverse-bg-color);
       }
 
       .faq-question {
+        color: var(--text-color);
         font-size: var(--main-size);
-        font-family: var(--website-font-family);
         font-weight: 700;
         line-height: var(--line-height);
         width: rem(768);
@@ -57,6 +57,7 @@
           width: rem(25);
           height: rem(20);
           transform: rotate(0deg);
+          color: var(--reverse-bg-color);
           content: '▼';
         }
 
@@ -66,7 +67,7 @@
       }
 
       .faq-answer {
-        font-family: var(--website-font-family);
+        color: var(--text-color);
         display: none;
         padding: 0 rem(20) rem(20) rem(20);
       }
@@ -92,11 +93,11 @@
 
     .Button {
       padding: rem(12) rem(24);
-      border: rem(1) solid var(--black);
+      border: rem(1) solid var(--reverse-bg-color);
       font-size: var(--main-size);
       font-weight: 400;
       line-height: var(--line-height);
-      color: var(--black);
+      color: var(--text-color);
       text-decoration: none;
       display: inline-flex;
       align-items: center;
@@ -105,8 +106,9 @@
       cursor: pointer;
 
       &:hover {
-        background-color: var(--black);
-        color: var(--bg-color-white);
+        background-color: var(--reverse-bg-color);
+        color: var(--website-bg-color);
+        transition: var( --transition-duration) ease-in-out;
       }
     }
   }
