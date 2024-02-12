@@ -108,25 +108,25 @@
     <h2 class="Heading">Trusted by industry-leading companies worldwide</h2>
     <div class="Content">
         <div class="Logo Webflow">
-            <img src="../../../Front-end/Workspace/assets/svg/brand/webflow-2.svg">
+            <img class="icon" src="../../../Front-end/Workspace/assets/svg/brand/webflow-2.svg">
         </div>
         <div class="Logo Relume">
-            <img src="../../../Front-end/Workspace/assets/svg/brand/relume-2.svg">
+            <img class="icon" src="../../../Front-end/Workspace/assets/svg/brand/relume-2.svg">
         </div>
         <div class="Logo Webflow">
-            <img src="../../../Front-end/Workspace/assets/svg/brand/webflow-2.svg">
+            <img class="icon" src="../../../Front-end/Workspace/assets/svg/brand/webflow-2.svg">
         </div>
         <div class="Logo Relume">
-            <img src="../../../Front-end/Workspace/assets/svg/brand/relume-2.svg">
+            <img class="icon" src="../../../Front-end/Workspace/assets/svg/brand/relume-2.svg">
         </div>
         <div class="Logo Webflow">
-            <img src="../../../Front-end/Workspace/assets/svg/brand/webflow-2.svg">
+            <img class="icon" src="../../../Front-end/Workspace/assets/svg/brand/webflow-2.svg">
         </div>
         <div class="Logo Relume">
-            <img src="../../../Front-end/Workspace/assets/svg/brand/relume-2.svg">
+            <img class="icon" src="../../../Front-end/Workspace/assets/svg/brand/relume-2.svg">
         </div>
         <div class="Logo Webflow">
-            <img src="../../../Front-end/Workspace/assets/svg/brand/webflow-2.svg">
+            <img class="icon" src="../../../Front-end/Workspace/assets/svg/brand/webflow-2.svg">
         </div>
     </div>
 </section>
@@ -139,11 +139,11 @@
     <div class="Content">
         <div class="Column">
             <div class="Stars">
-                <img src="../../../Front-end/Workspace/assets/svg/icon/star.svg">
-                <img src="../../../Front-end/Workspace/assets/svg/icon/star.svg">
-                <img src="../../../Front-end/Workspace/assets/svg/icon/star.svg">
-                <img src="../../../Front-end/Workspace/assets/svg/icon/star.svg">
-                <img src="../../../Front-end/Workspace/assets/svg/icon/star.svg">
+                <img class="icon" src="../../../Front-end/Workspace/assets/svg/icon/star.svg">
+                <img class="icon" src="../../../Front-end/Workspace/assets/svg/icon/star.svg">
+                <img class="icon" src="../../../Front-end/Workspace/assets/svg/icon/star.svg">
+                <img class="icon" src="../../../Front-end/Workspace/assets/svg/icon/star.svg">
+                <img class="icon" src="../../../Front-end/Workspace/assets/svg/icon/star.svg">
             </div>
             <p class="Quote">Our platform has been a game-changer for my portfolio. It's easy to use and has helped me showcase my work effectively.</p>
             <div class="Avatar">
@@ -154,18 +154,18 @@
                 </div>
                 <div class="Divider"></div>
                 <div class="CompanyLogo WebflowBlack">
-                    <img src="../../../Front-end/Workspace/assets/svg/brand/webflow-2.svg">
+                    <img class="icon" src="../../../Front-end/Workspace/assets/svg/brand/webflow-2.svg">
                 </div>
             </div>
 
         </div>
         <div class="Column">
             <div class="Stars">
-                <img src="../../../Front-end/Workspace/assets/svg/icon/star.svg">
-                <img src="../../../Front-end/Workspace/assets/svg/icon/star.svg">
-                <img src="../../../Front-end/Workspace/assets/svg/icon/star.svg">
-                <img src="../../../Front-end/Workspace/assets/svg/icon/star.svg">
-                <img src="../../../Front-end/Workspace/assets/svg/icon/star.svg"> 
+                <img class="icon" src="../../../Front-end/Workspace/assets/svg/icon/star.svg">
+                <img class="icon" src="../../../Front-end/Workspace/assets/svg/icon/star.svg">
+                <img class="icon" src="../../../Front-end/Workspace/assets/svg/icon/star.svg">
+                <img class="icon" src="../../../Front-end/Workspace/assets/svg/icon/star.svg">
+                <img class="icon" src="../../../Front-end/Workspace/assets/svg/icon/star.svg"> 
             </div>
             <p class="Quote">
                 I highly recommend this platform to all artists looking to manage their portfolios. It has streamlined my workflow and boosted my online presence.
@@ -178,7 +178,7 @@
                 </div>
                 <div class="Divider"></div>
                 <div class="CompanyLogo WebflowBlack">
-                    <img src="../../../Front-end/Workspace/assets/svg/brand/webflow-2.svg">
+                    <img class="icon" src="../../../Front-end/Workspace/assets/svg/brand/webflow-2.svg">
                 </div>
             </div>
         </div>

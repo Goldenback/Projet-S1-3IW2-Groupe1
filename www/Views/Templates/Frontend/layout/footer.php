@@ -5,7 +5,7 @@
             <div class="logo">
                 <div class="logo">
                     <a href="/about">
-                        <img src="../../../Front-end/Workspace/assets/img/logo/simplify.png">
+                        <img class="icon logo" src="../../../Front-end/Workspace/assets/svg/brand/simplify.svg">
                     </a>
                 </div>
             </div>

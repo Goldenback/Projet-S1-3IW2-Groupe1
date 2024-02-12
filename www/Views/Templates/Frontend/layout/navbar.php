@@ -2,7 +2,7 @@
     <div class="container">
         <div class="logo-container">
           <a href="/about">
-            <img class="logo" src="../../../Front-end/Workspace/assets/img/logo/simplify.png">
+            <img class="icon logo" src="../../../Front-end/Workspace/assets/svg/brand/simplify.svg">
           </a>
         </div>
         <ul class="navbar-links">
@@ -23,12 +23,13 @@
             </li>
         </ul>
         <a href="/contact" class="Button Primary">Contact</a>
+        <div class="theme-switcher" id="themeSwitcher">
+          <img id="icon-sun" class="icon icon-sun" src="../../../Front-end/Workspace/assets/svg/icon/sun.svg" alt="Sun Icon"/>
+          <img id="icon-moon" class="icon icon-moon" src="../../../Front-end/Workspace/assets/svg/icon/moon.svg" alt="Moon Icon"/>
+        </div>
     </div>
     <div class="line"></div>
-    <label class="switch">
-      <input type="checkbox" id="toggleDarkMode">
-      <span class="slider round"></span>
-    </label>
+
 </nav>
 <script>
 
@@ -39,15 +40,34 @@
   });
 });
 
-const toggleDarkMode = document.getElementById('toggleDarkMode');
-  toggleDarkMode.addEventListener('click', () => {
+
+document.addEventListener('DOMContentLoaded', () => {
+  const themeSwitcher = document.getElementById('themeSwitcher');
+  const iconSun = document.getElementById('icon-sun');
+  const iconMoon = document.getElementById('icon-moon');
+
+  themeSwitcher.addEventListener('click', () => {
     const isDarkMode = document.body.classList.toggle('dark-mode');
     localStorage.setItem('darkMode', isDarkMode ? 'enabled' : 'disabled');
+    updateIcons(isDarkMode);
   });
 
-  if (localStorage.getItem('darkMode') === 'enabled') {
-    document.body.classList.add('dark-mode');
+  function updateIcons(isDarkMode) {
+    if (isDarkMode) {
+      iconSun.style.display = 'block';
+      iconMoon.style.display = 'none';
+    } else {
+      iconSun.style.display = 'none';
+      iconMoon.style.display = 'block';
+    }
   }
+
+  // Initialiser l'icône en fonction du mode sombre stocké
+  const isDarkModeInitial = localStorage.getItem('darkMode') === 'enabled';
+  document.body.classList.toggle('dark-mode', isDarkModeInitial);
+  updateIcons(isDarkModeInitial);
+});
+
 
 
 </script>

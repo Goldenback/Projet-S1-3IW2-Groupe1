@@ -31,7 +31,7 @@
     <div class="Container">
         <div class="Content">
             <div class="IconRelume">
-                <img src="../../../Front-end/Workspace/assets/svg/icon/cube.svg">
+                <img id="icon-moon" class="icon" src="../../../Front-end/Workspace/assets/svg/icon/cube.svg" alt="cube Icon"/>
             </div>
             <div class="ContentText">
                 <div class="Heading">Empowering artists to showcase their talent and connect with their audience.</div>
@@ -84,17 +84,17 @@
                 <div class="SocialIcons">
                     <div class="IconLinkedin">
                         <a href="#">
-                            <img src="../../../Front-end/Workspace/assets/svg/social/mini-linkedin.svg">
+                            <img class="icon" src="../../../Front-end/Workspace/assets/svg/social/mini-linkedin.svg">
                         </a>
                     </div>
                     <div class="IconX">
                         <a href="#">
-                        <img src="../../../Front-end/Workspace/assets/svg/social/x-transparent.svg">
+                        <img class="icon" src="../../../Front-end/Workspace/assets/svg/social/x-transparent.svg">
                         </a>
                     </div>
                     <div class="IconDribble">
                         <a href="#">
-                            <img src="../../../Front-end/Workspace/assets/svg/social/dribble.svg">
+                            <img class="icon" src="../../../Front-end/Workspace/assets/svg/social/dribble.svg">
                         </a>
                     </div>
                 </div>
@@ -110,17 +110,17 @@
                 <div class="SocialIcons">
                     <div class="IconLinkedin">
                         <a href="https://www.linkedin.com/in/toma-chang">
-                            <img src="../../../Front-end/Workspace/assets/svg/social/mini-linkedin.svg">
+                            <img class="icon" src="../../../Front-end/Workspace/assets/svg/social/mini-linkedin.svg">
                         </a>
                     </div>
                     <div class="IconX">
                         <a href="#">
-                            <img src="../../../Front-end/Workspace/assets/svg/social/x-transparent.svg">
+                            <img class="icon" src="../../../Front-end/Workspace/assets/svg/social/x-transparent.svg">
                         </a>
                     </div>
                     <div class="IconDribble">
                         <a href="#">
-                            <img src="../../../Front-end/Workspace/assets/svg/social/dribble.svg">
+                            <img class="icon" src="../../../Front-end/Workspace/assets/svg/social/dribble.svg">
                         </a>
                     </div>
                 </div>
@@ -136,17 +136,17 @@
                 <div class="SocialIcons">
                     <div class="IconLinkedin">
                         <a href="#">
-                            <img src="../../../Front-end/Workspace/assets/svg/social/mini-linkedin.svg">
+                            <img class="icon" src="../../../Front-end/Workspace/assets/svg/social/mini-linkedin.svg">
                         </a>
                     </div>
                     <div class="IconX">
                         <a href="#">
-                            <img src="../../../Front-end/Workspace/assets/svg/social/x-transparent.svg">
+                            <img class="icon" src="../../../Front-end/Workspace/assets/svg/social/x-transparent.svg">
                         </a>
                     </div>
                     <div class="IconDribble">
                         <a href="#">
-                            <img src="../../../Front-end/Workspace/assets/svg/social/dribble.svg">
+                            <img class="icon" src="../../../Front-end/Workspace/assets/svg/social/dribble.svg">
                         </a>
                     </div>
                 </div>
@@ -165,17 +165,17 @@
                 <div class="SocialIcons">
                     <div class="IconLinkedin">
                         <a href="#">
-                            <img src="../../../Front-end/Workspace/assets/svg/social/mini-linkedin.svg">
+                            <img class="icon" src="../../../Front-end/Workspace/assets/svg/social/mini-linkedin.svg">
                         </a>
                     </div>
                     <div class="IconX">
                         <a href="#">
-                            <img src="../../../Front-end/Workspace/assets/svg/social/x-transparent.svg">
+                            <img class="icon" src="../../../Front-end/Workspace/assets/svg/social/x-transparent.svg">
                         </a>
                     </div>
                     <div class="IconDribble">
                         <a href="#">
-                            <img src="../../../Front-end/Workspace/assets/svg/social/dribble.svg">
+                            <img class="icon" src="../../../Front-end/Workspace/assets/svg/social/dribble.svg">
                         </a>
                     </div>
                 </div>
@@ -190,17 +190,17 @@
                 <div class="SocialIcons">
                     <div class="IconLinkedin">
                         <a href="#">
-                            <img src="../../../Front-end/Workspace/assets/svg/social/mini-linkedin.svg">
+                            <img class="icon" src="../../../Front-end/Workspace/assets/svg/social/mini-linkedin.svg">
                         </a>
                     </div>
                     <div class="IconX">
                         <a href="#">
-                            <img src="../../../Front-end/Workspace/assets/svg/social/x-transparent.svg">
+                            <img class="icon" src="../../../Front-end/Workspace/assets/svg/social/x-transparent.svg">
                         </a>
                     </div>
                     <div class="IconDribble">
                         <a href="#">
-                            <img src="../../../Front-end/Workspace/assets/svg/social/dribble.svg">
+                            <img class="icon" src="../../../Front-end/Workspace/assets/svg/social/dribble.svg">
                         </a>
                     </div>
                 </div>
@@ -215,17 +215,17 @@
                 <div class="SocialIcons">
                     <div class="IconLinkedin">
                         <a href="#">
-                            <img src="../../../Front-end/Workspace/assets/svg/social/mini-linkedin.svg">
+                            <img class="icon" src="../../../Front-end/Workspace/assets/svg/social/mini-linkedin.svg">
                         </a>
                     </div>
                     <div class="IconX">
                         <a href="#">
-                            <img src="../../../Front-end/Workspace/assets/svg/social/x-transparent.svg">
+                            <img class="icon" src="../../../Front-end/Workspace/assets/svg/social/x-transparent.svg">
                         </a>
                     </div>
                     <div class="IconDribble">
                         <a href="#">
-                            <img src="../../../Front-end/Workspace/assets/svg/social/dribble.svg">
+                            <img class="icon" src="../../../Front-end/Workspace/assets/svg/social/dribble.svg">
                         </a>
                     </div>
                 </div>
@@ -248,30 +248,30 @@
         </div>
         <div class="Logos">
             <div class="Logo">
-                <img src="../../../Front-end/Workspace/assets/svg/brand/webflow.svg">
+                <img class="icon" src="../../../Front-end/Workspace/assets/svg/brand/webflow.svg">
             </div>
             <div class="Logo">
-                <img src="../../../Front-end/Workspace/assets/svg/brand/relume.svg">
+                <img class="icon" src="../../../Front-end/Workspace/assets/svg/brand/relume.svg">
             </div>
             <div class="Logo">
-                <img src="../../../Front-end/Workspace/assets/svg/brand/webflow.svg">
+                <img class="icon" src="../../../Front-end/Workspace/assets/svg/brand/webflow.svg">
             </div>
             <div class="Logo">
-                <img src="../../../Front-end/Workspace/assets/svg/brand/relume.svg">
+                <img class="icon" src="../../../Front-end/Workspace/assets/svg/brand/relume.svg">
             </div>
         </div>
         <div class="Logos">
             <div class="Logo">
-                <img src="../../../Front-end/Workspace/assets/svg/brand/webflow.svg">
+                <img class="icon" src="../../../Front-end/Workspace/assets/svg/brand/webflow.svg">
             </div>
             <div class="Logo">
-                <img src="../../../Front-end/Workspace/assets/svg/brand/relume.svg">
+                <img class="icon" src="../../../Front-end/Workspace/assets/svg/brand/relume.svg">
             </div>
             <div class="Logo">
-                <img src="../../../Front-end/Workspace/assets/svg/brand/webflow.svg">
+                <img class="icon" src="../../../Front-end/Workspace/assets/svg/brand/webflow.svg">
             </div>
             <div class="Logo">
-                <img src="../../../Front-end/Workspace/assets/svg/brand/relume.svg">
+                <img class="icon" src="../../../Front-end/Workspace/assets/svg/brand/relume.svg">
             </div>
         </div>
     </div>
@@ -282,19 +282,19 @@
         <h2 class="Heading">Trusted by industry-leading companies around the globe</h2>
         <div class="Logos">
             <div class="Logo">
-                <img src="../../../Front-end/Workspace/assets/svg/brand/webflow-2.svg">
+                <img class="icon" src="../../../Front-end/Workspace/assets/svg/brand/webflow-2.svg">
             </div>
             <div class="Logo">
-                <img src="../../../Front-end/Workspace/assets/svg/brand/relume-2.svg">
+                <img class="icon" src="../../../Front-end/Workspace/assets/svg/brand/relume-2.svg">
             </div>
             <div class="Logo">
-                <img src="../../../Front-end/Workspace/assets/svg/brand/webflow-2.svg">
+                <img class="icon" src="../../../Front-end/Workspace/assets/svg/brand/webflow-2.svg">
             </div>
             <div class="Logo">
-                <img src="../../../Front-end/Workspace/assets/svg/brand/relume-2.svg">
+                <img class="icon" src="../../../Front-end/Workspace/assets/svg/brand/relume-2.svg">
             </div>
             <div class="Logo">
-                <img src="../../../Front-end/Workspace/assets/svg/brand/webflow-2.svg">
+                <img class="icon" src="../../../Front-end/Workspace/assets/svg/brand/webflow-2.svg">
             </div>
         </div>
     </div>
