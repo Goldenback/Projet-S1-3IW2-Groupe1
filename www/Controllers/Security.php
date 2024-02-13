@@ -51,7 +51,7 @@ class Security
             exit();
         }
         // Ne pas afficher de contenu HTML ou de texte avant header()
-        require(BASE_DIR . "/Views/Security/login_form.php");
+        include(BASE_DIR . "/Views/Security/login_form.php");
     }
 
     public function logout(): void
@@ -106,7 +106,7 @@ class Security
                 $_SESSION["error_message"] = "Une erreur s'est produite lors de l'inscription.";
             }
         }
-        require(BASE_DIR . "/Views/Security/register_form.php");
+        include(BASE_DIR . "/Views/Security/register_form.php");
     }
 
     public function activate(): void
@@ -174,7 +174,7 @@ class Security
             }
         }
 
-        require(BASE_DIR . "/Views/Security/forgot_password.php");
+        include(BASE_DIR . "/Views/Security/forgot_password.php");
     }
 
     public function updatePassword(): void
