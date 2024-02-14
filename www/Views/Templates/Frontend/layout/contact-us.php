@@ -8,27 +8,27 @@
         </div>
     </div>
 
-    <form class="form" action="/sendMessage">
+    <form class="form" action="/send-message" method="post">
 
         <div class="inputs">
             <div class="input">
                 <label for="first-name">First name</label>
-                <input type="text" id="first-name" name="first-name" placeholder="Placeholder" required>
+                <input type="text" id="first-name" name="first-name" placeholder="Firstname" required>
             </div>
             <div class="input">
                 <label for="last-name">Last name</label>
-                <input type="text" id="last-name" name="last-name" placeholder="Placeholder" required>
+                <input type="text" id="last-name" name="last-name" placeholder="Lastname" required>
             </div>
         </div>
 
         <div class="inputs">
             <div class="input">
                 <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Placeholder" required>
+                <input type="email" id="email" name="email" placeholder="Email" required>
             </div>
             <div class="input">
                 <label for="phone">Phone number</label>
-                <input type="tel" id="phone" name="phone" placeholder="Placeholder" required>
+                <input type="tel" id="phone" name="phone" placeholder="Phone number" required>
             </div>
         </div>
 

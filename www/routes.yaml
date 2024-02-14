@@ -30,6 +30,10 @@
   controller : Main
   action : loadFrontEndView
 
+/thank-you :
+  controller : Main
+  action : loadFrontEndView
+
 
 #Controller Main -> Pour la vue du Backend
 #La fonction loadView → (/dashboard → dashboard = nom du fichier)
@@ -81,6 +85,11 @@
 /update-password:
   controller : Security
   action : updatePassword
+
+/newsletter:
+  controller : Contact
+  action : subscribe
+
 
 
 #Gestion d'erreur

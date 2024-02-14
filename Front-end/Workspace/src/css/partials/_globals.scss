@@ -15,3 +15,7 @@ img{
 .icon {
     filter: var(--icon-color);
 }
+
+.error {
+    color: var(--error-message);
+}

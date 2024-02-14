@@ -142,17 +142,18 @@
     </div>
 </section>
 
-<section class="service-cta2">
+<section class="service-cta2" id="newsletter">
     <div class="container">
         <div class="column">
             <div class="content">
                 <h2 class="heading">Build Your Website Today</h2>
                 <p class="text">Create a stunning website with our easy-to-use site builder.</p>
             </div>
+            <p class="error"><?= $error ?? '' ?></p>
             <form class="actions" action="/newsletter" method="post">
                 <div class="form-group">
                     <label>
-                        <input type="text" class="text-input" placeholder="Enter your email">
+                        <input type="email" name="email" required class="text-input" placeholder="Enter your email">
                     </label>
                     <button type="submit" class="Button Primary">subscribe</button>
                 </div>
