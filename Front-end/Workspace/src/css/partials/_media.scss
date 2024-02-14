@@ -1,4 +1,4 @@
-@media (prefers-color-scheme: dark ){
+@media (prefers-color-scheme: dark) {
   :root {
     --text-color: var(--black);
     --bg-color: var(--bg-color-dark);
@@ -6,12 +6,11 @@
     --btn-bg-hover-color: #333;
     --dropdown-bg-color-dark: var(--black);
     --dropdown-link-hover-bg-color-dark: #3a3a3a;
-    --error-message: #FF6B6B;
+    --error-message: #ff6b6b;
   }
 }
 
 @media screen and (max-width: 768px) {
-
   .navbar {
     flex-direction: column;
     padding: 0.5rem 0;
@@ -52,7 +51,9 @@
       gap: rem(24);
     }
 
-    .icon-envelope, .icon-phone, .icon-map {
+    .icon-envelope,
+    .icon-phone,
+    .icon-map {
       font-size: rem(20);
     }
 
@@ -64,11 +65,14 @@
   .contact-us {
     padding: rem(56) rem(50);
 
-    .inputs, .radios-content {
+    .inputs,
+    .radios-content {
       flex-direction: row;
     }
 
-    .inputs, .radios, .message-container {
+    .inputs,
+    .radios,
+    .message-container {
       width: auto;
       padding: 0 rem(16);
       box-sizing: border-box;
@@ -79,7 +83,6 @@
     padding: rem(56) rem(32);
 
     .Container {
-
     }
 
     .Accordion .faq-item .faq-question {
@@ -100,13 +103,15 @@
         align-items: center;
       }
 
-      .logo-column, .links-column {
+      .logo-column,
+      .links-column {
         flex-direction: column;
         align-items: center;
         font-size: var(--main-size-768);
       }
 
-      .social-links, .footer-links {
+      .social-links,
+      .footer-links {
         justify-content: center;
 
         a {
@@ -120,10 +125,12 @@
     }
   }
 
-  .Header-about, .Cta-about {
+  .Header-about,
+  .Cta-about {
     padding: rem(56) rem(32);
 
-    .Accordion .faq-item .faq-question, .Content {
+    .Accordion .faq-item .faq-question,
+    .Content {
       padding: rem(20) rem(20);
     }
   }
@@ -155,13 +162,13 @@
   .Team-about {
     .SectionTitle {
       .Subheading {
-          font-size: var(--subtitle-size-768);
-        }
-        .Heading {
-          font-size: var(--subtitle-size-768);
-        }
-        .Description {
-          font-size: var(--main-size-768);
+        font-size: var(--subtitle-size-768);
+      }
+      .Heading {
+        font-size: var(--subtitle-size-768);
+      }
+      .Description {
+        font-size: var(--main-size-768);
       }
     }
 
@@ -214,12 +221,13 @@
   }
 
   .Portfolio-Layout {
+    margin-top: 29rem;
     position: relative;
   }
 
   .Portfolio {
     .Content {
-      .PortfolioList{
+      .PortfolioList {
         .Row {
           flex-direction: column;
           align-items: center;
@@ -235,16 +243,27 @@
     }
   }
 
+  .Portfolio-feedback {
+    .Content {
+      flex-direction: column;
+    }
+  }
+
   .project-header {
     padding: rem(56) rem(32);
   }
 
-  .project-content .Container, .project-layout .Container, .project-layout2 .Content {
+  .project-content .Container,
+  .project-layout .Container,
+  .project-layout2 .Content {
     flex-direction: column;
-    gap: rem(32); /* Augmente l'espace entre les éléments pour une disposition verticale */
+    gap: rem(
+      32
+    ); /* Augmente l'espace entre les éléments pour une disposition verticale */
   }
 
-  .Tags, .Actions {
+  .Tags,
+  .Actions {
     justify-content: center; /* Centrage des tags et actions */
     flex-wrap: wrap; /* Permet aux éléments de passer à la ligne suivante si nécessaire */
   }
@@ -253,24 +272,34 @@
     padding: rem(56) rem(32); /* Réduction du padding pour les tablettes */
   }
 
-  .service-layout1 .container, .service-layout2 .content, .service-gallery .gallery-content {
+  .service-layout1 .container,
+  .service-layout2 .content,
+  .service-gallery .gallery-content {
     flex-direction: column;
-    gap: rem(32); /* Augmente l'espace entre les éléments pour une disposition verticale */
+    gap: rem(
+      32
+    ); /* Augmente l'espace entre les éléments pour une disposition verticale */
 
-    .Actions, .actions, .list, .List {
+    .Actions,
+    .actions,
+    .list,
+    .List {
       justify-content: center; /* Centrage des actions et listes pour les petits écrans */
       flex-wrap: wrap; /* Permet aux éléments de passer à la ligne suivante si nécessaire */
       gap: rem(16); /* Ajuste l'espacement entre les éléments */
     }
   }
 
-  .contact-header, .contact-map, .contact-cta {
+  .contact-header,
+  .contact-map,
+  .contact-cta {
     padding: rem(32); /* Réduction du padding pour les tablettes */
     .row {
       flex-direction: column; /*Change la disposition pour une meilleure visualisation sur tablette */
     }
 
-    .actions .form, .actions {
+    .actions .form,
+    .actions {
       flex-direction: column; /* Ajuste la disposition des actions pour les petits écrans */
       gap: rem(16); /* Espacement entre les éléments du formulaire */
     }

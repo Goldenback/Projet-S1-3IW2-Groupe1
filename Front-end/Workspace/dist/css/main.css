@@ -96,7 +96,7 @@ img {
     --btn-bg-hover-color: #333;
     --dropdown-bg-color-dark: var(--black);
     --dropdown-link-hover-bg-color-dark: #3a3a3a;
-    --error-message: #FF6B6B;
+    --error-message: #ff6b6b;
   }
 }
 @media screen and (max-width: 768px) {
@@ -133,7 +133,9 @@ img {
     flex-direction: row;
     gap: 1.5rem;
   }
-  .contact-menu .icon-envelope, .contact-menu .icon-phone, .contact-menu .icon-map {
+  .contact-menu .icon-envelope,
+  .contact-menu .icon-phone,
+  .contact-menu .icon-map {
     font-size: 1.25rem;
   }
   .contact-menu .contact-info {
@@ -142,10 +144,13 @@ img {
   .contact-us {
     padding: 3.5rem 3.125rem;
   }
-  .contact-us .inputs, .contact-us .radios-content {
+  .contact-us .inputs,
+  .contact-us .radios-content {
     flex-direction: row;
   }
-  .contact-us .inputs, .contact-us .radios, .contact-us .message-container {
+  .contact-us .inputs,
+  .contact-us .radios,
+  .contact-us .message-container {
     width: auto;
     padding: 0 1rem;
     box-sizing: border-box;
@@ -168,24 +173,31 @@ img {
     width: 100%;
     align-items: center;
   }
-  .footer .content .logo-column, .footer .content .links-column {
+  .footer .content .logo-column,
+  .footer .content .links-column {
     flex-direction: column;
     align-items: center;
     font-size: var(--main-size-768);
   }
-  .footer .content .social-links, .footer .content .footer-links {
+  .footer .content .social-links,
+  .footer .content .footer-links {
     justify-content: center;
   }
-  .footer .content .social-links a, .footer .content .footer-links a {
+  .footer .content .social-links a,
+  .footer .content .footer-links a {
     font-size: var(--main-size-768);
   }
   .footer .content .link-list {
     align-items: center;
   }
-  .Header-about, .Cta-about {
+  .Header-about,
+  .Cta-about {
     padding: 3.5rem 2rem;
   }
-  .Header-about .Accordion .faq-item .faq-question, .Header-about .Content, .Cta-about .Accordion .faq-item .faq-question, .Cta-about .Content {
+  .Header-about .Accordion .faq-item .faq-question,
+  .Header-about .Content,
+  .Cta-about .Accordion .faq-item .faq-question,
+  .Cta-about .Content {
     padding: 1.25rem 1.25rem;
   }
   .Layout1-about {
@@ -250,6 +262,7 @@ img {
     font-size: var(--main-size-768);
   }
   .Portfolio-Layout {
+    margin-top: 29rem;
     position: relative;
   }
   .Portfolio .Content .PortfolioList .Row {
@@ -260,36 +273,64 @@ img {
   .Portfolio-Logo .Content {
     flex-direction: column;
   }
+  .Portfolio-feedback .Content {
+    flex-direction: column;
+  }
   .project-header {
     padding: 3.5rem 2rem;
   }
-  .project-content .Container, .project-layout .Container, .project-layout2 .Content {
+  .project-content .Container,
+  .project-layout .Container,
+  .project-layout2 .Content {
     flex-direction: column;
     gap: 2rem; /* Augmente l'espace entre les éléments pour une disposition verticale */
   }
-  .Tags, .Actions {
+  .Tags,
+  .Actions {
     justify-content: center; /* Centrage des tags et actions */
     flex-wrap: wrap; /* Permet aux éléments de passer à la ligne suivante si nécessaire */
   }
   .service-header {
     padding: 3.5rem 2rem; /* Réduction du padding pour les tablettes */
   }
-  .service-layout1 .container, .service-layout2 .content, .service-gallery .gallery-content {
+  .service-layout1 .container,
+  .service-layout2 .content,
+  .service-gallery .gallery-content {
     flex-direction: column;
     gap: 2rem; /* Augmente l'espace entre les éléments pour une disposition verticale */
   }
-  .service-layout1 .container .Actions, .service-layout1 .container .actions, .service-layout1 .container .list, .service-layout1 .container .List, .service-layout2 .content .Actions, .service-layout2 .content .actions, .service-layout2 .content .list, .service-layout2 .content .List, .service-gallery .gallery-content .Actions, .service-gallery .gallery-content .actions, .service-gallery .gallery-content .list, .service-gallery .gallery-content .List {
+  .service-layout1 .container .Actions,
+  .service-layout1 .container .actions,
+  .service-layout1 .container .list,
+  .service-layout1 .container .List,
+  .service-layout2 .content .Actions,
+  .service-layout2 .content .actions,
+  .service-layout2 .content .list,
+  .service-layout2 .content .List,
+  .service-gallery .gallery-content .Actions,
+  .service-gallery .gallery-content .actions,
+  .service-gallery .gallery-content .list,
+  .service-gallery .gallery-content .List {
     justify-content: center; /* Centrage des actions et listes pour les petits écrans */
     flex-wrap: wrap; /* Permet aux éléments de passer à la ligne suivante si nécessaire */
     gap: 1rem; /* Ajuste l'espacement entre les éléments */
   }
-  .contact-header, .contact-map, .contact-cta {
+  .contact-header,
+  .contact-map,
+  .contact-cta {
     padding: 2rem; /* Réduction du padding pour les tablettes */
   }
-  .contact-header .row, .contact-map .row, .contact-cta .row {
+  .contact-header .row,
+  .contact-map .row,
+  .contact-cta .row {
     flex-direction: column; /*Change la disposition pour une meilleure visualisation sur tablette */
   }
-  .contact-header .actions .form, .contact-header .actions, .contact-map .actions .form, .contact-map .actions, .contact-cta .actions .form, .contact-cta .actions {
+  .contact-header .actions .form,
+  .contact-header .actions,
+  .contact-map .actions .form,
+  .contact-map .actions,
+  .contact-cta .actions .form,
+  .contact-cta .actions {
     flex-direction: column; /* Ajuste la disposition des actions pour les petits écrans */
     gap: 1rem; /* Espacement entre les éléments du formulaire */
   }
@@ -1699,7 +1740,7 @@ img {
 }
 
 .Portfolio {
-  width: 100%;
+  width: auto;
   height: 71.75rem;
   padding: 7rem 4rem;
   display: flex;
@@ -1727,7 +1768,7 @@ img {
   line-height: var(--line-height);
 }
 .Portfolio .SectionTitle .Content {
-  width: 100%;
+  width: auto;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -1768,7 +1809,7 @@ img {
   gap: 3rem;
 }
 .Portfolio .Content .PortfolioList .Row {
-  width: 82rem;
+  width: auto;
   display: flex;
   justify-content: flex-start;
   gap: 3rem;
@@ -1981,8 +2022,6 @@ img {
 .Portfolio-feedback .Content {
   width: 100%;
   display: flex;
-  flex-direction: unset;
-  flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: flex-start;
   gap: 4rem;
