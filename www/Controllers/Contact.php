@@ -47,4 +47,40 @@ class Contact
         }
     }
 
+    public function sendMessage()
+    {
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            // Récupération et nettoyage des données du formulaire
+            $firstName = htmlspecialchars(strip_tags($_POST['first-name']));
+            $lastName = htmlspecialchars(strip_tags($_POST['last-name']));
+            $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
+            $phone = htmlspecialchars(strip_tags($_POST['phone']));
+            $topic = htmlspecialchars(strip_tags($_POST['topic']));
+            $userType = $_POST['option'];
+            $message = htmlspecialchars(strip_tags($_POST['messageArea']));
+
+            // Validation supplémentaire des données
+            if (empty($firstName) || empty($lastName) || !filter_var($email, FILTER_VALIDATE_EMAIL) || empty($phone) || empty($topic) || empty($userType) || empty($message)) {
+                header('Location: /contact#contact-us');
+                exit;
+            } else {
+                try {
+                    // Gestion du mail
+
+                    // Si tout est réussi, rediriger vers la page de remerciement
+
+                    header('Location: /thank-you');
+                    exit;
+                }
+                catch (Exception $e) {
+                    // En cas d'erreur lors de l'enregistrement ou de l'envoi de l'e-mail
+                    header('Location: /contact#contact-us');
+                    exit;
+                }
+            }
+        } else {
+            header('Location: /about');
+            exit;
+        }
+    }
 }

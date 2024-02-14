@@ -90,7 +90,9 @@
   controller : Contact
   action : subscribe
 
-
+/send-message:
+  controller : Contact
+  action : sendMessage
 
 #Gestion d'erreur
 /error:
