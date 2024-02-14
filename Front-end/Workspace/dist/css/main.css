@@ -134,10 +134,6 @@ img {
   .contact-menu .contact-info {
     align-items: flex-start;
   }
-  .contact-us {
-    padding-top: 6.25rem;
-    gap: 3.125rem;
-  }
   .contact-us .inputs, .contact-us .radios-content {
     flex-direction: row;
   }
