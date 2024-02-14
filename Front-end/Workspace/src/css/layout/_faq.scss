@@ -3,6 +3,7 @@
   @include flexbox(column, nowrap, center, center, rem(80));
 
   .Container {
+    width: auto;
     @include flexbox(column, nowrap, center, center, rem(80));
   }
 

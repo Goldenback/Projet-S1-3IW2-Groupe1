@@ -54,13 +54,13 @@
 
 .Layout1-about {
   width: 100%;
-  height: rem(864);
+  height: auto;
   padding: rem(112) rem(64);
   @include flexbox(column, nowrap, unset, flex-start, rem(80));
 
   .Container {
     align-self: stretch;
-    @include flexbox(unset, nowrap, flex-start, center, rem(80));
+    @include flexbox(row, nowrap, flex-start, center, rem(80));
   }
 
   .Content {
@@ -193,7 +193,7 @@
     .Subheading {
       font-size: var(--subtitle-size);
       font-weight: 600;
-      line-height: var(--line-height)
+      line-height: var(--line-height);
     }
     .Heading {
       font-size: var(--heading-size);
@@ -203,7 +203,7 @@
     .Description {
       font-size: var(--main-size);
       font-weight: 400;
-      line-height: var(--line-height)
+      line-height: var(--line-height);
     }
   }
 
@@ -259,13 +259,15 @@
 
 .Logo1-about {
   width: 100%;
-  height: rem(584);
+  height: auto;
   padding: rem(112) rem(64);
   @include flexbox(unset, nowrap, unset, center, rem(80));
 
   .Container {
-    @include flexbox(row, nowrap, space-between, center, rem(80));
-    gap: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
     width: 100%;
 
     .Content {
@@ -323,12 +325,15 @@
 
 .Logo2-about {
   width: 100%;
-  height: rem(216);
+  height: auto;
   padding: rem(80) rem(64);
-  @include flexbox(column, nowrap, center, center, rem(80));
+  @include flexbox(unset, nowrap, flex-start, center, rem(80));
 
   .Container {
-    @include flexbox(unset, nowrap, start, center, rem(64));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: rem(64);
     width: 100%;
 
     .Heading {
@@ -341,7 +346,9 @@
     }
 
     .Logos {
-      @include flexbox(unset, nowrap, end, center);
+      display: flex;
+      justify-content: end;
+      align-items: center;
       flex: 1;
 
       .Logo {

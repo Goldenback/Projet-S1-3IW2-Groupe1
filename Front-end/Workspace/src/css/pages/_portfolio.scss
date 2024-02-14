@@ -1,6 +1,5 @@
 .Portfolio-container {
   width: 100%;
-  height: auto;
   padding-bottom: rem(80);
   @include flexbox(column, nowrap, flex-start, center, rem(80));
 
@@ -24,7 +23,7 @@
       @include flexbox(column, nowrap, center, center, rem(24));
 
       h1 {
-        font-size: rem(56);
+        font-size: var(--h1-font-size);
         font-family: var(--website-font-family);
         font-weight: 700;
         line-height: rem(67.2);
@@ -127,7 +126,7 @@
       font-size: var(--main-size);
       font-family: var(--website-font-family);
       font-weight: 600;
-      line-height: var(--line-height)
+      line-height: var(--line-height);
     }
 
     .Content {
@@ -162,7 +161,9 @@
 
       .Row {
         width: rem(1312);
-        @include flexbox(unset, nowrap, flex-start, flex-start, rem(48));
+        display: flex;
+        justify-content: flex-start;
+        gap: rem(48);
 
         .Card {
           flex: 1;
@@ -280,7 +281,7 @@
     align-self: stretch;
     width: 100%;
     height: rem(838);
-    object-fit: fill;
+    object-fit: cover;
   }
 }
 
@@ -299,7 +300,10 @@
   }
 
   .Content {
-    @include flexbox(unset, nowrap, center, center, rem(24));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: rem(24);
 
     .Logo {
       &.Webflow,

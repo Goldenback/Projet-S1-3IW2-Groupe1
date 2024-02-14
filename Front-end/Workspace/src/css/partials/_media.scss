@@ -10,11 +10,12 @@
   }
 }
 
-@media screen and (max-width: rem(768)) {
+@media screen and (max-width: 768px) {
 
   .navbar {
     flex-direction: column;
     padding: 0.5rem 0;
+    position: fixed;
 
     .container {
       padding-right: rem(50);
@@ -61,12 +62,14 @@
   }
 
   .contact-us {
+    padding: rem(56) rem(50);
+
     .inputs, .radios-content {
       flex-direction: row;
     }
 
     .inputs, .radios, .message-container {
-      width: 100%;
+      width: auto;
       padding: 0 rem(16);
       box-sizing: border-box;
     }
@@ -74,6 +77,10 @@
 
   .Faq {
     padding: rem(56) rem(32);
+
+    .Container {
+
+    }
 
     .Accordion .faq-item .faq-question {
       padding-left: rem(10);
@@ -113,7 +120,7 @@
     }
   }
 
-  .Header-about, .Layout1-about, .Layout2-about, .Team-about, .Logo1-about, .Logo2-about, .Cta-about {
+  .Header-about, .Cta-about {
     padding: rem(56) rem(32);
 
     .Accordion .faq-item .faq-question, .Content {
@@ -121,19 +128,111 @@
     }
   }
 
+  .Layout1-about {
+    padding: rem(56) rem(32);
+    .Container {
+      width: 50%;
+      flex-direction: column;
+    }
+    .PlaceholderImage {
+      width: rem(308);
+      height: rem(320);
+    }
+  }
+
+  .Layout2-about {
+    padding: rem(56) rem(32);
+    .Container {
+      width: 50%;
+      flex-direction: column;
+    }
+    .PlaceholderImage {
+      width: rem(308);
+      height: rem(320);
+    }
+  }
+
+  .Team-about {
+    .SectionTitle {
+      .Subheading {
+          font-size: var(--subtitle-size-768);
+        }
+        .Heading {
+          font-size: var(--subtitle-size-768);
+        }
+        .Description {
+          font-size: var(--main-size-768);
+      }
+    }
+
+    .Content {
+      .Card {
+        .Name {
+          font-size: var(--subtitle-size-768);
+        }
+        .JobTitle {
+          font-size: var(--main-size-768);
+        }
+        .Bio {
+          font-size: var(--main-size-768);
+        }
+      }
+    }
+  }
+
+  .Logo1-about {
+    padding: rem(56) rem(32);
+
+    .Container {
+      flex-direction: column;
+    }
+  }
+
+  .Logo2-about {
+    .Container {
+      flex-direction: column;
+      .Logos {
+        flex-direction: column;
+      }
+    }
+  }
+
   .Portfolio-container {
-    padding: 56px 32px;
+    .background-image {
+      .content {
+        gap: 0;
+
+        .h1 {
+          font-size: var(--h1-font-size-768);
+        }
+
+        .p {
+          font-size: var(--main-size-768);
+        }
+      }
+    }
   }
 
-  .Portfolio-Gallery .Content div,
-  .Portfolio-Layout .Content .Column,
-  .Portfolio-feedback .Content .Column {
-    flex-direction: column;
-    align-items: center;
+  .Portfolio-Layout {
+    position: relative;
   }
 
-  .tags span, .Tags .Tag, .Actions, .PortfolioList .Row {
-    @include flexbox(unset, wrap, center, unset, rem(8));
+  .Portfolio {
+    .Content {
+      .PortfolioList{
+        .Row {
+          flex-direction: column;
+          align-items: center;
+          gap: rem(50);
+        }
+      }
+    }
+  }
+
+  .Portfolio-Logo {
+    .Content {
+      flex-direction: column;
+    }
   }
 
   .project-header {
