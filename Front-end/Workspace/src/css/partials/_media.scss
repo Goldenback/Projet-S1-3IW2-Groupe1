@@ -15,22 +15,30 @@
   .navbar {
     flex-direction: column;
     padding: 0.5rem 0;
+
+    .container {
+      padding-right: rem(50);
+      .Button {
+        padding: rem(6) rem(12);
+      }
+    }
+
     .logo-container {
       margin-bottom: 1rem;
     }
-  
+
     .navbar-links {
-      flex-direction: column;
-      width: 100%;
+      flex-direction: row;
+
+      li {
+        font-size: var(--main-size-768);
+        padding: 0.5rem 0;
+      }
     }
-  
-    .navbar-links li {
-      padding: 0.5rem 0;
-    }
-  
+
     .theme-switcher {
-      position: relative;
-      right: 0;
+      position: absolute;
+      right: 5%;
       padding-top: 1rem;
     }
   }
@@ -39,14 +47,14 @@
     padding: rem(56) rem(32);
 
     .row {
-      flex-direction: column;
+      flex-direction: row;
       gap: rem(24);
     }
-  
+
     .icon-envelope, .icon-phone, .icon-map {
-      font-size: rem(30);
+      font-size: rem(20);
     }
-  
+
     .contact-info {
       align-items: flex-start;
     }
@@ -59,7 +67,7 @@
     .inputs, .radios-content {
       flex-direction: row;
     }
-  
+
     .inputs, .radios, .message-container {
       width: 100%;
       padding: 0 rem(16);
@@ -78,34 +86,39 @@
   }
 
   .footer {
-    padding: 32px;
+    padding: rem(32);
 
     .content {
       flex-direction: column;
-    }
-  
-    .column {
-      width: 100%;
-      align-items: center;
-    }
-  
-    .logo-column, .links-column {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .social-links, .footer-links {
-      justify-content: center;
-    }
-  
-    .link-list {
-      align-items: center;
+
+      .column {
+        width: 100%;
+        align-items: center;
+      }
+
+      .logo-column, .links-column {
+        flex-direction: column;
+        align-items: center;
+        font-size: var(--main-size-768);
+      }
+
+      .social-links, .footer-links {
+        justify-content: center;
+
+        a {
+          font-size: var(--main-size-768);
+        }
+      }
+
+      .link-list {
+        align-items: center;
+      }
     }
   }
 
   .Header-about, .Layout1-about, .Layout2-about, .Team-about, .Logo1-about, .Logo2-about, .Cta-about {
-    padding: rem(56) rem(32); 
-    
+    padding: rem(56) rem(32);
+
     .Accordion .faq-item .faq-question, .Content {
       padding: rem(20) rem(20);
     }
@@ -160,7 +173,7 @@
     .row {
       flex-direction: column; /*Change la disposition pour une meilleure visualisation sur tablette */
     }
-  
+
     .actions .form, .actions {
       flex-direction: column; /* Ajuste la disposition des actions pour les petits écrans */
       gap: rem(16); /* Espacement entre les éléments du formulaire */

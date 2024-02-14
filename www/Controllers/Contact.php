@@ -47,7 +47,7 @@ class Contact
         }
     }
 
-    public function sendMessage()
+    public function sendMessage() : void
     {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // Récupération et nettoyage des données du formulaire

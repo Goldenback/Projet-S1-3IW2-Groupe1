@@ -1,16 +1,13 @@
 .footer {
   width: 100%;
-  height: rem(538);
+  height: auto;
   padding: rem(80) rem(64);
   @include flexbox(column, nowrap, unset, center, rem(64));
 
   .content {
     width: 100%;
-    height: rem(244);
-    display: inline-flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: rem(64);
+    height: auto;
+    @include flexbox(unset, nowrap, flex-start, flex-start, rem(64));
 
     .column {
       width: rem(1312);

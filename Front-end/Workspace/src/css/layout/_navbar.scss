@@ -22,7 +22,7 @@
   }
 
   .navbar-links {
-    width: 30%;
+    gap: rem(32);
     display: flex;
     justify-content: space-around;
     font-family: var(--website-font-family);
@@ -86,7 +86,7 @@
 
   .theme-switcher {
     position: absolute;
-    right: rem(100);
+    right: 5%;
     cursor: pointer;
     padding: rem(10);
 

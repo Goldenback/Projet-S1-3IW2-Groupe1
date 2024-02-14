@@ -32,16 +32,13 @@
 
 </nav>
 <script>
-
-  document.addEventListener('DOMContentLoaded', () => {
+    document.addEventListener('DOMContentLoaded', () => {
   const moreButton = document.querySelector('.navbar-links .more');
   moreButton.addEventListener('click', function() {
     this.querySelector('.dropdown-content').classList.toggle('show');
   });
 });
-
-
-document.addEventListener('DOMContentLoaded', () => {
+    document.addEventListener('DOMContentLoaded', () => {
   const themeSwitcher = document.getElementById('themeSwitcher');
   const iconSun = document.getElementById('icon-sun');
   const iconMoon = document.getElementById('icon-moon');
@@ -67,7 +64,4 @@ document.addEventListener('DOMContentLoaded', () => {
   document.body.classList.toggle('dark-mode', isDarkModeInitial);
   updateIcons(isDarkModeInitial);
 });
-
-
-
 </script>
