@@ -266,13 +266,14 @@
 
 .project-layout2 {
   width: 100%;
-  height: rem(1346);
+  height: auto;
   padding: rem(112) rem(64);
   @include flexbox(column, nowrap, flex-start, center, rem(80));
   font-family: var(--website-font-family);
 
   .Content {
     align-self: stretch;
+
     @include flexbox(row, nowrap, flex-start, flex-start, rem(80));
 
     .Column {
@@ -393,7 +394,7 @@
 
 .project-cta {
   width: 100%;
-  height: rem(421);
+  height: auto;
   padding: rem(112) rem(64);
   background-color: var(--reverse-bg-color);
   @include flexbox(column, nowrap, flex-start, flex-start, rem(80));

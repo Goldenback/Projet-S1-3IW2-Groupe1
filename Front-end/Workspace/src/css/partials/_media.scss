@@ -257,9 +257,6 @@
   .project-layout .Container,
   .project-layout2 .Content {
     flex-direction: column;
-    gap: rem(
-      32
-    ); /* Augmente l'espace entre les éléments pour une disposition verticale */
   }
 
   .Tags,
@@ -268,7 +265,12 @@
     flex-wrap: wrap; /* Permet aux éléments de passer à la ligne suivante si nécessaire */
   }
 
-  .service-layout1 .container, .content,
+  .project-layout2, .project-galerry{
+    margin-top: 29rem;
+  }
+
+  .service-layout1 .container,
+  .content,
   .service-gallery .gallery-content {
     flex-direction: column;
 
@@ -290,7 +292,8 @@
     }
   }
 
-  .service-cta1, .service-cta2 {
+  .service-cta1,
+  .service-cta2 {
     .container {
       flex-direction: column;
     }

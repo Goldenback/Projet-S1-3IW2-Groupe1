@@ -284,21 +284,25 @@ img {
   .project-layout .Container,
   .project-layout2 .Content {
     flex-direction: column;
-    gap: 2rem; /* Augmente l'espace entre les éléments pour une disposition verticale */
   }
   .Tags,
   .Actions {
     justify-content: center; /* Centrage des tags et actions */
     flex-wrap: wrap; /* Permet aux éléments de passer à la ligne suivante si nécessaire */
   }
-  .service-layout1 .container, .content,
+  .project-layout2, .project-galerry {
+    margin-top: 29rem;
+  }
+  .service-layout1 .container,
+  .content,
   .service-gallery .gallery-content {
     flex-direction: column;
   }
   .service-layout1 .container .Actions,
   .service-layout1 .container .actions,
   .service-layout1 .container .list,
-  .service-layout1 .container .List, .content .Actions,
+  .service-layout1 .container .List,
+  .content .Actions,
   .content .actions,
   .content .list,
   .content .List,
@@ -313,7 +317,8 @@ img {
   .service-layout2 .section-title .heading {
     font-size: var(--heading-size-768);
   }
-  .service-cta1 .container, .service-cta2 .container {
+  .service-cta1 .container,
+  .service-cta2 .container {
     flex-direction: column;
   }
   .contact-header,
@@ -2428,7 +2433,7 @@ img {
 
 .project-layout2 {
   width: 100%;
-  height: 84.125rem;
+  height: auto;
   padding: 7rem 4rem;
   display: flex;
   flex-direction: column;
@@ -2581,7 +2586,7 @@ img {
 
 .project-cta {
   width: 100%;
-  height: 26.3125rem;
+  height: auto;
   padding: 7rem 4rem;
   background-color: var(--reverse-bg-color);
   display: flex;
