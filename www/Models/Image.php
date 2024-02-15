@@ -2,57 +2,42 @@
 
 namespace App\Models;
 
-class image
+use App\Core\DB;
+
+class Image extends DB
 {
-    private ?int $id_images;
-    private string $url;
-    private string $text;
+    private int $id;
+    private string $imageName;
 
     /**
-     * @return int|null
+     * @return int
      */
-    public function getIdImages(): ?int
+    public function getId(): int
     {
-        return $this->id_images;
+        return $this->id;
     }
 
     /**
-     * @param int|null $id_images
+     * @param int $id
      */
-    public function setIdImages(?int $id_images): void
+    public function setId(int $id): void
     {
-        $this->id_images = $id_images;
-    }
-
-    /**
-     * @return string
-     */
-    public function getUrl(): string
-    {
-        return $this->url;
-    }
-
-    /**
-     * @param string $url
-     */
-    public function setUrl(string $url): void
-    {
-        $this->url = $url;
+        $this->id = $id;
     }
 
     /**
      * @return string
      */
-    public function getText(): string
+    public function getImageName(): string
     {
-        return $this->text;
+        return $this->imageName;
     }
 
     /**
-     * @param string $text
+     * @param string $imageName
      */
-    public function setText(string $text): void
+    public function setImageName(string $imageName): void
     {
-        $this->text = $text;
+        $this->imageName = $imageName;
     }
 }

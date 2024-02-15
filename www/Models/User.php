@@ -7,7 +7,7 @@ use PDO;
 
 class User
 {
-    private ?int $id = null;
+    private int $id;
     protected string $firstname;
     protected string $lastname;
     protected string $email;
@@ -25,7 +25,7 @@ class User
     /**
      * @return int
      */
-    public function getId(): ?int
+    public function getId(): int
     {
         return $this->id;
     }

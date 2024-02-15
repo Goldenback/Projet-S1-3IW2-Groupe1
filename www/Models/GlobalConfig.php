@@ -4,7 +4,7 @@ namespace App\Models;
 
 use App\Core\DB;
 
-class Config extends DB
+class GlobalConfig extends DB
 {
     protected int $id;
     protected string $colorPrimary;
