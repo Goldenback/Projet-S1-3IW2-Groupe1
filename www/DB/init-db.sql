@@ -51,9 +51,6 @@ CREATE TABLE IF NOT EXISTS config (
     id_secondary_font INT NOT NULL REFERENCES fonts(id_fonts),
     primary_color VARCHAR(50) DEFAULT NULL,
     secondary_color VARCHAR(50) DEFAULT NULL,
-    created_at TIMESTAMP NOT NULL,
-    updated_at TIMESTAMP DEFAULT NULL,
-    deleted_at TIMESTAMP NOT NULL
     );
 
 --
