@@ -50,6 +50,7 @@
   --subtitle-size: 1.5rem;
   --subtitle-size-768: 0.75rem;
   --heading-size: 3rem;
+  --heading-size-768: 1.875rem;
   --line-height: 1.6875rem;
   --h1-font-size: 3.5rem;
   --h1-font-size-768: 1.75rem;
@@ -290,23 +291,17 @@ img {
     justify-content: center; /* Centrage des tags et actions */
     flex-wrap: wrap; /* Permet aux éléments de passer à la ligne suivante si nécessaire */
   }
-  .service-header {
-    padding: 3.5rem 2rem; /* Réduction du padding pour les tablettes */
-  }
-  .service-layout1 .container,
-  .service-layout2 .content,
+  .service-layout1 .container, .content,
   .service-gallery .gallery-content {
     flex-direction: column;
-    gap: 2rem; /* Augmente l'espace entre les éléments pour une disposition verticale */
   }
   .service-layout1 .container .Actions,
   .service-layout1 .container .actions,
   .service-layout1 .container .list,
-  .service-layout1 .container .List,
-  .service-layout2 .content .Actions,
-  .service-layout2 .content .actions,
-  .service-layout2 .content .list,
-  .service-layout2 .content .List,
+  .service-layout1 .container .List, .content .Actions,
+  .content .actions,
+  .content .list,
+  .content .List,
   .service-gallery .gallery-content .Actions,
   .service-gallery .gallery-content .actions,
   .service-gallery .gallery-content .list,
@@ -314,6 +309,12 @@ img {
     justify-content: center; /* Centrage des actions et listes pour les petits écrans */
     flex-wrap: wrap; /* Permet aux éléments de passer à la ligne suivante si nécessaire */
     gap: 1rem; /* Ajuste l'espacement entre les éléments */
+  }
+  .service-layout2 .section-title .heading {
+    font-size: var(--heading-size-768);
+  }
+  .service-cta1 .container, .service-cta2 .container {
+    flex-direction: column;
   }
   .contact-header,
   .contact-map,
@@ -2646,7 +2647,7 @@ img {
   font-family: var(--website-font-family);
 }
 .service-header .column {
-  height: 17.0625rem;
+  height: auto;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -2698,8 +2699,6 @@ img {
 }
 .service-layout1 .container {
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
   gap: 5rem;
@@ -2805,7 +2804,7 @@ img {
   font-weight: 600;
   line-height: var(--line-height);
 }
-.service-layout2 .section-title .heading {
+.service-layout2 .section-title h1 {
   font-size: var(--heading-size);
   font-weight: 700;
   line-height: var(--line-height);
@@ -3037,8 +3036,6 @@ img {
 }
 .service-cta1 .container {
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
   gap: 5rem;
@@ -3094,8 +3091,6 @@ img {
 }
 .service-cta2 .container {
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
   gap: 5rem;

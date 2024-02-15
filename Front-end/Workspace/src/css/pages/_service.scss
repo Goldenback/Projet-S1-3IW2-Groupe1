@@ -6,7 +6,7 @@
   font-family: var(--website-font-family);
 
   .column {
-    height: rem(273);
+    height: auto;
     @include flexbox(column, nowrap, flex-start, center, rem(24));
 
     .content {
@@ -49,7 +49,10 @@
   box-sizing: border-box;
 
   .container {
-    @include flexbox(row, nowrap, space-between, center, rem(80));
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: rem(80);
 
     .content {
       @include flexbox(column, nowrap, flex-start, flex-start);
@@ -131,7 +134,7 @@
       line-height: var(--line-height);
     }
 
-    .heading {
+    h1 {
       font-size: var(--heading-size);
       font-weight: 700;
       line-height: var(--line-height);
@@ -327,7 +330,10 @@
   box-sizing: border-box;
 
   .container {
-    @include flexbox(row, nowrap, space-between, center, rem(80));
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap : rem(80);
   }
 
   .column {
@@ -372,7 +378,10 @@
   box-sizing: border-box;
 
   .container {
-    @include flexbox(row, nowrap, space-between, center, rem(80));
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap : rem(80);
   }
 
   .column {

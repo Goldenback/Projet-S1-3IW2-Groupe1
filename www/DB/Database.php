@@ -11,7 +11,7 @@ Class Database {
 
     public function __construct(){}
 
-    function getDatabaseConnection(): PDO
+    public function getDatabaseConnection(): PDO
     {
         $host = 'db';
         $db   = 'db_name';
