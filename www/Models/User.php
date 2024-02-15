@@ -2,8 +2,7 @@
 
 namespace App\Models;
 
-
-use App\DB\Database;
+use App\Core\DB;
 use PDO;
 
 class User
@@ -15,12 +14,12 @@ class User
     protected string $pwd;
     protected string $role;
     protected int $isDeleted;
-    private Database $database;
+    private DB $database;
 
 
     public function __construct()
     {
-        $this->database = new Database();
+        $this->database = new DB();
     }
 
     /**
@@ -158,8 +157,8 @@ class User
     }
 
 
-
-    public function authenticateUser(String $email, String $password): bool {
+    public function authenticateUser(string $email, string $password): bool
+    {
 
         $pdo = $this->database->getDatabaseConnection();
 
@@ -173,14 +172,16 @@ class User
 
         return false;
     }
-    public function createUser(String $firstname, String $lastname, String $email, String $password, String $role, String $ActivationToken): bool
+
+    public function createUser(string $firstname, string $lastname, string $email, string $password, string $role, string $ActivationToken): bool
     {
         $pdo = $this->database->getDatabaseConnection();
 
         $stmt = $pdo->prepare("INSERT INTO users (Firstname, Lastname, email, pwd, Role, is_validated, created_at, updated_at, deleted_at, token) VALUES (?, ?, ?, ?, ?, FALSE, NOW(), NULL, NULL, ?)");
         return $stmt->execute([$firstname, $lastname, $email, $password, $role, $ActivationToken]);
     }
-    public function EmailExists(String $email): bool
+
+    public function EmailExists(string $email): bool
     {
         $pdo = $this->database->getDatabaseConnection();
 
@@ -196,7 +197,6 @@ class User
     }
 
 
-
     // Validation d'un compte à sa création
     public function isTokenValid(string $token): bool //vérifie le token
     {
@@ -205,6 +205,7 @@ class User
         $stmt->execute(['token' => $token]);
         return $stmt->fetchColumn() > 0;
     }
+
     public function activateUser(string $token): bool //active l'utilisateur
     {
         $pdo = $this->database->getDatabaseConnection();
@@ -212,6 +213,7 @@ class User
         $stmt->execute(['token' => $token]);
         return $stmt->rowCount() > 0;
     }
+
     public function is_Validated($email): bool  //vérifie si il est activé
     {
         // Assurez-vous de sécuriser la valeur de l'e-mail
@@ -234,7 +236,6 @@ class User
             return false;
         }
     }
-
 
 
 }

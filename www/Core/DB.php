@@ -1,20 +1,23 @@
 <?php
 
-namespace App\DB;
+namespace App\Core;
 
 use PDO;
 
 /**
  * @method prepare(string $string)
  */
-Class Database {
+class DB
+{
 
-    public function __construct(){}
+    public function __construct()
+    {
+    }
 
     function getDatabaseConnection(): PDO
     {
         $host = 'db';
-        $db   = 'db_name';
+        $db = 'db_name';
         $user = 'super_user_name';
         $pass = 'smth_smth';
 

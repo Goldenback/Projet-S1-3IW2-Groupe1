@@ -2,33 +2,28 @@
 
 namespace App\Models;
 
-use App\DB\Database;
+use App\Core\DB;
 
-class config
+class Config extends DB
 {
-    private ?int $id;
-    private string $primary_color;
-    private string $secondary_color;
-    private string $isDeleted;
-    private Database $pdo;
-
-    public function __construct()
-    {
-        $this->pdo = new Database();
-    }
+    protected int $id;
+    protected string $colorPrimary;
+    protected string $colorSecondary;
+    protected ?Font $fontPrimary = null;
+    protected ?Font $fontSecondary = null;
 
     /**
-     * @return int|null
+     * @return int
      */
-    public function getId(): ?int
+    public function getId(): int
     {
         return $this->id;
     }
 
     /**
-     * @param int|null $id
+     * @param int $id
      */
-    public function setId(?int $id): void
+    public function setId(int $id): void
     {
         $this->id = $id;
     }
@@ -36,55 +31,64 @@ class config
     /**
      * @return string
      */
-    public function getPrimaryColor(): string
+    public function getColorPrimary(): string
     {
-        return $this->primary_color;
+        return $this->colorPrimary;
     }
 
     /**
-     * @param string $primary_color
+     * @param string $colorPrimary
      */
-    public function setPrimaryColor(string $primary_color): void
+    public function setColorPrimary(string $colorPrimary): void
     {
-        $this->primary_color = $primary_color;
-    }
-
-    /**
-     * @return string
-     */
-    public function getSecondaryColor(): string
-    {
-        return $this->secondary_color;
-    }
-
-    /**
-     * @param string $secondary_color
-     */
-    public function setSecondaryColor(string $secondary_color): void
-    {
-        $this->secondary_color = $secondary_color;
+        $this->colorPrimary = $colorPrimary;
     }
 
     /**
      * @return string
      */
-    public function getIsDeleted(): string
+    public function getColorSecondary(): string
     {
-        return $this->isDeleted;
+        return $this->colorSecondary;
     }
 
     /**
-     * @param string $isDeleted
+     * @param string $colorSecondary
      */
-    public function setIsDeleted(string $isDeleted): void
+    public function setColorSecondary(string $colorSecondary): void
     {
-        $this->isDeleted = $isDeleted;
+        $this->colorSecondary = $colorSecondary;
     }
 
-
-    public function getAllFonts()
+    /**
+     * @return Font|null
+     */
+    public function getFontPrimary(): ?Font
     {
-        $stmt = $this->pdo->query("SELECT * FROM fonts");
-        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        return $this->fontPrimary;
+    }
+
+    /**
+     * @param Font|null $fontPrimary
+     */
+    public function setFontPrimary(?Font $fontPrimary): void
+    {
+        $this->fontPrimary = $fontPrimary;
+    }
+
+    /**
+     * @return Font|null
+     */
+    public function getFontSecondary(): ?Font
+    {
+        return $this->fontSecondary;
+    }
+
+    /**
+     * @param Font|null $fontSecondary
+     */
+    public function setFontSecondary(?Font $fontSecondary): void
+    {
+        $this->fontSecondary = $fontSecondary;
     }
 }
