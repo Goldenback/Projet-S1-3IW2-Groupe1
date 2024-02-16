@@ -17,6 +17,24 @@
 /home :
   controller : Main
   action : loadFrontEndView
+              # le suffixe artist est utilisé pour éviter tout conflit avec les pages précédemment créées en attendant
+/home-artist :
+  controller : Main
+  action : loadDemoView
+
+/portfolio-artist :
+  controller : Main
+  action : loadDemoView
+
+/about-artist :
+  controller : Main
+  action : loadDemoView
+
+/contact-artist :
+  controller : Main
+  action : loadDemoView
+
+
 
 /portfolio :
   controller : Main
