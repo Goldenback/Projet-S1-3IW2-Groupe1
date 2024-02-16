@@ -9,6 +9,7 @@ class Post extends DB
     private int $id;
     private string $title;
     private string $paragraph;
+    private string $url;
     private string $imageName;
 
     /**
@@ -57,6 +58,22 @@ class Post extends DB
     public function setParagraph(string $paragraph): void
     {
         $this->paragraph = $paragraph;
+    }
+
+    /**
+     * @return string
+     */
+    public function getUrl(): string
+    {
+        return $this->url;
+    }
+
+    /**
+     * @param string $url
+     */
+    public function setUrl(string $url): void
+    {
+        $this->url = $url;
     }
 
     /**

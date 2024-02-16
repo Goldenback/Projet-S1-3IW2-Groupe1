@@ -2,38 +2,47 @@
 
 namespace App\Models;
 
-class comment
+use App\Core\DB;
+
+class Comment extends DB
 {
-    private ?int $id_comment;
-    private ?int $id_userCOM;
+    private int $id;
+    private User $user;
     private string $comment;
-    private string $isApproved;
-    private int $isDeleted;
+    private bool $isApproved;
+    private bool $isDeleted;
+    private \DateTimeImmutable $createdAt;
 
-    public function getIdComment(): ?int
+    /**
+     * @return int
+     */
+    public function getId(): int
     {
-        return $this->id_comment;
-    }
-
-    public function setIdComment(?int $id_comment): void
-    {
-        $this->id_comment = $id_comment;
+        return $this->id;
     }
 
     /**
-     * @return int|null
+     * @param int $id
      */
-    public function getIdUserCOM(): ?int
+    public function setId(int $id): void
     {
-        return $this->id_userCOM;
+        $this->id = $id;
     }
 
     /**
-     * @param int|null $id_userCOM
+     * @return User
      */
-    public function setIdUserCOM(?int $id_userCOM): void
+    public function getUser(): User
     {
-        $this->id_userCOM = $id_userCOM;
+        return $this->user;
+    }
+
+    /**
+     * @param User $user
+     */
+    public function setUser(User $user): void
+    {
+        $this->user = $user;
     }
 
     /**
@@ -53,33 +62,33 @@ class comment
     }
 
     /**
-     * @return string
+     * @return bool
      */
-    public function getIsApproved(): string
+    public function IsApproved(): bool
     {
         return $this->isApproved;
     }
 
     /**
-     * @param string $isApproved
+     * @param bool $isApproved
      */
-    public function setIsApproved(string $isApproved): void
+    public function setIsApproved(bool $isApproved): void
     {
         $this->isApproved = $isApproved;
     }
 
     /**
-     * @return int
+     * @return bool
      */
-    public function getIsDeleted(): int
+    public function IsDeleted(): bool
     {
         return $this->isDeleted;
     }
 
     /**
-     * @param int $isDeleted
+     * @param bool $isDeleted
      */
-    public function setIsDeleted(int $isDeleted): void
+    public function setIsDeleted(bool $isDeleted): void
     {
         $this->isDeleted = $isDeleted;
     }

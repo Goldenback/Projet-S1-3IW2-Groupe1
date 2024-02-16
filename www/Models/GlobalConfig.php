@@ -12,6 +12,7 @@ class GlobalConfig extends DB
     protected ?Font $fontPrimary = null;
     protected ?Font $fontSecondary = null;
 
+
     /**
      * @return int
      */

@@ -11,14 +11,14 @@ require './vendor/phpmailer/phpmailer/src/SMTP.php';
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
-use PHPMailer\PHPMailer\SMTP;
 
 
 class Security
 {
     private User $User;
 
-    public function __construct(){
+    public function __construct()
+    {
         $this->User = new User();
 
         define('BASE_DIR', __DIR__ . '/..'); //pour le dossier parent
@@ -34,19 +34,18 @@ class Security
             session_start();
             // Vérifie l'authentification
             if ($this->User->authenticateUser($email, $password)) {
-                if($this->User->is_Validated($email)){
+                if ($this->User->is_Validated($email)) {
                     $_SESSION["connected"] = true;
                     $_SESSION["user_email"] = $email;
                     header("Location: /config");
                     exit();
-                }
-                else{
+                } else {
                     $_SESSION["error_message"] = "Compte non activé";
                     header("Location: /Login");
                 }
             } else {
                 $_SESSION["error_message"] = "Email ou mot de passe incorrect !";
-                header("Location: /Login" );
+                header("Location: /Login");
             }
             exit();
         }
@@ -141,7 +140,8 @@ class Security
     /**
      * @throws RandomException
      */
-    public function forgotPWD(): void {
+    public function forgotPWD(): void
+    {
         session_start();
 
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -194,15 +194,13 @@ class Security
                 $_SESSION["error_message"] = "Tous les champs sont requis.";
                 header("Location: /user_management");
                 exit();
-            }
-            else {
+            } else {
                 // Vérifie la longueur du nouveau mot de passe
                 if (strlen($newPassword) < 8) {
                     $_SESSION["error_message"] = "Le nouveau mot de passe doit comporter au moins 8 caractères.";
                     header("Location: /user_management");
                     exit();
-                }
-                else {
+                } else {
                     // Vérifie si les nouveaux mots de passe correspondent
                     if ($newPassword !== $confirmPassword) {
                         $_SESSION["error_message"] = "Les nouveaux mots de passe ne correspondent pas.";
@@ -223,8 +221,6 @@ class Security
 
         header("Location: /user_management");
     }
-
-
 
 
     /**

@@ -2,7 +2,9 @@
 
 namespace App\Models;
 
-class Font
+use App\Core\DB;
+
+class Font extends DB
 {
     private int $id;
     private string $name;
