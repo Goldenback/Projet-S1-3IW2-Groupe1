@@ -1,0 +1,10 @@
+.gallery {
+        align-self: center;
+        width: 67%;
+        @include flexbox(unset, nowrap, flex-start, flex-start, rem(24));
+    
+        div {
+          flex: 1;
+          @include flexbox(column, nowrap, flex-start, flex-start, rem(32));
+        }
+  }

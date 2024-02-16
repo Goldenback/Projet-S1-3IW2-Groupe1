@@ -85,29 +85,7 @@
     }
   }
 
-  .Content {
-    align-self: center;
-    @include flexbox(unset, nowrap, flex-start, flex-start, rem(24));
-
-    div {
-      flex: 1;
-      @include flexbox(column, nowrap, flex-start, flex-start, rem(32));
-
-      .PlaceholderImage1,
-      .PlaceholderImage4 {
-        width: rem(640);
-        height: rem(640);
-        object-fit: cover;
-      }
-
-      .PlaceholderImage2,
-      .PlaceholderImage3 {
-        width: rem(640);
-        height: rem(426);
-        object-fit: cover;
-      }
-    }
-  }
+  
 }
 
 .Portfolio {
@@ -129,28 +107,7 @@
       line-height: var(--line-height);
     }
 
-    .Content {
-      width: auto;
-      @include flexbox(column, nowrap, flex-start, center);
-
-      .Heading {
-        text-align: center;
-        color: var(--text-color);
-        font-size: var(--heading-size);
-        font-family: var(--website-font-family);
-        font-weight: 700;
-        line-height: rem(57.6);
-      }
-
-      .Text {
-        text-align: center;
-        color: var(--text-color);
-        font-size: var(--main-size);
-        font-family: var(--website-font-family);
-        font-weight: 400;
-        line-height: var(--line-height)
-      }
-    }
+    
   }
 
   .Content {

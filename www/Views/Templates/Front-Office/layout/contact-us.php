@@ -2,7 +2,7 @@
 
     <div class="section-title">
         <div class="content">
-            <div class="heading">Contact us</div>
+            <div class="heading heading-centered">Contact us</div>
             <div class="tagline">Get in touch</div>
             <div class="text">Have a question or need assistance ? Fill out the form below.</div>
         </div>

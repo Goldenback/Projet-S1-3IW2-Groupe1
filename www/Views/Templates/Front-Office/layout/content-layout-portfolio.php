@@ -10,7 +10,7 @@
         <div class="PortfolioList">
             <div class="Row">
                 <div class="Card">
-                    <img class="PlaceholderImage" src="../../../Front-end/Workspace/assets/img/page-portfolio/web-site1.png" alt="Art Project One">
+                    <img class="placeholder-image" src="../../../Front-end/Workspace/assets/img/page-portfolio/web-site1.png" alt="Art Project One">
                     <div class="Content">
                         <div class="Text">
                             <h3 class="Heading">Nature's Canvas</h3>
@@ -24,7 +24,7 @@
                     </div>
                 </div>
                 <div class="Card">
-                    <img class="PlaceholderImage" src="../../../Front-end/Workspace/assets/img/page-portfolio/web-site2.png" alt="Art Project Two">
+                    <img class="placeholder-image" src="../../../Front-end/Workspace/assets/img/page-portfolio/web-site2.png" alt="Art Project Two">
                     <div class="Content">
                         <div class="Text">
                             <h3 class="Heading">Harmonic Blues</h3>

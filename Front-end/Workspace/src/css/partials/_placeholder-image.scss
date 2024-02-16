@@ -1,0 +1,28 @@
+.placeholder-image {
+    flex: 1 1 0;
+    width: rem(616);
+    height: rem(640);
+    object-fit: cover;
+
+    &-lg{  
+        width: rem(1312);
+        height: rem(738);
+    }
+
+    &-sm{
+        width: rem(616);
+        height: rem(400);
+    }
+
+    &-rect{
+        width: rem(405.33);
+        height: rem(240);
+    }
+
+    &-squared{
+        width: rem(640);
+        height: rem(640);
+    }
+  }
+
+  

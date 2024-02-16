@@ -1,0 +1,17 @@
+.heading {
+    align-self: stretch;
+    color: var(--text-color);
+    font-size: var(--heading-size);
+    font-family: var(--website-font-family);
+    font-weight: 700;
+    line-height: rem(57.60);
+
+    &-centered{text-align: center;}
+
+    &-sub{
+        font-size: var(--main-size);
+        font-weight: 600;
+        
+        &-bold{font-weight: 700;}
+    }
+  }

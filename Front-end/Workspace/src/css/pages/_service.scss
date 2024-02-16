@@ -33,11 +33,7 @@
     }
   }
 
-  .placeholder-image {
-    align-self: stretch;
-    height: rem(738);
-    object-fit: cover;
-  }
+  
 }
 
 .service-layout1 {
@@ -61,21 +57,6 @@
         @include flexbox(column, nowrap, flex-start, flex-start, rem(16));
         color: var(--text-color);
 
-        .subheading {
-          text-align: center;
-          font-size: var(--main-size);
-          font-weight: 600;
-        }
-
-        .heading {
-          font-size: var(--heading-size);
-          font-weight: 700;
-        }
-
-        .text {
-          font-size: var(--main-size);
-          font-weight: 400;
-        }
       }
 
       .list {
@@ -99,17 +80,10 @@
         }
       }
 
-      .Actions {
-        @include flexbox(unset, nowrap, flex-start, flex-start, rem(16));
-        padding-top: rem(16);
-      }
+      
     }
 
-    .placeholder-image {
-      flex: 1 1 0;
-      width: rem(616);
-      height: rem(640);
-    }
+    
   }
 }
 
@@ -151,33 +125,7 @@
     @include flexbox(column, nowrap, flex-start, center, rem(48));
     color: var(--text-color);
 
-    .row {
-      @include flexbox(unset, nowrap, center, flex-start, rem(48));
-
-      .column {
-        @include flexbox(column, nowrap, flex-start, center, rem(32));
-
-        img {
-          width: rem(405.33);
-          height: rem(240);
-          object-fit: cover;
-        }
-
-        .heading {
-          text-align: center;
-          font-size: var(--title-size);
-          font-weight: 700;
-          line-height: var(--line-height);
-        }
-
-        .text {
-          text-align: center;
-          font-size: var(--main-size);
-          font-weight: 400;
-          line-height: var(--line-height);
-        }
-      }
-    }
+    
 
     .Actions {
       @include flexbox(unset, nowrap, flex-start, center, rem(24));
@@ -363,11 +311,7 @@
     }
   }
 
-  .placeholder-image {
-    width: rem(616);
-    height: rem(400);
-    object-fit: cover;
-  }
+  
 }
 
 .service-cta2 {
@@ -433,9 +377,4 @@
     }
   }
 
-  .placeholder-image {
-    width: rem(616);
-    height: rem(400);
-    object-fit: cover;
-  }
 }

@@ -1,0 +1,11 @@
+.content-layout{
+        width: 100%;
+        height: auto;
+        padding: rem(112) rem(64);
+        @include flexbox(column, nowrap, flex-start, center, rem(80));
+        font-family: var(--website-font-family);
+
+        .row {
+            @include flexbox(unset, nowrap, center, flex-start, rem(48));
+        }
+}

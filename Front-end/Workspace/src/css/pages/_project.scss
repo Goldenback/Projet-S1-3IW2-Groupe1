@@ -12,27 +12,9 @@
     height: rem(171);
       @include flexbox(column, nowrap, flex-start, center, rem(24));
 
-    .Heading {
-      align-self: stretch;
-      text-align: center;
-      color: var(--text-color);
-      font-size: rem(56);
-      font-family: var(--website-font-family);
-      font-weight: 700;
-      line-height: rem(67.2);
-      word-wrap: break-word;
-    }
+    
 
-    .Text {
-      align-self: stretch;
-      text-align: center;
-      color: var(--text-color);
-      font-size: var(--main-size);
-      font-family: var(--website-font-family);
-      font-weight: 400;
-      line-height: var(--line-height);
-      word-wrap: break-word;
-    }
+    
 
     .Tags {
       align-self: stretch;
@@ -90,15 +72,7 @@
       align-items: flex-start;
       gap: rem(24);
 
-      .Heading {
-        align-self: stretch;
-        color: var(--text-color);
-        font-size: var(--heading-size);
-        font-family: var(--website-font-family);
-        font-weight: 700;
-        line-height: rem(57.6);
-        word-wrap: break-word;
-      }
+      
 
       .RichText {
         align-self: stretch;
@@ -147,11 +121,7 @@
     }
   }
 
-  .PlaceholderImage1 {
-    width: rem(1312);
-    height: rem(738);
-    object-fit: cover;
-  }
+  
 }
 
 .project-layout {
@@ -193,21 +163,9 @@
           line-height: var(--line-height);
         }
 
-        .Heading {
-          font-size: var(--heading-size);
-          font-weight: 700;
-          font-family: var(--website-font-family);
-          line-height: rem(57.6);
-          align-self: stretch;
-        }
+        
 
-        .Text {
-          font-size: var(--main-size);
-          font-weight: 400;
-          font-family: var(--website-font-family);
-          line-height: var(--line-height);
-          align-self: stretch;
-        }
+        
       }
 
       .List {
@@ -236,13 +194,7 @@
             align-self: stretch;
           }
 
-          .Text {
-            font-size: var(--main-size);
-            font-weight: 400;
-            font-family: var(--website-font-family);
-            line-height: var(--line-height);
-            align-self: stretch;
-          }
+          
         }
       }
 
@@ -255,12 +207,7 @@
       }
     }
 
-    .PlaceholderImage {
-      flex: 1 1 0;
-      width: rem(616);
-      height: rem(640);
-      object-fit: cover;
-    }
+    
   }
 }
 
@@ -304,11 +251,7 @@
     }
   }
 
-  .PlaceholderImage {
-    width: rem(1312);
-    height: rem(738);
-    object-fit: cover;
-  }
+  
 }
 
 .project-faq {

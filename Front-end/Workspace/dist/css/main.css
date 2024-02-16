@@ -341,6 +341,61 @@ img {
     gap: 1rem; /* Espacement entre les éléments du formulaire */
   }
 }
+.heading {
+  align-self: stretch;
+  color: var(--text-color);
+  font-size: var(--heading-size);
+  font-family: var(--website-font-family);
+  font-weight: 700;
+  line-height: 3.6rem;
+}
+.heading-centered {
+  text-align: center;
+}
+.heading-sub {
+  font-size: var(--main-size);
+  font-weight: 600;
+}
+.heading-sub-bold {
+  font-weight: 700;
+}
+
+.text {
+  align-self: stretch;
+  color: var(--text-color);
+  font-size: var(--main-size);
+  font-family: var(--website-font-family);
+  font-weight: 400;
+  line-height: var(--line-height);
+  word-wrap: break-word;
+}
+.text-centered {
+  text-align: center;
+}
+
+.placeholder-image {
+  flex: 1 1 0;
+  width: 38.5rem;
+  height: 40rem;
+  object-fit: cover;
+}
+.placeholder-image-lg {
+  width: 82rem;
+  height: 46.125rem;
+}
+.placeholder-image-sm {
+  width: 38.5rem;
+  height: 25rem;
+}
+.placeholder-image-rect {
+  width: 25.333125rem;
+  height: 15rem;
+}
+.placeholder-image-squared {
+  width: 40rem;
+  height: 40rem;
+}
+
 .btn {
   padding: var(--pm-md);
   text-decoration: none;
@@ -486,6 +541,55 @@ img {
 .CTA-form input {
   padding: var(--pm-md);
 }
+.gallery {
+  align-self: center;
+  width: 67%;
+  display: flex;
+  flex-direction: unset;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+.gallery div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+  border: 1px solid red;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+
+.action {
+  display: flex;
+  flex-direction: unset;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1rem;
+  padding-top: 1rem;
+}
+
 /* Site principal */
 .navbar {
   background-color: var(--website-bg-color);
@@ -609,24 +713,6 @@ img {
   justify-content: flex-start;
   align-items: center;
   gap: 1.5rem;
-}
-.contact-us .section-title .content .heading {
-  align-self: stretch;
-  text-align: center;
-  color: var(--text-color);
-  font-size: var(--heading-size);
-  font-family: var(--website-font-family);
-  font-weight: 700;
-  line-height: 3.6rem;
-}
-.contact-us .section-title .content .text {
-  align-self: stretch;
-  text-align: center;
-  color: var(--text-color);
-  font-size: var(--main-size);
-  font-family: var(--main-font);
-  font-weight: 400;
-  line-height: var(--line-height);
 }
 .contact-us .form {
   display: flex;
@@ -970,6 +1056,27 @@ img {
   background-color: var(--reverse-bg-color);
   color: var(--website-bg-color);
   transition: var(--transition-duration) ease-in-out;
+}
+
+.content-layout {
+  width: 100%;
+  height: auto;
+  padding: 7rem 4rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5rem;
+  font-family: var(--website-font-family);
+}
+.content-layout .row {
+  display: flex;
+  flex-direction: unset;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 3rem;
 }
 
 .footer {
@@ -1714,36 +1821,6 @@ img {
   font-weight: 400;
   line-height: var(--line-height);
 }
-.Portfolio-Gallery .Content {
-  align-self: center;
-  display: flex;
-  flex-direction: unset;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 1.5rem;
-}
-.Portfolio-Gallery .Content div {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 2rem;
-}
-.Portfolio-Gallery .Content div .PlaceholderImage1,
-.Portfolio-Gallery .Content div .PlaceholderImage4 {
-  width: 40rem;
-  height: 40rem;
-  object-fit: cover;
-}
-.Portfolio-Gallery .Content div .PlaceholderImage2,
-.Portfolio-Gallery .Content div .PlaceholderImage3 {
-  width: 40rem;
-  height: 26.625rem;
-  object-fit: cover;
-}
 
 .Portfolio {
   width: auto;
@@ -1771,31 +1848,6 @@ img {
   font-size: var(--main-size);
   font-family: var(--website-font-family);
   font-weight: 600;
-  line-height: var(--line-height);
-}
-.Portfolio .SectionTitle .Content {
-  width: auto;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 0;
-}
-.Portfolio .SectionTitle .Content .Heading {
-  text-align: center;
-  color: var(--text-color);
-  font-size: var(--heading-size);
-  font-family: var(--website-font-family);
-  font-weight: 700;
-  line-height: 3.6rem;
-}
-.Portfolio .SectionTitle .Content .Text {
-  text-align: center;
-  color: var(--text-color);
-  font-size: var(--main-size);
-  font-family: var(--website-font-family);
-  font-weight: 400;
   line-height: var(--line-height);
 }
 .Portfolio .Content {
@@ -2177,26 +2229,6 @@ img {
   align-items: center;
   gap: 1.5rem;
 }
-.project-header .Content .Heading {
-  align-self: stretch;
-  text-align: center;
-  color: var(--text-color);
-  font-size: 3.5rem;
-  font-family: var(--website-font-family);
-  font-weight: 700;
-  line-height: 4.2rem;
-  word-wrap: break-word;
-}
-.project-header .Content .Text {
-  align-self: stretch;
-  text-align: center;
-  color: var(--text-color);
-  font-size: var(--main-size);
-  font-family: var(--website-font-family);
-  font-weight: 400;
-  line-height: var(--line-height);
-  word-wrap: break-word;
-}
 .project-header .Content .Tags {
   align-self: stretch;
   display: inline-flex;
@@ -2252,15 +2284,6 @@ img {
   justify-content: flex-start;
   align-items: flex-start;
   gap: 1.5rem;
-}
-.project-content .Container .Content .Heading {
-  align-self: stretch;
-  color: var(--text-color);
-  font-size: var(--heading-size);
-  font-family: var(--website-font-family);
-  font-weight: 700;
-  line-height: 3.6rem;
-  word-wrap: break-word;
 }
 .project-content .Container .Content .RichText {
   align-self: stretch;
@@ -2322,11 +2345,6 @@ img {
   line-height: 3.6rem;
   word-wrap: break-word;
 }
-.project-gallery .PlaceholderImage1 {
-  width: 82rem;
-  height: 46.125rem;
-  object-fit: cover;
-}
 
 .project-layout {
   width: 100%;
@@ -2371,20 +2389,6 @@ img {
   font-family: var(--website-font-family);
   line-height: var(--line-height);
 }
-.project-layout .Container .Content .SectionTitle .Heading {
-  font-size: var(--heading-size);
-  font-weight: 700;
-  font-family: var(--website-font-family);
-  line-height: 3.6rem;
-  align-self: stretch;
-}
-.project-layout .Container .Content .SectionTitle .Text {
-  font-size: var(--main-size);
-  font-weight: 400;
-  font-family: var(--website-font-family);
-  line-height: var(--line-height);
-  align-self: stretch;
-}
 .project-layout .Container .Content .List {
   display: inline-flex;
   align-items: flex-start;
@@ -2410,25 +2414,12 @@ img {
   line-height: var(--line-height);
   align-self: stretch;
 }
-.project-layout .Container .Content .List .ListItem .Text {
-  font-size: var(--main-size);
-  font-weight: 400;
-  font-family: var(--website-font-family);
-  line-height: var(--line-height);
-  align-self: stretch;
-}
 .project-layout .Container .Content .Actions {
   display: inline-flex;
   align-items: center;
   justify-content: flex-start;
   gap: 1.5rem;
   padding-top: 1rem;
-}
-.project-layout .Container .PlaceholderImage {
-  flex: 1 1 0;
-  width: 38.5rem;
-  height: 40rem;
-  object-fit: cover;
 }
 
 .project-layout2 {
@@ -2484,11 +2475,6 @@ img {
   justify-content: flex-start;
   align-items: center;
   gap: 1.5rem;
-}
-.project-layout2 .PlaceholderImage {
-  width: 82rem;
-  height: 46.125rem;
-  object-fit: cover;
 }
 
 .project-faq {
@@ -2683,11 +2669,6 @@ img {
   gap: 1rem;
   padding-top: 1rem;
 }
-.service-header .placeholder-image {
-  align-self: stretch;
-  height: 46.125rem;
-  object-fit: cover;
-}
 
 .service-layout1 {
   width: 100%;
@@ -2725,19 +2706,6 @@ img {
   gap: 1rem;
   color: var(--text-color);
 }
-.service-layout1 .container .content .section-title .subheading {
-  text-align: center;
-  font-size: var(--main-size);
-  font-weight: 600;
-}
-.service-layout1 .container .content .section-title .heading {
-  font-size: var(--heading-size);
-  font-weight: 700;
-}
-.service-layout1 .container .content .section-title .text {
-  font-size: var(--main-size);
-  font-weight: 400;
-}
 .service-layout1 .container .content .list {
   width: 38.5rem;
   height: auto;
@@ -2764,20 +2732,6 @@ img {
 .service-layout1 .container .content .list .list-item .text {
   font-size: var(--main-size);
   font-weight: 400;
-}
-.service-layout1 .container .content .Actions {
-  display: flex;
-  flex-direction: unset;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 1rem;
-  padding-top: 1rem;
-}
-.service-layout1 .container .placeholder-image {
-  flex: 1 1 0;
-  width: 38.5rem;
-  height: 40rem;
 }
 
 .service-layout2 {
@@ -2827,39 +2781,6 @@ img {
   align-items: center;
   gap: 3rem;
   color: var(--text-color);
-}
-.service-layout2 .content .row {
-  display: flex;
-  flex-direction: unset;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 3rem;
-}
-.service-layout2 .content .row .column {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 2rem;
-}
-.service-layout2 .content .row .column img {
-  width: 25.333125rem;
-  height: 15rem;
-  object-fit: cover;
-}
-.service-layout2 .content .row .column .heading {
-  text-align: center;
-  font-size: var(--title-size);
-  font-weight: 700;
-  line-height: var(--line-height);
-}
-.service-layout2 .content .row .column .text {
-  text-align: center;
-  font-size: var(--main-size);
-  font-weight: 400;
-  line-height: var(--line-height);
 }
 .service-layout2 .content .Actions {
   display: flex;
@@ -3076,11 +2997,6 @@ img {
   align-items: flex-start;
   gap: 1rem;
 }
-.service-cta1 .placeholder-image {
-  width: 38.5rem;
-  height: 25rem;
-  object-fit: cover;
-}
 
 .service-cta2 {
   width: 100%;
@@ -3148,11 +3064,6 @@ img {
   font-family: var(--website-font-family);
   line-height: var(--line-height);
   color: var(--text-color);
-}
-.service-cta2 .placeholder-image {
-  width: 38.5rem;
-  height: 25rem;
-  object-fit: cover;
 }
 
 .contact-header {
