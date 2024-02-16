@@ -185,14 +185,10 @@
 }
 
 .service-feedback {
-  width: 100%;
-  height: auto;
-  padding: rem(112) rem(64);
-  @include flexbox(column, nowrap, center, center, rem(80));
+
 
   .Content {
-    width: 100%;
-    @include flexbox(unset, nowrap, center, center, rem(64));
+   
 
     .Column {
       @include flexbox(column, nowrap, center, center, rem(20));
@@ -214,20 +210,7 @@
       }
 
       .Avatar {
-        width: 100%;
-        height: rem(61);
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        gap: rem(20);
-
-        .AvatarImage {
-          width: rem(56);
-          height: rem(56);
-          object-fit: cover;
-          border-radius: rem(9999); //pour être rond
-        }
-
+       
         .AvatarContent {
           display: inline-flex;
           flex-direction: column;
@@ -251,14 +234,14 @@
           }
         }
 
-        .Divider {
+        .divider {
           width: rem(61);
           height: 0;
           transform: rotate(90deg);
           border: rem(1) solid var(--reverse-bg-color);
         }
 
-        .CompanyLogo {
+        .company-logo {
           width: rem(120);
           height: rem(48);
           padding: rem(9.75) rem(3);

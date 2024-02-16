@@ -16,7 +16,7 @@ $components = [
     'content-layout-project.php',
     'gallery.php',
     'trust-us.php',
-    'testimonials.php',
+    'testimonial.php',
     'FAQ.php',
     'contact-us.php',
     'footer.php',
