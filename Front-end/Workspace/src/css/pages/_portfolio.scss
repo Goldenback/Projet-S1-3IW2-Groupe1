@@ -116,65 +116,12 @@
     .PortfolioList {
       @include flexbox(column, nowrap, flex-start, center, rem(48));
 
-      .Row {
-        width: auto;
-        display: flex;
-        justify-content: flex-start;
-        gap: rem(48);
-
-        .Card {
-          flex: 1;
-          @include flexbox(column, nowrap, flex-start, flex-start);
-
-          .PlaceholderImage {
-            width: rem(632);
-            height: rem(400);
-            object-fit: cover;
-          }
-
-          .Content {
-            width: 100%;
-            @include flexbox(column, nowrap, flex-start, flex-start);
-
-            .Text {
-              @include flexbox(column, nowrap, flex-start, flex-start);
-
-              .Heading {
-                color: var(--text-color);
-                font-size: var(--subtitle-size);
-                font-family: var(--website-font-family);
-                font-weight: 700;
-                line-height: rem(33.6);
-              }
-
-              .Text {
-                color: var(--text-color);
-                font-size: var(--main-size);
-                font-family: var(--website-font-family);
-                font-weight: 400;
-                line-height: var(--line-height)
-              }
+  
             }
 
-            .Tags {
-              @include flexbox(unset, nowrap, flex-start, flex-start, rem(8));
-
-              .Tag {
-                padding: rem(4) rem(8);
-                background: var(--img-bg-color);
-                color: var(--text-color);
-                font-size: var(--main-size);
-                font-family: var(--website-font-family);
-                font-weight: 600;
-                line-height: var(--line-height)
-              }
+            
             }
           }
-        }
-      }
-    }
-  }
-}
 
 .Portfolio-Layout {
   width: 100%;
@@ -388,17 +335,6 @@
     }
   }
 }
-
-.Portfolio-cta {
-  width: 100%;
-  height: auto;
-  padding: rem(112) rem(64);
-  display: inline-flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  gap: rem(80);
-
   .Content {
     height: rem(197);
     @include flexbox(column, nowrap, flex-start, center, rem(24));
@@ -433,4 +369,3 @@
       gap: rem(16);
     }
   }
-}

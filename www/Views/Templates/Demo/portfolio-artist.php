@@ -16,7 +16,7 @@
         'trust-us.php',
         'content-layout-project.php',
         'content-layout-cta.php',
-        'testimonials-2.php',
+        'testimonials.php',
         'footer.php',
     ];
     

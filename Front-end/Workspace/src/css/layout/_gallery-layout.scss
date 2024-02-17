@@ -1,0 +1,7 @@
+.gallery-layout{
+    width: 100%;
+    height: auto;
+    padding: rem(112) rem(64);
+    background: var(--bg-color-white);
+    @include flexbox(column, nowrap, flex-start, center, rem(150));
+}

@@ -1,8 +1,8 @@
 <section class="Faq">
     <div class="Container">
-        <div class="SectionTitle">
-            <h2 class="Heading">FAQs</h2>
-            <p class="Text">Find answers to common questions and concerns about our platform.</p>
+        <div class="title">
+            <h2 class="heading heading-centered">FAQs</h2>
+            <p class="text">Find answers to common questions and concerns about our platform.</p>
         </div>
         <div class="Accordion">
             <div class="faq-item">
@@ -27,9 +27,9 @@
             </div>
         </div>
         <div class="Content">
-            <h2 class="Heading">Still have questions?</h2>
-            <p class="Text">Contact our support team for assistance.</p>
-            <a href="/contact#contact-us" class="Button">Contact Us</a>
+            <h2 class="heading heading-centered">Still have questions?</h2>
+            <p class="text text-centered">Contact our support team for assistance.</p>
+            <a href="/contact#contact-us" class="btn btn-transparent">Contact Us</a>
         </div>
     </div>
 </section>

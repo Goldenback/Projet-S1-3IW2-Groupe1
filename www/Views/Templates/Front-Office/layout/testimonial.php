@@ -1,4 +1,4 @@
-<section class="testimonial">
+<div class="testimonial">
     <div class="testimonial-container">
         <div class="Column">
             <div class="stars">
@@ -22,4 +22,4 @@
                 </div>
             </div>
         </div>
-</section>
+</div>

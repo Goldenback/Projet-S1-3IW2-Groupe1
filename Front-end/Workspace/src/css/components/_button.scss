@@ -29,6 +29,12 @@
         background-color: transparent;
         border: 1px solid var(--text-color);
         color: var(--text-color);
+
+        &:hover {
+            background-color: var(--reverse-bg-color);
+            color: var(--website-bg-color);
+            transition: var( --transition-duration) ease-in-out;
+          }
     }
 }
 
@@ -65,5 +71,3 @@
         }
     }
 }
-
-.row{margin: rem(50) 0 rem(50) 0;}

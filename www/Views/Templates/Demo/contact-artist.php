@@ -13,7 +13,7 @@ $components = [
     'navbar.php',
     'contact-us.php',
     'trust-us.php',
-    'testimonials-2.php',
+    'testimonials.php',
     'FAQ.php',
     'footer.php',
 ];

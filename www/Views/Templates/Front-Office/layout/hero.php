@@ -1,15 +1,6 @@
-<section class="Portfolio-container">
-
-  <div class="background-image hero">
-    <img src="../../../Front-end/Workspace/assets/img/page-portfolio/background.png" alt="Background">
-    <div class="content">
-      <h1>Creative Photography Project</h1>
-      <p>Capturing Moments Through the Lens of Artistry</p>
-      <div class="tags">
-        <span>Landscape</span>
-        <span>Nature</span>
-        <span>Abstract</span>
-      </div>
-    </div>
+<section class="hero"  style="background-image: url('assets/img/hero-bg.png')">
+  <div class="content">
+      <h1 class="heading heading-h1 heading-centered heading-white">Playfair Display</h1>
+      <h4 class="heading heading-centered heading-white heading-sub">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. </h4>
   </div>
 </section>

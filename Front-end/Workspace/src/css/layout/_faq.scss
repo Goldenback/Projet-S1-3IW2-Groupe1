@@ -7,26 +7,6 @@
     @include flexbox(column, nowrap, center, center, rem(80));
   }
 
-  .SectionTitle {
-    @include flexbox(column, nowrap, center, center, rem(24));
-    color: var(--text-color);
-    font-family: var(--website-font-family);
-
-    .Heading {
-      font-size: var(--heading-size);
-      font-weight: 700;
-      line-height: rem(57.6);
-      text-align: center;
-    }
-
-    .Text {
-      font-size: var(--main-size);
-      font-weight: 400;
-      line-height: var(--line-height);
-      text-align: center;
-    }
-  }
-
   .Accordion {
     width: 100%;
 
@@ -77,40 +57,6 @@
 
   .Content {
     @include flexbox(column, nowrap, center, center, rem(24));
-
-    .Heading {
-      font-size: var(--title-size);
-      font-weight: 700;
-      text-align: center;
-      color: var(--text-color);
-    }
-
-    .Text {
-      font-size: var(--main-size);
-      font-weight: 400;
-      text-align: center;
-      color: var(--text-color);
-    }
-
-    .Button {
-      padding: rem(12) rem(24);
-      border: rem(1) solid var(--reverse-bg-color);
-      font-size: var(--main-size);
-      font-weight: 400;
-      line-height: var(--line-height);
-      color: var(--text-color);
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: rem(8);
-      cursor: pointer;
-
-      &:hover {
-        background-color: var(--reverse-bg-color);
-        color: var(--website-bg-color);
-        transition: var( --transition-duration) ease-in-out;
-      }
-    }
   }
+  
 }

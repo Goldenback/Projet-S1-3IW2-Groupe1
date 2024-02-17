@@ -1,7 +1,7 @@
-<section class="Portfolio-Gallery">
-    <div class="SectionTitle">
-        <h2 class="Heading">Curated Artists</h2>
-        <p class="Text">Explore the stunning works of talented artists</p>
+<section class="gallery-layout">
+    <div class="title">
+        <h2 class="heading">Curated Artists</h2>
+        <p class="text">Explore the stunning works of talented artists</p>
     </div>
     <div class="gallery">
         <div>

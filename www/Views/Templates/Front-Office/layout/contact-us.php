@@ -1,6 +1,6 @@
 <section class="contact-us" id="contact-us">
 
-    <div class="section-title">
+    <div class="title">
         <div class="content">
             <div class="heading heading-centered">Contact us</div>
             <div class="tagline">Get in touch</div>

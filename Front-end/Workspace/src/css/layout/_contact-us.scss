@@ -3,7 +3,7 @@
   @include flexbox(column, nowrap, flex-start, center, rem(100));
   width: 100%;
 
-  .section-title {
+  .title {
     display: flex;
     align-items: flex-end;
     gap: rem(16);

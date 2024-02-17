@@ -1,10 +1,15 @@
 .heading {
+    display: inline;
     align-self: stretch;
     color: var(--text-color);
     font-size: var(--heading-size);
     font-family: var(--website-font-family);
     font-weight: 700;
     line-height: rem(57.60);
+    margin: none;
+    z-index: 3;
+
+    &-h1{font-size: var(--h1-font-size);}
 
     &-centered{text-align: center;}
 
@@ -14,4 +19,5 @@
         
         &-bold{font-weight: 700;}
     }
+    &-white{color: var(--white);}
   }

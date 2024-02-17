@@ -342,12 +342,18 @@ img {
   }
 }
 .heading {
+  display: inline;
   align-self: stretch;
   color: var(--text-color);
   font-size: var(--heading-size);
   font-family: var(--website-font-family);
   font-weight: 700;
   line-height: 3.6rem;
+  margin: none;
+  z-index: 3;
+}
+.heading-h1 {
+  font-size: var(--h1-font-size);
 }
 .heading-centered {
   text-align: center;
@@ -358,6 +364,9 @@ img {
 }
 .heading-sub-bold {
   font-weight: 700;
+}
+.heading-white {
+  color: var(--white);
 }
 
 .text {
@@ -399,6 +408,22 @@ img {
   height: 40rem;
 }
 
+.row {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.row-around {
+  justify-content: space-around;
+}
+.row-between {
+  justify-content: space-between;
+}
+.row-gap {
+  gap: 1.5rem;
+}
+
 .btn {
   padding: var(--pm-md);
   text-decoration: none;
@@ -429,6 +454,11 @@ img {
   background-color: transparent;
   border: 1px solid var(--text-color);
   color: var(--text-color);
+}
+.btn-transparent:hover {
+  background-color: var(--reverse-bg-color);
+  color: var(--website-bg-color);
+  transition: var(--transition-duration) ease-in-out;
 }
 
 .Button {
@@ -466,10 +496,6 @@ img {
   transition: 0.3s ease-in-out;
 }
 
-.row {
-  margin: 3.125rem 0 3.125rem 0;
-}
-
 .hero {
   position: relative;
   aspect-ratio: 100/42;
@@ -502,20 +528,8 @@ img {
   background-color: rgba(0, 0, 0, 0.4);
 }
 .hero .content {
-  color: var(--white);
-  position: relative;
-  text-align: center;
-}
-.hero .content-title {
-  font-size: var(--main-title-size);
-  font-family: var(--title-font);
-  font-weight: lighter;
-  letter-spacing: var(--title-spacing);
-}
-.hero .content-title-sub {
-  font-size: var(--subtitle-size);
-  font-family: var(--main-font);
-  font-weight: lighter;
+  display: flex;
+  flex-direction: column;
 }
 
 .CTA {
@@ -571,7 +585,6 @@ img {
   justify-content: flex-start;
   align-items: center;
   gap: 2rem;
-  border: 1px solid red;
 }
 
 .title {
@@ -591,6 +604,41 @@ img {
   align-items: flex-start;
   gap: 1rem;
   padding-top: 1rem;
+}
+
+.trust-us {
+  width: 100%;
+  height: auto;
+  padding: 7rem 4rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 3rem;
+}
+.trust-us .content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 3rem;
+}
+.trust-us .logo {
+  width: 12.5rem;
+  height: 3rem;
+  padding: 0.609375rem 2.6875rem;
+  display: flex;
+  flex-direction: unset;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+}
+.trust-us .logo-relume {
+  height: 3.5rem;
+  position: relative;
 }
 
 .testimonial {
@@ -651,6 +699,24 @@ img {
   justify-content: center;
   align-items: center;
   gap: 0;
+}
+
+.Tags {
+  display: flex;
+  flex-direction: unset;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+.Tags > * {
+  padding: 0.25rem 0.5rem;
+  background: var(--img-bg-color);
+  color: var(--text-color);
+  font-size: var(--main-size);
+  font-family: var(--website-font-family);
+  font-weight: 600;
+  line-height: var(--line-height);
 }
 
 /* Site principal */
@@ -754,12 +820,12 @@ img {
   gap: 6.25rem;
   width: 100%;
 }
-.contact-us .section-title {
+.contact-us .title {
   display: flex;
   align-items: flex-end;
   gap: 1rem;
 }
-.contact-us .section-title .tagline {
+.contact-us .title .tagline {
   text-align: center;
   color: var(--text-color);
   font-size: var(--main-size);
@@ -767,7 +833,7 @@ img {
   font-weight: 600;
   line-height: var(--subtitle-size);
 }
-.contact-us .section-title .content {
+.contact-us .title .content {
   align-self: stretch;
   height: 6.8125rem;
   display: flex;
@@ -1018,28 +1084,6 @@ img {
   align-items: center;
   gap: 5rem;
 }
-.Faq .SectionTitle {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
-  gap: 1.5rem;
-  color: var(--text-color);
-  font-family: var(--website-font-family);
-}
-.Faq .SectionTitle .Heading {
-  font-size: var(--heading-size);
-  font-weight: 700;
-  line-height: 3.6rem;
-  text-align: center;
-}
-.Faq .SectionTitle .Text {
-  font-size: var(--main-size);
-  font-weight: 400;
-  line-height: var(--line-height);
-  text-align: center;
-}
 .Faq .Accordion {
   width: 100%;
 }
@@ -1089,37 +1133,6 @@ img {
   align-items: center;
   gap: 1.5rem;
 }
-.Faq .Content .Heading {
-  font-size: var(--title-size);
-  font-weight: 700;
-  text-align: center;
-  color: var(--text-color);
-}
-.Faq .Content .Text {
-  font-size: var(--main-size);
-  font-weight: 400;
-  text-align: center;
-  color: var(--text-color);
-}
-.Faq .Content .Button {
-  padding: 0.75rem 1.5rem;
-  border: 0.0625rem solid var(--reverse-bg-color);
-  font-size: var(--main-size);
-  font-weight: 400;
-  line-height: var(--line-height);
-  color: var(--text-color);
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  cursor: pointer;
-}
-.Faq .Content .Button:hover {
-  background-color: var(--reverse-bg-color);
-  color: var(--website-bg-color);
-  transition: var(--transition-duration) ease-in-out;
-}
 
 .content-layout {
   width: 100%;
@@ -1140,6 +1153,93 @@ img {
   justify-content: center;
   align-items: flex-start;
   gap: 3rem;
+}
+
+.content-layout-project {
+  width: 100%;
+  height: 54rem;
+  padding: 7rem 4rem;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 5rem;
+}
+.content-layout-project-container {
+  align-self: stretch;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5rem;
+}
+.content-layout-project ul {
+  list-style-type: none;
+  display: inline-flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1.5rem;
+  padding: 0.5rem 0;
+  align-self: stretch;
+}
+.content-layout-project ul li {
+  gap: 1rem;
+  flex: 1 1 0;
+  color: var(--text-color);
+}
+
+.content-layout-portfolio {
+  width: auto;
+  padding: 7rem 4rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 11.25rem;
+}
+
+.gallery-layout {
+  width: 100%;
+  height: auto;
+  padding: 7rem 4rem;
+  background: var(--bg-color-white);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 9.375rem;
+}
+
+.content-layout-cta {
+  width: 100%;
+  height: auto;
+  padding: 7rem 4rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+.content-layout-team {
+  padding: var(--pm-xlg);
+}
+.content-layout-team .SocialIcons {
+  display: flex;
+  flex-direction: unset;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.875rem;
+}
+.content-layout-team .SocialIcons .IconLinkedin, .content-layout-team .SocialIcons .IconX, .content-layout-team .SocialIcons .IconDribble {
+  fill: var(--icon-color);
+  width: 2.5rem;
+  height: 2rem;
+}
+
+.testimonials-container {
+  display: flex;
 }
 
 .footer {
@@ -1270,1634 +1370,11 @@ img {
   color: var(--text-color);
 }
 
-.Header-about {
-  width: 100%;
-  height: 29.375rem;
-  padding: 7rem 4rem;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: unset;
-  align-items: flex-start;
-  gap: 5rem;
-}
-.Header-about .Container {
-  height: 15.375rem;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: unset;
-  align-items: flex-start;
-  gap: 1.5rem;
-}
-.Header-about .SectionTitle {
-  align-self: stretch;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: unset;
-  align-items: flex-start;
-  gap: 1rem;
-}
-.Header-about .SectionTitle .Tagline {
-  text-align: center;
-  color: var(--text-color);
-  font-size: 1rem;
-  font-family: var(--website-font-family);
-  font-weight: 600;
-  line-height: var(--line-height);
-}
-.Header-about .SectionTitle .Content {
-  align-self: stretch;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: unset;
-  align-items: flex-start;
-  gap: 1.5rem;
-}
-.Header-about .SectionTitle .Content .ShortHeadingHere {
-  color: var(--text-color);
-  font-size: 3.5rem;
-  font-family: var(--website-font-family);
-  font-weight: 700;
-  line-height: 4.2rem;
-}
-.Header-about .SectionTitle .Content .Description {
-  color: var(--text-color);
-  font-size: var(--main-size);
-  font-family: var(--website-font-family);
-  font-weight: 400;
-  line-height: var(--line-height);
-}
-.Header-about .Actions {
-  padding-top: 1rem;
-  display: flex;
-  align-items: flex-start;
-  gap: 1rem;
-}
-
-.Layout1-about {
-  width: 100%;
-  height: auto;
-  padding: 7rem 4rem;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: unset;
-  align-items: flex-start;
-  gap: 5rem;
-}
-.Layout1-about .Container {
-  align-self: stretch;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 5rem;
-}
-.Layout1-about .Content {
-  flex: 1 1 0;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: unset;
-  align-items: flex-start;
-  gap: 1.5rem;
-}
-.Layout1-about .Content .IconRelume {
-  width: 3rem;
-  height: 3rem;
-  padding: 0.25rem 0.375rem;
-  display: flex;
-  flex-direction: unset;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
-  gap: 0;
-  background-size: contain;
-}
-.Layout1-about .Content .ContentText {
-  align-self: stretch;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: unset;
-  align-items: flex-start;
-  gap: 1.5rem;
-}
-.Layout1-about .Content .ContentText .Heading {
-  color: var(--text-color);
-  font-size: 2.5rem;
-  font-family: var(--website-font-family);
-  font-weight: 700;
-  line-height: var(--heading-size);
-}
-.Layout1-about .Content .ContentText .Text {
-  color: var(--text-color);
-  font-size: var(--main-size);
-  font-family: var(--website-font-family);
-  font-weight: 400;
-  line-height: var(--line-height);
-}
-.Layout1-about .PlaceholderImage {
-  flex: 1 1 0;
-  width: 38.5rem;
-  height: 40rem;
-  object-fit: cover;
-}
-
-.Layout2-about {
-  width: 100%;
-  height: 54rem;
-  padding: 7rem 4rem;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: unset;
-  align-items: flex-start;
-  gap: 5rem;
-}
-.Layout2-about .Container {
-  align-self: stretch;
-  display: flex;
-  flex-direction: unset;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 5rem;
-}
-.Layout2-about .Content {
-  flex: 1 1 0;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: unset;
-  align-items: flex-start;
-  gap: 2rem;
-}
-.Layout2-about .Content .ContentHeader {
-  align-self: stretch;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: unset;
-  align-items: flex-start;
-  gap: 1.5rem;
-}
-.Layout2-about .Content .ContentHeader .Heading {
-  color: var(--text-color);
-  font-size: 2.5rem;
-  font-family: var(--website-font-family);
-  font-weight: 700;
-  line-height: var(--heading-size);
-}
-.Layout2-about .Content .ContentHeader .Text {
-  color: var(--text-color);
-  font-size: var(--main-size);
-  font-family: var(--website-font-family);
-  font-weight: 400;
-  line-height: var(--line-height);
-}
-.Layout2-about .Content .List {
-  align-self: stretch;
-  padding: 0.5rem 0;
-  display: flex;
-  flex-direction: unset;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 1.5rem;
-}
-.Layout2-about .Content .List .ListItem {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 0.5rem;
-}
-.Layout2-about .Content .List .ListItem .Number {
-  color: var(--text-color);
-  font-size: var(--heading-size);
-  font-family: var(--website-font-family);
-  font-weight: 700;
-  line-height: 3.6rem;
-}
-.Layout2-about .Content .List .ListItem .Text {
-  color: var(--text-color);
-  font-size: var(--main-size);
-  font-family: var(--website-font-family);
-  font-weight: 400;
-  line-height: var(--line-height);
-}
-.Layout2-about .PlaceholderImage {
-  flex: 1 1 0;
-  width: 38.5rem;
-  height: 40rem;
-  object-fit: cover;
-}
-
-.Team-about {
-  width: 100%;
-  height: auto;
-  padding: 7rem 4rem;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: unset;
-  align-items: center;
-  gap: 5rem;
-}
-.Team-about .SectionTitle {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: unset;
-  align-items: center;
-  gap: 1rem;
-}
-.Team-about .SectionTitle .Subheading, .Team-about .SectionTitle .Heading, .Team-about .SectionTitle .Description {
-  text-align: center;
-  color: var(--text-color);
-  font-family: var(--website-font-family);
-}
-.Team-about .SectionTitle .Subheading {
-  font-size: var(--subtitle-size);
-  font-weight: 600;
-  line-height: var(--line-height);
-}
-.Team-about .SectionTitle .Heading {
-  font-size: var(--heading-size);
-  font-weight: 700;
-  line-height: 3.6rem;
-}
-.Team-about .SectionTitle .Description {
-  font-size: var(--main-size);
-  font-weight: 400;
-  line-height: var(--line-height);
-}
-.Team-about .Content {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: unset;
-  align-items: center;
-  gap: 6rem;
-}
-.Team-about .Content .Row {
-  display: flex;
-  flex-direction: unset;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: unset;
-  gap: 3rem;
-}
-.Team-about .Content .Card {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
-  gap: 1.5rem;
-}
-.Team-about .Content .Card .PlaceholderImage {
-  width: 25.3125rem;
-  height: 24.6875rem;
-  object-fit: cover;
-}
-.Team-about .Content .Card .CardContent {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: unset;
-  align-items: center;
-  gap: 1rem;
-}
-.Team-about .Content .Card .Name, .Team-about .Content .Card .JobTitle, .Team-about .Content .Card .Bio {
-  text-align: center;
-  color: var(--text-color);
-  font-family: var(--website-font-family);
-}
-.Team-about .Content .Card .Name {
-  font-size: var(--subtitle-size);
-  font-weight: 600;
-  line-height: var(--line-height);
-}
-.Team-about .Content .Card .JobTitle {
-  font-size: var(--main-size);
-  font-weight: 400;
-  line-height: var(--line-height);
-}
-.Team-about .Content .Card .Bio {
-  font-size: var(--main-size);
-  font-weight: 400;
-  line-height: var(--line-height);
-}
-.Team-about .Content .Card .SocialIcons {
-  display: flex;
-  flex-direction: unset;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
-  gap: 0.875rem;
-}
-.Team-about .Content .Card .SocialIcons .IconLinkedin, .Team-about .Content .Card .SocialIcons .IconX, .Team-about .Content .Card .SocialIcons .IconDribble {
-  fill: var(--icon-color);
-  width: 2.5rem;
-  height: 2rem;
-}
-
-.Logo1-about {
-  width: 100%;
-  height: auto;
-  padding: 7rem 4rem;
-  display: flex;
-  flex-direction: unset;
-  flex-wrap: nowrap;
-  justify-content: unset;
-  align-items: center;
-  gap: 5rem;
-}
-.Logo1-about .Container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
-  width: 100%;
-}
-.Logo1-about .Container .Content {
-  flex: 1;
-  display: inline-flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 1.5rem;
-}
-.Logo1-about .Container .Content .Heading {
-  font-size: var(--heading-size);
-  font-weight: 700;
-  line-height: 3.6rem;
-  color: var(--text-color);
-  font-family: var(--website-font-family);
-}
-.Logo1-about .Container .Content .Text {
-  font-size: var(--main-size);
-  font-weight: 400;
-  line-height: var(--line-height);
-  color: var(--text-color);
-  font-family: var(--website-font-family);
-}
-.Logo1-about .Container .Content .Actions {
-  display: flex;
-  gap: 1.5rem;
-}
-.Logo1-about .Container .Logos {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: unset;
-  align-items: unset;
-  gap: 0.5rem;
-}
-.Logo1-about .Container .Logos .Logo {
-  width: 19rem;
-  height: 5.25rem;
-  flex-direction: column;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.875rem;
-}
-.Logo1-about .Container .Logos .Logo img {
-  background-color: var(--img-bg-color);
-  max-width: 100%;
-  height: auto;
-  object-fit: cover;
-}
-
-.Logo2-about {
-  width: 100%;
-  height: auto;
-  padding: 5rem 4rem;
-  display: flex;
-  flex-direction: unset;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 5rem;
-}
-.Logo2-about .Container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 4rem;
-  width: 100%;
-}
-.Logo2-about .Container .Heading {
-  width: 20rem;
-  color: var(--text-color);
-  font-size: var(--main-size);
-  font-family: var(--website-font-family);
-  font-weight: 700;
-  line-height: var(--line-height);
-}
-.Logo2-about .Container .Logos {
-  display: flex;
-  justify-content: end;
-  align-items: center;
-  flex: 1;
-}
-.Logo2-about .Container .Logos .Logo {
-  width: 10.625rem;
-  height: 3.5rem;
-  display: flex;
-  flex-direction: unset;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
-  gap: 4rem;
-}
-.Logo2-about .Container .Logos .Logo img {
-  max-width: 100%;
-  height: auto;
-  object-fit: cover;
-}
-
-.Cta-about {
-  width: 100%;
-  height: 26.3125rem;
-  padding: 7rem 4rem;
-  background-color: var(--reverse-bg-color);
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 5rem;
-}
-.Cta-about .Column {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 0;
-}
-.Cta-about .Column .Content {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 0;
-  color: var(--reverse-text-color);
-}
-.Cta-about .Column .Content .Heading {
-  font-size: var(--heading-size);
-  font-family: var(--website-font-family);
-  font-weight: 700;
-  line-height: var(--line-height);
-}
-.Cta-about .Column .Content .Text {
-  font-size: var(--main-size);
-  font-family: var(--website-font-family);
-  font-weight: 400;
-  line-height: var(--line-height);
-}
-.Cta-about .Column .Actions {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 1rem;
-  padding-top: var(--pm-md);
-}
-.Cta-about .Column .Actions .Button.btn-white {
-  background: none;
-  border: 0.0625rem solid var(--website-bg-color);
-  color: var(--website-bg-color);
-}
-.Cta-about .Column .Actions .Button.btn-white:hover {
-  color: var(--text-color);
-  background-color: var(--website-bg-color);
-  transition: var(--transition-duration) ease-in-out;
-  border-color: var(--btn-bg-hover-color);
-}
-
-.Portfolio-container {
-  width: 100%;
-  padding-bottom: 5rem;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 5rem;
-}
-.Portfolio-container .background-image {
-  width: 100%;
-  position: relative;
-}
-.Portfolio-container .background-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.Portfolio-container .background-image .content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: var(--white);
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
-  gap: 1.5rem;
-}
-.Portfolio-container .background-image .content h1 {
-  font-size: var(--h1-font-size);
-  font-family: var(--website-font-family);
-  font-weight: 700;
-  line-height: 4.2rem;
-}
-.Portfolio-container .background-image .content p {
-  font-size: var(--main-size);
-  font-family: var(--website-font-family);
-  font-weight: 400;
-  line-height: var(--line-height);
-}
-.Portfolio-container .background-image .content .tags {
-  display: flex;
-  gap: 0.5rem;
-}
-.Portfolio-container .background-image .content .tags span {
-  padding: 0.25rem 0.5rem;
-  background: var(--img-bg-color);
-  font-size: var(--main-size);
-  font-family: var(--website-font-family);
-  font-weight: 600;
-  line-height: var(--line-height);
-}
-
-.Portfolio-Gallery {
-  width: 100%;
-  height: auto;
-  padding: 7rem 4rem;
-  background: var(--bg-color-white);
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 9.375rem;
-}
-.Portfolio-Gallery .SectionTitle {
-  height: 6.8125rem;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 0;
-}
-.Portfolio-Gallery .SectionTitle .Heading {
-  width: 100%;
-  text-align: center;
-  color: var(--text-color);
-  font-size: var(--heading-size);
-  font-family: var(--website-font-family);
-  font-weight: 700;
-  line-height: 3.6rem;
-}
-.Portfolio-Gallery .SectionTitle .Text {
-  width: 100%;
-  text-align: center;
-  color: var(--text-color);
-  font-size: var(--main-size);
-  font-family: var(--website-font-family);
-  font-weight: 400;
-  line-height: var(--line-height);
-}
-
-.Portfolio {
-  width: auto;
-  height: 71.75rem;
-  padding: 7rem 4rem;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 11.25rem;
-}
-.Portfolio .SectionTitle {
-  height: 9.3125rem;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 0;
-}
-.Portfolio .SectionTitle .Subheading {
-  text-align: center;
-  color: var(--text-color);
-  font-size: var(--main-size);
-  font-family: var(--website-font-family);
-  font-weight: 600;
-  line-height: var(--line-height);
-}
-.Portfolio .Content {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 0;
-}
-.Portfolio .Content .PortfolioList {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 3rem;
-}
-.Portfolio .Content .PortfolioList .Row {
-  width: auto;
-  display: flex;
-  justify-content: flex-start;
-  gap: 3rem;
-}
-.Portfolio .Content .PortfolioList .Row .Card {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 0;
-}
-.Portfolio .Content .PortfolioList .Row .Card .PlaceholderImage {
-  width: 39.5rem;
-  height: 25rem;
-  object-fit: cover;
-}
-.Portfolio .Content .PortfolioList .Row .Card .Content {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 0;
-}
-.Portfolio .Content .PortfolioList .Row .Card .Content .Text {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 0;
-}
-.Portfolio .Content .PortfolioList .Row .Card .Content .Text .Heading {
-  color: var(--text-color);
-  font-size: var(--subtitle-size);
-  font-family: var(--website-font-family);
-  font-weight: 700;
-  line-height: 2.1rem;
-}
-.Portfolio .Content .PortfolioList .Row .Card .Content .Text .Text {
-  color: var(--text-color);
-  font-size: var(--main-size);
-  font-family: var(--website-font-family);
-  font-weight: 400;
-  line-height: var(--line-height);
-}
-.Portfolio .Content .PortfolioList .Row .Card .Content .Tags {
-  display: flex;
-  flex-direction: unset;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 0.5rem;
-}
-.Portfolio .Content .PortfolioList .Row .Card .Content .Tags .Tag {
-  padding: 0.25rem 0.5rem;
-  background: var(--img-bg-color);
-  color: var(--text-color);
-  font-size: var(--main-size);
-  font-family: var(--website-font-family);
-  font-weight: 600;
-  line-height: var(--line-height);
-}
-
-.Portfolio-Layout {
-  width: 100%;
-  height: auto;
-  padding: 7rem 4rem;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 5rem;
-}
-.Portfolio-Layout .Content {
-  align-self: center;
-  display: inline-flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 5rem;
-}
-.Portfolio-Layout .Content .Column {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 1rem;
-}
-.Portfolio-Layout .Content .Column .Subheading {
-  align-self: stretch;
-  color: var(--text-color);
-  font-size: var(--main-size);
-  font-family: var(--website-font-family);
-  font-weight: 600;
-  line-height: var(--line-height);
-}
-.Portfolio-Layout .Content .Column .Heading {
-  align-self: stretch;
-  color: var(--text-color);
-  font-size: var(--heading-size);
-  font-family: var(--website-font-family);
-  font-weight: 700;
-  line-height: 3.6rem;
-}
-.Portfolio-Layout .Content .Column .Actions {
-  padding-top: 1rem;
-  display: inline-flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 1rem;
-}
-.Portfolio-Layout .Content .Column {
-  gap: 1.5rem;
-}
-.Portfolio-Layout .Content .Column .Text {
-  align-self: stretch;
-  color: var(--text-color);
-  font-size: var(--main-size);
-  font-family: var(--website-font-family);
-  font-weight: 400;
-  line-height: var(--line-height);
-}
-.Portfolio-Layout .PlaceholderImage {
-  align-self: stretch;
-  width: 100%;
-  height: 52.375rem;
-  object-fit: cover;
-}
-
-.Portfolio-Logo {
-  width: 100%;
-  height: auto;
-  padding: 7rem 4rem;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 3rem;
-}
-.Portfolio-Logo .Heading {
-  color: var(--text-color);
-  font-size: var(--main-size);
-  font-family: var(--website-font-family);
-  font-weight: 700;
-  line-height: var(--line-height);
-}
-.Portfolio-Logo .Content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1.5rem;
-}
-.Portfolio-Logo .Content .Logo.Webflow, .Portfolio-Logo .Content .Logo.Relume {
-  width: 12.5rem;
-  height: 3rem;
-  padding: 0.609375rem 2.6875rem;
-  display: flex;
-  flex-direction: unset;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
-  gap: 0;
-}
-.Portfolio-Logo .Content .Logo.Relume {
-  height: 3.5rem;
-  position: relative;
-}
-
-.Portfolio-feedback {
-  width: 100%;
-  height: auto;
-  padding: 7rem 4rem;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 5rem;
-}
-.Portfolio-feedback .SectionTitle {
-  height: 11.25rem;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 0;
-}
-.Portfolio-feedback .SectionTitle .Heading {
-  color: var(--text-color);
-  font-size: var(--heading-size);
-  font-family: var(--website-font-family);
-  font-weight: 700;
-  line-height: 3.6rem;
-}
-.Portfolio-feedback .SectionTitle .Text {
-  color: var(--text-color);
-  font-size: var(--main-size);
-  font-family: var(--website-font-family);
-  font-weight: 400;
-  line-height: var(--line-height);
-}
-.Portfolio-feedback .Content {
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 4rem;
-}
-.Portfolio-feedback .Content .Column {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 1.25rem;
-}
-.Portfolio-feedback .Content .Column .Stars {
-  display: flex;
-  flex-direction: unset;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 0;
-}
-.Portfolio-feedback .Content .Column .Stars img {
-  width: 1.25rem;
-  height: 1.180625rem;
-}
-.Portfolio-feedback .Content .Column .Quote {
-  color: var(--text-color);
-  font-size: var(--main-size);
-  font-family: var(--website-font-family);
-  font-weight: 700;
-  line-height: var(--line-height);
-}
-.Portfolio-feedback .Content .Column .Avatar {
-  width: 100%;
-  height: 3.8125rem;
-  display: inline-flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 1.25rem;
-}
-.Portfolio-feedback .Content .Column .Avatar .AvatarImage {
-  width: 3.5rem;
-  height: 3.5rem;
-  object-fit: fill;
-  border-radius: 624.9375rem;
-}
-.Portfolio-feedback .Content .Column .Avatar .AvatarContent {
-  display: inline-flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-}
-.Portfolio-feedback .Content .Column .Avatar .AvatarContent .Name,
-.Portfolio-feedback .Content .Column .Avatar .AvatarContent .Role {
-  color: var(--text-color);
-  font-size: var(--main-size);
-  font-family: var(--website-font-family);
-  line-height: var(--line-height);
-  word-wrap: break-word;
-}
-.Portfolio-feedback .Content .Column .Avatar .AvatarContent .Name {
-  font-weight: 600;
-}
-.Portfolio-feedback .Content .Column .Avatar .AvatarContent .Role {
-  font-weight: 400;
-}
-.Portfolio-feedback .Content .Column .Avatar .Divider {
-  width: 3.8125rem;
-  height: 0;
-  transform: rotate(90deg);
-  border: 0.0625rem solid var(--reverse-bg-color);
-}
-.Portfolio-feedback .Content .Column .Avatar .CompanyLogo {
-  width: 7.5rem;
-  height: 3rem;
-  padding: 0.609375rem 0.1875rem;
-  display: flex;
-  flex-direction: unset;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
-  gap: 0;
-}
-
-.Portfolio-cta {
-  width: 100%;
-  height: auto;
-  padding: 7rem 4rem;
-  display: inline-flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 5rem;
-}
-.Portfolio-cta .Content {
-  height: 12.3125rem;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 1.5rem;
-}
-.Portfolio-cta .Content .Heading {
-  align-self: stretch;
-  text-align: center;
-  color: var(--text-color);
-  font-size: var(--heading-size);
-  font-family: var(--website-font-family);
-  font-weight: 700;
-  line-height: 3.6rem;
-  word-wrap: break-word;
-}
-.Portfolio-cta .Content .Text {
-  align-self: stretch;
-  text-align: center;
-  color: var(--text-color);
-  font-size: var(--main-size);
-  font-family: var(--website-font-family);
-  font-weight: 400;
-  line-height: var(--line-height);
-  word-wrap: break-word;
-}
-.Portfolio-cta .Content .Actions {
-  padding-top: 1rem;
-  display: inline-flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 1rem;
-}
-
-.project-header {
-  width: 100%;
-  height: 24.6875rem;
-  padding: 7rem 4rem;
-  display: inline-flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 5rem;
-}
-.project-header .Content {
-  height: 10.6875rem;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 1.5rem;
-}
-.project-header .Content .Tags {
-  align-self: stretch;
-  display: inline-flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 0.5rem;
-}
-.project-header .Content .Tags .Tag {
-  padding: 0.25rem 0.5rem;
-  background: var(--img-bg-color);
-  display: flex;
-  flex-direction: unset;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 0;
-}
-.project-header .Content .Tags .Tag div {
-  color: var(--white);
-  font-size: var(--main-size);
-  font-family: var(--website-font-family);
-  font-weight: 600;
-  line-height: var(--line-height);
-  word-wrap: break-word;
-}
-
-.project-content {
-  width: 100%;
-  height: auto;
-  padding: 7rem 4rem;
-  display: inline-flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 5rem;
-}
-.project-content .Container {
-  align-self: stretch;
-  display: inline-flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 5rem;
-}
-.project-content .Container .PlaceholderImage {
-  width: 38.5rem;
-  height: 40rem;
-  object-fit: cover;
-}
-.project-content .Container .Content {
-  flex: 1 1 0;
-  display: inline-flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 1.5rem;
-}
-.project-content .Container .Content .RichText {
-  align-self: stretch;
-  height: 18.5rem;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 0;
-}
-.project-content .Container .Content .RichText .Content {
-  align-self: stretch;
-  padding-bottom: 1rem;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 0;
-}
-.project-content .Container .Content .RichText .Content .Paragraph {
-  align-self: stretch;
-  color: var(--text-color);
-  font-size: var(--main-size);
-  font-family: var(--website-font-family);
-  font-weight: 400;
-  line-height: var(--line-height);
-  word-wrap: break-word;
-}
-
-.project-gallery {
-  width: 100%;
-  height: auto;
-  padding: 7rem 4rem;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 5rem;
-}
-.project-gallery .SectionTitle {
-  height: 6.8125rem;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 1.5rem;
-}
-.project-gallery .SectionTitle .Heading, .project-gallery .SectionTitle .Text {
-  align-self: stretch;
-  text-align: center;
-  color: var(--text-color);
-  font-size: var(--heading-size);
-  font-family: var(--website-font-family);
-  font-weight: 700;
-  line-height: 3.6rem;
-  word-wrap: break-word;
-}
-
-.project-layout {
-  width: 100%;
-  height: 54rem;
-  padding: 7rem 4rem;
-  display: inline-flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: 5rem;
-}
-.project-layout .Container {
-  align-self: stretch;
-  display: inline-flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 5rem;
-}
-.project-layout .Container .Content {
-  flex: 1 1 0;
-  display: inline-flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: 1.5rem;
-}
-.project-layout .Container .Content .SectionTitle {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 1rem;
-  align-self: stretch;
-  height: 18rem;
-  color: var(--text-color);
-}
-.project-layout .Container .Content .SectionTitle .Subheading {
-  text-align: center;
-  font-size: var(--main-size);
-  font-weight: 600;
-  font-family: var(--website-font-family);
-  line-height: var(--line-height);
-}
-.project-layout .Container .Content .List {
-  display: inline-flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: 1.5rem;
-  padding: 0.5rem 0;
-  align-self: stretch;
-}
-.project-layout .Container .Content .List .ListItem {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: 1rem;
-  flex: 1 1 0;
-  color: var(--text-color);
-}
-.project-layout .Container .Content .List .ListItem .SubheadingOne,
-.project-layout .Container .Content .List .ListItem .SubheadingTwo {
-  font-size: var(--main-size);
-  font-weight: 700;
-  font-family: var(--website-font-family);
-  line-height: var(--line-height);
-  align-self: stretch;
-}
-.project-layout .Container .Content .Actions {
-  display: inline-flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 1.5rem;
-  padding-top: 1rem;
-}
-
-.project-layout2 {
-  width: 100%;
-  height: auto;
-  padding: 7rem 4rem;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 5rem;
-  font-family: var(--website-font-family);
-}
-.project-layout2 .Content {
-  align-self: stretch;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 5rem;
-}
-.project-layout2 .Content .Column {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 1rem;
-  color: var(--text-color);
-}
-.project-layout2 .Content .Column .Subheading {
-  align-self: stretch;
-  font-size: var(--main-size);
-  font-weight: 600;
-  font-family: var(--website-font-family);
-  line-height: var(--line-height);
-}
-.project-layout2 .Content .Column .Heading, .project-layout2 .Content .Column Text {
-  align-self: stretch;
-  font-size: var(--heading-size);
-  font-weight: 700;
-  font-family: var(--website-font-family);
-  line-height: 3.6rem;
-}
-.project-layout2 .Content .Column .Actions {
-  padding-top: 1rem;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 1.5rem;
-}
-
-.project-faq {
-  padding: 7rem 4rem;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: unset;
-  align-items: flex-start;
-  gap: 0;
-}
-.project-faq .Container {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: unset;
-  align-items: flex-start;
-  gap: 0;
-}
-.project-faq .SectionTitle {
-  width: 100%;
-  text-align: center;
-  font-family: var(--website-font-family);
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: unset;
-  align-items: flex-start;
-  gap: 0.0625rem;
-  color: var(--text-color);
-}
-.project-faq .SectionTitle .Heading {
-  font-family: var(--website-font-family);
-  font-size: var(--heading-size);
-  font-weight: 700;
-}
-.project-faq .SectionTitle .Text {
-  font-family: var(--website-font-family);
-  font-size: var(--main-size);
-  font-weight: 400;
-}
-.project-faq .Accordion {
-  width: 100%;
-}
-.project-faq .Accordion .faq-item {
-  width: 100%;
-  border-bottom: 0.0625rem solid #eaeaea;
-  color: var(--text-color);
-}
-.project-faq .Accordion .faq-item .faq-question {
-  color: var(--text-color);
-  width: 100%;
-  text-align: left;
-  font-size: var(--main-size);
-  font-weight: 700;
-  background: none;
-  border: none;
-  cursor: pointer;
-  display: flex;
-  flex-direction: unset;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: center;
-  gap: 0;
-  padding: 1.25rem 0;
-}
-.project-faq .Accordion .faq-item .faq-question:after {
-  content: "▼";
-  font-size: 1.5rem;
-  transition: transform 0.3s;
-}
-.project-faq .Accordion .faq-item .faq-question.is-open::after {
-  content: "▲";
-}
-.project-faq .Accordion .faq-item .faq-answer {
-  display: none;
-  padding: 0 1.25rem;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  margin-top: 0.5rem;
-}
-.project-faq .Content {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: unset;
-  align-items: flex-start;
-  gap: 0;
-  color: var(--text-color);
-}
-.project-faq .Content a {
-  text-decoration: none;
-}
-
-.project-cta {
-  width: 100%;
-  height: auto;
-  padding: 7rem 4rem;
-  background-color: var(--reverse-bg-color);
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 5rem;
-}
-.project-cta .column {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 1.5rem;
-}
-.project-cta .column .content {
-  font-family: var(--website-font-family);
-  color: var(--reverse-text-color);
-}
-.project-cta .column .content .heading {
-  font-size: var(--heading-size);
-  font-weight: 700;
-  line-height: 3.6rem;
-}
-.project-cta .column .content .text {
-  font-size: var(--main-size);
-  font-weight: 400;
-  line-height: var(--line-height);
-}
-.project-cta .column .Actions {
-  display: flex;
-  flex-direction: unset;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 1rem;
-  padding-top: 1rem;
-}
-.project-cta .column .Actions .Button.btn-white {
-  background: none;
-  border: 0.0625rem solid var(--website-bg-color);
-  color: var(--website-bg-color);
-}
-.project-cta .column .Actions .Button.btn-white:hover {
-  color: var(--text-color);
-  background-color: var(--website-bg-color);
-  transition: var(--transition-duration) ease-in-out;
-  border-color: var(--btn-bg-hover-color);
-}
-
-/*@import "pages/service";*/
-.contact-header {
-  width: 100%;
-  height: auto;
-  padding: 4rem 4rem;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 5rem;
-}
-.contact-header .container {
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 1.5rem;
-}
-.contact-header .container .section-title {
-  text-align: start;
-  font-family: var(--website-font-family);
-}
-.contact-header .container .section-title .tagline {
-  font-size: var(--main-size);
-  font-weight: 600;
-  line-height: var(--subtitle-size);
-  color: var(--text-color);
-}
-.contact-header .container .section-title .short-heading-here {
-  font-size: 3.5rem;
-  font-weight: 700;
-  line-height: 4.2rem;
-  color: var(--text-color);
-}
-.contact-header .container .section-title .text {
-  font-size: var(--main-size);
-  font-weight: 400;
-  line-height: var(--line-height);
-  color: var(--text-color);
-}
-.contact-header .container .actions {
-  padding-top: 1rem;
-  display: flex;
-  flex-direction: unset;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 1rem;
-}
-
-.contact-map {
-  width: 100%;
-  height: auto;
-  padding: 4rem 4rem;
-}
-.contact-map .section-title {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 0;
-  font-family: var(--website-font-family);
-}
-.contact-map .section-title .subheading,
-.contact-map .section-title .heading,
-.contact-map .section-title .text {
-  text-align: center;
-}
-.contact-map .section-title .subheading {
-  color: var(--text-color);
-  font-size: var(--main-size);
-  font-weight: 600;
-  line-height: var(--line-height);
-}
-.contact-map .section-title .heading {
-  color: var(--text-color);
-  font-size: var(--heading-size);
-  font-weight: 700;
-}
-.contact-map .section-title .text {
-  color: var(--text-color);
-  font-size: var(--main-size);
-  font-weight: 400;
-  line-height: var(--line-height);
-}
-.contact-map .row {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
-  gap: 4rem;
-}
-.contact-map .row .column {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 0;
-}
-.contact-map .row .column .content {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 0;
-  font-family: var(--website-font-family);
-}
-.contact-map .row .column .content .heading {
-  color: var(--text-color);
-  font-size: var(--subtitle-size);
-  font-weight: 700;
-}
-.contact-map .row .column .content .text {
-  color: var(--text-color);
-  font-size: var(--main-size);
-  font-weight: 400;
-  line-height: var(--line-height);
-}
-.contact-map .row .column .img {
-  width: 39rem;
-  height: 24rem;
-  object-fit: cover;
-}
-
-.contact-cta {
-  width: 100%;
-  height: auto;
-  padding: 7rem 4rem;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: unset;
-  gap: 5rem;
-}
-.contact-cta .container {
-  display: flex;
-  flex-direction: unset;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 5rem;
-}
-.contact-cta .container .content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: unset;
-  align-items: flex-start;
-  gap: 0;
-  font-family: var(--website-font-family);
-}
-.contact-cta .container .content .heading {
-  font-size: var(--heading-size);
-  font-weight: 700;
-  line-height: var(--heading-size);
-  color: var(--text-color);
-}
-.contact-cta .container .content .text {
-  font-size: var(--main-size);
-  font-weight: 400;
-  line-height: var(--line-height);
-  color: var(--text-color);
-}
-.contact-cta .container .actions {
-  width: 32.0625rem;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: unset;
-  align-items: flex-start;
-  gap: 1rem;
-}
-.contact-cta .container .actions .form {
-  display: flex;
-  gap: 1rem;
-  font-family: var(--website-font-family);
-}
-.contact-cta .container .actions .form .text-input {
-  width: 24.625rem;
-  flex: 1;
-  height: 3rem;
-  padding: 0.75rem;
-  border: 0.0625rem solid var(--text-color);
-  font-size: var(--main-size);
-}
-.contact-cta .container .actions .form .subscribe-button {
-  height: 3rem;
-  padding: 0.75rem 1.5rem;
-  background: var(--btn-bg-color);
-  color: var(--text-color);
-  border: 0.0625rem solid var(--reverse-bg-color);
-  font-size: var(--main-size);
-  cursor: pointer;
-}
-.contact-cta .container .actions .terms {
-  font-family: var(--website-font-family);
-  font-size: 0.75rem;
-  line-height: var(--main-size);
-  color: var(--text-color);
-}
-
+/*@import "pages/about-us";
+@import "pages/portfolio";
+@import "pages/project";
+@import "pages/service";
+@import "pages/contact";*/
 .error-404 {
   display: flex;
   flex-direction: column;

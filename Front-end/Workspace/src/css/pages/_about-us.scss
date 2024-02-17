@@ -216,43 +216,11 @@
     .Card {
       @include flexbox(column, nowrap, center, center, rem(24));
 
-      .PlaceholderImage {
-        width: rem(405);
-        height: rem(395);
-        object-fit: cover;
-      }
-      .CardContent {
-        @include flexbox(column, nowrap, unset, center, rem(16));
-      }
-      .Name, .JobTitle, .Bio {
-        text-align: center;
-        color: var(--text-color);
-        font-family: var(--website-font-family);
-      }
-      .Name {
-        font-size:var(--subtitle-size);
-        font-weight: 600;
-        line-height: var(--line-height)
-      }
-      .JobTitle {
-        font-size: var(--main-size);
-        font-weight: 400;
-        line-height: var(--line-height)
-      }
-      .Bio {
-        font-size: var(--main-size);
-        font-weight: 400;
-        line-height: var(--line-height)
-      }
-      .SocialIcons {
-        @include flexbox(unset, nowrap, center, center, rem(14));
-
-        .IconLinkedin, .IconX, .IconDribble {
-          fill: var(--icon-color);
-          width: rem(40);
-          height: rem(32);
-        }
-      }
+      
+      
+     
+      
+      
     }
   }
 }
