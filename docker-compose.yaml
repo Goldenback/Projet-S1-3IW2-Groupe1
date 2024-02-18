@@ -1,0 +1,61 @@
+version: '3'
+
+services:
+  php:
+    build: php
+    volumes:
+      - ./www:/var/www/html/
+    depends_on:
+      - postgres
+    networks:
+      - internal
+
+  nginx:
+    build: nginx
+    ports:
+      - "80:80"
+    volumes:
+      - ./www:/var/www/html/Back-end
+      - ./Front-end:/var/www/html/Front-end
+      - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - php
+    networks:
+      - internal
+
+  postgres:
+    image: postgres:latest
+    restart: always
+    environment:
+      POSTGRES_DB: db_name
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./www/DB/init-db.sql:/docker-entrypoint-initdb.d/init-db.sql
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - internal
+
+  pgadmin:
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: root
+    ports:
+      - "5050:80"
+    volumes:
+      - pgadmin_data:/var/lib/pgadmin
+    depends_on:
+      - postgres
+    networks:
+      - internal
+
+volumes:
+  postgres_data:
+  pgadmin_data:
+
+networks:
+  internal:
+    driver: bridge
