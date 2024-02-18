@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../Front-end/Workspace/dist/css/main.css" />
-    <title>Document</title>
+    <title>Home</title>
 </head>
 <body>
 <?php
-//include __DIR__ . '/../Front-Office/layout/';
+
 $components = [
+    'loader.php',
     'navbar.php',
     'hero.php',
     'content-layout.php',
@@ -22,12 +23,9 @@ $components = [
     'footer.php',
 ];
 
-// Parcours du tableau et inclusion de chaque fichier de composant
 foreach ($components as $component) {
     include __DIR__ . '/../Front-Office/layout/' . $component;
 }
-
-
 ?> 
 </body>
 </html>

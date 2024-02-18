@@ -1,28 +1,19 @@
 <nav class="navbar">
     <div class="container">
         <div class="logo-container">
-          <a href="/about">
+          <a href="/home-artist">
             <img class="icon logo" src="../../../Front-end/Workspace/assets/svg/brand/simplify.svg">
           </a>
         </div>
         <ul class="navbar-links">
             <li>
-                <a href="/about">About Us</a>
+                <a href="/about-artist">About Us</a>
             </li>
             <li>
-                <a href="/portfolio">Portfolio</a>
-            </li>
-            <li>
-                <a href="/service">Services</a>
-            </li>
-            <li class="more">More
-                <ul class="dropdown-content">
-                    <li><a href="/project">Projects</a></li>
-                    <li><a href="/register">Sign Up</a></li>
-                </ul>
+                <a href="/portfolio-artist">Portfolio</a>
             </li>
         </ul>
-        <a href="/contact" class="Button Primary">Contact</a>
+        <a href="/contact-artist" class="Button Primary">Contact</a>
         <div class="theme-switcher" id="themeSwitcher">
           <img id="icon-sun" class="icon icon-sun" src="../../../Front-end/Workspace/assets/svg/icon/sun.svg" alt="Sun Icon"/>
           <img id="icon-moon" class="icon icon-moon" src="../../../Front-end/Workspace/assets/svg/icon/moon.svg" alt="Moon Icon"/>

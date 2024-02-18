@@ -1370,11 +1370,6 @@ img {
   color: var(--text-color);
 }
 
-/*@import "pages/about-us";
-@import "pages/portfolio";
-@import "pages/project";
-@import "pages/service";
-@import "pages/contact";*/
 .error-404 {
   display: flex;
   flex-direction: column;
