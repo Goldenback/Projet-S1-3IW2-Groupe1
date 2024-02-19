@@ -2,95 +2,88 @@
 
 namespace App\Models;
 
-use App\Core\DB;
-
-class Comment extends DB
+class Comment
 {
     private int $id;
     private User $user;
-    private string $comment;
+    private Post $post;
+    private string $content;
     private bool $isApproved;
     private bool $isDeleted;
-    private \DateTimeImmutable $createdAt;
+    private \DateTime $createdAt;
 
-    /**
-     * @return int
-     */
+    public function __construct(User $user, Post $post, string $content, bool $isApproved, bool $isDeleted, \DateTime $createdAt)
+    {
+        $this->user = $user;
+        $this->post = $post;
+        $this->content = $content;
+        $this->isApproved = $isApproved;
+        $this->isDeleted = $isDeleted;
+        $this->createdAt = $createdAt;
+    }
+
     public function getId(): int
     {
         return $this->id;
     }
 
-    /**
-     * @param int $id
-     */
-    public function setId(int $id): void
-    {
-        $this->id = $id;
-    }
-
-    /**
-     * @return User
-     */
     public function getUser(): User
     {
         return $this->user;
     }
 
-    /**
-     * @param User $user
-     */
     public function setUser(User $user): void
     {
         $this->user = $user;
     }
 
-    /**
-     * @return string
-     */
-    public function getComment(): string
+    public function getPost(): Post
     {
-        return $this->comment;
+        return $this->post;
     }
 
-    /**
-     * @param string $comment
-     */
-    public function setComment(string $comment): void
+    public function setPost(Post $post): void
     {
-        $this->comment = $comment;
+        $this->post = $post;
     }
 
-    /**
-     * @return bool
-     */
-    public function IsApproved(): bool
+    public function getContent(): string
+    {
+        return $this->content;
+    }
+
+    public function setContent(string $content): void
+    {
+        $this->content = $content;
+    }
+
+    public function isApproved(): bool
     {
         return $this->isApproved;
     }
 
-    /**
-     * @param bool $isApproved
-     */
     public function setIsApproved(bool $isApproved): void
     {
         $this->isApproved = $isApproved;
     }
 
-    /**
-     * @return bool
-     */
-    public function IsDeleted(): bool
+    public function isDeleted(): bool
     {
         return $this->isDeleted;
     }
 
-    /**
-     * @param bool $isDeleted
-     */
     public function setIsDeleted(bool $isDeleted): void
     {
         $this->isDeleted = $isDeleted;
     }
 
+    public function getCreatedAt(): \DateTime
+    {
+        return $this->createdAt;
+    }
+
+    public function setCreatedAt(\DateTime $createdAt): void
+    {
+        $this->createdAt = $createdAt;
+    }
 }

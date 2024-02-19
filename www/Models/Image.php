@@ -1,43 +1,52 @@
 <?php
 
 namespace App\Models;
-
-use App\Core\DB;
-
-class Image extends DB
+class Image
 {
     private int $id;
-    private string $imageName;
+    private string $filename;
+    private string $description;
+    private \DateTime $createdAt;
 
-    /**
-     * @return int
-     */
+    public function __construct(string $filename, string $description, \DateTime $createdAt)
+    {
+        $this->filename = $filename;
+        $this->description = $description;
+        $this->createdAt = $createdAt;
+    }
+
     public function getId(): int
     {
         return $this->id;
     }
 
-    /**
-     * @param int $id
-     */
-    public function setId(int $id): void
+    public function getFilename(): string
     {
-        $this->id = $id;
+        return $this->filename;
     }
 
-    /**
-     * @return string
-     */
-    public function getImageName(): string
+    public function setFilename(string $filename): void
     {
-        return $this->imageName;
+        $this->filename = $filename;
     }
 
-    /**
-     * @param string $imageName
-     */
-    public function setImageName(string $imageName): void
+    public function getDescription(): string
     {
-        $this->imageName = $imageName;
+        return $this->description;
+    }
+
+    public function setDescription(string $description): void
+    {
+        $this->description = $description;
+    }
+
+    public function getCreatedAt(): \DateTime
+    {
+        return $this->createdAt;
+    }
+
+    public function setCreatedAt(\DateTime $createdAt): void
+    {
+        $this->createdAt = $createdAt;
     }
 }

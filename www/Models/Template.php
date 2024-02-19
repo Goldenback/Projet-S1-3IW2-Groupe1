@@ -2,16 +2,14 @@
 
 namespace App\Models;
 
-class Font
+class Template
 {
     private int $id;
     private string $name;
-    private string $url;
 
-    public function __construct(string $name, string $url)
+    public function __construct(string $name)
     {
         $this->name = $name;
-        $this->url = $url;
     }
 
     public function getId(): int
@@ -27,15 +25,5 @@ class Font
     public function setName(string $name): void
     {
         $this->name = $name;
-    }
-
-    public function getUrl(): string
-    {
-        return $this->url;
-    }
-
-    public function setUrl(string $url): void
-    {
-        $this->url = $url;
     }
 }

@@ -2,93 +2,88 @@
 
 namespace App\Models;
 
-use App\Core\DB;
-
-class Post extends DB
+class Post
 {
     private int $id;
-    private string $title;
-    private string $paragraph;
-    private string $url;
-    private string $imageName;
+    private ?string $title = null;
+    private ?string $content = null;
+    private ?string $url = null;
+    private ?Image $image = null;
+    private int $displayOrder;
+    private \DateTime $createdAt;
 
-    /**
-     * @return int
-     */
+    public function __construct(?string $title, ?string $content, ?string $url, ?Image $image, int $displayOrder, \DateTime $createdAt)
+    {
+        $this->title = $title;
+        $this->content = $content;
+        $this->url = $url;
+        $this->image = $image;
+        $this->displayOrder = $displayOrder;
+        $this->createdAt = $createdAt;
+    }
+
     public function getId(): int
     {
         return $this->id;
     }
 
-    /**
-     * @param int $id
-     */
-    public function setId(int $id): void
-    {
-        $this->id = $id;
-    }
-
-    /**
-     * @return string
-     */
-    public function getTitle(): string
+    public function getTitle(): ?string
     {
         return $this->title;
     }
 
-    /**
-     * @param string $title
-     */
-    public function setTitle(string $title): void
+    public function setTitle(?string $title): void
     {
         $this->title = $title;
     }
 
-    /**
-     * @return string
-     */
-    public function getParagraph(): string
+    public function getContent(): ?string
     {
-        return $this->paragraph;
+        return $this->content;
     }
 
-    /**
-     * @param string $paragraph
-     */
-    public function setParagraph(string $paragraph): void
+    public function setContent(?string $content): void
     {
-        $this->paragraph = $paragraph;
+        $this->content = $content;
     }
 
-    /**
-     * @return string
-     */
-    public function getUrl(): string
+    public function getUrl(): ?string
     {
         return $this->url;
     }
 
-    /**
-     * @param string $url
-     */
-    public function setUrl(string $url): void
+    public function setUrl(?string $url): void
     {
         $this->url = $url;
     }
 
-    /**
-     * @return string
-     */
-    public function getImageName(): string
+    public function getImage(): ?Image
     {
-        return $this->imageName;
+        return $this->image;
     }
 
-    /**
-     * @param string $imageName
-     */
-    public function setImageName(string $imageName): void
+    public function setImage(?Image $image): void
     {
-        $this->imageName = $imageName;
+        $this->image = $image;
+    }
+
+    public function getDisplayOrder(): int
+    {
+        return $this->displayOrder;
+    }
+
+    public function setDisplayOrder(int $displayOrder): void
+    {
+        $this->displayOrder = $displayOrder;
+    }
+
+    public function getCreatedAt(): \DateTime
+    {
+        return $this->createdAt;
+    }
+
+    public function setCreatedAt(\DateTime $createdAt): void
+    {
+        $this->createdAt = $createdAt;
     }
 }
