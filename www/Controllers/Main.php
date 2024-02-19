@@ -2,16 +2,18 @@
 
 namespace App\Controllers;
 
-use App\Models\GlobalConfig;
+use App\Models\GlobalSettings;
+use App\Config\Config;
 
 class Main
 {
 
-    private GlobalConfig $config;
+    private GlobalSettings $config;
 
     public function __construct()
     {
-        $this->config = new GlobalConfig();
+        include __DIR__ . '/../Config/Config.php';
+        $this->config = new GlobalSettings($templateLight);
         define('BASE_DIR', __DIR__ . '/..'); //pour le dossier parent
     }
 
