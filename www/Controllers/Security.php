@@ -45,7 +45,8 @@ class Security
                     $userData['role'],
                     $userData['is_validated'],
                     $userData['is_deleted'],
-                    new \DateTime($userData['created_at'])
+                    new \DateTime($userData['created_at']),
+                    $userData['activation_token']
                 );
                 if (!$user->isValidated()) {
                     // Account not activated
@@ -57,7 +58,6 @@ class Security
                     session_start();
 
                     // Store user information in session
-                    $_SESSION['user_id'] = $user->getId();
                     $_SESSION['email'] = $user->getEmail();
 
                     // Redirect to home page
@@ -106,7 +106,7 @@ class Security
             $activationToken = bin2hex(random_bytes(16));
 
             // Vérifie si l'email existe déjà
-            if ($this->db->getOneBy("users", ['email' => $email], "object")) {
+            if ($this->db->getOneBy("users", ['email' => $email])) {
                 // L'utilisateur existe déjà
                 $_SESSION["error_message"] = "Cet email est déjà pris !";
                 header("Location: /register");
@@ -245,8 +245,6 @@ class Security
         }
     }
 
-
-
     public function activate(): void
     {
         session_start();
@@ -254,7 +252,7 @@ class Security
         if (!empty($_GET['token'])) {
             $token = $_GET['token'];
 
-            $user = $this->db->getOneBy('users', ['activation_token' => $token], "object");
+            $user = $this->db->getOneBy('users', ['activation_token' => $token]);
 
             if ($user) {
                 // Active le compte utilisateur
