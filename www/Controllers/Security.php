@@ -7,8 +7,12 @@ use App\Models\User;
 
 class Security
 {
+
+    private DB $db;
+
     public function __construct()
     {
+        $this->db = new DB();
         define('BASE_DIR', __DIR__ . '/..'); //pour le dossier parent
     }
 
@@ -20,13 +24,8 @@ class Security
             $email = $_POST['email'] ?? '';
             $password = $_POST['password'] ?? '';
 
-            // Get database connection
-            $db = DB::getInstance()->getConnection();
-
-            // Prepare and execute SQL query to fetch user by email
-            $stmt = $db->prepare("SELECT * FROM users WHERE email = :email");
-            $stmt->execute(['email' => $email]);
-            $userData = $stmt->fetch();
+            // check is email exist + get his informations
+            $userData = $this->db->getOneBy("users", ['email'=> $email]);
 
             // Verify password if user is found
             if ($userData && password_verify($password, $userData['password'])) {
@@ -55,7 +54,7 @@ class Security
                     $_SESSION['email'] = $user->getEmail();
 
                     // Redirect to home page
-                    header("Location: /");
+                    header("Location: /config");
                 }
             } else {
                 // Authentication failed
@@ -68,4 +67,10 @@ class Security
             require(BASE_DIR . "/Views/Security/login_form.php");
         }
     }
+
+
+
+
+
+
 }

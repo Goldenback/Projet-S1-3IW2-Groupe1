@@ -8,6 +8,10 @@ class DB
 {
     private static ?DB $instance = null;
     private PDO $connection;
+    private array $tableMapping = [
+        // 'NomDeLaClasse' => 'nom_de_la_table',
+        'User' => 'users',
+    ];
 
     private string $host = 'postgres';
     private string $database = 'db_name';
@@ -43,4 +47,26 @@ class DB
     {
         return $this->connection;
     }
+
+    public function getOneBy(string $table, array $criteria, string $returnType = "array") {
+        $sql = "SELECT * FROM " . $table . " WHERE ";
+        foreach ($criteria as $column => $value) {
+            $sql .= $column . "=:" . $column . " AND ";
+        }
+        $sql = rtrim($sql, ' AND '); // Delete the "AND"
+
+        $stmt = $this->connection->prepare($sql);
+        $stmt->execute($criteria);
+
+        if ($returnType == "object") {
+            // Note: Il faut avoir une classe correspondant au nom de la table
+            // return an object of his specific class
+            return $stmt->fetchObject($table);
+        } else {
+            // Retourne un tableau associatif par défaut
+            return $stmt->fetch(PDO::FETCH_ASSOC);
+        }
+    }
+
+
 }

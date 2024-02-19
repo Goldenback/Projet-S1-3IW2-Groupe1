@@ -1,8 +1,9 @@
 <?php
 
 namespace App\Models;
+use App\Core\DB;
 
-class User
+class User extends DB
 {
     private int $id;
     private string $firstname;
