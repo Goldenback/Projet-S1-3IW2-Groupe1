@@ -28,25 +28,6 @@ CREATE TABLE fonts
     link VARCHAR(255) NOT NULL
 );
 
-CREATE TABLE images
-(
-    id          SERIAL PRIMARY KEY,
-    filename    VARCHAR(255) NOT NULL,
-    description TEXT         NOT NULL,
-    created_at  DATE DEFAULT CURRENT_DATE
-);
-
-CREATE TABLE posts
-(
-    id            SERIAL PRIMARY KEY,
-    title         VARCHAR(255),
-    content       TEXT,
-    url           VARCHAR(255),
-    image_id      INTEGER REFERENCES images (id),
-    display_order INTEGER NOT NULL,
-    created_at    DATE DEFAULT CURRENT_DATE
-);
-
 CREATE TABLE global_settings
 (
     id              SERIAL PRIMARY KEY,
@@ -56,6 +37,14 @@ CREATE TABLE global_settings
     font_primary    INTEGER REFERENCES fonts (id),
     font_secondary  INTEGER REFERENCES fonts (id),
     template_id     INTEGER REFERENCES templates (id) NOT NULL
+);
+
+CREATE TABLE images
+(
+    id          SERIAL PRIMARY KEY,
+    filename    VARCHAR(255) NOT NULL,
+    description TEXT         NOT NULL,
+    created_at  DATE DEFAULT CURRENT_DATE
 );
 
 CREATE TABLE home_settings
@@ -84,10 +73,32 @@ CREATE TABLE projects_settings
     content TEXT
 );
 
+CREATE TABLE posts
+(
+    id            SERIAL PRIMARY KEY,
+    title         VARCHAR(255),
+    content       TEXT,
+    url           VARCHAR(255),
+    image_id      INTEGER REFERENCES images (id),
+    display_order INTEGER NOT NULL,
+    created_at    DATE DEFAULT CURRENT_DATE
+);
+
 CREATE TABLE projects_posts
 (
     projects_config_id INTEGER REFERENCES projects_settings (id),
     post_id            INTEGER REFERENCES posts (id)
+);
+
+CREATE TABLE comments
+(
+    id          SERIAL PRIMARY KEY,
+    user_id     INTEGER REFERENCES users (id) NOT NULL,
+    post_id     INTEGER REFERENCES posts (id) NOT NULL,
+    content     TEXT                          NOT NULL,
+    is_approved BOOLEAN DEFAULT false,
+    is_deleted  BOOLEAN DEFAULT false,
+    created_at  DATE    DEFAULT CURRENT_DATE
 );
 
 CREATE TABLE contact_settings
