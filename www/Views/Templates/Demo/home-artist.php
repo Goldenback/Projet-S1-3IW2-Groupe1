@@ -10,7 +10,6 @@
 <?php
 
 $components = [
-    'loader.php',
     'navbar.php',
     'hero.php',
     'content-layout.php',

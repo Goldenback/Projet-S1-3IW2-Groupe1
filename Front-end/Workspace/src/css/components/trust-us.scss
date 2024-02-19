@@ -5,7 +5,7 @@
     @include flexbox(column, nowrap, flex-start, center, rem(48));
 
     .content{
-        @include flexbox(row, nowrap, space-evenly, center, rem(48));
+        @include flexbox(row, nowrap, space-evenly, center);
     }
 
     .logo{
