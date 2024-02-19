@@ -9,7 +9,8 @@ CREATE TABLE users
     role         VARCHAR(50) DEFAULT USER NOT NULL,
     is_validated BOOLEAN     DEFAULT false,
     is_deleted   BOOLEAN     DEFAULT false,
-    created_at   DATE        DEFAULT CURRENT_DATE
+    created_at   DATE        DEFAULT CURRENT_DATE,
+    activation_token VARCHAR(255) UNIQUE
 );
 
 INSERT INTO users (firstname, lastname, username, email, password, role, is_validated, is_deleted)

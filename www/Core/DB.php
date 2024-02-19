@@ -8,17 +8,13 @@ class DB
 {
     private static ?DB $instance = null;
     private PDO $connection;
-    private array $tableMapping = [
-        // 'NomDeLaClasse' => 'nom_de_la_table',
-        'User' => 'users',
-    ];
 
     private string $host = 'postgres';
     private string $database = 'db_name';
     private string $user = 'root';
     private string $password = 'root';
 
-    private function __construct()
+    public function __construct()
     {
         $dsn = "pgsql:host=$this->host;dbname=$this->database";
 
@@ -68,5 +64,38 @@ class DB
         }
     }
 
+    // Fonction pour insérer des données dans une table spécifique
+    public function insert(string $table, array $data): bool {
+        $columns = implode(', ', array_keys($data));
+        $placeholders = ':' . implode(', :', array_keys($data));
+
+        $sql = "INSERT INTO $table ($columns) VALUES ($placeholders);";
+        $stmt = $this->connection->prepare($sql);
+
+        foreach ($data as $key => &$value) {
+            $stmt->bindParam(":$key", $value);
+        }
+
+        return $stmt->execute();
+    }
+
+    public function update(string $table, array $criteria, array $data): bool {
+        $sql = "UPDATE " . $table . " SET ";
+        $updates = [];
+        foreach ($data as $key => $value) {
+            $updates[] = "$key = :$key";
+        }
+        $sql .= implode(', ', $updates);
+        $sql .= " WHERE ";
+        foreach ($criteria as $key => $value) {
+            $sql .= "$key = :$key AND ";
+        }
+        $sql = rtrim($sql, ' AND ');
+    
+        $stmt = $this->connection->prepare($sql);
+        $result = $stmt->execute(array_merge($data, $criteria));
+    
+        return $result;
+    }
 
 }
