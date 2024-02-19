@@ -1,120 +1,111 @@
---
--- Structure de la table `users`
---
-DROP TABLE IF EXISTS users;
-
-CREATE TABLE IF NOT EXISTS users (
-    id_user SERIAL PRIMARY KEY,
-    Firstname VARCHAR (50) NOT NULL,
-    Lastname VARCHAR (50) NOT NULL,
-    pwd VARCHAR (255) NOT NULL,
-    email VARCHAR (255) NOT NULL,
-    Role VARCHAR (50) NOT NULL,
-    is_validated BOOLEAN,
-    created_at TIMESTAMP NOT NULL,
-    updated_at TIMESTAMP DEFAULT NULL,
-    deleted_at TIMESTAMP DEFAULT NULL,
-    token VARCHAR (255)
+CREATE TABLE
+ users
+(
+    id           SERIAL PRIMARY KEY,
+    firstname    VARCHAR(50)              NOT NULL,
+    lastname     VARCHAR(50)              NOT NULL,
+    username     VARCHAR(50) UNIQUE       NOT NULL,
+    email        VARCHAR(320) UNIQUE      NOT NULL,
+    password     VARCHAR(255)             NOT NULL,
+    role         VARCHAR(50) DEFAULT USER NOT NULL,
+    is_validated BOOLEAN     DEFAULT false,
+    is_deleted   BOOLEAN     DEFAULT false,
+    created_at   DATE        DEFAULT CURRENT_DATE
 );
 
---
--- Structure de la table `comments`
---
-DROP TABLE IF EXISTS comments;
+INSERT INTO users (firstname, lastname, username, email, password, role, is_validated, is_deleted)
+VALUES ('admin', 'admin', 'admin', 'admin@admin.com', '$2y$10$ACukkHtZ4Y6nqVGj49P9Qua259RhaN6.AXnS0RDTZqfmD8MK1RtSa', 'ADMIN', true, false);
 
-CREATE TABLE IF NOT EXISTS comments (
-    Id_Comment SERIAL PRIMARY KEY,
-    id_user INT NOT NULL REFERENCES users (id_user),
-    comment VARCHAR (255) NOT NULL,
-    is_approved BOOLEAN NOT NULL,
-    created_at TIMESTAMP NOT NULL,
-    updated_at TIMESTAMP DEFAULT NULL,
-    deleted_at TIMESTAMP NOT NULL
+CREATE TABLE templates
+(
+    id   SERIAL PRIMARY KEY,
+    name VARCHAR(255) NOT NULL
 );
 
---
--- Structure de la table `fonts`
---
-DROP TABLE IF EXISTS fonts;
-
-CREATE TABLE IF NOT EXISTS fonts (
-    id_fonts SERIAL PRIMARY KEY,
-    name VARCHAR (30) NOT NULL,
-    URL VARCHAR (255) NOT NULL
+CREATE TABLE fonts
+(
+    id   SERIAL PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    link VARCHAR(255) NOT NULL
 );
 
---
--- Structure de la table `config`
---
-DROP TABLE IF EXISTS config;
-
-CREATE TABLE IF NOT EXISTS config (
-    Id_config SERIAL PRIMARY KEY,
-    id_user INT REFERENCES users (id_user),
-    id_primary_font INT NOT NULL REFERENCES fonts (id_fonts),
-    id_secondary_font INT NOT NULL REFERENCES fonts (id_fonts),
-    primary_color VARCHAR (50) DEFAULT NULL,
-    secondary_color VARCHAR (50) DEFAULT NULL,
-    created_at TIMESTAMP NOT NULL,
-    updated_at TIMESTAMP DEFAULT NULL,
-    deleted_at TIMESTAMP NOT NULL
+CREATE TABLE global_settings
+(
+    id              SERIAL PRIMARY KEY,
+    name            VARCHAR(255)                      NOT NULL,
+    color_primary   VARCHAR(255),
+    color_secondary VARCHAR(255),
+    font_primary    INTEGER REFERENCES fonts (id),
+    font_secondary  INTEGER REFERENCES fonts (id),
+    template_id     INTEGER REFERENCES templates (id) NOT NULL
 );
 
---
--- Structure de la table `images`
---
-DROP TABLE IF EXISTS images;
-
-CREATE TABLE IF NOT EXISTS images (
-    id_images SERIAL PRIMARY KEY,
-    URL VARCHAR (255) NOT NULL,
-    text VARCHAR (255) NOT NULL,
-    id_user INT NOT NULL REFERENCES users (id_user)
+CREATE TABLE images
+(
+    id          SERIAL PRIMARY KEY,
+    filename    VARCHAR(255) NOT NULL,
+    description TEXT         NOT NULL,
+    created_at  DATE DEFAULT CURRENT_DATE
 );
 
---
--- Structure de la table `pages`
---
-DROP TABLE IF EXISTS pages;
-
-CREATE TABLE IF NOT EXISTS pages (
-    Id_pages SERIAL PRIMARY KEY,
-    id_images INT NOT NULL REFERENCES images (id_images),
-    id_config INT NOT NULL REFERENCES config (Id_config)
+CREATE TABLE home_settings
+(
+    id       SERIAL PRIMARY KEY,
+    title    VARCHAR(255),
+    content  TEXT,
+    image_id INTEGER REFERENCES images (id)
 );
 
---
--- Structure de la table `gestions`
---
-DROP TABLE IF EXISTS gestions;
-
-CREATE TABLE IF NOT EXISTS gestions (
-    Id_config INT NOT NULL REFERENCES config (Id_config),
-    Id_comments INT NOT NULL REFERENCES comments (Id_Comment)
+CREATE TABLE about_settings
+(
+    id        SERIAL PRIMARY KEY,
+    title     VARCHAR(255),
+    content   TEXT,
+    image1_id INTEGER REFERENCES images (id),
+    image2_id INTEGER REFERENCES images (id),
+    image3_id INTEGER REFERENCES images (id),
+    image4_id INTEGER REFERENCES images (id)
 );
 
-DROP TABLE IF EXISTS newsletter_subscribers;
-
-CREATE TABLE IF NOT EXISTS newsletter_subscribers (
-    id SERIAL PRIMARY KEY,
-    email VARCHAR (255) UNIQUE NOT NULL,
-    is_confirmed BOOLEAN DEFAULT FALSE,
-    subscribed_at TIMESTAMP NOT NULL,
-    confirmed_at TIMESTAMP DEFAULT NULL
+CREATE TABLE projects_settings
+(
+    id      SERIAL PRIMARY KEY,
+    title   VARCHAR(255),
+    content TEXT
 );
 
-INSERT INTO
-    fonts (name, URL)
-VALUES
-    (
-        'Lato Thin 100',
-        'https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap'
-    ),
-    (
-        'Lato Light 300',
-        'https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap'
-    ),
-    (
-        'Lato Regular 400',
-        'https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap'
-    );
+CREATE TABLE posts
+(
+    id            SERIAL PRIMARY KEY,
+    title         VARCHAR(255),
+    content       TEXT,
+    url           VARCHAR(255),
+    image_id      INTEGER REFERENCES images (id),
+    display_order INTEGER NOT NULL,
+    created_at    DATE DEFAULT CURRENT_DATE
+);
+
+CREATE TABLE projects_posts
+(
+    projects_config_id INTEGER REFERENCES projects_settings (id),
+    post_id            INTEGER REFERENCES posts (id)
+);
+
+CREATE TABLE comments
+(
+    id          SERIAL PRIMARY KEY,
+    user_id     INTEGER REFERENCES users (id) NOT NULL,
+    post_id     INTEGER REFERENCES posts (id) NOT NULL,
+    content     TEXT                          NOT NULL,
+    is_approved BOOLEAN DEFAULT false,
+    is_deleted  BOOLEAN DEFAULT false,
+    created_at  DATE    DEFAULT CURRENT_DATE
+);
+
+CREATE TABLE contact_settings
+(
+    id      SERIAL PRIMARY KEY,
+    title   VARCHAR(255),
+    content TEXT,
+    email   VARCHAR(320) NOT NULL
+);
