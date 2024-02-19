@@ -68,7 +68,19 @@ class Security
         }
     }
 
+    public function logout(): void
+    {
+        session_start();
 
+        // erase all the $_SESSION data
+        $_SESSION = array();
+
+        session_destroy();
+
+        // Redirection to login page
+        header("Location: /login");
+        exit();
+    }
 
 
 
