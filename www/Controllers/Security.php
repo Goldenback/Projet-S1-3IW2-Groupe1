@@ -150,6 +150,54 @@ class Security
         }
     }
 
+    public function forgotPWD(): void
+{
+    session_start();
+
+    if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["email"])) {
+        $email = $_POST['email'];
+
+        if ($this->db->getOneBy("users", ['email' => $email])) {
+            // generate a random password
+            $newPassword = bin2hex(random_bytes(8));
+            $hashedPassword = password_hash($newPassword, PASSWORD_DEFAULT);
+
+            // update password with the new one
+            $updateSuccess = $this->db->update("users", ['email' => $email], ['password' => $hashedPassword]);
+
+            if ($updateSuccess) {
+                // Mail config
+                $mail = new PHPMailer(true);
+                try {
+                    $this->ConfigMail($mail, $email);
+                    $mail->Subject = 'Nouveau mot de passe - Challenge Stack';
+                    $mail->Body = 'Votre nouveau mot de passe est : ' . $newPassword . ' Veuillez le changer';
+                    $mail->send();
+
+                    $_SESSION["success_message"] = "Un nouveau mot de passe a été envoyé à votre adresse email.";
+                    header("Location: /login");
+                    exit;
+                } catch (Exception $e) {
+                    $_SESSION["error_message"] = "Impossible d'envoyer le mail.";
+                    header("Location: /forgot-password");
+                    exit;
+                }
+            } else {
+                $_SESSION["error_message"] = "Une erreur s'est produite lors de la mise à jour du mot de passe.";
+                header("Location: /forgot-password");
+                exit;
+            }
+        } else {
+            $_SESSION["error_message"] = "Email inexistant !";
+            header("Location: /forgot-password");
+            exit;
+        }
+    }
+
+    require(BASE_DIR . "/Views/Security/forgot_password.php");
+}
+
+
 
     public function activate(): void {
         session_start();
