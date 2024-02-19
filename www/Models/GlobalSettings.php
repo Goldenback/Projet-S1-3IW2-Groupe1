@@ -8,18 +8,18 @@ class GlobalSettings
     private string $name;
     private ?string $colorPrimary = null;
     private ?string $colorSecondary = null;
-    private ?Font $fontPrimary = null;
-    private ?Font $fontSecondary = null;
-    private Template $template;
+    private ?string $fontPrimary = null;
+    private ?string $fontSecondary = null;
+    //private ?string $templateConfig;
 
-    public function __construct(string $name, ?string $colorPrimary, ?string $colorSecondary, ?Font $fontPrimary, ?Font $fontSecondary, Template $template)
+    public function __construct($template)
     {
-        $this->name = $name;
-        $this->colorPrimary = $colorPrimary;
-        $this->colorSecondary = $colorSecondary;
-        $this->fontPrimary = $fontPrimary;
-        $this->fontSecondary = $fontSecondary;
-        $this->template = $template;
+        $this->name = $template['name'];
+        $this->colorPrimary = $template['colorPrimary'];
+        $this->colorSecondary = $template['colorSecondary'];
+        $this->fontPrimary = $template['fontPrimary'];
+        $this->fontSecondary = $template['fontSecondary'];
+        //$this->template = $templateConfig;
     }
 
     public function getId(): int
