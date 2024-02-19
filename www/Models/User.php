@@ -15,6 +15,7 @@ class User extends DB
     private bool $isValidated;
     private bool $isDeleted;
     private \DateTime $createdAt;
+    private string $activation_token;
 
     public function __construct(
         string    $firstname,
@@ -25,7 +26,8 @@ class User extends DB
         string    $role,
         bool      $isValidated,
         bool      $isDeleted,
-        \DateTime $createdAt
+        \DateTime $createdAt,
+        string $activation_token
     )
     {
         $this->setFirstname($firstname);
@@ -37,6 +39,7 @@ class User extends DB
         $this->setIsValidated($isValidated);
         $this->setIsDeleted($isDeleted);
         $this->setCreatedAt($createdAt);
+        $this->setactivation_token($activation_token);
     }
 
     public function getId(): int
@@ -132,5 +135,15 @@ class User extends DB
     public function setCreatedAt(\DateTime $createdAt): void
     {
         $this->createdAt = $createdAt;
+    }
+
+    public function getActivation_token(): string
+    {
+        return $this->activation_token;
+    }
+
+    public function setActivation_token(string $token): void
+    {
+        $this->activation_token = $token;
     }
 }

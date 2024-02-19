@@ -151,66 +151,115 @@ class Security
     }
 
     public function forgotPWD(): void
-{
-    session_start();
+    {
+        session_start();
 
-    if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["email"])) {
-        $email = $_POST['email'];
+        if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["email"])) {
+            $email = $_POST['email'];
 
-        if ($this->db->getOneBy("users", ['email' => $email])) {
-            // generate a random password
-            $newPassword = bin2hex(random_bytes(8));
-            $hashedPassword = password_hash($newPassword, PASSWORD_DEFAULT);
+            if ($this->db->getOneBy("users", ['email' => $email])) {
+                // generate a random password
+                $newPassword = bin2hex(random_bytes(8));
+                $hashedPassword = password_hash($newPassword, PASSWORD_DEFAULT);
 
-            // update password with the new one
-            $updateSuccess = $this->db->update("users", ['email' => $email], ['password' => $hashedPassword]);
+                // update password with the new one
+                $updateSuccess = $this->db->update("users", ['email' => $email], ['password' => $hashedPassword]);
 
-            if ($updateSuccess) {
-                // Mail config
-                $mail = new PHPMailer(true);
-                try {
-                    $this->ConfigMail($mail, $email);
-                    $mail->Subject = 'Nouveau mot de passe - Challenge Stack';
-                    $mail->Body = 'Votre nouveau mot de passe est : ' . $newPassword . ' Veuillez le changer';
-                    $mail->send();
+                if ($updateSuccess) {
+                    // Mail config
+                    $mail = new PHPMailer(true);
+                    try {
+                        $this->ConfigMail($mail, $email);
+                        $mail->Subject = 'Nouveau mot de passe - Challenge Stack';
+                        $mail->Body = 'Votre nouveau mot de passe est : ' . $newPassword . ' Veuillez le changer';
+                        $mail->send();
 
-                    $_SESSION["success_message"] = "Un nouveau mot de passe a été envoyé à votre adresse email.";
-                    header("Location: /login");
-                    exit;
-                } catch (Exception $e) {
-                    $_SESSION["error_message"] = "Impossible d'envoyer le mail.";
+                        $_SESSION["success_message"] = "Un nouveau mot de passe a été envoyé à votre adresse email.";
+                        header("Location: /login");
+                        exit;
+                    } catch (Exception $e) {
+                        $_SESSION["error_message"] = "Impossible d'envoyer le mail.";
+                        header("Location: /forgot-password");
+                        exit;
+                    }
+                } else {
+                    $_SESSION["error_message"] = "Une erreur s'est produite lors de la mise à jour du mot de passe.";
                     header("Location: /forgot-password");
                     exit;
                 }
             } else {
-                $_SESSION["error_message"] = "Une erreur s'est produite lors de la mise à jour du mot de passe.";
+                $_SESSION["error_message"] = "Email inexistant !";
                 header("Location: /forgot-password");
                 exit;
             }
-        } else {
-            $_SESSION["error_message"] = "Email inexistant !";
-            header("Location: /forgot-password");
+        }
+
+        require(BASE_DIR . "/Views/Security/forgot_password.php");
+    }
+
+    public function updatePassword(): void
+    {
+        session_start();
+
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            $currentPassword = $_POST["currentPassword"] ?? '';
+            $newPassword = $_POST["newPassword"] ?? '';
+            $confirmPassword = $_POST["confirmPassword"] ?? '';
+            $email = $_SESSION["user_email"] ?? '';
+
+            if (empty($currentPassword) || empty($newPassword) || empty($confirmPassword) || empty($email)) {
+                $_SESSION["error_message"] = "Tous les champs sont requis.";
+                header("Location: /user_management");
+                exit;
+            }
+
+            if (strlen($newPassword) < 8) {
+                $_SESSION["error_message"] = "Le nouveau mot de passe doit comporter au moins 8 caractères.";
+                header("Location: /user_management");
+                exit;
+            }
+
+            if ($newPassword !== $confirmPassword) {
+                $_SESSION["error_message"] = "Les nouveaux mots de passe ne correspondent pas.";
+                header("Location: /user_management");
+                exit;
+            }
+
+            $user = $this->db->getOneBy("users", ['email' => $email]);
+
+            if ($user && password_verify($currentPassword, $user['password'])) {
+                $hashedPassword = password_hash($newPassword, PASSWORD_DEFAULT);
+                $updated = $this->db->update("users", ['email' => $email], ['password' => $hashedPassword]);
+
+                if ($updated) {
+                    $_SESSION["success_message"] = "Mot de passe mis à jour avec succès.";
+                } else {
+                    $_SESSION["error_message"] = "Une erreur est survenue lors de la mise à jour du mot de passe.";
+                }
+            } else {
+                $_SESSION["error_message"] = "Mot de passe actuel invalide.";
+            }
+
+            header("Location: /user_management");
             exit;
         }
     }
 
-    require(BASE_DIR . "/Views/Security/forgot_password.php");
-}
 
 
-
-    public function activate(): void {
+    public function activate(): void
+    {
         session_start();
-    
+
         if (!empty($_GET['token'])) {
             $token = $_GET['token'];
-    
+
             $user = $this->db->getOneBy('users', ['activation_token' => $token], "object");
-    
+
             if ($user) {
                 // Active le compte utilisateur
                 $updateSuccess = $this->db->update('users', ['activation_token' => $token], ['is_validated' => true, 'activation_token' => null]);
-    
+
                 if ($updateSuccess) {
                     $_SESSION["success_message"] = "Votre compte a été activé avec succès. Vous pouvez maintenant vous connecter.";
                     header("Location: /login");

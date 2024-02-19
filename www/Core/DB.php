@@ -13,6 +13,9 @@ class DB
     private string $database = 'db_name';
     private string $user = 'root';
     private string $password = 'root';
+    private static array $tableMapping = [
+        'users' => \App\Models\User::class,
+    ];
 
     public function __construct()
     {
@@ -57,7 +60,8 @@ class DB
         if ($returnType == "object") {
             // Note: Il faut avoir une classe correspondant au nom de la table
             // return an object of his specific class
-            return $stmt->fetchObject($table);
+            $className = $this->getTableName($table);
+            return $stmt->fetchObject($className);
         } else {
             // Retourne un tableau associatif par défaut
             return $stmt->fetch(PDO::FETCH_ASSOC);
@@ -98,4 +102,15 @@ class DB
         return $result;
     }
 
+    private function getTableName(): string
+    {
+        $className = explode("\\", get_called_class());
+        $className = end($className);
+
+        if (array_key_exists($className, self::$tableMapping)) {
+            return self::$tableMapping[$className];
+        } else {
+            throw new \Exception("Mapping de table non trouvé pour la classe '{$className}'.");
+        }
+    } 
 }
