@@ -5,6 +5,7 @@ namespace App\Controllers;
 use App\Models\GlobalSettings;
 use App\Config\Config;
 
+
 class Main
 {
 
@@ -15,6 +16,7 @@ class Main
         include __DIR__ . '/../Config/Config.php';
         $this->config = new GlobalSettings($templateLight);
         define('BASE_DIR', __DIR__ . '/..'); //pour le dossier parent
+        new Template($config);
     }
 
     //Attention ----> redirige vers sa vue en fonction du nom de la route

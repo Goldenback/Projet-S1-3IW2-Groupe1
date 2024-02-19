@@ -27,6 +27,15 @@ $components = [
 foreach ($components as $component) {
     include __DIR__ . '/../Front-Office/layout/' . $component;
 }
+
+$bytesWritten = file_put_contents($dynamicVariablesPath, $scssContent);
+if ($bytesWritten === false) {
+    echo "Erreur lors de l'écriture du fichier.";
+} else {
+    echo "Fichier écrit avec succès, $bytesWritten octets écrits.";
+}
+
+
 ?> 
 </body>
 </html>
