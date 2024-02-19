@@ -27,15 +27,15 @@ class User
         \DateTime $createdAt
     )
     {
-        $this->firstname = $firstname;
-        $this->lastname = $lastname;
-        $this->username = $username;
-        $this->email = $email;
-        $this->password = $password;
-        $this->role = $role;
-        $this->isValidated = $isValidated;
-        $this->isDeleted = $isDeleted;
-        $this->createdAt = $createdAt;
+        $this->setFirstname($firstname);
+        $this->setLastname($lastname);
+        $this->setUsername($username);
+        $this->setEmail($email);
+        $this->setPassword($password);
+        $this->setRole($role);
+        $this->setIsValidated($isValidated);
+        $this->setIsDeleted($isDeleted);
+        $this->setCreatedAt($createdAt);
     }
 
     public function getId(): int
