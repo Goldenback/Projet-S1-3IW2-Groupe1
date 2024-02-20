@@ -1,20 +1,20 @@
 .footer {
   width: 100%;
-  height: rem(538);
+  height: auto;
   padding: rem(80) rem(64);
-  background: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: rem(64);
+  @include flexbox(column, nowrap, unset, center, rem(64));
 
   .content {
     width: 100%;
-    display: flex;
-    gap: rem(64);
+    height: auto;
+    @include flexbox(unset, nowrap, flex-start, flex-start, rem(64));
 
     .column {
-      display: flex;
+      width: rem(1312);
+      height: rem(244);
+      justify-content: flex-start;
+      align-items: flex-start;
+      display: inline-flex;
       flex-direction: column;
       gap: rem(32);
 
@@ -31,8 +31,8 @@
         }
 
         .logo {
-          width: rem(63);
-          height: rem(27);
+          width: rem(60);
+          height: rem(65);
           position: relative;
         }
 
@@ -45,17 +45,20 @@
 
           a {
             text-decoration: none;
-            font-size: rem(24);
+            font-size: var(--subtitle-size);
+            font-family: var(--website-font-family);
 
             img {
               width: rem(24);
               height: rem(24);
+              object-fit: cover;
             }
           }
         }
       }
 
       &.links-column {
+        font-family: var(--website-font-family);
         justify-content: flex-end;
         flex-direction: row;
 
@@ -72,14 +75,18 @@
     align-self: stretch;
     display: flex;
     flex-direction: column;
+    font-family: var(--website-font-family);
 
-    .divider { height: rem(1); background: black; }
+    .divider { 
+      height: rem(1); 
+      background: var(--text-color); 
+    }
 
     .row {
       justify-content: space-between;
       display: flex;
       text-decoration: none;
-      color: black;
+      color: var(--text-color);
 
       .footer-links {
         display: flex;
@@ -90,38 +97,40 @@
   }
 }
 
-.address, .contact, .link, .footer-link, .phone, .email, .copyright {
-  font-family: Roboto, sans-serif;
+.address, .contact, .link, .footer-link, .phone, .email, .copyright, .address-detail {
+  font-family: var(--website-font-family);
+  color: var(--text-color);
 
   &.address, &.contact {
     font-weight: 600;
     font-size: rem(14);
-
   }
 
   &.phone, &.email {
-    text-decoration: underline;
+    text-decoration: none;
   }
 
   &.link {
     font-weight: 700;
     text-decoration: none;
     font-size: rem(16);
-    line-height: rem(24);
-    word-wrap: break-word;
+    line-height: var(--line-height);
     width: rem(180);
     height: auto;
-    color: black;
+    color: var(--text-color);
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   &.footer-link {
     font-weight: 400;
     text-decoration: underline;
-    font-size: rem(14);
-    line-height: rem(21);
-    word-wrap: break-word;
+    font-size: var(--main-size);
+    line-height: var(--line-height);
     a {
-      color: black;
+      color: var(--text-color);
     }
   }
 }

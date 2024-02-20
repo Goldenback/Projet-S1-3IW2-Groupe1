@@ -1,0 +1,13 @@
+.content-layout-team{
+    padding: var(--pm-xlg);
+
+    .SocialIcons {
+        @include flexbox(unset, nowrap, center, center, rem(14));
+
+        .IconLinkedin, .IconX, .IconDribble {
+          fill: var(--icon-color);
+          width: rem(40);
+          height: rem(32);
+        }
+      }
+}

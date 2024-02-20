@@ -1,0 +1,22 @@
+.trust-us{
+    width: 100%;
+    height: auto;
+    padding: rem(112) rem(64);
+    @include flexbox(column, nowrap, flex-start, center, rem(48));
+
+    .content{
+        @include flexbox(row, nowrap, space-evenly, center);
+    }
+
+    .logo{
+        width: rem(200);
+        height: rem(48);
+        padding: rem(9.75) rem(43);
+        @include flexbox(unset, nowrap, center, center);
+
+        &-relume{
+            height: rem(56);
+            position: relative;
+        }
+    }
+}

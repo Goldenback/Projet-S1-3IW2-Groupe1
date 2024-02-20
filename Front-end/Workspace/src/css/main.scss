@@ -3,10 +3,22 @@
 @import "partials/variables"; /*Variables #2*/
 @import "partials/globals";
 @import "partials/mixin";
+@import "partials/media";
+@import "partials/heading";
+@import "partials/text";
+@import "partials/placeholder-image";
+@import"partials/row";
 
 @import "components/button";
 @import "components/hero";
 @import "components/cta";
+@import "components/gallery";
+@import "components/card";
+@import "components/title";
+@import "components/action";
+@import "components/trust-us";
+@import "components/testimonial";
+@import "components/tags";
 
 /* Site principal */
 
@@ -14,13 +26,17 @@
 @import "layout/contact-us";
 @import "layout/contact-data";
 @import "layout/faq";
+@import "layout/content-layout";
+@import "layout/content-layout-project";
+@import "layout/content-layout-portfolio";
+@import "layout/gallery-layout";
+@import "layout/content-layout-cta";
+@import "layout/content-layout-team";
+@import "layout/testimonials";
 @import "layout/footer";
 
-@import "pages/about-us";
-@import "pages/portfolio";
-@import "pages/project";
-@import "pages/service";
-@import "pages/contact";
+@import "pages/error404";
+@import "pages/thank-you";
 
 /* ------------------------- */
 

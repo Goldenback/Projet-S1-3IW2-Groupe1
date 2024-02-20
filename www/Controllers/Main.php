@@ -26,9 +26,9 @@ class Main
             $uriView = explode('/', trim($uri, '/'));
 
             //conditions pour vérifier dans quel dossier il se trouve (Backend ou Frontend)
-            if (file_exists(BASE_DIR . "/Views/Templates/Backend/" . $uriView[0] . ".php")) {
-                include(BASE_DIR . "/Views/Templates/Backend/" . $uriView[0] . ".php");
-                include(BASE_DIR . "/Views/Templates/Backend/sideBar.php");
+            if (file_exists(BASE_DIR . "/Views/Templates/Back-Office/" . $uriView[0] . ".php")) {
+                include(BASE_DIR . "/Views/Templates/Back-Office/" . $uriView[0] . ".php");
+                include(BASE_DIR . "/Views/Templates/Back-Office/sideBar.php");
             } else {
                 $_SESSION["error_message"] = "Pas de vue trouvé";
                 header("Location: /error");
@@ -46,8 +46,26 @@ class Main
             $uriView = explode('/', trim($uri, '/'));
 
             //conditions pour vérifier dans quel dossier il se trouve (Backend ou Frontend)
-            if (file_exists(BASE_DIR . "/Views/Templates/Frontend/" . $uriView[0] . ".php")) {
-                include(BASE_DIR . "/Views/Templates/Frontend/" . $uriView[0] . ".php");
+            if (file_exists(BASE_DIR . "/Views/Templates/Front-Office/" . $uriView[0] . ".php")) {
+                include(BASE_DIR . "/Views/Templates/Front-Office/" . $uriView[0] . ".php");
+            } else {
+                header("Location: /error");
+            }
+        } else {
+            header("Location: /about");
+        }
+    }
+
+    public function loadDemoView(): void
+    {
+        if ($_SERVER["REQUEST_URI"]) {
+            //supprime le "/" du $_SERVER["REQUEST_URI]
+            $uri = strtolower($_SERVER["REQUEST_URI"]);
+            $uriView = explode('/', trim($uri, '/'));
+
+            //conditions pour vérifier dans quel dossier il se trouve (Backend ou Frontend)
+            if (file_exists(BASE_DIR . "/Views/Templates/Demo/" . $uriView[0] . ".php")) {
+                include(BASE_DIR . "/Views/Templates/Demo/" . $uriView[0] . ".php");
             } else {
                 header("Location: /error");
             }

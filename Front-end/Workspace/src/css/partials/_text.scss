@@ -1,0 +1,14 @@
+.text {
+    align-self: stretch;
+    color: var(--text-color);
+    font-size: var(--main-size);
+    font-family: var(--website-font-family);
+    font-weight: 400;
+    line-height: var(--line-height);
+    word-wrap: break-word;
+  
+
+  &-centered{text-align: center;}
+
+  &-bold{font-weight: 600;}
+}

@@ -4,7 +4,7 @@
     flex-wrap: $wrap;
     justify-content: $justify;
     align-items: $align;
-
+    gap: $gap;
 }
 
 @mixin adjust-color($bg-color) {

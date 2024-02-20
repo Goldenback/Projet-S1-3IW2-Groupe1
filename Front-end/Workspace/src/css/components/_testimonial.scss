@@ -1,0 +1,52 @@
+.testimonial{
+    width: 100%;
+    height: auto;
+    padding: rem(112) rem(64);
+    @include flexbox(column, nowrap, center, center, rem(80));
+
+    &-container{
+        width: 100%;
+        @include flexbox(unset, nowrap, center, center, rem(64));
+
+        .stars{
+            display: flex;
+            justify-content: center;
+            
+            img{
+                width: rem(20);
+                height: rem(18.89);
+            }
+        }
+
+        .avatar{
+            width: 100%;
+            height: rem(61);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: rem(20);
+
+            &-img{
+                width: rem(56);
+                height: rem(56);
+                object-fit: cover;
+                border-radius: rem(99); 
+            }
+
+            .divider {
+                width: rem(61);
+                height: 0;
+                transform: rotate(90deg);
+                border: rem(1) solid var(--reverse-bg-color);
+            }
+
+            .company-logo img{
+                width: rem(120);
+                height: rem(48);
+                padding: rem(9.75) rem(3);
+                @include flexbox(unset, nowrap, center, center);
+            }
+        }
+    }
+
+}

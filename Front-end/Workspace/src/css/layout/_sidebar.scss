@@ -2,10 +2,6 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: 'Roboto', sans-serif;
-}
-
 .l-sidebar {
     position: fixed;
     top: 0;
@@ -15,6 +11,8 @@ body {
     background-color: rgb(28, 27, 59);
     transition: width 0.5s;
     z-index: 100;
+    font-family: var(--website-font-family);
+
 
     .sidebar_toggle {
         display: flex;
@@ -34,7 +32,7 @@ body {
             display: flex;
             align-items: center;
             justify-content: flex-start; // Alignement à gauche en mode étendu
-            color: #FFFFFF;
+            color: var(--white);
             text-decoration: none;
             padding: 1rem;
 
@@ -71,10 +69,8 @@ body {
 
     &.active {
         .side-link {
-            display: flex;
-            align-items: center;
-            justify-content: right; // Aligner les icônes à droite en mode rétracté
-            color: #FFFFFF;
+            @include flexbox(unset, nowrap, right, center, rem(16));
+            color: var(--white);
             text-decoration: none;
             padding-right: 0;
             padding-bottom: 1rem;
@@ -112,26 +108,5 @@ body {
     &.sidebar-active {
         margin-left: rem(-200); // marge quand le sidebar est actif (donc fermé)
         transition: 0.5s;
-    }
-}
-
-@media screen and (max-width: rem(768)) { // responsive
-    .l-sidebar {
-        .side_logo .side_text {
-            left: 0;
-            transform: translateX(rem(100));
-            transition: 0.5s;
-        }
-        &.active {
-            left: 0;
-        }
-    }
-
-    .sidebar {
-        transition: 0.5s;
-        margin-left: rem(-200);
-        &.sidebar-active {
-            transition: 0.5s;
-        }
     }
 }

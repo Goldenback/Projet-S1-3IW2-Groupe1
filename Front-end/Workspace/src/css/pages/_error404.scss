@@ -1,0 +1,24 @@
+.error-404 {
+  @include flexbox(column, nowrap, center, center);
+  height: 50%;
+  text-align: center;
+
+  .container {
+    max-width: rem(600);
+    padding: rem(20);
+  }
+
+  h1 {
+    font-family: var(--website-font-family);
+    font-size: 2.5rem;
+    color: var(--grey);
+    margin-bottom: rem(20);
+  }
+
+  p {
+    font-family: var(--website-font-family);
+    font-size: 1.5rem;
+    color: var(--darkgrey);
+    margin-bottom: rem(30);
+  }
+}

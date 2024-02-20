@@ -1,0 +1,18 @@
+
+.thank-you-section {
+  @include flexbox(column, nowrap, center, center);
+  height: calc(100vh - var(--navbar-height));
+  text-align: center;
+  padding-top: rem(20);
+
+  h1 {
+    color: var(--text-color);
+    font-family: var(--website-font-family);
+    margin-bottom: rem(20);
+  }
+  p {
+    color: var(--text-color);
+    font-size: var(--main-size);
+    margin-bottom: rem(20);
+  }
+}

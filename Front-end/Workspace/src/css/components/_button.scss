@@ -28,45 +28,46 @@
     &-transparent{
         background-color: transparent;
         border: 1px solid var(--text-color);
-        color: /*adjust-color($color: var(--bg-color))*/ var(--text-color);
+        color: var(--text-color);
+
+        &:hover {
+            background-color: var(--reverse-bg-color);
+            color: var(--website-bg-color);
+            transition: var( --transition-duration) ease-in-out;
+          }
     }
 }
 
 .Button {
     padding: rem(12) rem(24);
-    font-size: rem(16);
-    font-family: Roboto, sans-serif;
+    font-size: var(--main-size);
+    font-family: var(--website-font-family);
     font-weight: 400;
-    line-height: rem(24);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: rem(8);
-    border: rem(1) solid black;
+    line-height: var(--line-height);
+    @include flexbox(unset, nowrap, center, center, rem(8));
+    border: rem(1) solid var(--reverse-bg-color);
     text-decoration: none;
 
     &.Primary {
-        background: black;
+        background: var(--reverse-bg-color);
         text-decoration: none;
-        color: white;
+        color: var(--website-bg-color);
 
         &:hover {
-            background-color: white;
-            color: black;
+            background-color: var(--website-bg-color);
+            color: var(--reverse-bg-color);
             transition: 0.3s ease-in-out;
         }
     }
 
     &.Secondary {
         text-decoration: none;
-        color: black;
+        color: var(--reverse-bg-color);
 
         &:hover {
-            color: white;
-            background-color: black;
+            color: var(--website-bg-color);
+            background-color: var(--reverse-bg-color);
             transition: 0.3s ease-in-out;
         }
     }
 }
-
-.row{margin: rem(50) 0 rem(50) 0;}

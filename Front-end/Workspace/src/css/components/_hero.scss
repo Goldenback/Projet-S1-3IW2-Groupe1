@@ -32,22 +32,11 @@
     }
 
     .content{
-        color: var(--white);
-        position: relative;
-        text-align: center;
-        
-        &-title{
-            font-size: var(--main-title-size);
-            font-family: var(--title-font);
-            font-weight: lighter;
-            letter-spacing: var(--title-spacing);
-            &-sub{
-                font-size: var(--subtitle-size);
-                font-family: var(--main-font);
-                font-weight: lighter;
-            }
-        }
-        
+        display: flex;
+        flex-direction: column;
     }
 }
+        
+
+
 
