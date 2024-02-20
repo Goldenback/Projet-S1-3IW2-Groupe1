@@ -4,19 +4,33 @@ namespace App\Controllers;
 
 use App\Models\GlobalSettings;
 use App\Config\Config;
-
+use Template;
 
 class Main
 {
 
-    private GlobalSettings $config;
+    private $config;
 
     public function __construct()
     {
-        include __DIR__ . '/../Config/Config.php';
-        $this->config = new GlobalSettings($templateLight);
-        define('BASE_DIR', __DIR__ . '/..'); //pour le dossier parent
-        new Template($config);
+        // Assurez-vous que le chemin d'accès à config.php est correct.
+        // Cette ligne charge la configuration. Vous pourriez vouloir ajuster ceci pour charger une configuration spécifique en fonction de certaines conditions.
+        $configPath = __DIR__ . '/../Config/config.php';
+        $config = require $configPath;
+        
+       
+        $this->config = $config['templateLight'];
+
+        define('BASE_DIR', __DIR__ . '/../..'); // Définir le répertoire de base pour faciliter la référence aux chemins dans l'application
+
+        // Instanciation de la classe Template avec la configuration choisie
+        $template = new Template($this->config);
+
+        // Chemin vers le fichier SCSS de variables dynamiques
+        $dynamicVariablesPath = BASE_DIR . '/Front-end/Workspace/src/css/partials/_dynamic-variables.scss';
+
+        // Génération et écriture du contenu SCSS
+        $template->generateScss($dynamicVariablesPath);
     }
 
     //Attention ----> redirige vers sa vue en fonction du nom de la route
