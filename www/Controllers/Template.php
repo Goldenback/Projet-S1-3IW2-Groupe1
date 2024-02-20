@@ -16,8 +16,11 @@ SCSS;
     }
 
     public function generateScss($path) {
-        $bytesWritten = file_put_contents($path, $this->scssContent);
-        if ($bytesWritten === false) {
+        $byteWritten = null;
+        echo shell_exec('ls ./Front-end/Workspace/src/css/partials/');
+        $byteWritten = file_put_contents($path, $this->scssContent);
+        echo shell_exec('ls ./Front-end/Workspace/src/css/partials/');
+        if (!$bytesWritten) {
             echo "Erreur lors de l'écriture du fichier.";
         } else {
             echo "Fichier écrit avec succès, $bytesWritten octets écrits.";
