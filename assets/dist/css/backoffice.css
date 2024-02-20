@@ -1,0 +1,627 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;700;900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&family=Oswald:wght@200;300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/*Function #1*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+:root {
+  /*Color*/
+  --text-color:#000;
+  --white:#FFF;
+  --black:#000;
+  --btn-bg-color:#000;
+  --bg-color:#FFF2D8;
+  --btn-bg-hover-color: #1a1a1a;
+  --primary-color: #113946;
+  --secondary-color: #EAD7BB;
+  --black-bg-color: #000;
+  --error-message: #ff0000;
+  /*Radius*/
+  --main-radius: 0.375rem;
+  /*Fonts*/
+  --main-font: Lato;
+  --title-font: Playfair Display;
+  /*trans*/
+  --transition-duration:0.3s;
+  /*Font size*/
+  --main-size: 1rem;
+  --title-size: 2rem;
+  --main-title-size: 5rem;
+  --subtitle-size: 1.5rem;
+  /*Letter spacing*/
+  --title-spacing: 0.3125rem;
+  /*padding & margins */
+  --pm-md: 1rem;
+  --pm-sm: 0.5rem;
+  --pm-lg: 1rem 2rem;
+  --pm-xlg: 2rem;
+  --pm-xxlg: 4rem;
+  /*margin*/
+  --centered: auto;
+}
+
+/*Variables #2*/
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+*, ::before, ::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.l-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 15.625rem;
+  background-color: rgb(28, 27, 59);
+  transition: width 0.5s;
+  z-index: 100;
+}
+.l-sidebar .sidebar_toggle {
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 2rem;
+  padding-right: 0.9rem;
+}
+.l-sidebar .sidebar_toggle .menu-icon {
+  color: #FFFFFF;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.l-sidebar .side-item .side-link {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: #FFFFFF;
+  text-decoration: none;
+  padding: 1rem;
+}
+.l-sidebar .side-item .side-link .side-icon {
+  font-size: 1.375rem;
+  margin-right: 0.5rem;
+}
+.l-sidebar .side-item .side-link .side-text {
+  font-size: 1.1rem;
+  display: inline;
+}
+.l-sidebar .side-item .side-link:hover {
+  transition: 0.2s;
+  background-color: #000002;
+}
+.l-sidebar .logout-section {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 0.5rem 0;
+  text-align: center;
+}
+.l-sidebar .logout-section a {
+  color: var(--white);
+  font-weight: 700;
+  text-decoration: none;
+}
+.l-sidebar.active .side-link {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  color: #FFFFFF;
+  text-decoration: none;
+  padding-right: 0;
+  padding-bottom: 1rem;
+  transition: 1s;
+}
+.l-sidebar.active .side-link .side-icon {
+  font-size: 1.5rem;
+}
+.l-sidebar.active .side-link .side-text {
+  display: none;
+}
+
+.l-sidebar {
+  transition: 0.5s;
+}
+.l-sidebar.l-sidebar.active {
+  transform: translateX(-12.5rem);
+  transition: 0.5s;
+}
+.l-sidebar.l-sidebar.active .side_logo .side_text {
+  transform: translateX(6.25rem);
+  transition: 0.5s;
+}
+
+.sidebar {
+  transition: 0.5s;
+  padding-left: 15.625rem;
+}
+.sidebar.sidebar-active {
+  margin-left: -12.5rem;
+  transition: 0.5s;
+}
+
+@media screen and (max-width: 48rem) {
+  .l-sidebar .side_logo .side_text {
+    left: 0;
+    transform: translateX(6.25rem);
+    transition: 0.5s;
+  }
+  .l-sidebar.active {
+    left: 0;
+  }
+  .sidebar {
+    transition: 0.5s;
+    margin-left: -12.5rem;
+  }
+  .sidebar.sidebar-active {
+    transition: 0.5s;
+  }
+}
+.login-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 0.9375rem;
+}
+
+.login-form {
+  background: var(--white);
+  padding: 2.5rem;
+  border-radius: 0.375rem;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 25rem;
+}
+
+.login-title {
+  color: var(--text-color);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.login-input {
+  width: 100%;
+  padding: 0.625rem;
+  margin-bottom: 1rem;
+  border-radius: 0.375rem;
+  border: 0.0625rem solid var(--black);
+}
+
+.login-button {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 0.9375rem;
+  margin-top: 0.75rem;
+  font-size: 1rem;
+  background-color: var(--black-bg-color);
+  color: var(--white);
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+}
+.login-button:hover {
+  background-color: var(--btn-bg-hover-color);
+}
+
+.login-links {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.9375rem;
+}
+
+.login-link {
+  color: var(--black);
+  text-decoration: none;
+  font-size: 0.875rem;
+  transition: color var(--transition-duration);
+}
+.login-link:hover {
+  color: var(--btn-bg-hover-color);
+  text-decoration: underline;
+}
+
+.register-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 0.9375rem;
+}
+
+.register-form {
+  background: var(--white);
+  padding: 2.5rem;
+  border-radius: 0.375rem;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 25rem;
+}
+
+.register-title {
+  color: var(--text-color);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.register-input {
+  width: 100%;
+  padding: 0.625rem;
+  margin-bottom: 1rem;
+  border-radius: 0.375rem;
+  border: 0.0625rem solid var(--black);
+}
+
+.register-button {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 0.625rem;
+  margin-top: 0.75rem;
+  font-size: 1rem;
+  background-color: var(--black);
+  color: var(--white);
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+}
+.register-button:hover {
+  background-color: var(--btn-bg-hover-color);
+}
+
+.register-links {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.625rem;
+}
+
+.register-link {
+  color: var(--black);
+  text-decoration: none;
+  font-size: 0.875rem;
+  transition: color var(--transition-duration);
+}
+.register-link:hover {
+  color: var(--btn-bg-hover-color);
+  text-decoration: underline;
+}
+
+.error-message {
+  color: var(--error-message);
+  margin-top: 0.625rem;
+}
+
+.success-message {
+  color: #308034;
+  margin-top: 0.625rem;
+}
+
+.forgot-password-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 0.9375rem;
+}
+
+.forgot-password-form {
+  background: var(--white);
+  padding: 2.5rem;
+  border-radius: 0.375rem;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 25rem;
+}
+
+.forgot-password-title {
+  color: var(--text-color);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.forgot-password-input {
+  width: 100%;
+  padding: 0.625rem;
+  margin-bottom: 1rem;
+  border-radius: 0.375rem;
+  border: 0.0625rem solid var(--black);
+}
+
+.forgot-password-button {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 0.625rem;
+  margin-top: 0.75rem;
+  font-size: 1rem;
+  background-color: var(--black-bg-color);
+  color: var(--white);
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+}
+.forgot-password-button:hover {
+  background-color: var(--btn-bg-hover-color);
+}
+
+.container-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1.25rem;
+  padding: 1.25rem;
+}
+
+.user-info-container, .password-update-container {
+  background-color: #f5f5f5;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+  padding: 1.25rem;
+  width: calc(50% - 10px);
+}
+.user-info-container h2, .password-update-container h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 1.25rem;
+}
+.user-info-container .user-info-form, .user-info-container .password-update-form, .password-update-container .user-info-form, .password-update-container .password-update-form {
+  width: 100%;
+  max-width: 31.25rem;
+  margin: auto;
+}
+.user-info-container .user-info-form .form-group, .user-info-container .password-update-form .form-group, .password-update-container .user-info-form .form-group, .password-update-container .password-update-form .form-group {
+  margin-bottom: 0.9375rem;
+}
+.user-info-container .user-info-form .form-group label, .user-info-container .password-update-form .form-group label, .password-update-container .user-info-form .form-group label, .password-update-container .password-update-form .form-group label {
+  display: block;
+  margin-bottom: 0.3125rem;
+}
+.user-info-container .user-info-form .form-group input[type=text], .user-info-container .user-info-form .form-group input[type=email], .user-info-container .user-info-form .form-group input[type=password], .user-info-container .password-update-form .form-group input[type=text], .user-info-container .password-update-form .form-group input[type=email], .user-info-container .password-update-form .form-group input[type=password], .password-update-container .user-info-form .form-group input[type=text], .password-update-container .user-info-form .form-group input[type=email], .password-update-container .user-info-form .form-group input[type=password], .password-update-container .password-update-form .form-group input[type=text], .password-update-container .password-update-form .form-group input[type=email], .password-update-container .password-update-form .form-group input[type=password] {
+  width: 100%;
+  padding: 0.625rem;
+  border-radius: 0.25rem;
+  border: 0.0625rem solid #ddd;
+}
+.user-info-container .user-info-form .btn-update, .user-info-container .password-update-form .btn-update, .password-update-container .user-info-form .btn-update, .password-update-container .password-update-form .btn-update {
+  width: 100%;
+  padding: 0.625rem;
+  border: none;
+  border-radius: 0.25rem;
+  background-color: #008CBA;
+  color: white;
+  cursor: pointer;
+}
+.user-info-container .user-info-form .btn-update:hover, .user-info-container .password-update-form .btn-update:hover, .password-update-container .user-info-form .btn-update:hover, .password-update-container .password-update-form .btn-update:hover {
+  background-color: #006687;
+}
+
+@media screen and (max-width: 47.9375rem) {
+  .user-info-container, .password-update-container {
+    width: 100%;
+  }
+}
+.dashboard-container {
+  font-family: "Roboto", sans-serif;
+  background-color: #F4F4F4;
+  color: #333;
+  padding: 20px;
+}
+.dashboard-container h2 {
+  color: #4A90E2;
+  margin-bottom: 20px;
+}
+.dashboard-container .chart-container,
+.dashboard-container .editor-container,
+.dashboard-container .datatable-container {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+.dashboard-container .chart-container:hover,
+.dashboard-container .editor-container:hover,
+.dashboard-container .datatable-container:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+.dashboard-container .chart-container {
+  height: 400px;
+}
+.dashboard-container .editor-container textarea {
+  width: 100%;
+  min-height: 200px;
+}
+.dashboard-container .datatable-container table {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .dashboard-container {
+    padding: 10px;
+  }
+  .dashboard-container .chart-container,
+  .dashboard-container .editor-container,
+  .dashboard-container .datatable-container {
+    padding: 10px;
+  }
+}
+.config-container {
+  background-color: #F4F4F4;
+  color: #ffffff;
+  width: 100%;
+  margin: 0;
+  padding: 1.25rem;
+  border-radius: 0.625rem;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+.config-container a {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+}
+.config-container a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.config-container h1, .config-container h3 {
+  color: rgb(65, 64, 134);
+  text-align: center;
+}
+.config-container label {
+  color: rgb(65, 64, 134);
+}
+.config-container .tabs {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 1.25rem;
+}
+.config-container .tabs .tab-button {
+  background-color: rgb(46, 45, 96);
+  border: none;
+  padding: 0.625rem 1.25rem;
+  border-radius: 0.3125rem;
+  color: #ffffff;
+  cursor: pointer;
+}
+.config-container .tabs .tab-button:hover {
+  background-color: #1d1d3d;
+}
+.config-container .tab-content {
+  display: none;
+  padding: 1.25rem;
+  border: 0.0625rem solid rgb(46, 45, 96);
+  border-radius: 0.3125rem;
+}
+.config-container .submit-button {
+  background-color: rgb(46, 45, 96);
+  border: none;
+  padding: 0.625rem 1.25rem;
+  border-radius: 0.3125rem;
+  color: #ffffff;
+  cursor: pointer;
+  text-decoration: none;
+  justify-content: center;
+}
+.config-container .submit-button:hover {
+  background-color: #15152c;
+}
+
+.config-form .form-group {
+  margin-bottom: 0.9375rem;
+}
+.config-form .form-group label {
+  display: block;
+  margin-bottom: 0.3125rem;
+}
+.config-form .form-group input[type=text],
+.config-form .form-group input[type=email],
+.config-form .form-group textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 0.0625rem solid #ccc;
+  border-radius: 0.25rem;
+}
+
+.comments-management-container {
+  width: 100%;
+  margin: 0;
+  padding: 1.25rem;
+  background-color: #f5f5f5;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+}
+.comments-management-container h2 {
+  text-align: center;
+  color: rgb(65, 64, 134);
+}
+.comments-management-container .comments-list {
+  width: 100%;
+}
+.comments-management-container .comments-list .comment-item {
+  background-color: #fff;
+  border: 0.0625rem solid #ddd;
+  border-radius: 0.25rem;
+  padding: 0.9375rem;
+  margin-bottom: 0.9375rem;
+}
+.comments-management-container .comments-list .comment-item .comment-content .comment-text {
+  font-size: 1rem;
+}
+.comments-management-container .comments-list .comment-item .comment-content .comment-info {
+  font-size: 0.8rem;
+  color: #666;
+}
+.comments-management-container .comments-list .comment-item .comment-content .comment-info .comment-author,
+.comments-management-container .comments-list .comment-item .comment-content .comment-info .comment-date {
+  margin-right: 0.625rem;
+}
+.comments-management-container .comments-list .comment-item .comment-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+.comments-management-container .comments-list .comment-item .comment-actions .btn {
+  margin-left: 0.625rem;
+  padding: 0.3125rem 0.625rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border: none;
+}
+.comments-management-container .comments-list .comment-item .comment-actions .btn:hover {
+  background-color: #c4c4c4;
+}
+.comments-management-container .comments-list .comment-item .comment-actions .approve-comment {
+  background-color: #4CAF50;
+  color: white;
+}
+.comments-management-container .comments-list .comment-item .comment-actions .delete-comment {
+  background-color: #F44336;
+  color: white;
+}
+
+.templates-selection-container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 1.25rem;
+  background-color: #f5f5f5;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+}
+.templates-selection-container h2 {
+  text-align: center;
+  color: rgb(51, 51, 105);
+}
+.templates-selection-container .templates-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.templates-selection-container .templates-table th, .templates-selection-container .templates-table td {
+  border: 0.0625rem solid #ddd;
+  padding: 0.5rem;
+  text-align: center;
+}
+.templates-selection-container .templates-table th {
+  background-color: rgb(47, 46, 96);
+  color: white;
+}
+.templates-selection-container .templates-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+.templates-selection-container .templates-table .select-btn {
+  padding: 0.3125rem 0.625rem;
+  border-radius: 0.25rem;
+  border: none;
+  background-color: rgb(65, 64, 134);
+  color: white;
+  cursor: pointer;
+}
+.templates-selection-container .templates-table .select-btn:hover {
+  background-color: #282752;
+}
+
+/*# sourceMappingURL=backoffice.css.map */

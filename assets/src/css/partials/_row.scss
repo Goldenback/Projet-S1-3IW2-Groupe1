@@ -1,0 +1,10 @@
+.row{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    
+    &-around{justify-content: space-around;}
+    &-between{justify-content: space-between;}
+    &-gap{gap: rem(24);}
+}

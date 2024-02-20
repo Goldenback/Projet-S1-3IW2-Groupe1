@@ -1,0 +1,73 @@
+.btn{
+    padding: var(--pm-md);
+    text-decoration: none;
+    color: var(--white);
+    background-color: var(--btn-bg-color);
+    font-family: 'Lato';
+    font-size: var(--main-size);
+    line-height: rem(18);
+    text-align: center;
+    align-items: center;
+
+    &-lg{
+        padding: var(--pm-lg);
+    }
+    &-sm{
+        padding: var(--pm-sm);
+    }
+
+    &-primary{
+        background-color: var(--primary-color);
+    }
+    &-secondary{
+        background-color: var(--secondary-color);
+    }
+    &-danger{
+        background-color: var(--btn-bg-color);
+    }
+    &-transparent{
+        background-color: transparent;
+        border: 1px solid var(--text-color);
+        color: var(--text-color);
+
+        &:hover {
+            background-color: var(--reverse-bg-color);
+            color: var(--website-bg-color);
+            transition: var( --transition-duration) ease-in-out;
+          }
+    }
+}
+
+.Button {
+    padding: rem(12) rem(24);
+    font-size: var(--main-size);
+    font-family: var(--website-font-family);
+    font-weight: 400;
+    line-height: var(--line-height);
+    @include flexbox(unset, nowrap, center, center, rem(8));
+    border: rem(1) solid var(--reverse-bg-color);
+    text-decoration: none;
+
+    &.Primary {
+        background: var(--reverse-bg-color);
+        text-decoration: none;
+        color: var(--website-bg-color);
+
+        &:hover {
+            background-color: var(--website-bg-color);
+            color: var(--reverse-bg-color);
+            transition: 0.3s ease-in-out;
+        }
+    }
+
+    &.Secondary {
+        text-decoration: none;
+        color: var(--reverse-bg-color);
+
+        &:hover {
+            color: var(--website-bg-color);
+            background-color: var(--reverse-bg-color);
+            transition: 0.3s ease-in-out;
+        }
+    }
+}

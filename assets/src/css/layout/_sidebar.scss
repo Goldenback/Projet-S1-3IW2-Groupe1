@@ -1,0 +1,112 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+}
+
+.l-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: rem(250); // Largeur par défaut
+    background-color: rgb(28, 27, 59);
+    transition: width 0.5s;
+    z-index: 100;
+    font-family: var(--website-font-family);
+
+
+    .sidebar_toggle {
+        display: flex;
+        justify-content: flex-end;
+        padding-bottom: 2rem;
+        padding-right: 0.9rem;
+
+        .menu-icon {
+            color: #FFFFFF;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+    }
+
+    .side-item {
+        .side-link {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start; // Alignement à gauche en mode étendu
+            color: var(--white);
+            text-decoration: none;
+            padding: 1rem;
+
+            .side-icon {
+                font-size: rem(22);
+                margin-right: rem(8); // l'espacement entre l'icône et le texte
+            }
+
+            .side-text {
+                font-size: 1.1rem;
+                display: inline; // montre le texte en mode étendu
+            }
+
+            &:hover {
+                transition: 0.2s;
+                background-color: darken(rgb(12,0,53), 10%);
+            }
+        }
+    }
+
+    .logout-section {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        padding: 0.5rem 0;
+        text-align: center;
+
+        a {
+            color: var(--white);
+            font-weight: 700;
+            text-decoration: none;
+        }
+    }
+
+    &.active {
+        .side-link {
+            @include flexbox(unset, nowrap, right, center, rem(16));
+            color: var(--white);
+            text-decoration: none;
+            padding-right: 0;
+            padding-bottom: 1rem;
+            transition: 1s;
+
+            .side-icon {
+                font-size: 1.5rem;
+            }
+
+            .side-text {
+                display: none; // Cacher le texte par défaut
+            }
+        }
+    }
+}
+
+.l-sidebar {
+    transition: 0.5s;
+
+    &.l-sidebar.active {
+        transform: translateX(rem(-200));
+        transition: 0.5s;
+
+        .side_logo .side_text {
+            transform: translateX(rem(100));
+            transition: 0.5s;
+        }
+    }
+}
+
+.sidebar {
+    transition: 0.5s;
+    padding-left: rem(250);
+
+    &.sidebar-active {
+        margin-left: rem(-200); // marge quand le sidebar est actif (donc fermé)
+        transition: 0.5s;
+    }
+}

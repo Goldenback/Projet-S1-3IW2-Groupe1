@@ -1,0 +1,6 @@
+.content-layout-portfolio{
+    width: auto;
+    
+    padding: rem(112) rem(64);
+    @include flexbox(column, nowrap, flex-start, center, rem(180));
+}

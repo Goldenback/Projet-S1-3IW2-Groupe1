@@ -1,23 +1,44 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
-    <title>Accueil</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../../../public/assets/css/main.css"/>
+    <link rel="stylesheet" href="../../../../assets/dist/css/main.css" />
+    <title>Home</title>
+
+    <style>
+        body {
+            background-color: <?php echo $config['colorPrimary']; ?>;
+            color: <?php echo $config['colorSecondary']; ?>;
+            font-family: '<?php echo $config['fontPrimary']; ?>', sans-serif;
+        }
+
+        h1, h2, h3 {
+            font-family: '<?php echo $config['fontSecondary']; ?>', sans-serif;
+        }
+    </style>
+
+    <title>Home</title>   
 </head>
-
 <body>
-<?php include("Views/_partials/navbar.php") ?>
+<?php
 
-<section class="service-header">
-    <div class="column">
-        <div class="content">
-            <h1 class="headline">Discover the Artistic World of Simplify</h1>
-            <p class="description">Experience the creativity and passion of talented artists, photographers, and musicians.</p>
-        </div>
-        <img src="https://via.placeholder.com/1312x738" alt="Placeholder Image" class="placeholder-image">
-    </div>
-</section>
+$components = [
+    'navbar.php',
+    'hero.php',
+    'content-layout.php',
+    'content-layout-project.php',
+    'gallery.php',
+    'trust-us.php',
+    'testimonial.php',
+    'FAQ.php',
+    'contact-us.php',
+    'footer.php',
+];
+
+foreach ($components as $component) {
+    include __DIR__ . '/../../_partials/' . $component;
+}
+?> 
 </body>
 </html>

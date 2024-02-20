@@ -1,0 +1,21 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    padding-top: rem(50);
+    background-color: var(--website-bg-color);
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+.icon {
+    filter: var(--icon-color);
+}
+
+.error {
+    color: var(--error-message);
+}

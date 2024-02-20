@@ -1,0 +1,3 @@
+.column {
+    @include flexbox(column, nowrap, flex-start, center, rem(32));
+  }

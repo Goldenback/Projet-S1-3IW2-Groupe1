@@ -1,0 +1,34 @@
+.content-layout-project{
+    width: 100%;
+    height: rem(864);
+    padding: rem(112) rem(64);
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: rem(80);
+
+    &-container{
+        align-self: stretch;
+        display: inline-flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: rem(80);
+    }
+
+    ul{ 
+        list-style-type: none;
+        display: inline-flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: rem(24);
+        padding: rem(8) 0;
+        align-self: stretch;
+
+        li{
+            gap: rem(16);
+            flex: 1 1 0;
+            color: var(--text-color);
+        }
+    }
+}
