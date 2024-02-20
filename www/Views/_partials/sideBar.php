@@ -1,20 +1,10 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="utf-8">
-    <title>Back-Office</title>
-    <link rel="stylesheet" href="../../../Front-end/Workspace/dist/css/backoffice.css">
-</head>
-
-<body id="body" class="sidebar">
-
 <nav class="l-sidebar">
     <div id="menu-toggle" class="sidebar_toggle">
         <span class="menu-icon">&#9776;</span>
     </div>
 
     <div class="side-item">
-        <a href="/config" class="side-link">
+        <a href="/home/settings" class="side-link">
             <span class="side-icon">&#128221;</span>
             <span class="side-text">Configuration</span>
         </a>
@@ -35,7 +25,7 @@
     </div>
 
     <div class="side-item">
-        <a href="/user_management" class="side-link">
+        <a href="/users" class="side-link">
             <span class="side-icon">&#128209;</span>
             <span class="side-text">Mes Informations</span>
         </a>
@@ -61,6 +51,3 @@
         });
     });
 </script>
-
-</body>
-</html>

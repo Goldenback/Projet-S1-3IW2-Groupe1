@@ -22,6 +22,7 @@ class Security
     {
         // Check if the form was submitted and the request method is POST
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            session_start();
             // Retrieve username and password from request data
             $email = $_POST['email'] ?? '';
             $password = $_POST['password'] ?? '';
@@ -48,10 +49,8 @@ class Security
                     // Account not activated
                     $_SESSION["error_message"] = "Compte non activé";
                     header("Location: /login");
+                    exit();
                 } else {
-                    // Authentication successful
-                    // Start PHP session
-                    session_start();
 
                     // Store user information in session
                     $_SESSION['email'] = $user->getEmail();
@@ -102,11 +101,14 @@ class Security
             $activationToken = bin2hex(random_bytes(16));
 
             // Vérifie si l'email existe déjà
-            if ($this->db->getOneBy("users", ['email' => $email])) {
+            $EmailVerificator = $this->db->getOneBy("users", ['email' => $email]);
+
+            if ($EmailVerificator != null) {
                 // L'utilisateur existe déjà
+                session_start();
                 $_SESSION["error_message"] = "Cet email est déjà pris !";
-                header("Location: /register");
-                return;
+                require(BASE_DIR . "/Views/Security/register_form.php");
+                exit;
             }
 
             // Préparation des données pour l'insertion
@@ -200,23 +202,23 @@ class Security
             $currentPassword = $_POST["currentPassword"] ?? '';
             $newPassword = $_POST["newPassword"] ?? '';
             $confirmPassword = $_POST["confirmPassword"] ?? '';
-            $email = $_SESSION["user_email"] ?? '';
+            $email = $_SESSION["email"] ?? '';
 
             if (empty($currentPassword) || empty($newPassword) || empty($confirmPassword) || empty($email)) {
                 $_SESSION["error_message"] = "Tous les champs sont requis.";
-                header("Location: /user_management");
+                header("Location: /users");
                 exit;
             }
 
             if (strlen($newPassword) < 8) {
                 $_SESSION["error_message"] = "Le nouveau mot de passe doit comporter au moins 8 caractères.";
-                header("Location: /user_management");
+                header("Location: /users");
                 exit;
             }
 
             if ($newPassword !== $confirmPassword) {
                 $_SESSION["error_message"] = "Les nouveaux mots de passe ne correspondent pas.";
-                header("Location: /user_management");
+                header("Location: /users");
                 exit;
             }
 
@@ -235,7 +237,7 @@ class Security
                 $_SESSION["error_message"] = "Mot de passe actuel invalide.";
             }
 
-            header("Location: /user_management");
+            header("Location: /users");
             exit;
         }
     }
