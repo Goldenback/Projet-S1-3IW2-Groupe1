@@ -3,6 +3,7 @@
 namespace App;
 
 spl_autoload_register("App\myAutoloader");
+require("vendor/autoload.php");
 
 function myAutoloader($class): void
 {
