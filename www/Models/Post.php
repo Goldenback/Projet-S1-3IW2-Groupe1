@@ -14,12 +14,12 @@ class Post
 
     public function __construct(?string $title, ?string $content, ?string $url, ?Image $image, int $displayOrder, \DateTime $createdAt)
     {
-        $this->title = $title;
-        $this->content = $content;
-        $this->url = $url;
-        $this->image = $image;
-        $this->displayOrder = $displayOrder;
-        $this->createdAt = $createdAt;
+        $this->setTitle($title);
+        $this->setContent($content);
+        $this->setUrl($url);
+        $this->setImage($image);
+        $this->setDisplayOrder($displayOrder);
+        $this->setCreatedAt($createdAt);
     }
 
     public function getId(): int

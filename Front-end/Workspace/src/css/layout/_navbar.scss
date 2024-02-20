@@ -2,33 +2,37 @@ body {
   padding-top: rem(100);
 }
 
-.navbar{
+.navbar {
   background-color: var(--bg-color);
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 1000;
 
-  .container{
-    @include flexbox(row, nowrap, space-around, center);
+  .container {
+    @include flexbox(row, nowrap, center, center, rem(20));
   }
-  &-title{
+
+  &-title {
     font-size: var(--title-size);
     font-family: var(--title-font);
   }
-  &-links{
+
+  &-links {
     width: 30%;
     display: flex;
     justify-content: space-around;
     font-family: var(--main-font);
     list-style-type: none;
   }
-  &-links li a{
+
+  &-links li a {
     font-size: var(--main-size);
     text-decoration: none;
     color: black;
   }
-  hr{
+
+  hr {
     color: var(--text-color);
     width: 100%;
     height: rem(2);

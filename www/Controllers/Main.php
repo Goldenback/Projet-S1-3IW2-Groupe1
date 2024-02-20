@@ -2,16 +2,16 @@
 
 namespace App\Controllers;
 
-use App\Models\GlobalConfig;
+use App\Models\Template;
 
 class Main
 {
 
-    private GlobalConfig $config;
+    private Template $config;
 
     public function __construct()
     {
-        $this->config = new GlobalConfig();
+        $this->config = new Template();
         define('BASE_DIR', __DIR__ . '/..'); //pour le dossier parent
     }
 

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Configuration des Pages</title>
-    <link rel="stylesheet" href="../../../Front-end/Workspace/dist/css/backoffice.css">
+    <link rel="stylesheet" href="path/to/your/style.css">
 </head>
 <body>
 

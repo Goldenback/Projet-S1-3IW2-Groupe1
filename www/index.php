@@ -57,5 +57,5 @@ if (!empty($listOfRoutes[$uri])) {
 } else {
     include "Controllers/Error.php";
     $object = new Controllers\Error();
-    $object->page404();
+    $object->error404();
 }

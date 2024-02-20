@@ -10,9 +10,9 @@ class Image
 
     public function __construct(string $filename, string $description, \DateTime $createdAt)
     {
-        $this->filename = $filename;
-        $this->description = $description;
-        $this->createdAt = $createdAt;
+        $this->setFilename($filename);
+        $this->setDescription($description);
+        $this->setCreatedAt($createdAt);
     }
 
     public function getId(): int

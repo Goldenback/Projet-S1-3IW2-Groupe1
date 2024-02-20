@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    <title>Paramètres</title>
     <meta charset="UTF-8">
-    <title>Configuration des Pages</title>
     <link rel="stylesheet" href="../../../Front-end/Workspace/dist/css/backoffice.css">
 </head>
+
 <body>
-
 <section class="config-container">
-
-    <h1>Configuration des Pages</h1>
-    <a href="/#" target="_blank" class="button-page">Voir mon site</a><br>
+    <h1>Paramètres</h1>
+    <a href="/home" class="button-page">Retourner sur le site</a><br>
 
     <div class="tabs">
         <button class="tab-button" onclick="openTab('home')">Accueil</button>
@@ -162,14 +161,12 @@
             <button class="submit-button" type="submit">Enregistrer</button>
         </form>
     </div>
-
-
 </section>
 
 <script>
     function openTab(tabName) {
-        var i;
-        var x = document.getElementsByClassName("tab-content");
+        let i;
+        let x = document.getElementsByClassName("tab-content");
         for (i = 0; i < x.length; i++) {
             x[i].style.display = "none";
         }

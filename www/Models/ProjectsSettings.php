@@ -11,9 +11,9 @@ class ProjectsSettings
 
     public function __construct(?string $title, ?string $content, array $posts = [])
     {
-        $this->title = $title;
-        $this->content = $content;
-        $this->posts = $posts;
+        $this->setTitle($title);
+        $this->setContent($content);
+        $this->setPosts($posts);
     }
 
     public function getId(): int
@@ -44,6 +44,11 @@ class ProjectsSettings
     public function getPosts(): array
     {
         return $this->posts;
+    }
+
+    public function setPosts(array $posts): void
+    {
+        $this->posts = $posts;
     }
 
     public function addPost(Post $post): void

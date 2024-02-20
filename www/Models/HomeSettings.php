@@ -11,9 +11,9 @@ class HomeSettings
 
     public function __construct(?string $title, ?string $content, ?Image $image)
     {
-        $this->title = $title;
-        $this->content = $content;
-        $this->image = $image;
+        $this->setTitle($title);
+        $this->setContent($content);
+        $this->setImage($image);
     }
 
     public function getId(): int

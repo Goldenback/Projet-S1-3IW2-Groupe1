@@ -31,6 +31,7 @@ class Security
             // Verify password if user is found
             if ($userData && password_verify($password, $userData['password'])) {
                 $user = new User(
+                    $userData['id'],
                     $userData['firstname'],
                     $userData['lastname'],
                     $userData['username'],
@@ -55,7 +56,7 @@ class Security
                     $_SESSION['email'] = $user->getEmail();
 
                     // Redirect to home page
-                    header("Location: /");
+                    header("Location: /home");
                 }
             } else {
                 // Authentication failed

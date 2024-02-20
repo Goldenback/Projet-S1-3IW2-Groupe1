@@ -14,12 +14,12 @@ class AboutSettings
 
     public function __construct(?string $title, ?string $content, ?Image $image1, ?Image $image2, ?Image $image3, ?Image $image4)
     {
-        $this->title = $title;
-        $this->content = $content;
-        $this->image1 = $image1;
-        $this->image2 = $image2;
-        $this->image3 = $image3;
-        $this->image4 = $image4;
+        $this->setTitle($title);
+        $this->setContent($content);
+        $this->setImage1($image1);
+        $this->setImage2($image2);
+        $this->setImage3($image3);
+        $this->setImage4($image4);
     }
 
     public function getId(): int

@@ -14,12 +14,12 @@ class GlobalSettings
 
     public function __construct(string $name, ?string $colorPrimary, ?string $colorSecondary, ?Font $fontPrimary, ?Font $fontSecondary, Template $template)
     {
-        $this->name = $name;
-        $this->colorPrimary = $colorPrimary;
-        $this->colorSecondary = $colorSecondary;
-        $this->fontPrimary = $fontPrimary;
-        $this->fontSecondary = $fontSecondary;
-        $this->template = $template;
+        $this->setName($name);
+        $this->setColorPrimary($colorPrimary);
+        $this->setColorSecondary($colorSecondary);
+        $this->setFontPrimary($fontPrimary);
+        $this->setFontSecondary($fontSecondary);
+        $this->setTemplate($template);
     }
 
     public function getId(): int

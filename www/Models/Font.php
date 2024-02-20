@@ -10,8 +10,8 @@ class Font
 
     public function __construct(string $name, string $url)
     {
-        $this->name = $name;
-        $this->url = $url;
+        $this->setName($name);
+        $this->setUrl($url);
     }
 
     public function getId(): int

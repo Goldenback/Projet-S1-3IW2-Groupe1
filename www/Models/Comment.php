@@ -14,12 +14,12 @@ class Comment
 
     public function __construct(User $user, Post $post, string $content, bool $isApproved, bool $isDeleted, \DateTime $createdAt)
     {
-        $this->user = $user;
-        $this->post = $post;
-        $this->content = $content;
-        $this->isApproved = $isApproved;
-        $this->isDeleted = $isDeleted;
-        $this->createdAt = $createdAt;
+        $this->setUser($user);
+        $this->setPost($post);
+        $this->setContent($content);
+        $this->setIsApproved($isApproved);
+        $this->setIsDeleted($isDeleted);
+        $this->setCreatedAt($createdAt);
     }
 
     public function getId(): int

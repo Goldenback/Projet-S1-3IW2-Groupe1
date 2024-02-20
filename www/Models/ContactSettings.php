@@ -11,9 +11,9 @@ class ContactSettings
 
     public function __construct(?string $title, ?string $content, string $email)
     {
-        $this->title = $title;
-        $this->content = $content;
-        $this->email = $email;
+        $this->setTitle($title);
+        $this->setContent($content);
+        $this->setEmail($email);
     }
 
     public function getId(): int

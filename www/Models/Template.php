@@ -9,7 +9,7 @@ class Template
 
     public function __construct(string $name)
     {
-        $this->name = $name;
+        $this->setName($name);
     }
 
     public function getId(): int

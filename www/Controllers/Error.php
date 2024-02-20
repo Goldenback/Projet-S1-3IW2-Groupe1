@@ -4,9 +4,9 @@ namespace App\Controllers;
 
 class Error
 {
-    public function page404(): void
+    public function error404(): void
     {
-        echo "Page 404";
         http_response_code(404);
+        echo "Erreur 404 - Page non trouvée <br> <a href='/home'>Retour à l'accueil</a>";
     }
 }

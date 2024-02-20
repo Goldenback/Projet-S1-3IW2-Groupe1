@@ -16,6 +16,7 @@ class User
     private \DateTime $createdAt;
 
     public function __construct(
+        int       $id,
         string    $firstname,
         string    $lastname,
         string    $username,
@@ -27,6 +28,7 @@ class User
         \DateTime $createdAt
     )
     {
+        $this->setId($id);
         $this->setFirstname($firstname);
         $this->setLastname($lastname);
         $this->setUsername($username);
@@ -41,6 +43,11 @@ class User
     public function getId(): int
     {
         return $this->id;
+    }
+
+    public function setId(int $id): void
+    {
+        $this->id = $id;
     }
 
     public function getFirstname(): string
