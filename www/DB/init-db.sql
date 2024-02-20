@@ -1,19 +1,20 @@
 CREATE TABLE users
 (
-    id           SERIAL PRIMARY KEY,
-    firstname    VARCHAR(50)              NOT NULL,
-    lastname     VARCHAR(50)              NOT NULL,
-    username     VARCHAR(50) UNIQUE       NOT NULL,
-    email        VARCHAR(320) UNIQUE      NOT NULL,
-    password     VARCHAR(255)             NOT NULL,
-    role         VARCHAR(50) DEFAULT USER NOT NULL,
-    is_validated BOOLEAN     DEFAULT false,
-    is_deleted   BOOLEAN     DEFAULT false,
-    created_at   DATE        DEFAULT CURRENT_DATE
+    id               SERIAL PRIMARY KEY,
+    firstname        VARCHAR(50)              NOT NULL,
+    lastname         VARCHAR(50)              NOT NULL,
+    username         VARCHAR(50) UNIQUE       NOT NULL,
+    email            VARCHAR(320) UNIQUE      NOT NULL,
+    password         VARCHAR(255)             NOT NULL,
+    role             VARCHAR(50) DEFAULT USER NOT NULL,
+    is_validated     BOOLEAN     DEFAULT false,
+    is_deleted       BOOLEAN     DEFAULT false,
+    activation_token VARCHAR(255) UNIQUE      NOT NULL,
+    created_at       DATE        DEFAULT CURRENT_DATE
 );
 
-INSERT INTO users (firstname, lastname, username, email, password, role, is_validated, is_deleted)
-VALUES ('admin', 'admin', 'admin', 'admin@admin.com', '$2y$10$ACukkHtZ4Y6nqVGj49P9Qua259RhaN6.AXnS0RDTZqfmD8MK1RtSa', 'ADMIN', true, false);
+INSERT INTO users (firstname, lastname, username, email, password, role, is_validated, is_deleted, activation_token)
+VALUES ('admin', 'admin', 'admin', 'admin@admin.com', '$2y$10$ACukkHtZ4Y6nqVGj49P9Qua259RhaN6.AXnS0RDTZqfmD8MK1RtSa', 'ADMIN', true, false, '');
 
 CREATE TABLE templates
 (
@@ -21,12 +22,21 @@ CREATE TABLE templates
     name VARCHAR(255) NOT NULL
 );
 
+INSERT INTO templates (name)
+VALUES ('default'),
+       ('dark'),
+       ('light');
+
 CREATE TABLE fonts
 (
     id   SERIAL PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
     link VARCHAR(255) NOT NULL
 );
+
+INSERT INTO fonts (name, link)
+VALUES ('Roboto', 'https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap'),
+       ('Open Sans', 'https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
 
 CREATE TABLE global_settings
 (

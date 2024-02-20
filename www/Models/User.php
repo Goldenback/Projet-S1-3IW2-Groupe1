@@ -2,7 +2,9 @@
 
 namespace App\Models;
 
-class User
+use App\Core\DB;
+
+class User extends DB
 {
     private int $id;
     private string $firstname;
@@ -13,6 +15,7 @@ class User
     private string $role;
     private bool $isValidated;
     private bool $isDeleted;
+    private string $activationToken;
     private \DateTime $createdAt;
 
     public function __construct(
@@ -25,7 +28,8 @@ class User
         string    $role,
         bool      $isValidated,
         bool      $isDeleted,
-        \DateTime $createdAt
+        \DateTime $createdAt,
+        string    $activationToken
     )
     {
         $this->setId($id);
@@ -38,6 +42,7 @@ class User
         $this->setIsValidated($isValidated);
         $this->setIsDeleted($isDeleted);
         $this->setCreatedAt($createdAt);
+        $this->setactivation_token($activationToken);
     }
 
     public function getId(): int
@@ -138,5 +143,15 @@ class User
     public function setCreatedAt(\DateTime $createdAt): void
     {
         $this->createdAt = $createdAt;
+    }
+
+    public function getActivation_token(): string
+    {
+        return $this->activationToken;
+    }
+
+    public function setActivation_token(string $token): void
+    {
+        $this->activationToken = $token;
     }
 }
