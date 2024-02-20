@@ -1,0 +1,9 @@
+User-agent: *
+
+Disallow: /back-office/
+Disallow: /config/
+Disallow: /dashboard/
+Disallow: /templates/
+Disallow: /user_management/
+
+Sitemap: http://simplify.com/sitemap.xml
