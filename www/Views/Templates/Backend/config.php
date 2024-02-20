@@ -17,13 +17,11 @@
         <button class="tab-button" onclick="openTab('about')">À Propos</button>
         <button class="tab-button" onclick="openTab('projects')">Projets</button>
         <button class="tab-button" onclick="openTab('contact')">Contact</button>
-
     </div>
 
     <div id="home" class="tab-content">
         <h3>Configuration de la Page d'Accueil</h3>
         <form class="config-form" action="/SaveHome">
-
 
             <div class="form-group">
                 <label for="titleAbout">Titre principal :</label>
