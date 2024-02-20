@@ -1,52 +1,56 @@
-
 <footer class="footer">
     <div class="content">
         <div class="column logo-column">
             <div class="logo">
                 <div class="logo">
                     <a href="/about">
-                        <img class="icon logo" src="../../../Front-end/Workspace/assets/svg/brand/simplify.svg">
+                        <img class="icon logo" src="../../../assets/visual-assets/svg/brand/simplify.svg">
                     </a>
                 </div>
             </div>
             <div class="content-info">
                 <div class="address-block">
                     <div class="address">Address:</div>
-                    <div class="address-detail"><?= $adresse ?? '18 Rue des étudiants, 12345 France' ?></div>
+                    <div class="address-detail">
+                        <?= $adresse ?? '18 Rue des étudiants, 12345 France' ?>
+                    </div>
                 </div>
                 <div class="contact-block">
                     <div class="contact">Contact:</div>
                     <div class="contact-info">
-                        <div class="phone"><?= $phone ?? '01 02 03 04 05' ?></div>
-                        <div class="email"><?= $email ?? 'contact@simplify.com' ?> </div>
+                        <div class="phone">
+                            <?= $phone ?? '01 02 03 04 05' ?>
+                        </div>
+                        <div class="email">
+                            <?= $email ?? 'contact@simplify.com' ?>
+                        </div>
                     </div>
                 </div>
                 <div class="social-links">
-                    <a href="<?= $facebook ?? 'error'?>" class="icon">
-                        <img src="../../../Front-end/Workspace/assets/svg/social/facebook.svg">
+                    <a href="<?= $facebook ?? 'error' ?>" class="icon">
+                        <img src="../../../assets/visual-assets/svg/social/facebook.svg">
                     </a>
-                    <a href="<?= $instagram ?? 'error'?>" class="icon">
-                        <img src="../../../Front-end/Workspace/assets/svg/social/instagram.svg">
+                    <a href="<?= $instagram ?? 'error' ?>" class="icon">
+                        <img src="../../../assets/visual-assets/svg/social/instagram.svg">
                     </a>
-                    <a href="<?= $instagram ?? 'error'?>" class="icon">
-                        <img src="../../../Front-end/Workspace/assets/svg/social/x.svg">
+                    <a href="<?= $instagram ?? 'error' ?>" class="icon">
+                        <img src="../../../assets/visual-assets/svg/social/x.svg">
                     </a>
-                    <a href="<?= $linkedin ?? 'error'?>" class="icon">
-                        <img src="../../../Front-end/Workspace/assets/svg/social/linkedin.svg">
+                    <a href="<?= $linkedin ?? 'error' ?>" class="icon">
+                        <img src="../../../assets/visual-assets/svg/social/linkedin.svg">
                     </a>
-                    <a href="<?= $youtube ?? 'error'?>" class="icon">
-                        <img src="../../../Front-end/Workspace/assets/svg/social/youtube.svg">
+                    <a href="<?= $youtube ?? 'error' ?>" class="icon">
+                        <img src="../../../assets/visual-assets/svg/social/youtube.svg">
                     </a>
                 </div>
             </div>
         </div>
         <div class="column links-column">
             <div class="link-list">
+                <a href="/home" class="link">Home</a>
                 <a href="/about" class="link">About Us</a>
-                <a href="/portfolio" class="link">Portfolio</a>
-                <a href="/project" class="link">Projects</a>
-                <a href="/service" class="link">Services</a>
-                <a href="/contact#contact-us" class="link">Contact Us</a>
+                <a href="/projects" class="link">Projects</a>
+                <a href="/contact" class="link">Contact Us</a>
             </div>
         </div>
     </div>
@@ -71,5 +75,4 @@
             </div>
         </div>
     </div>
-</>
-
+    </>

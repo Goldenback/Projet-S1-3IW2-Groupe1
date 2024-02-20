@@ -16,17 +16,17 @@
                 <div class="SocialIcons">
                     <div class="IconLinkedin">
                         <a href="#">
-                            <img class="icon" src="../../../Front-end/Workspace/assets/svg/social/mini-linkedin.svg">
+                            <img class="icon" src="../../../assets/visual-assets/svg/social/mini-linkedin.svg">
                         </a>
                     </div>
                     <div class="IconX">
                         <a href="#">
-                        <img class="icon" src="../../../Front-end/Workspace/assets/svg/social/x-transparent.svg">
+                        <img class="icon" src="../../../assets/visual-assets/svg/social/x-transparent.svg">
                         </a>
                     </div>
                     <div class="IconDribble">
                         <a href="#">
-                            <img class="icon" src="../../../Front-end/Workspace/assets/svg/social/dribble.svg">
+                            <img class="icon" src="../../../assets/visual-assets/svg/social/dribble.svg">
                         </a>
                     </div>
                 </div>
@@ -42,17 +42,17 @@
                 <div class="SocialIcons">
                     <div class="IconLinkedin">
                         <a href="#">
-                            <img class="icon" src="../../../Front-end/Workspace/assets/svg/social/mini-linkedin.svg">
+                            <img class="icon" src="../../../assets/visual-assets/svg/social/mini-linkedin.svg">
                         </a>
                     </div>
                     <div class="IconX">
                         <a href="#">
-                        <img class="icon" src="../../../Front-end/Workspace/assets/svg/social/x-transparent.svg">
+                        <img class="icon" src="../../../assets/visual-assets/svg/social/x-transparent.svg">
                         </a>
                     </div>
                     <div class="IconDribble">
                         <a href="#">
-                            <img class="icon" src="../../../Front-end/Workspace/assets/svg/social/dribble.svg">
+                            <img class="icon" src="../../../assets/visual-assets/svg/social/dribble.svg">
                         </a>
                     </div>
                 </div>
@@ -68,17 +68,17 @@
                 <div class="SocialIcons">
                     <div class="IconLinkedin">
                         <a href="#">
-                            <img class="icon" src="../../../Front-end/Workspace/assets/svg/social/mini-linkedin.svg">
+                            <img class="icon" src="../../../assets/visual-assets/svg/social/mini-linkedin.svg">
                         </a>
                     </div>
                     <div class="IconX">
                         <a href="#">
-                        <img class="icon" src="../../../Front-end/Workspace/assets/svg/social/x-transparent.svg">
+                        <img class="icon" src="../../../assets/visual-assets/svg/social/x-transparent.svg">
                         </a>
                     </div>
                     <div class="IconDribble">
                         <a href="#">
-                            <img class="icon" src="../../../Front-end/Workspace/assets/svg/social/dribble.svg">
+                            <img class="icon" src="../../../assets/visual-assets/svg/social/dribble.svg">
                         </a>
                     </div>
                 </div>
@@ -96,17 +96,17 @@
                 <div class="SocialIcons">
                     <div class="IconLinkedin">
                         <a href="#">
-                            <img class="icon" src="../../../Front-end/Workspace/assets/svg/social/mini-linkedin.svg">
+                            <img class="icon" src="../../../assets/visual-assets../../../assets/visual-assets../../../assets/visual-assets/svg/social/mini-linkedin.svg">
                         </a>
                     </div>
                     <div class="IconX">
                         <a href="#">
-                        <img class="icon" src="../../../Front-end/Workspace/assets/svg/social/x-transparent.svg">
+                        <img class="icon" src="../../../assets/visual-assets../../../assets/visual-assets../../../assets/visual-assets/svg/social/x-transparent.svg">
                         </a>
                     </div>
                     <div class="IconDribble">
                         <a href="#">
-                            <img class="icon" src="../../../Front-end/Workspace/assets/svg/social/dribble.svg">
+                            <img class="icon" src="../../../assets/visual-assets../../../assets/visual-assets../../../assets/visual-assets/svg/social/dribble.svg">
                         </a>
                     </div>
                 </div>
@@ -122,17 +122,17 @@
                 <div class="SocialIcons">
                     <div class="IconLinkedin">
                         <a href="#">
-                            <img class="icon" src="../../../Front-end/Workspace/assets/svg/social/mini-linkedin.svg">
+                            <img class="icon" src="../../../assets/visual-assets../../../assets/visual-assets/svg/social/mini-linkedin.svg">
                         </a>
                     </div>
                     <div class="IconX">
                         <a href="#">
-                        <img class="icon" src="../../../Front-end/Workspace/assets/svg/social/x-transparent.svg">
+                        <img class="icon" src="../../../assets/visual-assets../../../assets/visual-assets/svg/social/x-transparent.svg">
                         </a>
                     </div>
                     <div class="IconDribble">
                         <a href="#">
-                            <img class="icon" src="../../../Front-end/Workspace/assets/svg/social/dribble.svg">
+                            <img class="icon" src="../../../assets/visual-assets../../../assets/visual-assets/svg/social/dribble.svg">
                         </a>
                     </div>
                 </div>
@@ -148,17 +148,17 @@
                 <div class="SocialIcons">
                     <div class="IconLinkedin">
                         <a href="#">
-                            <img class="icon" src="../../../Front-end/Workspace/assets/svg/social/mini-linkedin.svg">
+                            <img class="icon" src="../../../assets/visual-assets/svg/social/mini-linkedin.svg">
                         </a>
                     </div>
                     <div class="IconX">
                         <a href="#">
-                        <img class="icon" src="../../../Front-end/Workspace/assets/svg/social/x-transparent.svg">
+                        <img class="icon" src="../../../assets/visual-assets/svg/social/x-transparent.svg">
                         </a>
                     </div>
                     <div class="IconDribble">
                         <a href="#">
-                            <img class="icon" src="../../../Front-end/Workspace/assets/svg/social/dribble.svg">
+                            <img class="icon" src="../../../assets/visual-assets/svg/social/dribble.svg">
                         </a>
                     </div>
                 </div>

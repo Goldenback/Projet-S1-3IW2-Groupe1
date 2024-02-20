@@ -10,7 +10,7 @@
        
     <div class="row">
         <div class="card">
-            <img class="placeholder-image" src="../../../Front-end/Workspace/assets/img/page-portfolio/web-site1.png" alt="Art Project One">
+            <img class="placeholder-image" src="../../../assets/visual-assets/img/page-portfolio/web-site1.png" alt="Art Project One">
             <div class="content">
                 <h3 class="heading">Nature's Canvas</h3>
                 <p class="text">Captivating Photography Collection</p>
@@ -23,7 +23,7 @@
         </div>
                 
         <div class="card">
-            <img class="placeholder-image" src="../../../Front-end/Workspace/assets/img/page-portfolio/web-site2.png" alt="Art Project Two">
+            <img class="placeholder-image" src="../../../assets/visual-assets/img/page-portfolio/web-site2.png" alt="Art Project Two">
             <div class="content">
                 <h3 class="heading">Harmonic Blues</h3>
                 <p class="text">Soulful Music Collection</p>

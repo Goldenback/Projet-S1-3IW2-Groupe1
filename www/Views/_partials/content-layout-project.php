@@ -25,6 +25,6 @@
                 <a href="/register" class="Button Secondary">Sign Up</a>
             </div>
         </div>
-        <img class="placeholder-image image-squared" src="../../../Front-end/Workspace/assets/img/page-project/layout-1.png" />
+        <img class="placeholder-image image-squared" src="../../../assets/visual-assets/img/page-project/layout-1.png" />
     </div>
 </section>
