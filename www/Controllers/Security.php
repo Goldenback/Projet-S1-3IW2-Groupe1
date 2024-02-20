@@ -26,6 +26,7 @@ class Security
     {
         // Check if the form was submitted and the request method is POST
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            session_start();
             // Retrieve username and password from request data
             $email = $_POST['email'] ?? '';
             $password = $_POST['password'] ?? '';
@@ -52,10 +53,8 @@ class Security
                     // Account not activated
                     $_SESSION["error_message"] = "Compte non activé";
                     header("Location: /login");
+                    exit();
                 } else {
-                    // Authentication successful
-                    // Start PHP session
-                    session_start();
 
                     // Store user information in session
                     $_SESSION['email'] = $user->getEmail();
@@ -68,6 +67,7 @@ class Security
                 // Return error response
                 $_SESSION["error_message"] = "Email ou mot de passe incorrect !";
                 header("Location: /login");
+                exit();
             }
         } else {
             // Display login form
@@ -104,11 +104,14 @@ class Security
             $activationToken = bin2hex(random_bytes(16));
 
             // Vérifie si l'email existe déjà
-            if ($this->db->getOneBy("users", ['email' => $email])) {
+            $EmailVerificator = $this->db->getOneBy("users", ['email' => $email]);
+
+            if ($EmailVerificator != null) {
                 // L'utilisateur existe déjà
+                session_start();
                 $_SESSION["error_message"] = "Cet email est déjà pris !";
-                header("Location: /register");
-                return;
+                require(BASE_DIR . "/Views/Security/register_form.php");
+                exit;
             }
 
             // Préparation des données pour l'insertion
