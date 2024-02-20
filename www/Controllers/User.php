@@ -11,6 +11,7 @@ class User
 
     public function index(): void
     {
+        session_start();
         require(BASE_DIR . "/Views/pages/user/index.php");
     }
 

@@ -25,7 +25,7 @@
     </div>
 
     <div class="side-item">
-        <a href="/user_management" class="side-link">
+        <a href="/users" class="side-link">
             <span class="side-icon">&#128209;</span>
             <span class="side-text">Mes Informations</span>
         </a>

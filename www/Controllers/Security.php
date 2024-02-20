@@ -202,23 +202,23 @@ class Security
             $currentPassword = $_POST["currentPassword"] ?? '';
             $newPassword = $_POST["newPassword"] ?? '';
             $confirmPassword = $_POST["confirmPassword"] ?? '';
-            $email = $_SESSION["user_email"] ?? '';
+            $email = $_SESSION["email"] ?? '';
 
             if (empty($currentPassword) || empty($newPassword) || empty($confirmPassword) || empty($email)) {
                 $_SESSION["error_message"] = "Tous les champs sont requis.";
-                header("Location: /user_management");
+                header("Location: /users");
                 exit;
             }
 
             if (strlen($newPassword) < 8) {
                 $_SESSION["error_message"] = "Le nouveau mot de passe doit comporter au moins 8 caractères.";
-                header("Location: /user_management");
+                header("Location: /users");
                 exit;
             }
 
             if ($newPassword !== $confirmPassword) {
                 $_SESSION["error_message"] = "Les nouveaux mots de passe ne correspondent pas.";
-                header("Location: /user_management");
+                header("Location: /users");
                 exit;
             }
 
@@ -237,7 +237,7 @@ class Security
                 $_SESSION["error_message"] = "Mot de passe actuel invalide.";
             }
 
-            header("Location: /user_management");
+            header("Location: /users");
             exit;
         }
     }

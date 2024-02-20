@@ -2,18 +2,18 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Simplify</title>
+    <title>Comments management</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../Front-end/Workspace/dist/css/backoffice.css">
 </head>
 <body>
-    
+
 <?php include("Views/_partials/sidebar.php") ?>
 
 <section class="comments-management-container">
     <h2>Gestion des Commentaires</h2>
     <div class="comments-list">
-
-
+        
         <!-- Faire une boucle for pour afficher tous les commentaires -->
 
         <!-- Structure du commentaire -->

@@ -67,7 +67,7 @@
 
 /comments:
   controller: Comment
-  action: index
+  action: index  
 
 # Error
 /404:
