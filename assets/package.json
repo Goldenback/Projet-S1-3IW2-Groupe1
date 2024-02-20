@@ -1,0 +1,23 @@
+{
+  "name": "workspace",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "sass": "sass src/css/main.scss ../public/assets/css/main.css",
+    "watch": "concurrently \"vite build --watch\" \"sass --watch src/css/main.scss ../public/assets/css/main.css\"",
+    "watch-vite": "vite build --watch",
+    "watch-sass": "sass --watch src/css/main.scss ../public/assets/css/main.css",
+    "watch-sass-backoffice": "sass --watch src/css/backoffice.scss ../public/assets/css/backoffice.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "concurrently": "^8.2.2",
+    "sass": "^1.69.5",
+    "vite": "^2.9.17"
+  }
+}

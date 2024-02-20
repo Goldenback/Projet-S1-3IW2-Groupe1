@@ -8,17 +8,13 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 use PHPMailer\PHPMailer\SMTP;
 
-require './vendor/phpmailer/phpmailer/src/PHPMailer.php';
-require './vendor/phpmailer/phpmailer/src/Exception.php';
-require './vendor/phpmailer/phpmailer/src/SMTP.php';
-
 class Security
 {
     private DB $db;
 
     public function __construct()
     {
-        $this->db = new DB();
+        $this->db = DB::getInstance();
         define('BASE_DIR', __DIR__ . '/..'); //pour le dossier parent
     }
 
@@ -61,13 +57,14 @@ class Security
 
                     // Redirect to home page
                     header("Location: /home");
+                    exit;
                 }
             } else {
                 // Authentication failed
                 // Return error response
                 $_SESSION["error_message"] = "Email ou mot de passe incorrect !";
                 header("Location: /login");
-                exit();
+                exit;
             }
         } else {
             // Display login form
