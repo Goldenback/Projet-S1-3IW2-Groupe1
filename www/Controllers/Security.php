@@ -62,7 +62,6 @@ class Security
 
                     // Redirect to home page
                     header("Location: /home");
-                    header("Location: /config");
                 }
             } else {
                 // Authentication failed

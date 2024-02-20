@@ -7,6 +7,8 @@
 </head>
 
 <body>
+<?php include("Views/_partials/sidebar.php") ?>
+
 <section class="config-container">
     <h1>Paramètres</h1>
     <a href="/home" class="button-page">Retourner sur le site</a><br>
