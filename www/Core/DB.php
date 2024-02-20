@@ -109,6 +109,4 @@ class DB
             throw new \Exception("Aucune classe trouvée pour la table '{$table}'.");
         }
     }
-    
-    
 }
